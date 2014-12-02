@@ -14,13 +14,13 @@ In RFID-based IoT applications, Guinard at el. \cite{guinard2011cloud} point out
 because they involve the deployment of often rather large and heterogeneous distributed systems. As a consequence, these systems are often only
 suitable for big corporations and large implementations and do not fit the limited resources of small to mid-size businesses and small scale
 applications both in terms of required skill-set and costs. To address this problem, Guinard at el. proposes a Cloud-based solution that
-integrates virtualization technologies and the architecture of the Web and its services. They applied the Utility Computing blueprint to the
-software stack required by RFID-based IoT applications using the AWS platform and the EC2 service. The Elastic Cloud Computing (EC2) service
-allows the creation and management of virtual machines (Amazon Machine Images, or AMIs) that can then be deployed on
-demand onto a pool of machines hosted, managed and configured by Amazon. A benefit of this approach is that the server-side hardware
-maintenance is delegated to the cloud provider which is often more cost-efficient for smaller businesses. Furthermore,
-it also offers better scaling capabilities as the company using the EPC Cloud AMI, can deploy additional and more powerful instances regarding
-to the amount of requests.\\
+integrates virtualization technologies and the architecture of the Web and its services. The case of study consists in a IoT application that uses
+RFID technology to substitute existing Electronic Article Surveillance (EAS) technology, such as those used in clothing stores to track the products.
+In this scenario they applied the Utility Computing blueprint to the software stack required by the application using the AWS platform and the EC2 service.
+The Elastic Cloud Computing (EC2) service allows the creation and management of virtual machines (Amazon Machine Images, or AMIs) that can then be deployed on
+demand onto a pool of machines hosted, managed and configured by Amazon. A benefit of this approach is that the server-side hardware maintenance is delegated to
+the cloud provider which is often more cost-efficient for smaller businesses. Furthermore, it also offers better scaling capabilities as the company using the
+EPC Cloud AMI, can deploy additional and more powerful instances regarding to the amount of requests.\\
 
 Distefano \cite{distefano2012enabling} at el. proposed a high-level modular architecture to implement the Cloud of Things. According to Distefano at el. things
 not only can be discovered and aggregated, but also provided as a service, dynamically, applying the Cloud provisioning model to satisfy the agreed
@@ -38,7 +38,12 @@ service platform, that is a set of Cloud services (IaaS), allowing users to run 
 simplifies the application development, eliminates need for infrastructure development, shortens time to market, and reduces management and maintenance
 costs. The CloudThings Developer Suite is a set of Cloud service tools (PaaS) for application development, such as Web service API's, which provide complete
 development and deployment capabilities to developers. The CloudThings Operating Portal is a set of Cloud services (SaaS) that support deployment and handle
-or support specialized processing services.\\
+or support specialized processing services. To evaluate CloudThings, a smart home application based on a Cloud infrastructure was implemented. In the application,
+the sensors read the home temperature and luminosity and the Cloud application stores and visualized them, so that the user can view the smart home temperature and luminosity
+anywhere. In particular, in these implementation the Cloud architecture was extended by inserting a special layer for dynamic service composition.
+This middleware encapsulates sets of fundamental services for executing the users’ service requests and performing service composition, such as process planning,
+service discovery, process generation, process execution, and monitoring. This first implementation also demonstrates that this middleware as a service
+releases the burden of costs and risks for users and providers in using and managing those components.\\
 
 The effort put in the research to integrate the paradigms of Cloud Computing and Internet of Things resulted in a essential contribution, but there are several
 issues regarding to the integration between Cloud Computing and Internet of Things that must be addressed. In particular, due of the heterogeneity of the IoT
@@ -54,6 +59,9 @@ terminating a service. The correct topology and management procedure can be infe
 as "declarative" approach. Plans realize an "imperative" approach that explicitly specifies how each management process should be done. The topology templates, plans
 and artifacts of an application are packaged in a Cloud Service Archive (.csar file) and deployed in a TOSCA environment, which is able to interpret the models and perform
 specified management operation. These .csar files are portable across different cloud providers, which is a great benefit in terms of deployment flexibility.
+To demonstrate its feasability TOSCA was used to specify a typical IoT application in building automation, an Air Handling Unit (AHU). The commom IoT components, such as gateways
+and drivers will be modelled, and the gateway-specific artifacts that are necessary for application deployment will also be specified. By archiving the previous specifications
+and corresponding artifacts into a csar file, and deploying it in a TOSCA environment, the deployment of AHU application onto various gateways can be automated.
 As a newly established standard to counter growing complexity and isolation in cloud applications environments, TOSCA is gaining momentum in industrial adoption as well academic interests.\\
 
 Breitenb\"{u}cher at el. \cite{breitenbucher2014combining} proposed to combine the two flavors of management supported by TOSCA, \textit{declarative processing} and
@@ -61,9 +69,16 @@ Breitenb\"{u}cher at el. \cite{breitenbucher2014combining} proposed to combine t
 combination of both flavors would enable applications developers to benefit from automatically provisioning logic based on declarative processing and
 individual customization opportunities provided by adapting imperative plans. These provisioning plans are workflows that can be executed fully automatically and
 may be customized by application developers after generation. The approach enables to benefit from strengths of both flavors that leads to economical advantages
-when developing applications with TOSCA.\\
+when developing applications with TOSCA. The motivating scenario that is used to evaluate this approach consists in a LAMP-based TOSCA application to be provisiones.
+The application implements a Web-shop in PHP that uses a MySQL database to store product and customer data. The application consists of two application stacks, one provides
+the infrastructure for the application logic and the other hosts the database, were both will be run on Amazon's public IaaS oferring Amazon EC2. To measure the performance
+of the deployment using the two-flavor approach, the strategy addopted was measure the time spent to generate provisioning plans regarding the number of templates required
+by the application. The results indicates that the required time increases linealy to the number of templates.\\
+
+Waizenegger at el. \cite{waizenegger2013policy4tosca} point out that the policies ...\\
+
 
 Recently a growing number of organizations are developing Orchestrators, Design Tools and Cloud Managers based on TOSCA. Juju is an Open Source TOSCA Orchestrator that
 can deploy workloads across public, private clouds, and directly onto bare metal. HP Cloud Service Automation is cloud management solution that supports declaratives
-services design that are aligned with TOSCA modeling principles. IBM Cloud Orchestrator provides integrated tooling to create TOSCA applications, deploy them with custom
-polices, monitoring and scale them in cloud deployments.
+services design that are aligned with TOSCA modeling principles. GigaSpaces Cloudify orchestrates TOSCA Service Templates using workflows to automate deployments and other
+DevOps automation processes. IBM Cloud Orchestrator provides integrated tooling to create TOSCA applications, deploy them with custom polices, monitoring and scale them in cloud deployments.
