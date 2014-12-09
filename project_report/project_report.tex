@@ -1,6 +1,12 @@
 \documentclass{../llncs2e/llncs}
 \usepackage{inputenc}
 \usepackage{graphicx}
+% make a proper TOC despite llncs
+\setcounter{tocdepth}{2}
+\makeatletter
+\renewcommand*\l@author[2]{}
+\renewcommand*\l@title[2]{}
+\makeatletter
 % ------------------------------------------------------
 % CLOUD OF THINGS DOCUMENT
 % ------------------------------------------------------
@@ -11,14 +17,15 @@
 \title{\vspace*{2in}\Huge Cloud of Things\vspace{2in}}
 % ------------------------------------------------------
 % AUTHOR
-% ----------------------------------------------∫--------
+% --------------------------------------------------------
 \author{\Large Marcus Vin\'icius Paulino Gomes}
 % ------------------------------------------------------
-% INSTITUTION∫
+% INSTITUTION
 % ------------------------------------------------------
 \institute{\large Instituto Superior T\'ecnico\\
 \email{marcus.paulino.gomes@tecnico.ulisboa.pt}}
 \maketitle
+\tableofcontents
 \include{sections/abstract}
 \include{sections/introduction}
 \include{sections/objectives}
@@ -26,6 +33,7 @@
 \include{sections/solution_architecture}
 \include{sections/evaluation_methodology}
 \include{sections/conclusion}
+\appendix
 \include{sections/appendix}
 \bibliographystyle{ieeetr}
 \bibliography{../bibliography/references}

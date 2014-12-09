@@ -1,5 +1,5 @@
 \section{Related Work}
-\label{sec:Related Work}
+\label{sec:related_work}
 Cloud and Internet of Things are emerging computing paradigms that features distinctively different computing resources
 and system architecture. As its popularity has been growing across the academics and the industry, researchers and developers
 are spending a lot of effort to investigate how to integrate these technologies in order to take advantage of the benefits
@@ -10,6 +10,8 @@ client and server installations, setups, or software updates. As most of the com
 in Cloud computing, integrating these paradigms in a Cloud-based model results in a solution with more flexibility of implementation,
 high scalability and high availability, and with a reduced upfront investment.\\
 
+\subsection{Cloud Computing and Internet of Things}
+\label{sub:Cloud Computing and Internet of Things}
 In RFID-based IoT applications, Guinard at el. \cite{guinard2011cloud} point out that the deployment of RFID applications are cost-intensive mostly
 because they involve the deployment of often rather large and heterogeneous distributed systems. As a consequence, these systems are often only
 suitable for big corporations and large implementations and do not fit the limited resources of small to mid-size businesses and small scale
@@ -41,10 +43,12 @@ development and deployment capabilities to developers. The CloudThings Operating
 or support specialized processing services. To evaluate CloudThings, a smart home application based on a Cloud infrastructure was implemented. In the application,
 the sensors read the home temperature and luminosity and the Cloud application stores and visualized them, so that the user can view the smart home temperature and luminosity
 anywhere. In particular, in these implementation the Cloud architecture was extended by inserting a special layer for dynamic service composition.
-This middleware encapsulates sets of fundamental services for executing the users’ service requests and performing service composition, such as process planning,
+This middleware encapsulates sets of fundamental services for executing the users�� service requests and performing service composition, such as process planning,
 service discovery, process generation, process execution, and monitoring. This first implementation also demonstrates that this middleware as a service
 releases the burden of costs and risks for users and providers in using and managing those components.\\
 
+\subsection{Automated Deployment of IoT Applications}
+\label{sub:Automated Deployment of IoT Applications}
 The effort put in the research to integrate the paradigms of Cloud Computing and Internet of Things resulted in a essential contribution, but there are several
 issues regarding to the integration between Cloud Computing and Internet of Things that must be addressed. In particular, due of the heterogeneity of the IoT
 applications environments, its hard for solution providers to efficiently deploy and configure applications for a large number of users. Thus, automation for
@@ -59,9 +63,9 @@ terminating a service. The correct topology and management procedure can be infe
 as "declarative" approach. Plans realize an "imperative" approach that explicitly specifies how each management process should be done. The topology templates, plans
 and artifacts of an application are packaged in a Cloud Service Archive (.csar file) and deployed in a TOSCA environment, which is able to interpret the models and perform
 specified management operation. These .csar files are portable across different cloud providers, which is a great benefit in terms of deployment flexibility.
-To demonstrate its feasability TOSCA was used to specify a typical IoT application in building automation, an Air Handling Unit (AHU). The commom IoT components, such as gateways
-and drivers will be modelled, and the gateway-specific artifacts that are necessary for application deployment will also be specified. By archiving the previous specifications
-and corresponding artifacts into a csar file, and deploying it in a TOSCA environment, the deployment of AHU application onto various gateways can be automated.
+To demonstrate its feasibility TOSCA was used to specify a typical IoT application in building automation, an Air Handling Unit (AHU). The common IoT components, such as gateways
+and drivers will be modeled, and the gateway-specific artifacts that are necessary for application deployment will also be specified. By archiving the previous specifications
+and corresponding artifacts into a .csar file, and deploying it in a TOSCA environment, the deployment of AHU application onto various gateways can be automated.
 As a newly established standard to counter growing complexity and isolation in cloud applications environments, TOSCA is gaining momentum in industrial adoption as well academic interests.\\
 
 Breitenb\"{u}cher at el. \cite{breitenbucher2014combining} proposed to combine the two flavors of management supported by TOSCA, \textit{declarative processing} and
@@ -69,16 +73,37 @@ Breitenb\"{u}cher at el. \cite{breitenbucher2014combining} proposed to combine t
 combination of both flavors would enable applications developers to benefit from automatically provisioning logic based on declarative processing and
 individual customization opportunities provided by adapting imperative plans. These provisioning plans are workflows that can be executed fully automatically and
 may be customized by application developers after generation. The approach enables to benefit from strengths of both flavors that leads to economical advantages
-when developing applications with TOSCA. The motivating scenario that is used to evaluate this approach consists in a LAMP-based TOSCA application to be provisiones.
+when developing applications with TOSCA. The motivating scenario that is used to evaluate this approach consists in a LAMP-based TOSCA application to be provisioned.
 The application implements a Web-shop in PHP that uses a MySQL database to store product and customer data. The application consists of two application stacks, one provides
-the infrastructure for the application logic and the other hosts the database, were both will be run on Amazon's public IaaS oferring Amazon EC2. To measure the performance
-of the deployment using the two-flavor approach, the strategy addopted was measure the time spent to generate provisioning plans regarding the number of templates required
-by the application. The results indicates that the required time increases linealy to the number of templates.\\
-
-Waizenegger at el. \cite{waizenegger2013policy4tosca} point out that the policies ...\\
-
+the infrastructure for the application logic and the other hosts the database, were both will be run on Amazon's public IaaS offering Amazon EC2. To measure the performance
+of the deployment using the two-flavor approach, the strategy adopted was measure the time spent to generate provisioning plans regarding the number of templates required
+by the application. The results indicates that the required time increases linearly to the number of templates.\\
 
 Recently a growing number of organizations are developing Orchestrators, Design Tools and Cloud Managers based on TOSCA. Juju is an Open Source TOSCA Orchestrator that
 can deploy workloads across public, private clouds, and directly onto bare metal. HP Cloud Service Automation is cloud management solution that supports declaratives
 services design that are aligned with TOSCA modeling principles. GigaSpaces Cloudify orchestrates TOSCA Service Templates using workflows to automate deployments and other
-DevOps automation processes. IBM Cloud Orchestrator provides integrated tooling to create TOSCA applications, deploy them with custom polices, monitoring and scale them in cloud deployments.
+DevOps automation processes. IBM Cloud Orchestrator provides integrated tooling to create TOSCA applications, deploy them with custom polices, monitoring and scale them in cloud deployments.\\
+
+\subsection{Service Level Agreements in IoT Applications}
+\label{sub:subsection label}
+In order to guarantee an acceptable \textit{QoS} for a Cloud applications, Service-Level Agreements (SLA's) must be defined by the customers in order to monitor the performance of the
+applications. Regarding Cloud-Based IoT applications, SLA's can be defined with two purposes, to ensure that the events are been correctly captured and to ensure that the available resources
+are sufficient for the application runs with the desired performance.\\
+
+Waizenegger at el. \cite{waizenegger2013policy4tosca} proposed a mechanism to demonstrate how non-functional requirements are defined in TOSCA using policies. TOSCA allows to specify non-functional
+requriements like cost, security, and environmental issues. However, TOSCA lacks detailed description of how to apply, design, and implement policies. This paper proposes two mechanisms for processing
+policies during the deployment and management of Cloud services in TOSCA. The policies are described according a taxonomy were a Cloud service policy is a tuple of elements that describe its behavior and effect.
+To perform the implementation of this policy-specific logic two approches was proposed, an Implementation Artifact Based Policy Enforcement (IA-Approach) and a Plan-Based Policy Enforcement (P-Approach).
+In the IA-Approach the existing Implementation Artifacts - responsible to perform service management operations - are extended to support policy enforcement implementations, thus these artifacts are comprised
+of two alternative implementations for each service management operation: one that is policy enforcing and one that is not. In the P-Approach the policies are enforced in an imperative way, for each policy the plan
+execute the appropriate steps to enforcing the policy. Altough both of these approaches allows the enforcement of policies, the approach used for realizing this should be chosen with caution. The IA-Approach is
+more suitable for less complex scenarios and the policies implemented with this apporach can be reused very easily. On the other hand, the enforcement of policies in more complex scenarios should be performed according
+the P-Approach, that allows to have a global control of the triggered enforcement actions.\\
+
+Breitenb\"{u}cher et al. \cite{breitenbucher2014policy} proposed an approach that enables to automate the provisioning and management of composite Cloud applications in compliance with non-functional security requirements
+defined by policies. In this approach the Management Planlet Framework \cite{breitenbucher2013policy} was extended to support policy-aware provisioning and management based in Management Policies that binds non-functional
+security requirements to the management tasks that must enforce them. This paper also introduces the concept of Management Annotation Policies, which defines the semantics and how the policy must be processed.
+The automation of provisioning and management tasks are performed by Policy-aware Management Planlets, that executes this tasks considering the Annotation Policies attached to each operation. The Framework also allows the
+Cloud providers and application developers to specify their own policy-aware management logic in a flexible and reusable manner independently from individual applications. The management logic can be defined in two ways,
+by applying Automated Management Patterns or by manually creating Desired Application State Models. The Framework was evaluated in terms of feasibility, performance, economics, limitations and extensibility. To validate
+the concept technically, a prototype was sucessfully implemented based on a previous implementantion of the Management Planlet Framework.

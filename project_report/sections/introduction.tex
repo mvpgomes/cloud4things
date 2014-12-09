@@ -2,21 +2,21 @@
 % INTRODUCTION
 % ------------------------------------
 \section{Introduction}
-\label{sec:Introduction}
+\label{sec:introduction}
 This section will describe the context of this theme, namely:
 \begin{itemize}
   \item What is the scope of the theme?
   \item What is the actual state of the theme?
-  \item What are the main difficults confronted?
+  \item What are the main difficulties confronted?
 \end{itemize}
 % -------------------------------------
 % INTERNET OF THINGS
 % -------------------------------------
 \subsection{Internet of Things}
-\label{sub:Internet of Things}
+\label{sub:internet_of_things}
 The Internet of Things (IoT) is a concept in which the virtual world of information technology integrates seamlessly
 with the real world of things \cite{Uckelmann:2011:AIT:2018904}. Through the amount of computer and network devices
-available nowadays, the real world becomes accessible to business as well everyday scenarios. A more precise definition
+available nowadays, the real world becomes accessible to business and everyday scenarios. A more precise definition
 of what is Internet of Things was formulated in the Strategic Research Agenda of the Cluster of European Research Projects
 on the Internet of Things (CERP-IoT 2009):\\
 
@@ -29,10 +29,10 @@ on the Internet of Things (CERP-IoT 2009):\\
 
 IoT provides access to a more detailed information, which results that the level of analysis can be performed in a large-scale perspective, as well in a small-scale
 perspective. But Internet of Things is more than a tool for managing business processes more efficiently and more effectively, IoT will also enable a more convenient life for all peoples.
-Recently, IoT became relevant to industry and end-users\cite{Uckelmann:2011:AIT:2018904}, mainly because the reduction of cost and miniaturization of technologies used in IoT applications, such as RFID, sensor networks, NFC and
-wireless communication. Technologies like these allows the detection of status of things, which toghether with collection and processing of detailed data,
+Recently, IoT became relevant to industry and end-users \cite{Uckelmann:2011:AIT:2018904}, mainly because the reduction of cost and miniaturization of technologies used in IoT applications, such as RFID, sensor networks, NFC and
+wireless communication. Technologies like these allows the detection of status of things, which together with collection and processing of detailed data,
 allows to create an interactive and responsive network with huge potential for citizens, consumers, business and where is possible to gather immediate responses
-to events that occurs in the real world\cite{Uckelmann:2011:AIT:2018904}. One of the expectations regarding of IoT concerns with real-world awareness provided to information systems \cite{mattern2010internet}.
+to events that occurs in the real world \cite{Uckelmann:2011:AIT:2018904}. One of the expectations regarding of IoT concerns with real-world awareness provided to information systems \cite{mattern2010internet}.
 An example is in logistics applications, by the use of RFID, companies can react promptly to relevant physical events, and then manage their processes in a better way,
 typically increasing efficiency and reducing costs. Another expectation of IoT concerns with providing services to the end-users through common objects, in that
 way products will be able to provide recommendations for use and maintenance instructions, supply warranty information or highlight complementary products.\\
@@ -40,105 +40,65 @@ way products will be able to provide recommendations for use and maintenance ins
 % CLOUD COMPUTING
 % ---------------------------------------
 \subsection{Cloud Computing}
-\label{sub:Cloud Computing}
-This section will describe what is the concept of Cloud Computing? What is the most benefits of Cloud Computing?
-How Internet of Things could take advantage of Cloud Computing?\\
+\label{sub:cloud_computing}
+Cloud Computing is a paradigm where its infrastructure is designated as a \textit{``Cloud"} from which its resources are available to businesses and users from anywere in the world on demand \cite{buyya2009cloud}.
+This paradigm enables rapid service delivery in a dinamically scalable and virtualized manner. Actually, clouds are builted on top of modern data centers, that incorporated Infrastructure as a Service (IaaS),
+Platform as a Service (PaaS) and Software as a Service (SaaS) \cite{tsai2010service}, as illustrated on Figure \ref{fig:high_level_cloud_view}. Cloud providers, such as Amazon Web Services\footnote{aws.amazon.com}
+, Google Cloud Platform\footnote{cloud.google.com} and Microsoft Azure\footnote{azure.microsoft.com/} offers these services as utilities in a pay-per-use model in which \textit{QoS} guarantees are offered
+by means of customized Service Level Agreements (SLA's) \cite{vaquero2008break}, that are negotiated between the customers and the Cloud providers.
+% Cloud Computing High-Level view
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{./images/high_level_cloud_view}
+  \caption{Hierarchical View of Cloud Computing.}
+  \label{fig:high_level_cloud_view}
+\end{figure}\\
+Data Centers allocates all the hardware that supports the cloud, they consist of thousand of physical machines that provides redundancy and ensure reliability in case of site failures. By using the IaaS pattern, Cloud Computing is able to virtualize
+resources as computing power, storage and network connectivity of the data centers. These computational resources are provisoned on demand in a form of Virtual Machines (VM's) - \textit{definition} - deployed in a cloud provider data-center \cite{sotomayor2009virtual}.
+Cloud also assists application design, development, application hosting and testing by providing a development platform in order to assist the execution of these tasks, this development as a service pattern is know as PaaS. Another pattern supported by Cloud Computing
+is SaaS. This pattern allows that a single piece of software is transferred to millions of user through a browser \cite{zhang2010cloud}. This pattern is beneficial by both users and developers, the developers only needs to maintain a single program while the users can
+save costs in servers and software.\\
+
+In a global analysis Cloud computing offers several benefits such as high-availability, high-scalability, flexibility, on-demand service provisoning and massive reduction of costs. By converging IoT applications and Cloud computing, it is possible to take advantage
+of all these benefits.
 % ---------------------------------------
-% SMART SPACE
+% SMART PLACE
 % ---------------------------------------
-\subsection{Smart Space}
-\label{sub:Smart Space}
-In the context of this work, a smart space can be defined as an ecosystem composed by smart objects such as RFID tags and sensors, that are able to
+\subsection{Smart Place}
+\label{sub:smart_place}
+In the context of this work, a smart place can be defined as an ecosystem composed by smart objects such as RFID tags and sensors, that are able to
 acquire knowledge about this environment and also to adapt this inhabitants in order to improve their experience in that environment \cite{cook2004smart}.
-In particular, the deployment of IoT applications in a smart space is a challenge today due the heterogenity of the smart objects that are present in a smart space
-and also because the required infrastructure. In order to decrease the complexity of the deployment of an IoT application in a smart space, the Cloud computing paradigm allows to
-virtualize the required physical infrastructure. Nowadays the infrastructure needed by IoT applications can be virtualized by Cloud providers such as Amazon Web Services
-and Google Compute Engine, which helps to gain more flexibility and reduce the costs in the deployment of an IoT application. Therefore, another challenge concerns with the heterogenity
-of a smart space, more precisely the variety of smart objects that can be inside of a given space. Many of these objects uses different communication protocols and drivers to communicate with devices,
-the configuration of this objects must be manually handled, which makes the integration of these objects in the deployment of IoT applications in a smart space a inneficient process.  
-% ----------------------------------------
-% TOSCA
-% ----------------------------------------
-\subsection{TOSCA}
-\label{sub:TOSCA}
-This section will introduce the TOSCA standard and its main components.
+In particular, the deployment of IoT applications in a smart place is a challenge today due the heterogeneity of the smart objects that are present in a smart place
+and also because the required infrastructure. In order to decrease the complexity of the deployment of an IoT application in a smart place, the Cloud computing paradigm allows to
+virtualize the required physical infrastructure. Nowadays the infrastructure needed by IoT applications can be virtualized by Cloud providers, which helps to gain more flexibility and reduce the costs in the deployment of an IoT application. Therefore, another challenge concerns with the heterogeneity
+of a smart place, more precisely the variety of smart objects that can be inside of a given place. Many of these objects uses different communication protocols and drivers to communicate with devices,
+thus the configuration of this objects must be manually handled, which makes the integration of these objects in the deployment of IoT applications in a smart place a inefficient process.
 % -----------------------------------------
-% OPENTOSCA
+% CLOUD ORCHESTRATION
 % -----------------------------------------
-\subsection{OpenTOSCA}
-\label{sub:OpenTOSCA}
-OpenTOSCA is an open-source framework developed by the University of Stuttgart that provides an ecosystem for the OASIS Topology and Orchestration Specification for
-Cloud Applications (TOSCA) standard. OpenTOSCA allows to describe the components and relations of the applications, perform the orchestration and explicitly modeling
-management aspects of the applications. The components of OpenTOSCA will be described with further detail at the following sections.
-% ------------------------------------------
-% OPENTOSCA CONTAINER
-% ------------------------------------------
-\subsubsection{OpenTOSCA Container}
-\label{subs:OpenTOSCA Container}
-OpenTOSCA Container is a runtime supporting imperative processing of TOSCA applications \cite{OpenTOSCA}. Imperative means that deployment and management services is realized through plans.
-OpenTOSCA main tasks consists in management operations, run plans and manage state. At Fig\ref{fig:open_container} the architecture of OpenTOSCA Container is illustrated, as well
-a processing sequence regarding the instantiation of a Cloud application.
-% -------------------------------------------
-% OPENTOSCA ARCHITECTURE
-% -------------------------------------------
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{images/open_container}
-  \caption{OpenTOSCA Architecture Overview and Processing Sequence.}
-  \label{fig:open_container}
-\end{figure}\\
-Requests to the Container API are redirected to the Control module, that is responsible to orchestrate the different components, track their progress and interprets the TOSCA application.
-The Core module provides common services to other components, e. g., managing data or validating XML. The Implementation Artifact Engine is responsible to run the Implementation Artifact
-contained in the CSAR in order to make them available for plans, usually these Implementation Artifacts provides management operations of nodes and relationships. The Plan Engine is responsible
-to process the management plans contained in CSARs, they also employs plugins to support different workflow languages, usually BPMN or BPEL, and their runtime environments. The portability of
-management plans between different environments and runtimes is ensured by the Plan Portability API. Plans only provides an abstract description of the required service, it is responsibility of
-the plan plugin to bind the services invoked by the plans to the endpoint of the management operation before it deploys the plan to the respective workflow runtime.
-% --------------------------------------------
-% WINERY
-% --------------------------------------------
-\subsubsection{Winery}
-\label{subs:Winery}
-Winery is web-based tool that enable modeling of TOSCA-based applications and creation CSARs in a tailored environment \cite{Winery}. Its main features are type management and graphical topology modeling where the defined types
-are instantiated and interlinked. Winery architecture is composed essentially of three parts, the Topology Modeller, the Element Manager, and the Repository, where all data is stored, as illustrated in Figure~\ref{fig:winery}.
-% --------------------------------------------
-% WINERY ARCHITECTURE
-% --------------------------------------------
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{images/winery}
-  \caption{Winery Architecture.}
-  \label{fig:winery}
-\end{figure}\\
-The Topology Modeller makes modeling of application easier by depicting element and combinations thereof visually, that allows to architects, developers and operators to understand the and model applications without the need for
-technical knowledge of type implementations and configurations, that is possible because the Topology Modeller handle only with the TOSCA meta models that are directly related to visual topology modeling, such as the node templates,
-relationship templates, deployment artifacts, requirements and policy. In the other hand the meta models that are used to define semantics and configurations such as types, implementations and policy templates are only created, modified
-and deleted exclusively by the Element Manager. By accessing the Element Manager, technical experts to provide and configure node types and relationships.
-% --------------------------------------------
-% VINOTHEK
-% --------------------------------------------
-\subsubsection{Vinothek}
-\label{subs:Vinothek}
-Vinothek \cite{breitenbucher2014vinothek} is a web-based Self-Service portal that allows end-users to provision new TOSCA-based application instances through a simple graphical interface, as illustrated in Figure~\ref{fig:vinothek}.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.5\textwidth]{images/vinothek}
-  \caption{Vinothek Self-Service Portal}
-  \label{fig:vinothek}
-\end{figure}\\
-Vinothek abstracts the technical details and differences of different TOSCA Runtimes and provides a single interface to provision the applications. To perform the provision of the applications, Vinothek communicates with the server that
-delegates calls to the \textit{TOSCA Application Lifecycle Manager} via a \textit{RESTFUL API}, as illustrated on Figure~\ref{fig:vinothek_architecture}.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.5\textwidth]{images/vinothek_architecture}
-  \caption{Vinothek Self-Service Portal Architecture}
-  \label{fig:vinothek_architecture}
-\end{figure}\\
-Currently the \textit{Application Lifecycle Manager} only supports dealing with the provisioning of applications, in the future it will support dealing with management and termination of applications. Another component of Vinothek is the
-\textit{TOSCA Runtime Integration Layer} that is responsible to provide the mechanisms to plug-in TOSCA Runtimes. Although Vinothek facilitates the provisioning of applications, there are key mechanisms identified by the authors that currently Vinothek
-does not provide and are important in the application lifecycle such as performing management functionalities and processing policies to define security and other non-functional requirements.
+\subsection{Cloud Orchestration}
+\label{sub:cloud_orchestration}
+Due the heterogeneity of IoT applications infrastructure service management tasks such as deployment, driver installation and gateway configuration are still handled manually in a particular way for each case.
+In order to reduce the complexity of this tasks, Cloud Orchestration tools can be used to automate these management tasks. The process of orchestration woven the software components of the application
+in a one piece that can be managed more effectively, in order to ensure a smooth and fast service delivery. Cloud Orchestration helps to take advantage of the full benefits of Cloud computing by providing features that can include:
+% Orchestration Features
+\begin{itemize}
+  \item Simplify, automate and optimize service deployment by integrating cloud capabilities across heterogeneous environments.
+  \item Automated high-scale provisioning and de-provisioning of resources with policy-based tools.
+  \item Real-time monitoring of physical and virtual Cloud resources.
+  \item Selection of Cloud services such as storage and hosting, through a self-service portal.
+  \item Real-time monitoring of usage and accounting chargeback capabilities to track and optimize system usage.
+\end{itemize}
+In addition, orchestration allows to reduce significantly the costs related with labor and resources, since that manual intervention and management of varied IT services and resources are not needed. Actually several tools to
+performing Cloud Orchestration are available in the market such as IBM Cloud Orchestrator\footnote{ibm.com/software/products/en/ibm-cloud-orchestrator}, HP Operations Orchestration\footnote{hp.com/us/en/software-solutions/operations-orchestration-it-process-automation}
+and GigasSpaces Cloudify\footnote{gigaspaces.com/cloudify-cloud-orchestration/overview} and some open-source tools like Ubuntu Juju\footnote{juju.ubuntu.com} and OpenTOSCA\footnote{iaas.uni-stuttgart.de/OpenTOSCA/indexE.php}.
 % --------------------------------------------
 % FOSSTRAK EPCIS
 % --------------------------------------------
-\subsection{Fosstrak EPCIS}
-\label{sub:Fosstrak EPCIS}
-This sections will describe what is the Fosstrak EPCIS framework. How this framework is relationed with IoT applications?
+\subsection{Fosstrak}
+\label{sub:fosstrak}
+Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/} that implements the EPC (Electronic Product Code) Network specifications. Fosstrak is composed by modules that allows to store and query about events captured
+by a RFID reader, convert the EPC identifiers to others EPC representations, filter and collect the data from RFID readers and to configure and manage RFID readers. These modules provides an entire RFID infrastructure that accelerates the
+development of IoT applications and allows to users to gain hands-on experience with the EPC Network.\\
+
+The rest of the paper is organized in the following way ...
