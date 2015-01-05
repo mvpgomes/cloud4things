@@ -10,6 +10,16 @@ client and server installations, setups, or software updates. As most of the com
 in Cloud computing, integrating these paradigms in a Cloud-based model results in a solution with more flexibility of implementation,
 high scalability and high availability, and with a reduced upfront investment.\\
 
+% --------------------------------------------
+% FOSSTRAK EPCIS
+% --------------------------------------------
+\subsubsection{Fosstrak}
+\label{subs:fosstrak}
+The capture of events will be performed by Fosstrak. Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/} that implements the
+EPC (Electronic Product Code) Network specifications. Fosstrak is composed by modules that allows to store and query about events captured by a RFID reader,
+convert the EPC identifiers to others EPC representations, filter and collect the data from RFID readers and to configure and manage RFID readers. These modules
+provides an entire RFID infrastructure that accelerates the development of IoT applications and allows to users to gain hands-on experience with the EPC Network.\\
+
 \subsection{Cloud Computing and Internet of Things}
 \label{sub:Cloud Computing and Internet of Things}
 In RFID-based IoT applications, Guinard at el. \cite{guinard2011cloud} point out that the deployment of RFID applications are cost-intensive mostly
@@ -47,7 +57,7 @@ This middleware encapsulates sets of fundamental services for executing the user
 service discovery, process generation, process execution, and monitoring. This first implementation also demonstrates that this middleware as a service
 releases the burden of costs and risks for users and providers in using and managing those components.\\
 
-\subsection{Automated Deployment of IoT Applications}
+\subsection{Automated Deployment of Cloud Applications}
 \label{sub:Automated Deployment of IoT Applications}
 The effort put in the research to integrate the paradigms of Cloud Computing and Internet of Things resulted in a essential contribution, but there are several
 issues regarding to the integration between Cloud Computing and Internet of Things that must be addressed. In particular, due of the heterogeneity of the IoT
@@ -86,18 +96,20 @@ DevOps automation processes. IBM Cloud Orchestrator provides integrated tooling 
 
 \subsection{Service Level Agreements in IoT Applications}
 \label{sub:subsection label}
-In order to guarantee an acceptable \textit{QoS} for a Cloud applications, Service-Level Agreements (SLA's) must be defined by the customers in order to monitor the performance of the
-applications. Regarding Cloud-Based IoT applications, SLA's can be defined with two purposes, to ensure that the events are been correctly captured and to ensure that the available resources
-are sufficient for the application runs with the desired performance.\\
+Initially the objective of this work was focused in improve the deployment operation. However, during the research of this work it became clear that the automation of the deployment of IoT applications
+in smart places was an area that has a notorious progress in the developed work, standing out the development of Cloud Orchestration tools based on TOSCA. Therefore, it was realized that the focus of
+this work could be redirected to explore a field that still needs large research effort and is fundamental for the IoT success \cite{atzori2010internet}, \textit{QoS} support.
+In order to guarantee an acceptable \textit{QoS} for Cloud-based IoT applications, SLAs must be negotiated between service customers and services providers in order to guarantee an acceptable \textit{QoS}
+for the service. Recently, \textit{QoS} support has been a field where researchers are proposing new approches regarding policy-aware IoT applications based on TOSCA.\\
 
-Waizenegger at el. \cite{waizenegger2013policy4tosca} proposed a mechanism to demonstrate how non-functional requirements are defined in TOSCA using policies. TOSCA allows to specify non-functional
-requriements like cost, security, and environmental issues. However, TOSCA lacks detailed description of how to apply, design, and implement policies. This paper proposes two mechanisms for processing
-policies during the deployment and management of Cloud services in TOSCA. The policies are described according a taxonomy were a Cloud service policy is a tuple of elements that describe its behavior and effect.
-To perform the implementation of this policy-specific logic two approches was proposed, an Implementation Artifact Based Policy Enforcement (IA-Approach) and a Plan-Based Policy Enforcement (P-Approach).
+Waizenegger at el. \cite{waizenegger2013policy4tosca} proposed a mechanism to demonstrate how non-functional requirements are defined in TOSCA using policies. TOSCA allows the specification of non-functional
+requirements like cost, security, and environmental issues. However, TOSCA lacks detailed description of how to apply, design, and implement policies. This paper proposes two mechanisms for processing
+policies during the deployment and management of Cloud services in TOSCA. The policies are described according a taxonomy where a Cloud service policy is a tuple of elements that describe its behavior and effect.
+To perform the implementation of this policy-specific logic two approches was proposed, an Implementation Artifact Based Policy Enforcement (IA-Approach) and a Plan-Based Policy Enforcement (P-Approach) \cite{waizenegger2013policy4tosca}.
 In the IA-Approach the existing Implementation Artifacts - responsible to perform service management operations - are extended to support policy enforcement implementations, thus these artifacts are comprised
 of two alternative implementations for each service management operation: one that is policy enforcing and one that is not. In the P-Approach the policies are enforced in an imperative way, for each policy the plan
-execute the appropriate steps to enforcing the policy. Altough both of these approaches allows the enforcement of policies, the approach used for realizing this should be chosen with caution. The IA-Approach is
-more suitable for less complex scenarios and the policies implemented with this apporach can be reused very easily. On the other hand, the enforcement of policies in more complex scenarios should be performed according
+execute the appropriate steps to enforcing the policy. Although both of these approaches allow the enforcement of policies, the approach used for realizing this should be chosen with caution. The IA-Approach is
+more suitable for less complex scenarios and the policies implemented with this approach can be reused very easily. On the other hand, the enforcement of policies in more complex scenarios should be performed according
 the P-Approach, that allows to have a global control of the triggered enforcement actions.\\
 
 Breitenb\"{u}cher et al. \cite{breitenbucher2014policy} proposed an approach that enables to automate the provisioning and management of composite Cloud applications in compliance with non-functional security requirements
@@ -106,4 +118,9 @@ security requirements to the management tasks that must enforce them. This paper
 The automation of provisioning and management tasks are performed by Policy-aware Management Planlets, that executes this tasks considering the Annotation Policies attached to each operation. The Framework also allows the
 Cloud providers and application developers to specify their own policy-aware management logic in a flexible and reusable manner independently from individual applications. The management logic can be defined in two ways,
 by applying Automated Management Patterns or by manually creating Desired Application State Models. The Framework was evaluated in terms of feasibility, performance, economics, limitations and extensibility. To validate
-the concept technically, a prototype was sucessfully implemented based on a previous implementantion of the Management Planlet Framework.
+the concept technically, a prototype was successfully implemented based on a previous implementation of the Management Planlet Framework.\\
+
+Colocar LoHiFramework 
+
+An important observation of the realized work until now is that the developed approaches to enable policy-aware IoT applications are based in low-level policies. Thus, in the interest to add a new contribute to this field, the
+objective of this work is focused in develop an approach where these policy-aware applications are based in high-level business rules.

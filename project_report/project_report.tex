@@ -1,12 +1,18 @@
 \documentclass{../llncs2e/llncs}
 \usepackage{inputenc}
 \usepackage{graphicx}
+\usepackage{caption}
 % make a proper TOC despite llncs
 \setcounter{tocdepth}{2}
 \makeatletter
 \renewcommand*\l@author[2]{}
 \renewcommand*\l@title[2]{}
 \makeatletter
+\newcommand*\NewPage{\newpage\null\thispagestyle{empty}\newpage}
+% page numbering
+\pagestyle{plain}
+% change the spacing betwwen the caption and the table
+\captionsetup[table]{skip=10pt}
 % ------------------------------------------------------
 % CLOUD OF THINGS DOCUMENT
 % ------------------------------------------------------
@@ -14,7 +20,7 @@
 % ------------------------------------------------------
 % MASTER THESIS PROJECT TITLE
 % ------------------------------------------------------
-\title{\vspace*{2in}\Huge Cloud of Things\vspace{2in}}
+\title{\vspace*{2in}\Huge Cloud4Things\vspace{2in}}
 % ------------------------------------------------------
 % AUTHOR
 % --------------------------------------------------------
@@ -22,17 +28,26 @@
 % ------------------------------------------------------
 % INSTITUTION
 % ------------------------------------------------------
-\institute{\large Instituto Superior T\'ecnico\\
+\institute{\large Instituto Superior T\'ecnico, Universidade de Lisboa\\
 \email{marcus.paulino.gomes@tecnico.ulisboa.pt}}
 \maketitle
+\NewPage
 \tableofcontents
+\NewPage
 \include{sections/abstract}
+\NewPage
 \include{sections/introduction}
+\NewPage
 \include{sections/objectives}
+\NewPage
 \include{sections/related_work}
+\NewPage
 \include{sections/solution_architecture}
+\NewPage
 \include{sections/evaluation_methodology}
+\NewPage
 \include{sections/conclusion}
+\NewPage
 \appendix
 \include{sections/appendix}
 \bibliographystyle{ieeetr}
