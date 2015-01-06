@@ -1,27 +1,5 @@
 \section{Solution Architecture}
 \label{sec:solution_architecture}
-A typical scenario for an IoT application consists of a smart space that contains several smart objects and all
-the infrastructure required to support this application, namely RFID tags, sensors, readers and servers, as
-illustrated in Figure \ref{fig:smart-space}. This scenario presents several issues regarding the deployment
-of the application, the low scalability, the costs of infrastructure and the maintenance of the same.
-% Typical Smart Space Scenario
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{./images/smart-space}
-  \caption{Typical smart space scenario, using RFID technology.}
-  \label{fig:smart-space}
-\end{figure}\\
-By converging the IoT applications with the Cloud Computing paradigm the objective is simplify this scenario by
-leveraging the required infrastructure by these applications to the Cloud providers, as illustrated in
-Figure \ref{fig:smart-space-cloud}, allowing to take advantage of the benefits offered by Cloud computing
-(as referenced in \textbf{Section \ref{sub:cloud_computing}}).
-% Cloud-based Smart Space Scenario
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{./images/smart-space-cloud}
-  \caption{Cloud-based smart space.}
-  \label{fig:smart-space-cloud}
-\end{figure}\\
 % -----------------------------------------------
 % STATE OF ART
 % -----------------------------------------------
@@ -35,7 +13,7 @@ required manual intervention. The deployment of Cloud-based IoT applications usu
 through IT automation tools, such as Chef\footnote{http://www.chef.io} and Puppet\footnote{http://www.puppetlabs.com}.
 These automate the deployment of applications. However, the components of the application and the relation between
 themselves must be specified manually, which requires considerable manual work and expertise by the person that
-is performing the deployment. The deployment process of these solutions is not the only existing  issue.
+is performing the deployment. The deployment process of these solutions is not the only existing issue.
 Monitoring the application life-cycle is a task that requires a lot of effort and expertise by the system
 administrators.\\
 
@@ -50,7 +28,7 @@ into scripts that latter are executed using IT automation tools such as Puppet a
 % -----------------------------------------------
 \subsection{Cloud of Things Architecture}
 \label{sub:cloud_of_things_architecture}
-The main objective of this Cloud4Things proposal is  to decrease the complexity of deployment and management
+The main objective of this Cloud4Things proposal is to atu the complexity of deployment and management
 of IoT applications. To achieve this objective, Cloud of Things must enable non-technical users - the business
 managers - to perform the monitoring of Cloud-based IoT applications as well defining Service Level Agreements
 in a high-level way. In order execute these tasks, users must be able to interact with the application that

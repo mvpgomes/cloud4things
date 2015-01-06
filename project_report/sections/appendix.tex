@@ -17,3 +17,37 @@ In this section we propose a schedule that estimates the required time in future
   \end{tabular}
   \caption {Milestones and corresponding dates for the work of Master Thesis.}
 \end{table}
+
+
+\subsection{RFID Event Handling Evaluation}
+\label{sub:rfid_evaluation}
+RFID has its particular characteristics, which means that traditional event processing systems
+cannot support them. Furthermore, RFID events are temporal constrained \cite{wang2006bridging}.
+Temporal constraints as the time interval between two events and the time interval for a single
+event are critical to event detection. In order to assure the correctness of these received events,
+some conditions must be defined regarding the time interval between the events. Temporal constraints
+are not the only cause that can compromise the correctness of received the RFID events such as
+collisions on the air interface, tag detuning and tag misalignement \cite{floerkemeier2004issues}.\\
+
+The metric used to evaluate the RFID performance is proposed by Correia \cite{Correia:Thesis:2014}.
+The \textit{PresenceRate} is a metric that takes in account the reported time of reading a RFID tag.
+This metric measures the ratio between the time that a given object spent in a given area and the
+expected spent time. Correia \cite{Correia:Thesis:2014} defined that the expected behaviour of this
+metric is given by the following values:
+\begin{itemize}
+  \item \textit{PresenceRate = 0}: the object was not detected by the system;
+  \item \textit{0 $<$ PresenceRate $<$ 1}: there are false negative readings and they were reported;
+  \item \textit{PresenceRate = 1}: ideal scenario where the reported time is exactly the same as expected;
+  \item \textit{PresenceRate $>$ 1}: there are false positive readings over-estimating the time
+  spent by the object in the read area;
+\end{itemize}
+
+In order to perform a general evaluation of the system, we will establish a relation
+between the \textit{PresenceRate} and the metrics of Cloud performance. The scenario where
+the \textit{PresenceRate} is larger then 1 can be used to determine if the system is overloaded.
+In this scenario the metrics of \textit{PresenceRate} and \textit{SystemLoad} must be compared to
+verify this condition. If the \textit{SystemLoad} value is equal to 1, it means that the system
+is operating in it maximum capacity and the amount of resources available is not enough to
+process all the requests. Otherwise this comparison can determine if the system is overpowered.
+If the \textit{PresenceRate} is equal to 1 and the \textit{SystemLoad} is close to 0, it means that the
+available resources are more than the required to process all the requests.
