@@ -61,7 +61,7 @@ Therefore, another challenge concerns the heterogeneity of a smart place, more p
 smart objects that can be inside of a given place. Many of these objects uses different communication
 protocols and drivers to communicate with devices, thus the configuration of this objects
 must be manually handled, which makes the integration of these objects in the deployment of
-IoT applications in a smart place an inefficient process.\\
+IoT applications in a smart place an inefficient process.
 % -------------------------------------
 % INTERNET OF THINGS
 % -------------------------------------
@@ -104,7 +104,6 @@ awareness provided to information systems \cite{mattern2010internet}. An example
 applications, by the use of RFID, companies can react promptly to relevant physical events,
 and then manage their processes in a better way, typically increasing efficiency and
 reducing costs.
-
 % ---------------------------------------
 % CLOUD COMPUTING
 % ---------------------------------------
@@ -119,9 +118,8 @@ and Software as a Service (SaaS) \cite{tsai2010service}, as illustrated on Figur
 
 Cloud providers, such as Amazon Web Services\footnote{http://www.aws.amazon.com},
 Google Cloud Platform\footnote{http://cloud.google.com} and Microsoft Azure\footnote{http://www.azure.microsoft.com/}
-offer these services as utilities in a pay-per-use model in which Quality of Service \textit{QoS}
-guarantees are offered by means of customized Service Level Agreements (SLAs) \cite{vaquero2008break},
-that are negotiated between the customers and the Cloud providers.
+offer these services as utilities in a pay-per-use model in which the customer can
+indicate the desired service level that is delivered by the providers.
 % Cloud Computing High-Level View
 \begin{figure}[h!]
   \centering
@@ -175,19 +173,40 @@ in the market such as IBM Cloud Orchestrator\footnote{http://www.ibm.com/softwar
 HP Operations Orchestration\footnote{http://www8.hp.com/us/en/software-solutions/operations-orchestration-it-process-automation}
 and GigaSpaces Cloudify\footnote{http://www.gigaspaces.com/cloudify-cloud-orchestration/overview}
 and some open-source tools like Ubuntu Juju\footnote{http://www.juju.ubuntu.com}
-and OpenTOSCA\footnote{http://www.iaas.uni-stuttgart.de/OpenTOSCA/indexE.php}.\\
+and OpenTOSCA\footnote{http://www.iaas.uni-stuttgart.de/OpenTOSCA/indexE.php}.
 % -----------------------------------------
-% SMART SPACES ARCHITECTURE
+% Quality of Service and Cloud applications
+% -----------------------------------------
+\subsection{Quality of Service and Cloud applications}
+\label{sub:qos_cloud}
+As mentioned before, customers can define the service level that is delivered by
+Cloud providers. The desired service level is specified by customers through of
+Quality of Service \textit{QoS} parameters \cite{vaquero2008break}. QoS is a concept that
+encompasses a number of nonfunctional properties such as availability, reliability, price
+and reputation \cite{o2002s}.\\
+
+To guarantee the desired service level, Cloud providers need to consider and meet
+these QoS parameters for each costumer \cite{vaquero2008break}. To achieve that, Cloud
+providers establish a bilateral agreement with the customers that is known as Service Level
+Agreement (SLA). The SLA defines the terms and conditions of service quality that a
+Cloud provider delivers to service requesters based on the desired \textit{QoS} \cite{zeng2004qos}.\\
+
+The definition of these SLAs establish a contract between the Cloud provider and the customer.
+This contract contains the specification of the QoS parameters agreed by all parties, as
+well the penalties for meeting and violating the expectations \cite{vaquero2008break}.
+% -----------------------------------------
+% SMART PLACES ARCHITECTURE
 % -----------------------------------------
 \subsection{Smart Places Architecture}
 \label{sub:smart_places_architecture}
 As described before, a smart place is composed by several smart objects that generates
 data that is processed by the IoT application. However, to process all that data an
 infrastructure is required to support the IoT application. These infrastructure is composed
-by RFID tags, sensors, readers and servers, as illustrated in Figure \ref{fig:smart-space}.
+by RFID tags, sensors, readers and servers, as illustrated in Figure \ref{fig:smart-place}.
 Although this infrastructure can support the IoT application in the smart place, this
 architecture presents several issues regarding the deployment of the application, the low scalability,
 the costs of infrastructure and the maintenance of the same.
+\pagebreak
 % Typical Smart Space Scenario
 \begin{figure}[h!]
   \centering
@@ -197,7 +216,7 @@ the costs of infrastructure and the maintenance of the same.
 \end{figure}\\
 By converging the IoT applications with the Cloud computing paradigm the objective is simplify the
 smart space architecture by leveraging the required infrastructure by these applications to
-the Cloud providers, as illustrated in Figure \ref{fig:smart-space-cloud}, allowing to take
+the Cloud providers, as illustrated in Figure \ref{fig:smart-place-cloud}, allowing to take
 advantage of the benefits offered by Cloud computing (as referenced in \textbf{Section \ref{sub:cloud_computing}}).
 % Cloud-based Smart Space Scenario
 \begin{figure}
@@ -210,6 +229,18 @@ The convergence between the IoT applications and the Cloud allow to simplify the
 architecture of the smart place in a significantly way. However, as earlier mentioned
 these solution still presents some issues to be resolved, namely the deployment of
 the application.
+% --------------------------------------------
+% FOSSTRAK
+% --------------------------------------------
+\subsection{Fosstrak}
+\label{sub:fosstrak}
+Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/}
+that implements the EPC (Electronic Product Code) Network specifications. Fosstrak is composed
+by modules that allows to store and query about events captured by a RFID reader, convert the
+EPC identifiers to others EPC representations, filter and collect the data from RFID readers and
+to configure and manage RFID readers. These modules provides an entire RFID infrastructure that
+accelerates the development of IoT applications and allows to users to gain hands-on experience
+with the EPC Network.\\
 % -----------------------------------------
 % OVERVIEW
 % -----------------------------------------
