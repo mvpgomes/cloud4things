@@ -49,19 +49,19 @@ the tagged objects. In the case of RFID tagged objects, the EPC Framework provid
 support to perform the traceability of objects, as well the awareness of its status and
 current location \cite{atzori2010internet}.\\
 
-In particular, the deployment of IoT applications in the smart warehouse is a challenge today
-due the heterogeneity of the smart objects that are present in a smart place and also
+In particular, the deployment of an IoT application in the smart warehouse is a challenge today
+due the heterogeneity of the smart objects that are present in the warehouse and also
 because the required infrastructure. In order to decrease the complexity of the deployment
-of an IoT application in a smart place, the Cloud computing paradigm allows the virtualization
+of an IoT application in a smart warehouse, the Cloud computing paradigm allows the virtualization
 of the required physical infrastructure. Nowadays the server infrastructure needed by IoT
 applications can be virtualized by Cloud providers, which gives more flexibility and reduces
 the costs in the deployment of an IoT application.\\
 
-Therefore, another challenge concerns the heterogeneity of a smart place, more precisely the variety of
-smart objects that can be inside of a given place. Many of these objects uses different communication
-protocols and drivers to communicate with devices, thus the configuration of this objects
-must be manually handled, which makes the integration of these objects in the deployment of
-IoT applications in a smart place an inefficient process.
+Therefore, another challenge concerns the heterogeneity of a smart waehouse, more precisely
+the variety of smart objects that can be inside of a given warehouse. Many of these objects uses
+different communication protocols and drivers to communicate with devices, thus the configuration
+of this objects must be manually handled, which makes the integration of these objects in
+the deployment of IoT applications in a smart warehouse an inefficient process.
 % -------------------------------------
 % INTERNET OF THINGS
 % -------------------------------------
@@ -177,7 +177,7 @@ and OpenTOSCA\footnote{http://www.iaas.uni-stuttgart.de/OpenTOSCA/indexE.php}.
 % -----------------------------------------
 % Quality of Service and Cloud applications
 % -----------------------------------------
-\subsection{Quality of Service and Cloud applications}
+\subsection{Quality of Service and Cloud Applications}
 \label{sub:qos_cloud}
 As mentioned before, customers can define the service level that is delivered by
 Cloud providers. The desired service level is specified by customers through of
@@ -235,12 +235,15 @@ the application.
 \subsection{Fosstrak}
 \label{sub:fosstrak}
 Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/}
-that implements the EPC (Electronic Product Code) Network specifications. Fosstrak is composed
-by modules that allows to store and query about events captured by a RFID reader, convert the
-EPC identifiers to others EPC representations, filter and collect the data from RFID readers and
-to configure and manage RFID readers. These modules provides an entire RFID infrastructure that
-accelerates the development of IoT applications and allows to users to gain hands-on experience
-with the EPC Network.\\
+that implements the GS1 EPC (Electronic Product Code) Network ALE, IS and LLRP standards.\\
+
+The EPC Application Level Events (ALE) provides interfaces to filter and collect data.
+The EPC Information Services (IS) provides interfaces to interpret, store persistently
+and query captured EPC event data. The EPC Low-Level Reader Protocol (LLRP) provides an
+interface to configure and control RFID readers.\\
+
+Fosstrak provides an entire RFID infrastructure that accelerates the development of
+IoT applications and allows to users to gain hands-on experience with the EPC Network.
 % -----------------------------------------
 % OVERVIEW
 % -----------------------------------------
