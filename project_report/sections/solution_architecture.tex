@@ -18,23 +18,45 @@ Monitoring the application life-cycle is a task that requires a lot of effort an
 administrators.\\
 
 In order to solve this problem, the adopted approach relies on using Cloud Orchestrator tools perform the
-deployment of these applications. As mentioned in \textbf{Subsection \ref{subs:cloud_orchestration}},
+deployment of these applications. As mentioned in \textbf{\ref{subs:cloud_orchestration}},
 these tools allows the specification of the application components and their relations in a high-level perspective
 and to execute the management tasks required by the application during its life-cycle. As a matter of fact,
 in a low-level perspective cloud orchestration tools express the high-level perspective defined by the user
 into scripts that latter are executed using IT automation tools such as Puppet and Chef.
 % -----------------------------------------------
-% CLOUD OF THINGS ARCHITECTURE
+% CLOUD4THINGS ARCHITECTURE
 % -----------------------------------------------
-\subsection{Cloud of Things Architecture}
-\label{sub:cloud_of_things_architecture}
-The main objective of this Cloud4Things proposal is to atu the complexity of deployment and management
-of IoT applications. To achieve this objective, Cloud of Things must enable non-technical users - the business
-managers - to perform the monitoring of Cloud-based IoT applications as well defining Service Level Agreements
-in a high-level way. In order execute these tasks, users must be able to interact with the application that
-is running at the cloud in order to observe their state and to apply some decisions based on the performance
-of the application. Thus, Cloud4Things must provide a service, e.g a GUI, that allows the users to perform
-such actions. In Figure \ref{fig:cloud_of_things_architecture} we present the proposed Cloud4Things architecture.
+\subsection{Cloud4Things Architecture}
+\label{sub:cloud4things_architecture}
+The architecture of Cloud4Things is based in the perspectives that are
+used to describe an information system according the Zachman framework \cite{}.
+In this framework Zachman defines the \textit{Conceptual}, \textit{Logical} and
+\textit{Technological} perspectives that allows to describe an information system
+from a more abstract to a more detailed view.
+\subsubsection{Conceptual Architecture}
+\label{subs:conceptual_architecture}
+The \textit{Conceptual} architecture describe Cloud4Things in perspective of
+the business entities and processes that compose the system and how they are related,
+as illustrated in figure \ref{fig:conceptual_architecture}.
+% Cloud4Things conceptual architecture
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{./images/conceptual-architecture}
+  \caption{Cloud4Things Conceptual architecture.}
+  \label{fig:conceptual_architecture}
+\end{figure}\\
+The business entities that composes Cloud4Things are the smart smart place and the
+Cloud provider. The smart place uses an Internet connection to access the resources
+that are allocated in the Cloud infrastructure. The Cloud providers allow the smart
+places to perform real-time monitoring of the used resources.    
+\subsubsection{Logical Architecture}
+\label{subs:logical_architecture}
+
+\subsubsection{Technological Architecture}
+\label{subs:technological_architecture}
+
+\subsubsection{Monitor Agent Architecture}
+\label{subs:monitoring_srchitecture}
 \vspace{1in}
 % Cloud of Things Architecture
 \begin{figure}[h!]
@@ -42,7 +64,7 @@ such actions. In Figure \ref{fig:cloud_of_things_architecture} we present the pr
   \includegraphics[width=.8\textwidth]{./images/cloud-of-things-architecture}
   \caption{Cloud of Things Architecture.}
   \label{fig:cloud_of_things_architecture}
-\end{figure}\\
+\end{figure}
 The presented architecture is based on the LoM2HiS Framework \cite{emeakaroha2010low} architecture. In this
 architecture the \textit{Services} component and the \textit{Run-time Monitor} represents the application layer
 where services are deployed using a Web Service container. The \textit{Run-time Monitor} is responsible to monitor
