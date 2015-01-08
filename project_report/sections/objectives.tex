@@ -22,42 +22,36 @@ the performance of the application in the smart place is performed to determine 
 application is running  with the desired \textit{QoS} (step 5). The final stage that an IoT
 application can reach is its undeployment, which means that the smart place is deactivated (step 6).\\
 
-- Falar do objectivo principal : automated deployment\\
-- Falar do objectivo secundario : application monitoring\\
+The main objective of Cloud4Things is to decrease the complexity of the deployment of Cloud-based
+IoT applications in a smart place. Usually the deployment of such applications require that
+all the components of the application are manually configured and installed. In order
+to reduce the complexity of this process, Cloud4Things will automate the deployment process
+of Cloud-based IoT applications. To automate the deployment process of the applications
+Cloud4Things will rely in CLoud Orchestrators tools to execute such operation. These
+tools allows the specification of the components and the relation between them in a
+high-level abstraction, provisioning the necessary resources at the Cloud in a effective
+way and monitoring the application during its life-cycle.\\
 
-A very important point is to assure that the smart place is working according with the
-desired Quality of Service (QoS). QoS is a concept that encompasses a number of nonfunctional
-properties such as availability, reliability, price and reputation \cite{o2002s}.
-Thus in order to monitoring the performance of the application in the smart place (step 5),
-these properties must be agreed between the customer and the Cloud provider.
-This agreement between the customer and the service provider is know as Service Level Agreement (SLA).
-The SLA defines the terms and conditions of service quality that a service provider delivers
-to service requesters based on the desired \textit{QoS} \cite{zeng2004qos}. The final stage
-that an IoT application can reach is its undeployment, which means that the smart place is deactivated (step 6).\\
+However, orchestration tools do not solve all problems. In particular, RFID applications require a
+software stack that usually is composed by a database, a web server and the software components
+that implements the EPC Network standards. But these tools lack the integration of the EPC
+Network software with the other components. Thus, to support the deployment of IoT applications
+that are based in RFID technologies, the orchestration tool that will perform the deployment
+of the application need to be extend to support the integration of the EPC software components
+with the other software components that are required by the application.
+% ------------------------------------------
+% SUB-OBJECTIVES
+% ------------------------------------------
+\subsection{Sub Objectives}
+\label{sub:sub_objectives}
+Another aspect that is important is guarantee that Cloud providers are delivering
+the desired service level. As main sub objective, Cloud4Things will allow to
+define the \textit{QoS} parameters that specify the desired service level through
+the orchestration tool. These \textit{QoS} parameters will be expressed in terms of
+SLAs that will be negotiated between the Cloud provider and the customer.\\
 
-The objective of this work is to decrease the complexity of deployment and management
-of Cloud-based IoT applications in a smart place. Usually the deployment of such applications
-is performed by a technician that manually configures and installs the components of the application.
-In order to reduce the complexity of this process, deployment process of the application will be automated.
-That is achieved by performing the deployment through Cloud Orchestration tools, that allows the specification
-of the components and the relations between them in a high-level perspective and also provisioning
-the necessary resources at the Cloud in a effective way. These tools also allows the monitoring
-of applications during its life-cycle. However, these tools do not solve all problems.
-In particular, IoT applications require a software stack that usually is composed by a database,
-a web server and the event processing software. But orchestration tools normally lack the
-integration of the event processing software with the other components. Thus, to support the
-integration of such components these tools must be extend to support the event processing software.\\
-
-Managing IoT applications through an Orchestrator tool requires an elevated technical knowledge.
-To allow that non-technical users can perform the managing operations having in perspective
-the high-level business rules of the smart place, the main objective of this work is to permit
-that non-technical users can perform the management of smart places only having in mind the business
-rules of that particular place. To achieve that, these high-level rules must be translated to a more
-low-level rules that can be expressed in terms of non-functional requirements, SLAs, that can be
-used to estimate the resources needed by the application in order to have an acceptable \textit{QoS}.
-In the other hand, to allow those non-technical users to monitor the smart place, these SLAs must
-be translated to high-level rules that can be expressed in terms of business rules of a given smart place.
-For instance, if a smart place has a flow of people of 500 persons per day, that business rule will be
-translated to a SLA that express the amount of storage and bandwidth required to ensure the \textit{QoS}
-of the application. Furthermore, by monitoring the service level offered by the Cloud providers it will be
-possible to determine if the Cloud is overloaded with the amount of data generated by the smart place or not.
+The definition of these \textit{QoS} parameters will allow the monitoring the performance
+of the application and verify if the delivered service level meet with the expectations.
+In order to monitoring the performance of the application, Cloud4Things will need to
+monitor the service delivered by Cloud providers and determine if the level of this
+service guarantee an acceptable \textit{QoS} for the application.

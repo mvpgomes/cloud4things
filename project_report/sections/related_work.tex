@@ -7,7 +7,6 @@ installations, setups, or software updates. As most of the computing resources a
 on the Internet on servers in Cloud computing, integrating these paradigms in a Cloud-based model
 results in a solution with more flexibility of implementation, high scalability and high availability,
 and with a reduced upfront investment.\\
-
 % ----------------------------------------
 % INTERNET OF THINGS AND CLOUD COMPUTING
 % ----------------------------------------
@@ -26,23 +25,23 @@ clothing stores to track the products. In this scenario they applied the Utility
 to the software stack required by the application using the AWS platform and the EC2 service.\\
 
 % ----------------------------------
-% IMPLEMENTING THE CLOUD OF THINGS
+% ENABLING THE CLOUD OF THINGS
 % ----------------------------------
 Distefano \cite{distefano2012enabling} et al. proposed a high-level modular architecture to implement the
 Cloud of Things. According to the authors, things not only can be discovered and aggregated, but also
 provided as a service, dynamically, applying the Cloud provisioning model to satisfy the agreed
-user requirements and therefore establishing Things as a Service providers. The ``\textit{Things as a Service}'' (TaaS)
-paradigm envisages new scenarios and innovative, pervasive, value-added applications,
+user requirements and therefore establishing ``Things as a Service'' providers. The ``\textit{Things as a Service}''
+(TaaS) paradigm envisages new scenarios and innovative, pervasive, value-added applications,
 disclosing the Cloud of Things world to customers and providers as well, thus enabling an open
 marketplace of ``things". To address these issues, an ad-hoc infrastructure is required to deal
-with the management of sensing an actuation, mashed up resources provided by heterogeneous Clouds,
-and things, by exploiting well know ontologies and semantic approaches shared by and adopted by users,
-customers and providers to detect, identify, map and transform mashed up resources.
-The proposed architecture provides blocks to deal with all the related issues, while aiming
-to provide things according to a service oriented paradigm.\\
+with the management of sensing an actuation, resources provided by heterogeneous Clouds and
+and things. The proposed architecture provides blocks to deal with all the related issues, while aiming
+to provide things according to a service oriented paradigm. Altough the presented concept is
+very innovative, the proposed solution could not be evaluated since that the the solution was
+not implemented.\\
 
 % ----------------------------------
-% CLOUD OF THINGS
+% CLOUDTHINGS
 % ----------------------------------
 CloudThings \cite{zhou2013cloudthings} is an architecture that uses a common approach
 to integrate Internet of Things and Cloud Computing. The proposed architecture is an online
@@ -65,31 +64,19 @@ services for executing the users service requests and performing service composi
 service discovery, process generation, process execution, and monitoring. This first implementation
 also demonstrates that this middleware as a service releases the burden of costs and risks for users and
 providers in using and managing those components.\\
-
-% --------------------------------------------
-% FOSSTRAK
-% --------------------------------------------
-\subsubsection{Fosstrak}
-\label{subs:fosstrak}
-The capture of events will be performed by Fosstrak. Fosstrak is an open-source RFID
-project\footnote{https://code.google.com/p/fosstrak/} that implements the EPC (Electronic Product Code)
-Network specifications. Fosstrak is composed by modules that allows to store and query about
-events captured by a RFID reader, convert the EPC identifiers to others EPC representations,
-filter and collect the data from RFID readers and to configure and manage RFID readers.
-These modules provides an entire RFID infrastructure that accelerates the development of
-IoT applications and allows to users to gain hands-on experience with the EPC Network.\\
-
 % --------------------------------------------
 % AUTOMATED DEPLOYMENT OF CLOUD APPLICATIONS
 % --------------------------------------------
 \subsection{Automated Deployment of Cloud Applications}
 \label{sub:Automated Deployment of IoT Applications}
 The effort put in the research to integrate the paradigms of Cloud Computing and Internet
-of Things resulted in a essential contribution, but there are several issues regarding to the
-integration between Cloud Computing and Internet of Things that must be addressed. In particular,
-due of the heterogeneity of the IoT applications environments, it is hard for solution providers
-to efficiently deploy and configure applications for a large number of users. Thus, automation of
-the management tasks required by IoT applications is a key issue to be explored.\\
+of Things resulted in a essential contribution. The integration of these two paradigms allow
+that IoT applications to have higher availability, scalability and to reduce the costs associated
+with the maintenance of the application. But there are several issues regarding to the integration
+between Cloud Computing and Internet of Things that must be addressed. In particular, due of the
+heterogeneity of the IoT applications environments, it is hard for solution providers to efficiently
+deploy and configure applications for a large number of users. Thus, automation of the management
+tasks required by IoT applications is a key issue to be explored.\\
 
 % ---------------------------------------------
 % TOSCA
@@ -107,14 +94,15 @@ by a TOSCA environment just by interpreting the topology template, this is known
 Plans realize an ``imperative" approach that explicitly specifies how each management process should be done.
 The topology templates, plans and artifacts of an application are packaged in a Cloud Service Archive (.csar file)
 and deployed in a TOSCA environment, which is able to interpret the models and perform the specified management
-operations. These .csar files are portable across different cloud providers, which is a great benefit in terms
-of deployment flexibility. To demonstrate its feasibility TOSCA was used to specify a typical application in
-building automation, an Air Handling Unit (AHU). The common IoT components, such as gateways and
-drivers will be modeled, and the gateway-specific artifacts that are necessary for application deployment
-will also be specified. By archiving the previous specifications and corresponding artifacts into a .csar file,
-and deploying it in a TOSCA environment, the deployment of AHU application onto various gateways can be automated.
-As a newly established standard to counter growing complexity and isolation in cloud applications environments,
-TOSCA is gaining momentum in industrial adoption as well for academic interest.\\
+operations. These .csar files are portable across different Cloud providers, which is a great benefit in terms
+of deployment flexibility. To evaluate its feasibility, TOSCA was used in the specification of a typical
+application in building automation. an application to control an Air Handling Unit (AHU). The common IoT
+components, such as gateways and drivers will be modeled, and the gateway-specific artifacts that are
+necessary for application deployment will also be specified. By archiving the previous specifications
+and corresponding artifacts into a .csar file, and deploying it in a TOSCA environment, the deployment
+of AHU application onto various gateways can be automated. As a newly established standard to counter
+growing complexity and isolation in cloud applications environments, TOSCA is gaining momentum in industrial
+adoption as well for academic interest.\\
 
 % ------------------------------------------------------------------------------------
 % COMBINING DECLARATIVE AND IMPERATIVE CLOUD APPLICATION PROVISIONING BASED ON TOSCA
@@ -136,12 +124,14 @@ The results indicate that the required time increases linearly with the number o
 
 Recently a growing number of organizations are developing Orchestrators, Design Tools and Cloud Managers
 based on TOSCA. Juju is an Open Source TOSCA Orchestrator that can deploy workloads across public, private clouds,
-and directly onto bare metal. HP Cloud Service Automation is cloud management solution that supports declaratives
+and in physical machines. HP Cloud Service Automation is cloud management solution that supports declaratives
 services design that are aligned with TOSCA modeling principles. GigaSpaces Cloudify orchestrates TOSCA Service
 Templates using workflows to automate deployments and other DevOps automation processes. IBM Cloud Orchestrator
 provides integrated tooling to create TOSCA applications, deploy them with custom polices, monitoring and scale
 them in cloud deployments.\\
-
+% ------------------------------------------------
+%  SERVICE LEVEL AGREEMENTS IN CLOUD APPLICATIONS
+% ------------------------------------------------
 \subsection{Service Level Agreements in Cloud Applications}
 \label{sub:subsection label}
 Initially the objective of this work was focused in improve the deployment operation. However, during
@@ -185,10 +175,3 @@ from individual applications. The management logic can be defined in two ways, b
 Patterns or by manually creating Desired Application State Models. The Framework was evaluated in terms of
 feasibility, performance, economics, limitations and extensibility. A prototype was successfully implemented based
 to validate the concept technically based on a previous implementation of the Management Planlet Framework.\\
-
-Colocar LoHiFramework\\
-
-An important observation of the related work until now is that the developed approaches to enable policy-aware
-IoT applications are based in low-level policies. Thus, in the interest of adding a new contribution to this field,
-the objective of this work is focused in developing an approach where these policy-aware applications are based in
-high-level business rules.
