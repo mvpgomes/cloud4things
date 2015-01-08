@@ -235,12 +235,21 @@ the application.
 \subsection{Fosstrak}
 \label{sub:fosstrak}
 Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/}
-that implements the GS1 EPC (Electronic Product Code) Network ALE, IS and LLRP standards.\\
-
+that implements the GS1 EPC (Electronic Product Code) Network ALE, IS and LLRP standards.
+The Figure \ref{fig:epc-architecture} illustrate a simplified version of the EPC Network
+architecture.
+% EPC Architecture
+\begin{figure}
+  \centering
+  \includegraphics[scale=.5]{./images/epc-architecture}
+  \caption{Simplified view of EPC network.}
+  \label{fig:epc-architecture}
+\end{figure}\\
 The EPC Application Level Events (ALE) provides interfaces to filter and collect data.
 The EPC Information Services (IS) provides interfaces to interpret, store persistently
-and query captured EPC event data. The EPC Low-Level Reader Protocol (LLRP) provides an
-interface to configure and control RFID readers.\\
+and query captured EPC event data. The EPC Low-Level Reader Protocol (LLRP), that is not
+demonstrated in this architecture, provides an interface to configure and control RFID
+readers.\\
 
 Fosstrak provides an entire RFID infrastructure that accelerates the development of
 IoT applications and allows to users to gain hands-on experience with the EPC Network.
