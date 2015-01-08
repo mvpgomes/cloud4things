@@ -114,13 +114,15 @@ developers to benefit from automatically provisioning logic based on declarative
 customization opportunities provided by adapting imperative plans. These provisioning plans are workflows that
 can be executed fully automatically and may be customized by application developers after initial generation.
 The approach enables benefits from both flavors that may leads to economical advantages when developing applications
-with TOSCA. The motivating scenario that is used to evaluate this approach consists in a LAMP-based TOSCA
-application to be provisioned. The application implements a Web-shop in PHP that uses a MySQL database to store
-product and customer data. The application consists of two application stacks, one provides the infrastructure
-for the application logic and the other hosts the database. Both ran on Amazon's public IaaS offering
-Amazon EC2. To measure the performance of the deployment using the two-flavor approach, the time spent to
-generate provisioning plans regarding the number of templates required by the application was measured.
-The results indicate that the required time increases linearly with the number of templates.\\
+with TOSCA. The motivating scenario that is used to evaluate this approach consists in a LAMP-based\footnote{LAMP
+is a software stack that originally consists of the Linux system, the Apache HTTP Server, the MySql relational
+database and the PHP programming language.} TOSCA application to be provisioned. The application implements
+a Web-shop in PHP that uses a MySQL database to store product and customer data. The application consists
+of two application stacks, one provides the infrastructure for the application logic and the other hosts
+the database. Both ran on Amazon's public IaaS offering Amazon EC2. To measure the performance of the
+deployment using the two-flavor approach, the time spent to generate provisioning plans regarding the
+number of templates required by the application was measured. The results indicate that the required time
+increases linearly with the number of templates.\\
 
 Recently a growing number of organizations are developing Orchestrators, Design Tools and Cloud Managers
 based on TOSCA. Juju is an Open Source TOSCA Orchestrator that can deploy workloads across public, private clouds,
