@@ -177,7 +177,7 @@ and OpenTOSCA\footnote{http://www.iaas.uni-stuttgart.de/OpenTOSCA/indexE.php}.
 % -----------------------------------------
 % Quality of Service and Cloud applications
 % -----------------------------------------
-\subsection{Quality of Service and Cloud Applications}
+\subsection{Quality of Service of Cloud Applications}
 \label{sub:qos_cloud}
 As mentioned before, customers can define the service level that is intended to be
 delivered by Cloud providers. The desired service level is specified by customers
@@ -199,13 +199,13 @@ well the penalties for meeting and violating the expectations \cite{vaquero2008b
 % -----------------------------------------
 \subsection{Smart Places Architecture}
 \label{sub:smart_places_architecture}
-As described before, a smart place is composed by several smart objects that generates
+As described before, a smart place is composed by several smart objects that generate
 data that is processed by the IoT application. However, to process all that data an
 infrastructure is required to support the IoT application. These infrastructure is composed
 by RFID tags, sensors, readers and servers, as illustrated in Figure \ref{fig:smart-place}.
 Although this infrastructure can support the IoT application in the smart place, this
 architecture presents several issues regarding the deployment of the application, the low scalability,
-the costs of infrastructure and the maintenance of the same.
+the costs of infrastructure and its maintenance.
 \pagebreak
 % Typical Smart Space Scenario
 \begin{figure}[h!]
@@ -217,7 +217,7 @@ the costs of infrastructure and the maintenance of the same.
 By converging the IoT applications with the Cloud computing paradigm the objective is simplify the
 smart space architecture by leveraging the required infrastructure by these applications to
 the Cloud providers, as illustrated in Figure \ref{fig:smart-place-cloud}, allowing to take
-advantage of the benefits offered by Cloud computing (as referenced in \textbf{Section \ref{sub:cloud_computing}}).
+advantage of the benefits offered by Cloud computing (as referenced in \ref{sub:cloud_computing}).
 % Cloud-based Smart Space Scenario
 \begin{figure}
   \centering
@@ -232,8 +232,11 @@ the application.
 % --------------------------------------------
 % FOSSTRAK
 % --------------------------------------------
-\subsection{Fosstrak}
+\subsection{RFID Smart Place}
 \label{sub:fosstrak}
+For our work we will focus on software for an RFID smart place. The software to use
+will be based on the GS1 EPCglobal standards for RFID.\\
+
 Fosstrak is an open-source RFID project\footnote{https://code.google.com/p/fosstrak/}
 that implements the GS1 EPC (Electronic Product Code) Network ALE, IS and LLRP standards.
 In Figure \ref{fig:epc-architecture} a simplified version of the EPC Network architecture
@@ -241,7 +244,7 @@ is illustrated.
 % EPC Architecture
 \begin{figure}
   \centering
-  \includegraphics[scale=.5]{./images/epc-architecture}
+  \includegraphics[scale=.7]{./images/epc-architecture}
   \caption{Simplified view of EPC network.}
   \label{fig:epc-architecture}
 \end{figure}\\
@@ -264,4 +267,4 @@ presents the related work in the research area. Then in Section \ref{sec:solutio
 we present a brief description of the state of art solution and propose the architecture
 for our solution. In Section \ref{sec:evaluation} the evaluation methodology is described.
 Section \ref{sec:conclusion} presents the conclusion. In the appendix a schedule
-for the future work is presented and a methodology to evaluate the RFID Event Handling.
+for the future work is presented and a methodology to evaluate the RFID event handling.
