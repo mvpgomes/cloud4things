@@ -51,7 +51,7 @@ as illustrated in Figure~\ref{fig:conceptual_architecture}.
 The business entities that composes Cloud4Things are the smart smart place and the
 Cloud provider. The smart place uses an Internet connection to access the resources
 that are allocated in the Cloud infrastructure. The Cloud providers allow the smart
-places to perform real-time monitoring of the used resources.
+places to perform real-time monitoring of the resources that are consumed.
 % ----------------------------------------------
 % LOGICAL ARCHITECTURE
 % ----------------------------------------------
@@ -67,11 +67,33 @@ entities and processes, as illustrated in Figure~\ref{fig:logical-architecture}.
   \caption{Cloud4Things Logical architecture.}
   \label{fig:logical_architecture}
   \end{figure}\\
+The smart place is composed by sensors and tagged objects. These sensors and tagged
+objects are the physical components of the IoT application that is running in the Cloud.
+The tagged objects produces events that are captured by the sensors and sent to the
+application in the Cloud.\\
+
+The Cloud provide computing resources (ex. Network Bandwith, Data Storage) that
+are used by the servers where the application is running. In the case of an IoT
+application that is based in the EPC Network standards, the application is composed
+by layers that are able to collect and filter the data from the sensors (ALE) through
+the network, to interpret and query (EPCIS) the filtered data from the ALE layer and
+to store persistently (Database) the capture data. Each one of these layers must
+be implemented by a different server in the Cloud.
 % ----------------------------------------------
 % TECHNOLOGICAL ARCHITECTURE
 % ----------------------------------------------
 \subsubsection{Technological Architecture}
 \label{subs:technological_architecture}
+The \textit{Technological} architecture describe Cloud4Things in perspective of the
+specific technologie that is used to implement the \textit{Logical} perspective, as
+illustrated in Figure~\ref{fig:technological_architecture}.
+% Cloud4Things technological architecture
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\textwidth]{technological_architecture}
+  \caption{Cloud4Things Technological architecture}
+  \label{fig:technological_architecture}
+\end{figure}\\
 % ----------------------------------------------
 % MONITOR AGENT ARCHITECTURE
 % ----------------------------------------------
