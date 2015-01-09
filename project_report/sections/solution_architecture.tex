@@ -48,10 +48,10 @@ as illustrated in Figure~\ref{fig:conceptual_architecture}.
   \caption{Cloud4Things Conceptual architecture.}
   \label{fig:conceptual_architecture}
 \end{figure}\\
-The business entities that composes Cloud4Things are the smart smart place and the
-Cloud provider. The smart place uses an Internet connection to access the resources
+The business entities that composes Cloud4Things are the smart smart warehouse and the
+Cloud provider. The warehouse uses an Internet connection to access the resources
 that are allocated in the Cloud infrastructure. The Cloud providers allow the smart
-places to perform real-time monitoring of the resources that are consumed.
+warehouse to perform real-time monitoring of the resources that are consumed.
 % ----------------------------------------------
 % LOGICAL ARCHITECTURE
 % ----------------------------------------------
@@ -59,54 +59,79 @@ places to perform real-time monitoring of the resources that are consumed.
 \label{subs:logical_architecture}
 The \textit{Logical} architecture describe Cloud4Things in perspective of
 the data elements, logical process flows and functions that represent business
-entities and processes, as illustrated in Figure~\ref{fig:logical-architecture}.
+entities and processes, as illustrated in Figure~\ref{fig:logical_architecture}.
 % Cloud4Things logical architecture
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{./images/logical-architecture}
+  \includegraphics[width=\textwidth]{./images/logical-architecture}
   \caption{Cloud4Things Logical architecture.}
   \label{fig:logical_architecture}
   \end{figure}\\
-The smart place is composed by sensors and tagged objects. These sensors and tagged
+The smart warehouse is composed by sensors and tagged objects. These sensors and tagged
 objects are the physical components of the IoT application that is running in the Cloud.
 The tagged objects produces events that are captured by the sensors and sent to the
 application in the Cloud.\\
 
 The Cloud provide computing resources (ex. Network Bandwith, Data Storage) that
-are used by the servers where the application is running. In the case of an IoT
+are used by the servers where the application is running. In case of an IoT
 application that is based in the EPC Network standards, the application is composed
 by layers that are able to collect and filter the data from the sensors (ALE) through
 the network, to interpret and query (EPCIS) the filtered data from the ALE layer and
-to store persistently (Database) the capture data. Each one of these layers must
-be implemented by a different server in the Cloud.
+to store persistently (Database) the data that is captured by the EPCIS layer.
+Each one of these layers must be implemented by a different server in the Cloud.\\
+
+The monitoring of the application is performed through a dashboard. This dashboard
+provides the information about the current performance of the application,
+allows to know what objects that enter and leave the smart warehouse and what
+objects are currently inside the smart warehouse.
 % ----------------------------------------------
 % TECHNOLOGICAL ARCHITECTURE
 % ----------------------------------------------
 \subsubsection{Technological Architecture}
 \label{subs:technological_architecture}
 The \textit{Technological} architecture describe Cloud4Things in perspective of the
-specific technologie that is used to implement the \textit{Logical} perspective, as
+specific technology that is used to implement the \textit{Logical} perspective, as
 illustrated in Figure~\ref{fig:technological_architecture}.
 % Cloud4Things technological architecture
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{technological_architecture}
+  \includegraphics[width=.8\textwidth]{./images/technological-architecture}
   \caption{Cloud4Things Technological architecture}
   \label{fig:technological_architecture}
 \end{figure}\\
+In the smart warehouse objects are tagged with RFID tags. The RFID readers that
+are installed in the warehouse captures the data that is produced by these tags
+and send to the Cloud application through a protocol to exchange data, usually
+the HTTP protocol.\\
+
+Before the application start to process the data that is produced in the warehouse,
+the application must be deployed in the Cloud. The deployment of the application is
+performed through orchestration tools. These tools provides an interface that can be
+accessed through a device that is connected to the Internet (ex. a Tablet). This interface
+allow the specification of the components of the application, the execution of the deployment
+operation as well to monitoring the application.\\
+
+In the Cloud, the Orchestration Agent provisioning the VMs where the software stack required
+by the application will be installed and configured. The software stack required by the
+RFID-based IoT application is composed by a MySQL Database and the Fosstrak framework,
+namely by the Fosstrak EPCIS and Fosstrak ALE modules.\\
 % ----------------------------------------------
 % MONITOR AGENT ARCHITECTURE
 % ----------------------------------------------
-\subsubsection{Monitor Agent Architecture}
+\subsubsection{QoS Monitor Architecture}
 \label{subs:monitoring_srchitecture}
-\vspace{1in}
+As mentioned in \ref{sec:objectives}, a sub objective of Cloud4Things is to allow the
+definition of the \textit{QoS} parameters that specify the desired service level for
+the application. These QoS Agent will be able to monitor the application according to
+the \textit{QoS} parameters that are defined for the application, as illustrated in
+Figure~\ref{fig:monitor_architecture}.
 % Cloud of Things Architecture
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{./images/cloud-of-things-architecture}
-  \caption{Cloud of Things Architecture.}
-  \label{fig:cloud_of_things_architecture}
-\end{figure}
+  \includegraphics[width=.8\textwidth]{./images/monitor-architecture}
+  \caption{QoS Monitor Architecture.}
+  \label{fig:monitor_architecture}
+\end{figure}\\
 The presented architecture is based on the LoM2HiS Framework \cite{emeakaroha2010low} architecture. The
 \textit{Host Monitor} processes the monitored values of the hardware and network resources that are delivered
 by monitoring agents that are embedded in the infrastructure. The \textit{Run-time Monitor} is responsible to
