@@ -33,11 +33,14 @@ used to describe an information system according the Zachman framework \cite{}.
 In this framework Zachman defines the \textit{Conceptual}, \textit{Logical} and
 \textit{Technological} perspectives that allows to describe an information system
 from a more abstract to a more detailed view.
+% ----------------------------------------------
+% CONCEPTUAL ARCHITECTURE
+% ----------------------------------------------
 \subsubsection{Conceptual Architecture}
 \label{subs:conceptual_architecture}
 The \textit{Conceptual} architecture describe Cloud4Things in perspective of
 the business entities and processes that compose the system and how they are related,
-as illustrated in figure \ref{fig:conceptual_architecture}.
+as illustrated in Figure~\ref{fig:conceptual_architecture}.
 % Cloud4Things conceptual architecture
 \begin{figure}[h!]
   \centering
@@ -48,13 +51,30 @@ as illustrated in figure \ref{fig:conceptual_architecture}.
 The business entities that composes Cloud4Things are the smart smart place and the
 Cloud provider. The smart place uses an Internet connection to access the resources
 that are allocated in the Cloud infrastructure. The Cloud providers allow the smart
-places to perform real-time monitoring of the used resources.    
+places to perform real-time monitoring of the used resources.
+% ----------------------------------------------
+% LOGICAL ARCHITECTURE
+% ----------------------------------------------
 \subsubsection{Logical Architecture}
 \label{subs:logical_architecture}
-
+The \textit{Logical} architecture describe Cloud4Things in perspective of
+the data elements, logical process flows and functions that represent business
+entities and processes, as illustrated in Figure~\ref{fig:logical-architecture}.
+% Cloud4Things logical architecture
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{./images/logical-architecture}
+  \caption{Cloud4Things Logical architecture.}
+  \label{fig:logical_architecture}
+  \end{figure}\\
+% ----------------------------------------------
+% TECHNOLOGICAL ARCHITECTURE
+% ----------------------------------------------
 \subsubsection{Technological Architecture}
 \label{subs:technological_architecture}
-
+% ----------------------------------------------
+% MONITOR AGENT ARCHITECTURE
+% ----------------------------------------------
 \subsubsection{Monitor Agent Architecture}
 \label{subs:monitoring_srchitecture}
 \vspace{1in}
@@ -65,13 +85,17 @@ places to perform real-time monitoring of the used resources.
   \caption{Cloud of Things Architecture.}
   \label{fig:cloud_of_things_architecture}
 \end{figure}
-The presented architecture is based on the LoM2HiS Framework \cite{emeakaroha2010low} architecture. In this
-architecture the \textit{Services} component and the \textit{Run-time Monitor} represents the application layer
-where services are deployed using a Web Service container. The \textit{Run-time Monitor} is responsible to monitor
-the services based on the negotiated and agreed SLAs. After the Cloud provider agrees on the SLA terms, the
-agreed SLAs are stored in the repository for service provisioning and the following steps are executed:
+The presented architecture is based on the LoM2HiS Framework \cite{emeakaroha2010low} architecture. The
+\textit{Host Monitor} processes the monitored values of the hardware and network resources that are delivered
+by monitoring agents that are embedded in the infrastructure. The \textit{Run-time Monitor} is responsible to
+monitor the customer application (\textit{Services}) status and performance based on the negotiated
+and agreed SLAs.\\
+
+The monitoring process starts after the Cloud provider agrees on the SLA terms.
+The agreed SLAs are stored in the repository for service provisioning and the following
+steps are executed:
 \begin{enumerate}
-  \item The Cloud provider creates rules for the framework mappings using Domain Specific
+  \item The Cloud provider creates rules for the framework mappings of low-level metrics (QoS parameters) using Domain Specific
   Languages\footnote{Domain Specific Languages are small languages that normally are tailored to a specific
   problem domain.} (DSLs).
   \item The customer requests the provisioning of an agreed service.
@@ -85,5 +109,5 @@ agreed SLAs are stored in the repository for service provisioning and the follow
   mapped metrics repository.
 \end{enumerate}
 
-In this architecture, the \textit{Run-time monitor} uses the mapped values to monitor the status of the deployed services. Once it detects that a SLA is violated, the \textit{Run-time monitor} must alert the customer of the violated SLA.
-At this point the customer is responsible to take the decisions in order to correct the state of the system.
+In this architecture, the \textit{Run-time monitor} uses the mapped values to monitor the status of the deployed services.
+Once it detects that a SLA is violated, the \textit{Run-time monitor} must alert the customer of the violated SLA.
