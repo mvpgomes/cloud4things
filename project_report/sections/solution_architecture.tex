@@ -18,7 +18,7 @@ Monitoring the application life-cycle is a task that requires a lot of effort an
 administrators.\\
 
 In order to solve this problem, the adopted approach relies on using Cloud Orchestrator tools perform the
-deployment of these applications. As mentioned in \textbf{\ref{subs:cloud_orchestration}},
+deployment of these applications. As mentioned \ref{subs:cloud_orchestration},
 these tools allows the specification of the application components and their relations in a high-level perspective
 and to execute the management tasks required by the application during its life-cycle. As a matter of fact,
 in a low-level perspective cloud orchestration tools express the high-level perspective defined by the user
@@ -29,7 +29,7 @@ into scripts that latter are executed using IT automation tools such as Puppet a
 \subsection{Cloud4Things Architecture}
 \label{sub:cloud4things_architecture}
 The architecture of Cloud4Things is based in the perspectives that are
-used to describe an information system according the Zachman framework \cite{}.
+used to describe an information system according the Zachman framework \cite{zachman1987framework}.
 In this framework Zachman defines the \textit{Conceptual}, \textit{Logical} and
 \textit{Technological} perspectives that allows to describe an information system
 from a more abstract to a more detailed view.
@@ -41,6 +41,7 @@ from a more abstract to a more detailed view.
 The \textit{Conceptual} architecture describe Cloud4Things in perspective of
 the business entities and processes that compose the system and how they are related,
 as illustrated in Figure~\ref{fig:conceptual_architecture}.
+\pagebreak
 % Cloud4Things conceptual architecture
 \begin{figure}[h!]
   \centering
@@ -48,7 +49,7 @@ as illustrated in Figure~\ref{fig:conceptual_architecture}.
   \caption{Cloud4Things Conceptual architecture.}
   \label{fig:conceptual_architecture}
 \end{figure}\\
-The business entities that composes Cloud4Things are the smart smart warehouse and the
+The business entities that composes Cloud4Things are the smart warehouse and the
 Cloud provider. The warehouse uses an Internet connection to access the resources
 that are allocated in the Cloud infrastructure. The Cloud providers allow the smart
 warehouse to perform real-time monitoring of the resources that are consumed.
@@ -72,7 +73,7 @@ objects are the physical components of the IoT application that is running in th
 The tagged objects produces events that are captured by the sensors and sent to the
 application in the Cloud.\\
 
-The Cloud provide computing resources (ex. Network Bandwith, Data Storage) that
+The Cloud provide computing resources (ex. Network Bandwidth, Data Storage) that
 are used by the servers where the application is running. In case of an IoT
 application that is based in the EPC Network standards, the application is composed
 by layers that are able to collect and filter the data from the sensors (ALE) through
