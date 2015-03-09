@@ -1,0 +1,44 @@
+node_types:
+
+    cloud4things.nodes.MySqlDatabase:
+      derived_from:
+      properties:
+      interfaces:
+
+    cloud4things.nodes.ApacheTomcat:
+      derived_from:
+      properties:
+      interfaces:
+
+    cloud4things.nodes.EpcisServer:
+      derived_from:
+      properties:
+      interfaces:
+
+    cloud4things.nodes.AleServer:
+      derived_from:
+      properties:
+      interfaces:
+
+
+node_templates:
+
+    tomcat_vm:
+      types:
+      properties:
+      relationships:
+
+    mysql_vm:
+      types:
+      properties:
+      relationships:
+
+    epcis_vm:
+      types:
+      properties:
+      relationships:
+
+    ale_vm:
+      types:
+      properties:
+      relationships:
