@@ -1,44 +1,73 @@
+imports:
+  - http://www.getcloudify.org/spec/cloudify/3.1/types.yaml
+
+inputs:
+  #TODO
+
 node_types:
 
     cloud4things.nodes.MySqlDatabase:
-      derived_from:
+      derived_from: cloudify.nodes.DBMS
       properties:
+        port:
+          description: MySQL port
+          type: integer
       interfaces:
+        cloudify.interfaces.lifecycle:
 
-    cloud4things.nodes.ApacheTomcat:
-      derived_from:
+    cloud4things.nodes.ApacheTomcatServer:
+      derived_from: cloudify.nodes.ApplicationServer
       properties:
       interfaces:
+        cloudify.interfaces.lifecycle:
 
-    cloud4things.nodes.EpcisServer:
-      derived_from:
+    cloud4things.nodes.EpcisApplicationModule:
+      derived_from: cloudify.nodes.ApplicationModule
       properties:
       interfaces:
+        cloudify.interfaces.lifecycle:
 
-    cloud4things.nodes.AleServer:
-      derived_from:
-      properties:
-      interfaces:
+relationships:
+
+  node_connected_to_mysql:
+    derived_from: cloudify.relationships.connected_to
+    target_interfaces:
+
+  node_contained_in_apachetomcat:
+    derived_from: cloudify.relationships.contained_in
+    target_interfaces:
+
 
 
 node_templates:
 
+    epcis_host:
+      type: cloudify.nodes.Compute
+      properties:
+
+    mysql_host:
+      type: cloudify.nodes.Compute
+      properties:
+
     tomcat_vm:
-      types:
+      type: cloud4things.nodes.ApacheTomcatServer
       properties:
       relationships:
+        - type: cloudify.relationships.contained_in
+          target: epcis_host
 
     mysql_vm:
-      types:
+      type: cloud4things.nodes.MySqlDatabase
       properties:
       relationships:
+        - type: cloudify.relationships.contained_in
+          target: mysql_host
 
     epcis_vm:
-      types:
+      type: cloud4things.nodes.EpcisApplicationModule
       properties:
       relationships:
-
-    ale_vm:
-      types:
-      properties:
-      relationships:
+        - type: cloudify.relationships.contained_in
+          target: epcis_host
+        - type: cloudify.relationships.connected_to
+          target: mysql_vm
