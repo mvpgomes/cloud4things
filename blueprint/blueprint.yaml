@@ -1,73 +1,147 @@
+tosca_definitions_version: cloudify_dsl_1_0
+
 imports:
   - http://www.getcloudify.org/spec/cloudify/3.1/types.yaml
+  - https://raw.githubusercontent.com/cloudify-cosmo/cloudify-docker-plugin/1.1/plugin.yaml
 
 inputs:
-  #TODO
 
-node_types:
+  host_ip:
+    description: > The ip of the host the application will be deployed on
+    default: 127.0.0.1
 
-    cloud4things.nodes.MySqlDatabase:
-      derived_from: cloudify.nodes.DBMS
-      properties:
-        port:
-          description: MySQL port
-          type: integer
-      interfaces:
-        cloudify.interfaces.lifecycle:
+  agent_user:
+    description: >
+        User name used when SSH-ing into the started machine
+    default: ubuntu
 
-    cloud4things.nodes.ApacheTomcatServer:
-      derived_from: cloudify.nodes.ApplicationServer
-      properties:
-      interfaces:
-        cloudify.interfaces.lifecycle:
+  agent_private_key_path:
+    description: >
+      Path to a private key that resided on the management machine.
+      SSH-ing into agent machines will be done with this key.
+    default: ~/.ssh/agent_key.pem
 
-    cloud4things.nodes.EpcisApplicationModule:
-      derived_from: cloudify.nodes.ApplicationModule
-      properties:
-      interfaces:
-        cloudify.interfaces.lifecycle:
+  install_agent:
+    description: >
+      When running in local mode set this to false
+    default: false
 
-relationships:
+  epcis_port:
+      description: >
+        Which port you want to map the web port to.
+      default: 8080
 
-  node_connected_to_mysql:
-    derived_from: cloudify.relationships.connected_to
-    target_interfaces:
+  mysql_port:
+      description: >
+        Which port you want to map the mysql port to.
+      default: 3306
 
-  node_contained_in_apachetomcat:
-    derived_from: cloudify.relationships.contained_in
-    target_interfaces:
+  epcis_status_port:
+    description: >
+      Which port for the mysql epcis status page.
+    default: 28017
 
+  epcis_container_port_bindings:
+    description: >
+      A dict of port bindings for the epcis container.
+    default:
+      8080: 8080
+
+  mysql_container_port_bindings:
+    description: >
+      A dict of port bindings for the mysql container.
+    default:
+      27017: 27017
+      28017: 28017
 
 
 node_templates:
 
-    epcis_host:
-      type: cloudify.nodes.Compute
-      properties:
+  host:
+    type: cloudify.nodes.Compute
+    properties:
+      install_agent: { get_input: install_agent }
+      ip: { get_input: host_ip }
+      cloudify_agent:
+        user: { get_input: agent_user }
+        key: { get_input: agent_private_key_path }
 
-    mysql_host:
-      type: cloudify.nodes.Compute
-      properties:
+  mysql_container:
+    type: cloudify.docker.Container
+    properties:
+      name: mysql
+      image:
+        repository: dockerfile/mysql
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        create:
+          implementation: docker.docker_plugin.tasks.create_container
+          inputs:
+            params:
+              ports:
+                - { get_input: mysql_port }
+                - { get_input: epcis_status_port }
+              stdin_open: true
+              tty: true
+              command: # Command to be executed by the database
+        start:
+          implementation: docker.docker_plugin.tasks.start
+          inputs:
+            params:
+              port_bindings: { get_input: mysql_container_port_bindings }
+    relationships:
+      - type: cloudify.relationships.contained_in
+        target: host
 
-    tomcat_vm:
-      type: cloud4things.nodes.ApacheTomcatServer
-      properties:
-      relationships:
-        - type: cloudify.relationships.contained_in
-          target: epcis_host
+  tomcat_container:
+    type: cloudify.docker.Container
+    properties:
+      name: tomcat
+      image:
+        repository: dockerfile/tomcat
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        create:
+          implementation: docker.docker_plugin.tasks.create_container
+          inputs:
+            params:
+        start:
+          implementation: docker.docker_plugin.tasks.start
+          inputs:
+            params:
+    relationships:
 
-    mysql_vm:
-      type: cloud4things.nodes.MySqlDatabase
-      properties:
-      relationships:
-        - type: cloudify.relationships.contained_in
-          target: mysql_host
 
-    epcis_vm:
-      type: cloud4things.nodes.EpcisApplicationModule
-      properties:
-      relationships:
-        - type: cloudify.relationships.contained_in
-          target: epcis_host
-        - type: cloudify.relationships.connected_to
-          target: mysql_vm
+  epcis_container:
+    type: cloudify.docker.Container
+    properties:
+      name: epcis
+      image:
+        repository: # EPCIS Repository
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        create:
+          implementation: docker.docker_plugin.tasks.create_container
+          inputs:
+            params:
+              ports:
+                - { get_input: epcis_port }
+              stdin_open: true
+              tty: true
+              command: # EPCIS commands
+              environment:
+                EPCIS_PORT: { get_input: epcis_port }
+                MYSQL_PORT: { get_input: mysql_port }
+                MYSQL_HOST: { get_property: [ mysql_container, name ] }
+        start:
+          implementation: docker.docker_plugin.tasks.start
+          inputs:
+            params:
+              links:
+                mongod: { get_property: [ epcis_container, name ] }
+              port_bindings: { get_input: epcis_container_port_bindings }
+    relationships:
+      - type: cloudify.relationships.contained_in
+        target: host
+      - type: cloudify.relationships.depends_on
+        target: mysql_container
