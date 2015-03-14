@@ -1,0 +1,96 @@
+tosca_definitions_version: cloudify_dsl_1_0
+
+imports:
+  - http://www.getcloudify.org/spec/cloudify/3.2m7/types.yaml
+  - http://www.getcloudify.org/spec/diamond-plugin/1.2m7/plugin.yaml
+  - types/cloud4things
+
+inputs:
+
+  host_ip:
+    description: >
+      The ip of the host the application will be deployed on
+
+  agent_user:
+    description: >
+      User name used when SSH-ing into the started machine
+
+  agent_private_key_path:
+    description: >
+      Path to a private key that reside on the management machine.
+      SSH-ing inot agent machines will be done with this key.
+
+node_templates:
+
+  host:
+    type: cloudify.nodes.Compute
+    properties:
+      ip: { get_input: host_ip }
+      cloudify_agent:
+        user: { get_input: agent_user }
+        key: { get_input: agent_private_key_path }
+    interfaces:
+      cloudify.interfaces.monitoring_agent:
+        install:
+          implementation: diamond.diamond_agent.tasks.install
+          inputs:
+            diamond_config:
+              interval: 1
+        start: diamond.diamond_agent.tasks.start
+        stop: diamond.diamond_agent.tasks.stop
+        uninstall: diamond.diamond_agent.tasks.uninstall
+
+      cloudify.interfaces.monitoring:
+        start:
+          implementation: diamond.diamond_agent.tasks.add_collectors
+          inputs:
+            collectors_config:
+              CPUCollector: {}
+              MemoryCollectos: {}
+              LoadAverageCollector: {}
+              DiskUsageCollector: {}
+                config:
+                  devices: x?vd[a-z]+[0-9]*$
+              NetworkCollector: {}
+
+  mysql:
+    type: cloud4things.nodes.MySqlDatabase
+    properties:
+      port: 3306
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        configure: # Install script
+      cloudify.interfaces.monitoring:
+        start:
+          implementation: diamond.diamond_agent.tasks.add_collectors
+          inputs:
+            collectors_config:
+              MySqlDBCollector:
+                config:
+                  hosts: "localhost:3306"
+    relationships:
+     - type: cloudify.relationships.contained_in
+       target: host
+
+  tomcat:
+    type: cloud4things.nodes.ApacheTomcatServer
+    relationships:
+      - type: cloudify.relationships.contained_in
+        target: host
+
+  epcis:
+    type: cloud4things.nodes.EpcisApplicationModule
+    properties:
+      port: 8080
+    relationships:
+      - type: node_connected_to_mysql
+        target: mysql
+      - type: node_contained_in_tomcat
+        target: tomcat
+
+outputs:
+  endpoint:
+    description: Application endpoint
+    value:
+      ip_address: { get_property: [ host, ip ] }
+      port: { get_property: [epcis, port ] } 

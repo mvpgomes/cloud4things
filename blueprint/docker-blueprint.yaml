@@ -71,7 +71,7 @@ node_templates:
     properties:
       name: mysql
       image:
-        repository: dockerfile/mysql
+        repository: mysql
     interfaces:
       cloudify.interfaces.lifecycle:
         create:
@@ -83,7 +83,10 @@ node_templates:
                 - { get_input: epcis_status_port }
               stdin_open: true
               tty: true
-              command: # Command to be executed by the database
+              command: # mysql CREATE DATABASE epcis;
+                       # mysql GRANT SELECT, INSERT, UPDATE, DELETE ON epcis.* TO epcis IDENTIFIED BY 'epcis';
+                       # mysql USE epcis;
+                       # mysql SOURCE <path-to-unpacked-download>/epcis_schema.sql;
         start:
           implementation: docker.docker_plugin.tasks.start
           inputs:
@@ -98,7 +101,7 @@ node_templates:
     properties:
       name: tomcat
       image:
-        repository: dockerfile/tomcat
+        repository: tomcat
     interfaces:
       cloudify.interfaces.lifecycle:
         create:
@@ -110,6 +113,8 @@ node_templates:
           inputs:
             params:
     relationships:
+      - type: cloudify.relationships.contained_in
+        target: host
 
 
   epcis_container:
