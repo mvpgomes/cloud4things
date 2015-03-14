@@ -1,0 +1,44 @@
+tosca_definitions_version: cloudify_dsl_1_0
+
+imports:
+  - http://www.getcloudify.org/spec/cloudify/3.2m7/types.yaml
+  - types/cloud4things
+
+node_templates:
+
+  host:
+    type: cloudify.nodes.Compute
+    properties:
+      ip: localhost
+      install_agent: false
+
+  mysql:
+    type: cloud4things.nodes.MySqlDatabase
+    properties:
+      port: 3306
+    relationships:
+     - type: cloudify.relationships.contained_in
+       target: host
+
+  tomcat:
+    type: cloud4things.nodes.ApacheTomcatServer
+    relationships:
+      - type: cloudify.relationships.contained_in
+        target: host
+
+  epcis:
+    type: cloud4things.nodes.EpcisApplicationModule
+    properties:
+      port: 8080
+    relationships:
+      - type: node_connected_to_mysql
+        target: mysql
+      - type: node_contained_in_tomcat
+        target: tomcat
+
+outputs:
+  endpoint:
+    description: Application endpoint
+    value:
+      ip_address: { get_property: [ host, ip ] }
+      port: { get_property: [epcis, port ] }
