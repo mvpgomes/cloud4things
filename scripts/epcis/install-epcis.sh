@@ -45,7 +45,7 @@ function extract() {
         exit 1
       fi
 
-      inner_name=$(unzip -qql "${zip_archive}")
+      inner_name=$(unzip -qql "${zip_archive}" | sed -r '1 {s/([ ]+[^ ]+){3}\s+//;q}')
       echo "Unzipping ${zip_archive}"
       unzip ${zip_archive}
 
@@ -75,7 +75,7 @@ EPCIS_MIRROR='https://oss.sonatype.org/content/repositories/public/org/fosstrak/
 EPCIS_TARBALL='epcis-repository-0.5.0-bin-with-dependencies.zip'
 
 cd ${TEMP_DIR}
-#download ${EPCIS_MIRROR}/${EPCIS_TARBALL} ${EPCIS_TARBALL}
+download ${EPCIS_MIRROR}/${EPCIS_TARBALL} ${EPCIS_TARBALL}
 extract ${EPCIS_TARBALL} ${EPCIS_DIR}
 
 ctx logger info 'Fosstrak EPCIS repository installed successfuly.'
