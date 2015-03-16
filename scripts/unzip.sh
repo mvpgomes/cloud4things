@@ -1,20 +1,5 @@
 #!/bin/bash
 
-function untar() {
-
-  tar_archive=$1
-  destination=$2
-
-  if [ ! -d ${destination} ]; then
-    inner_name=$(tar -tf "${tar_archive}" | grep -o '^[^/]\+' | sort -u)
-    ctx logger info "Untaring ${tar_archive}"
-    tar -zxvf ${tar_archive}
-
-    ctx logger info "Moving ${inner_name} to ${destination}"
-    mv ${inner_name} ${destination}
-  fi
-}
-
 function unzip() {
 
   zip_archive=$1
@@ -44,5 +29,12 @@ function unzip() {
       # assuming tarball if the archive is not a zip.
       # we dont check that tar exists since if we made it
       # this far, it definitely exists (nodejs used it)
-      untar ${zip_archive} ${destination}
+      inner_name=$(tar -tf "${zip_archive}" | grep -o '^[^/]\+' | sort -u)
+      ctx logger info "Untaring ${zip_archive}"
+      tar -zxvf ${zip_archive}
+
+      ctx logger info "Moving ${inner_name} to ${destination}"
+      mv ${inner_name} ${destination}
+    fi
+  fi
 }
