@@ -78,4 +78,4 @@ cd ${TEMP_DIR}
 download ${EPCIS_MIRROR}/${EPCIS_TARBALL} ${EPCIS_TARBALL}
 extract ${EPCIS_TARBALL} ${EPCIS_DIR}
 
-ctx logger info 'Fosstrak EPCIS repository installed successfuly.'
+echo 'Fosstrak EPCIS repository installed successfuly.'

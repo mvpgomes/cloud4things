@@ -39,11 +39,12 @@ function untar() {
 
     echo "Moving ${inner_name} to ${destination}"
     mv ${inner_name} ${destination}
+
   fi
 }
 
 TMP_DIR='/tmp'
-MYSQL_DIR='/usr/local/mysql'
+MYSQL_DIR='/tmp/mysql'
 MYSQL_MIRROR=''
 MYSQL_TARBALL='mysql-server_5.6.23-1ubuntu14.10_i386.deb-bundle.tar'
 

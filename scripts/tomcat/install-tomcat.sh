@@ -39,6 +39,7 @@ function untar() {
 
     echo "Moving ${inner_name} to ${destination}"
     mv ${inner_name} ${destination}
+
   else
     echo "Could not extract."
   fi
@@ -55,6 +56,6 @@ cd ${TMP_DIR}
 download ${TOMCAT_MIRROR}/${TOMCAT_TARBALL} ${TOMCAT_TARBALL}
 untar ${TOMCAT_TARBALL} ${TOMCAT_DIR}
 
-export CATALINA_HOME=${TOMCAT_DIR}/${TOMCAT_TARBALL_NAME}
+export CATALINA_HOME=${TOMCAT_DIR}
 
 echo 'Tomcat installed successfuly.'
