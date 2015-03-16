@@ -44,5 +44,5 @@ function unzip() {
       # assuming tarball if the archive is not a zip.
       # we dont check that tar exists since if we made it
       # this far, it definitely exists (nodejs used it)
-      untar(tar_archive, destination)
+      untar ${zip_archive} ${destination}
 }
