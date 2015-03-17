@@ -47,15 +47,15 @@ function untar() {
 
 
 TMP_DIR='/tmp'
-TOMCAT_DIR='/tmp/tomcat'
+TOMCAT_HOME='/tmp/tomcat'
 TOMCAT_MIRROR='http://mirrors.ibiblio.org/apache/tomcat/tomcat-7/v7.0.59/bin'
 TOMCAT_TARBALL='apache-tomcat-7.0.59.tar.gz'
 TOMCAT_TARBALL_NAME='apache-tomcat-7.0.59'
 
 cd ${TMP_DIR}
 download ${TOMCAT_MIRROR}/${TOMCAT_TARBALL} ${TOMCAT_TARBALL}
-untar ${TOMCAT_TARBALL} ${TOMCAT_DIR}
+untar ${TOMCAT_TARBALL} ${TOMCAT_HOME}
 
-export CATALINA_HOME=${TOMCAT_DIR}
+export CATALINA_HOME=${TOMCAT_HOME}
 
 echo 'Tomcat installed successfuly.'
