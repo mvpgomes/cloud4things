@@ -45,7 +45,7 @@ function untar() {
 
 TMP_DIR='/tmp'
 MYSQL_HOME='/tmp/mysql'
-MYSQL_MIRROR=''
+MYSQL_MIRROR='http://dev.mysql.com/get/Downloads/MySQL-5.6/'
 MYSQL_TARBALL='mysql-server_5.6.23-1ubuntu14.10_i386.deb-bundle.tar'
 
 cd ${TMP_DIR}
