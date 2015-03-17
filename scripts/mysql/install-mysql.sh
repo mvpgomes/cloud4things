@@ -46,13 +46,13 @@ function untar() {
 TMP_DIR='/tmp'
 MYSQL_HOME='/tmp/mysql'
 MYSQL_MIRROR='http://dev.mysql.com/get/Downloads/MySQL-5.6/'
-MYSQL_TARBALL='mysql-server_5.6.23-1ubuntu14.10_i386.deb-bundle.tar'
+MYSQL_TARBALL='mysql-5.6.23-linux-glibc2.5-x86_64.tar.gz'
 
 cd ${TMP_DIR}
 download ${MYSQL_MIRROR}/${MYSQL_TARBALL} ${MYSQL_TARBALL}
 untar ${MYSQL_TARBALL} ${MYSQL_HOME}
 
 export MYSQL_HOME=${MYSQL_HOME}
-export PATH=${PATH}:${MYSQL_HOME}/bin
+export PATH=$PATH:$MYSQL_HOME/bin
 
 echo 'MySQL installed successfuly.'
