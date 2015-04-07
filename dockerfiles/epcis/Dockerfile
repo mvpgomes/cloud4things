@@ -27,4 +27,4 @@ RUN tar -zxvf mysql-connector.tar.gz && \
 COPY files/epcis-repository-0.5.0.xml /usr/local/tomcat/conf/Catalina/localhost/epcis-repository-0.5.0.xml
 
 # Run the server
-CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+CMD ["catalina.sh", "run"]
