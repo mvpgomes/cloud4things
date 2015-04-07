@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build --no-cache -t mvpgomes/fosstrak_ale .
+docker build --no-cache -t mvpgomes/fosstrak_ale_server .
