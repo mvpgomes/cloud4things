@@ -2,4 +2,4 @@
 
 CONTAINER_NAME='fosstrak_ale_webclient'
 
-docker stop ${CONTAINER_NAME}
+docker rm ${CONTAINER_NAME}
