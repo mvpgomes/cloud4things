@@ -12,10 +12,10 @@ WORKDIR /tmp
 RUN mv capturingapp-0.1.1.war /usr/local/tomcat/webapps/capturingapp-0.1.1.war
 
 # Confgure capturing application URL
-# COPY files/captureapplication.properties /usr/local/tomcat/webapps/capturingapp-0.1.1/WEB-INF/classes/captureapplication.properties
+ADD files/captureapplication.properties captureapplication.properties
 
 # Confgure capturing application changeset
-# COPY files/changeset.xml /usr/local/tomcat/webapps/capturingapp-0.1.1/WEB-INF/classes/changeset.xml
+ADD files/changeset.xml changeset.xml
 
 # Run the server
 CMD ["catalina.sh", "run"]

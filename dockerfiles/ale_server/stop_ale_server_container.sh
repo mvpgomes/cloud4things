@@ -2,4 +2,4 @@
 
 CONTAINER_NAME='fosstrak_ale_server'
 
-docker rm ${CONTAINER_NAME}
+docker stop ${CONTAINER_NAME}
