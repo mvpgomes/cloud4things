@@ -2,7 +2,7 @@
 <properties>
 
    <!-- the host to connect to -->
-   <host>localhost</host>
+   <host>docker</host>
 
    <!-- the port to connect to -->
    <port>8800</port>
@@ -14,4 +14,3 @@
    <timeout>3000</timeout>
 
 </properties>
-

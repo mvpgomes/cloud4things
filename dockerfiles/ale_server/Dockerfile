@@ -23,5 +23,12 @@ ADD files/SimulatorController.xml SimulatorController.xml
 # Add log4j configuration file
 ADD files/log4j.properties log4j.properties
 
+# ALE event configuration files
+ADD files/EventCycle_GoodsReceiving.xml EventCycle_GoodsReceiving.xml
+
+ADD files/EventCycle_PointOfSale.xml EventCycle_PointOfSale.xml
+
+ADD files/EventCycle_PointOfExit.xml EventCycle_PointOfExit.xml 
+
 # Run the server
 CMD ["catalina.sh", "run"]

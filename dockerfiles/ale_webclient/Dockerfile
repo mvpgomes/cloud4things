@@ -14,5 +14,12 @@ RUN unzip fc-webclient.zip && \
     mv fc-webclient-* fc-webclient && \
     mv fc-webclient/*.war /usr/local/tomcat/webapps/fc-webclient-1.2.0.war
 
+# Reader configuration files
+ADD files/Reader_GoodsReceiving.xml Reader_GoodsReceiving.xml
+
+ADD files/Reader_PointOfExit.xml Reader_PointOfExit.xml
+
+ADD files/Reader_PointOfSale.xml Reader_PointOfSale.xml
+
 # Run the server
 CMD ["catalina.sh", "run"]
