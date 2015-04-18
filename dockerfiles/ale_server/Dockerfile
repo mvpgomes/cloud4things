@@ -1,4 +1,4 @@
-FROM tomcat:6.0
+FROM tomcat:7.0
 
 MAINTAINER Marcus Gomes <email>
 
@@ -12,23 +12,17 @@ WORKDIR /tmp
 RUN unzip fc-server.zip && \
     rm fc-server.zip && \
     mv fc-server-* fc-server && \
-    mv fc-server/*.war /usr/local/tomcat/webapps/fc-server-1.2.0.war
+    unzip fc-server/*.war -d /usr/local/tomcat/webapps/fc-server-1.2.0 && \
+    rm -r fc-server
 
 # Add the Client configuration file
-ADD files/SimulatorClient.xml SimulatorClient.xml
+ADD files/SimulatorClient.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/props/SimulatorClient.xml
 
 # Add the Controller configuration file
-ADD files/SimulatorController.xml SimulatorController.xml
+ADD files/SimulatorController.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/props/SimulatorController.xml
 
 # Add log4j configuration file
-ADD files/log4j.properties log4j.properties
-
-# ALE event configuration files
-ADD files/EventCycle_GoodsReceiving.xml EventCycle_GoodsReceiving.xml
-
-ADD files/EventCycle_PointOfSale.xml EventCycle_PointOfSale.xml
-
-ADD files/EventCycle_PointOfExit.xml EventCycle_PointOfExit.xml 
+ADD files/log4j.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/log4j.xml
 
 # Run the server
 CMD ["catalina.sh", "run"]
