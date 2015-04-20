@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build --no-cache -t mvpgomes/epcisdb .
+docker build --no-cache -t cloud4things/fosstrak_db .

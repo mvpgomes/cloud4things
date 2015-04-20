@@ -21,7 +21,7 @@ ADD files/changeset.xml /usr/local/tomcat/webapps/capturingapp-0.1.1/WEB-INF/cla
 # Confgure capturing application changeset
 ADD files/SimpleWareHouse-3EventCycles.drl /usr/local/tomcat/webapps/capturingapp-0.1.1/WEB-INF/classes/drools/SimpleWareHouse-3EventCycles.drl
 
-# Expose capturing application port 
+# Expose capturing application port
 EXPOSE 9999
 
 # Run the server
