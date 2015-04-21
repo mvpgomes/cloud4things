@@ -52,3 +52,17 @@ If you follow the instructions now you are able to deploy an instance on EC2. In
 ```sh
 $ knife ec2 server create -I [image-name] -f [image-type] -N [instance-name] -x ec2-user -r "role[webserver]" -i '/path/to/your/aws/ssh/key/id'
 ```
+
+Lets explain better what is happening when you execute this command:
+
+1. As you guess when you execute ``knife ec2 server create`` you are telling to knife that you want to create a new instance on Amazon EC2.
+
+2. The ``-I [image-name]`` parameter specifies the image type that you want to use to create the instance. The available images are listed on [AWS Images]().
+
+3. The ``-f [image-type]`` parameter describes the instance type that you want. The The available instances types are listed on [AWS Instances Types]().
+
+4. The ``-N [instance-name]`` parameter set the name of the instance to ``instance-name``. You can give the name of your choice to each instance, since that you don't repeat the names for the instances. 
+
+5. The ``-x ec2-user`` parameter describes the username that is used to create the instance. The username ``ec2-user`` is the default name of EC2, if you don't perform any changes in the EC2 username you don't need to change that.
+
+6. The ``-r "role[webserver]"`` parameter describes the run list that execute by the client nodes. In this example we tell to the Chef server that we want to run the recipes that are described in the role ``webserver``, but feel free to change the run list with the roles or recipes that you want.
