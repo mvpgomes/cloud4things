@@ -27,8 +27,19 @@ In both variants you need to have a workstation configured with a Chef Developme
 After you verify that the installation was successful, copy all the directories that are in the ``chef-repo`` to your local ``chef-repo``.
 
 ###Deploying in a Vagrant Box
+If you want just test or extend the current implementation of Cloud4Things, p.e, modifying the cookbooks or adding new ones, we strongly recommend that you use [Vagrant](http://vagrantup.com) as your test/developing environment. Vagrant provides a consistent and isolated environment that is already configured and ready to run Cloud4Things.
 
+In order to use Vagrant with Cloud4Things you need to have Virtual Box and Vagrant installed. The installation instructions are available at [Installing Vagrant](https://www.vagrantup.com/downloads.html). With Vagrant already installed copy the ``Vagrantfile`` available in this repository to you local ``~/chef-repo`` directory and ``cd`` into it. To launch the Vagrant environment run the following command:
 
+```sh
+$ vagrant up
+```
+
+If is the first time that you bootstrapping the Vagrant environment it will take a while because Vagrant need to download the VM image. After the process is completed you can access the environment by executing:
+
+```sh
+$ vagrant ssh
+```
 ###Deploying in a Cloud Provider
 In order to deploy your application in a Cloud provider you need to have your workstation configured with all the resources (private keys, public keys, etc.) necessary of your provider of choice.
 
@@ -61,7 +72,7 @@ Lets explain better what is happening when you execute this command:
 
 3. The ``-f [image-type]`` parameter describes the instance type that you want. The The available instances types are listed on [AWS Instances Types]().
 
-4. The ``-N [instance-name]`` parameter set the name of the instance to ``instance-name``. You can give the name of your choice to each instance, since that you don't repeat the names for the instances. 
+4. The ``-N [instance-name]`` parameter set the name of the instance to ``instance-name``. You can give the name of your choice to each instance, since that you don't repeat the names for the instances.
 
 5. The ``-x ec2-user`` parameter describes the username that is used to create the instance. The username ``ec2-user`` is the default name of EC2, if you don't perform any changes in the EC2 username you don't need to change that.
 
