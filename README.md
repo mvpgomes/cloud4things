@@ -17,7 +17,7 @@ This repository contains all the resources and documentation of Cloud4Things.
 
 - ``docs/`` : Contains all the technical documentation developed until the date, namely the Master Thesis Project report and Dissertation report.
 
-- ``Vagrantfile``: Contains a description of a VM pre-configured with Chef. ***TODO***
+- ``Vagrantfile``: A Vagrant dev/test environment of a VM pre-configured with Chef Client.
 
 ##Requirements
 In order to use Cloud4Things to deploy your Fosstrak application you have two options: deploying in a Vagrant Box or deploying in a Cloud Provider.
@@ -29,7 +29,22 @@ After you verify that the installation was successful, copy all the directories 
 ###Deploying in a Vagrant Box
 If you want just test or extend the current implementation of Cloud4Things, p.e, modifying the cookbooks or adding new ones, we strongly recommend that you use [Vagrant](http://vagrantup.com) as your test/developing environment. Vagrant provides a consistent and isolated environment that is already configured and ready to run Cloud4Things.
 
-In order to use Vagrant with Cloud4Things you need to have Virtual Box and Vagrant installed. The installation instructions are available at [Installing Vagrant](https://www.vagrantup.com/downloads.html). With Vagrant already installed copy the ``Vagrantfile`` available in this repository to you local ``~/chef-repo`` directory and ``cd`` into it. To launch the Vagrant environment run the following command:
+In order to use Vagrant with Cloud4Things you need to have Virtual Box and Vagrant installed. The installation instructions are available at [Installing Vagrant](https://www.vagrantup.com/downloads.html). After you install Vagrant the first thing that you need to do is to add a Vagrant box, that is how Vagrant calls the base images for a VM. To add a Vagrant box to your local environment execute the following command in your terminal:
+
+```sh
+$ vagrant box add chef/ubuntu-14.04
+```
+This command will download the box named "hashicorp/precise32" from [HashiCorp's Atlas](https://atlas.hashicorp.com/boxes/search) box catalog, a place where you can find and host boxes. You are free to choose another image of your choice, but for dev/test purpose you can use the above image.
+
+Now that you already added a box, is time to initialize a local repository for your Vagrant environment. To do that first ``cd`` into your ``~/chef-repo`` directory and execute the command:
+
+```sh
+$ vagrant init
+```
+
+This command will generate a ``Vagrantfile``, now edit the file to looks like the Vagrantfile that is present in this repository or simply copy the file into the ``~/chef-repo`` directory. Before to launch your Vagrant environment don't forget to update the ``  chef.chef_server_url`` and ``chef.validation_key_path`` with the values of you Chef server URL and validation key path.
+
+To launch the Vagrant environment run the following command:
 
 ```sh
 $ vagrant up
