@@ -26,6 +26,6 @@
 
 .DS_Store
 
-.vagrant
+.vagrant/
 Vagrantfile
 
