@@ -1,0 +1,11 @@
+{
+  "name" : "webserver",
+  "default_attributes" : {},
+  "run_list" : [
+    "recipe[docker]",
+    "recipe[docker::fosstrak_db]",
+    "recipe[docker::fosstrak_epcis]",
+    "recipe[docker::fosstrak_capture]",
+    "recipe[docker::fosstrak_ale]"
+  ]
+}
