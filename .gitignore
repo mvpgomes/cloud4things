@@ -25,3 +25,7 @@
 *.fdb_latexmk
 
 .DS_Store
+
+.vagrant
+Vagrantfile
+
