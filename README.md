@@ -32,9 +32,9 @@ If you want just test or extend the current implementation of Cloud4Things, p.e,
 In order to use Vagrant with Cloud4Things you need to have Virtual Box and Vagrant installed. The installation instructions are available at [Installing Vagrant](https://www.vagrantup.com/downloads.html). After you install Vagrant the first thing that you need to do is to add a Vagrant box, that is how Vagrant calls the base images for a VM. To add a Vagrant box to your local environment execute the following command in your terminal:
 
 ```sh
-$ vagrant box add chef/ubuntu-14.04
+$ vagrant box add ubuntu/trusty64
 ```
-This command will download the box named "hashicorp/precise32" from [HashiCorp's Atlas](https://atlas.hashicorp.com/boxes/search) box catalog, a place where you can find and host boxes. You are free to choose another image of your choice, but for dev/test purpose you can use the above image.
+This command will download the box named "ubuntu/trusty64" from [HashiCorp's Atlas](https://atlas.hashicorp.com/boxes/search) box catalog, a place where you can find and host boxes. You are free to choose another image of your choice, but for dev/test purpose you can use the above image.
 
 Now that you already added a box, is time to initialize a local repository for your Vagrant environment. To do that first ``cd`` into your ``~/chef-repo`` directory and execute the command:
 
