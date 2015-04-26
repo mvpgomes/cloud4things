@@ -63,17 +63,17 @@ By using Chef it is possible to perform the deploy and provisioning of resources
 **knife** allows to perform the management of several resources, including Cloud resources such as provisioning. For that, **knife** provide plugins for different Cloud providers, such as AWS, Azure and Digital Ocean. In this project our provider of choice is Amazon Web Services, but you are free to use another Cloud provider of your choice.
 
 ### Provisioning in Amazon Web Services
-The first thing that you need to do is, if you don't already have, open an account in [Amazon Web Services](http://aws.amazon.com/). We strongly recommend that you also install [AWS Command Line Tools](http://aws.amazon.com/cli/) because it makes easier the configuration of credentials in AWS.  
+The first thing that you need to do is, if you don't already have, to open an account in [Amazon Web Services](http://aws.amazon.com/). We strongly recommend that you also install [AWS Command Line Tools](http://aws.amazon.com/cli/) because it makes easier the configuration of credentials in AWS.  
 
 Before to deploy the application in a EC2 instance you need to setup some configuration details through the AWS Management Console:
 
 1. In order to ssh to an EC2 instance you need to setup a Key Pair. Go to **Services -> EC2 -> Network & Security**. Click on **Create Key Pair**, next choose a name for you key pair and download the key for a safe place in your machine, preferable the ``~/.ssh`` directory.
 
-2. In order to accept ssh request from a external machine you need to setup the firewall of your instances. Go to **Services -> EC2 -> Network & Security**. Click on **Security Groups**, by default there is default security group already created, we will use that but you are free to create another one. In the **Inbound** tab, click on **Edit** and then add a SSH rule, in the source field you can restrict the allowed IP's or you can allow to everyone that have the private key to access the instances in this security group. Remember that you have to create more rules if you want to allow the instances to receive external requests, such as HTTP, HTTPS, etc.  
+2. In order to accept ssh requests from an external machine you need to setup the firewall of your EC2 instances. Go to **Services -> EC2 -> Network & Security**. Click on **Security Groups**, by default there is a security group already created, we will use that but you are free to create another one. In the **Inbound** tab, click on **Edit** and then add a SSH rule, in the source field you can restrict the allowed IP's or you can allow to everyone that have the private key to access the instances in this security group. Remember that you have to create more rules if you want to allow the instances to receive external requests, such as HTTP requests, HTTPS requests, etc.  
 
 Now, in order to launch an instance on EC2 we must to install the **knife-ec2** plugin, the installation instructions are available on the [knife-ec2 repository](https://github.com/chef/knife-ec2).
 
-If you follow the instructions now you are able to deploy an instance on EC2. In order to do that `cd` to your local `~/chef-repo` and execute the following command on your terminal:
+If you followed the instructions, now you are able to deploy an instance on EC2. In order to do that `cd` to your local `~/chef-repo` and execute the following command on your terminal (you need to provide the correct values for the parameters that are in square brackets):
 
 ```sh
 $ knife ec2 server create -I [image-name] -f [image-type] -N [instance-name] -x ec2-user -r "role[webserver]" -i '/path/to/your/aws/ssh/key/id'
@@ -91,4 +91,4 @@ Lets explain better what is happening when you execute this command:
 
 5. The ``-x ec2-user`` parameter describes the username that is used to create the instance. The username ``ec2-user`` is the default name of EC2, if you don't perform any changes in the EC2 username you don't need to change that.
 
-6. The ``-r "role[webserver]"`` parameter describes the run list that execute by the client nodes. In this example we tell to the Chef server that we want to run the recipes that are described in the role ``webserver``, but feel free to change the run list with the roles or recipes that you want.
+6. The ``-r "role[webserver]"`` parameter describes the run list that is executed by the client nodes. In this example we tell to the Chef server that we want to run the recipes that are described in the role ``webserver``, but feel free to change the run list with the roles or recipes that you want.
