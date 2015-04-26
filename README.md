@@ -83,9 +83,9 @@ Lets explain better what is happening when you execute this command:
 
 1. As you guess when you execute ``knife ec2 server create`` you are telling to knife that you want to create a new instance on Amazon EC2.
 
-2. The ``-I [image-name]`` parameter specifies the image type that you want to use to create the instance. The available images are listed on [AWS Images]().
+2. The ``-I [image-name]`` parameter specifies the image type that you want to use to create the instance. The available images are listed on [AWS Marketplace](https://aws.amazon.com/marketplace/).
 
-3. The ``-f [image-type]`` parameter describes the instance type that you want. The The available instances types are listed on [AWS Instances Types]().
+3. The ``-f [image-type]`` parameter describes the instance type that you want. The The available instances types are listed on [AWS Instances Types](http://aws.amazon.com/ec2/instance-types/).
 
 4. The ``-N [instance-name]`` parameter set the name of the instance to ``instance-name``. You can give the name of your choice to each instance, since that you don't repeat the names for the instances.
 
