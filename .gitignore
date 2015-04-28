@@ -29,3 +29,5 @@
 .vagrant/
 Vagrantfile
 
+.class
+
