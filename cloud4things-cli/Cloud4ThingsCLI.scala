@@ -27,15 +27,24 @@ object Cloud4ThingsCLI {
     print("Cloud4ThingsCLI:> ")
   }
 
-  def setALELRServiceURL(url: String) { this.ALELRServiceURL = url }
+  def selectOption(option: String) = option match {
+    case "1" => setALELRServiceURL()
+    case "2" => setALEServiceURL()
+    case "3" => defineReader()
+    case "4" => defineEventCycle()
+    case "5" => println("Need help!\n")
+    case _ => println("ERROR: Invalid option, choose another one.\n")
+  }
 
-  def setALEServiceURL(url: String) { this.ALEServiceURL = url }
+  def setALELRServiceURL() { ALELRServiceURL = url }
 
-  def defineReader(name: String) : Boolean = {
+  def setALEServiceURL() { ALEServiceURL = url }
+
+  def defineReader() : Boolean = {
     true
   }
 
-  def defineEventCycle(name: String) : Boolean = {
+  def defineEventCycle() : Boolean = {
     true
   }
 
@@ -45,7 +54,9 @@ object Cloud4ThingsCLI {
 
   def main(args: Array[String]): Unit = {
     printOptions()
-    for (line <- Source.stdin.getLines)
+    for (line <- Source.stdin.getLines) {
+      selectOption(line)
       printOptions()
+    }
   }
 }
