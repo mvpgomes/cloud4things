@@ -29,5 +29,5 @@
 .vagrant/
 Vagrantfile
 
-.class
+cloud4things-cli/*.class
 
