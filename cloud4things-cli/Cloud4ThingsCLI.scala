@@ -15,9 +15,9 @@ import scala.io.Source
 
 object Cloud4ThingsCLI {
 
-  // Filtering & Collection endpoints
-  var ALEServiceURL : String;
-  var ALELRServiceURL : String;
+  // Filtering & Collection endpoints variables
+  var ALEServiceURL : String = _
+  var ALELRServiceURL : String = _
 
   val listOptions = List("1 - Set ALELRService endpoint", "2 - Set ALEService endpoint",
                         "3 - Define Reader", "4 - Define Event-Cycle", "5 - Help")
@@ -29,7 +29,7 @@ object Cloud4ThingsCLI {
 
   def setALELRServiceURL(url: String) { this.ALELRServiceURL = url }
 
-  def setALEServiceURL(url: String) { this.ALEServiceURL = url  }
+  def setALEServiceURL(url: String) { this.ALEServiceURL = url }
 
   def defineReader(name: String) : Boolean = {
     true
@@ -45,7 +45,7 @@ object Cloud4ThingsCLI {
 
   def main(args: Array[String]): Unit = {
     printOptions()
-    for (line <- stdin.getLines)
+    for (line <- Source.stdin.getLines)
       printOptions()
   }
 }
