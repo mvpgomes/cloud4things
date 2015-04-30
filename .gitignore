@@ -27,7 +27,6 @@
 .DS_Store
 
 .vagrant/
-Vagrantfile
 
 cloud4things-cli/*.class
 
