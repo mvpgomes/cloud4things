@@ -56,7 +56,7 @@ object Cloud4ThingsCLI {
     case "7" => showEventCycles()
     case "8" => generateReadersConfig()
     case "9" => generateEventCyclesConfig()
-    case _ => println("ERROR: Invalid option, choose another one.\n")
+    case _ => deleteReader("TestReader")//println("ERROR: Invalid option, choose another one.\n")
   }
 
   // Set the URL of the ALELRService at the Filtering & Collecting server
@@ -78,7 +78,9 @@ object Cloud4ThingsCLI {
   }
 
   // Delete a Reader with name {name}
-  private def deleteReader(name: String) {}
+  private def deleteReader(name: String) {
+    readers.filter(_.readerName == name).foreach(readers -= _)
+  }
 
   // List all Readers
   def showReaders() {
@@ -130,7 +132,9 @@ object Cloud4ThingsCLI {
   }
 
   // Delete a EventCycle with name {name}
-  private def deleteEventCycle(name: String) {}
+  private def deleteEventCycle(name: String) {
+    eventCycles.filter(_.eventName == name).foreach(eventCycles -= _)
+  }
 
   // List all EventCycles
   def showEventCycles() {
