@@ -10,7 +10,7 @@
       each reader.
    ------------------------------------------------------- */
 
-import cloud4things.utils.{EventCycle, Reader}
+import cloud4things.cli.utils.{Reader, EventCycle}
 
 import scala.io.StdIn
 import scala.io.Source
