@@ -1,3 +1,5 @@
+package cloud4things.utils
+
 /* Reader: class that represents a RFID reader.
    Params:
     - @readerName : String = the reader name.

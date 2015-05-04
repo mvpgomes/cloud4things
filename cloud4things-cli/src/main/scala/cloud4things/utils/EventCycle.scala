@@ -1,3 +1,5 @@
+package cloud4things.utils
+
 /* EventCycle: class that represents a EventCycle that occurs in the smart place.
    Params:
     - @eventName : String = the EventCycle name.
