@@ -2,7 +2,7 @@
 <properties>
 
    <!-- the host to connect to -->
-   <host>docker</host>
+   <host>localhost</host>
 
    <!-- the port to connect to -->
    <port>8800</port>
