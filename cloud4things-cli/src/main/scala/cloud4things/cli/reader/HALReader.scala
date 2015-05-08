@@ -1,4 +1,4 @@
-package cloud4things.cli.utils
+package cloud4things.cli.reader
 
 /* HALReader: class that represents a HAL RFID reader.
    Params:

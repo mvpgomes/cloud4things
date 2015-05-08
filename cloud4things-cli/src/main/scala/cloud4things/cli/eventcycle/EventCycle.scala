@@ -1,4 +1,4 @@
-package cloud4things.cli.utils
+package cloud4things.cli.eventcycle
 
 /* EventCycle: class that represents a EventCycle that occurs in the smart place.
    Params:

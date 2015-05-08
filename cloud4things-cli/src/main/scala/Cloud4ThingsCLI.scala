@@ -10,17 +10,14 @@
       each reader.
    ------------------------------------------------------- */
 
-import cloud4things.cli.utils.{Reader, EventCycle}
+import cloud4things.cli.eventcycle.EventCycle
+import cloud4things.cli.fosstrak.client.{FosstrakALELRClient, FosstrakALEClient}
+import cloud4things.cli.reader.Reader
 
-import scala.io.StdIn
-import scala.io.Source
 import scala.collection.mutable.ListBuffer
+import scala.io.{Source, StdIn}
 
 object Cloud4ThingsCLI {
-
-  // Filtering & Collection endpoints variables
-  var ALEServiceURL : String = _
-  var ALELRServiceURL : String = _
 
   // List that contains the options available for the user
   val listOptions = List("1 - Set ALELRService endpoint",
@@ -39,6 +36,12 @@ object Cloud4ThingsCLI {
   // List of EventCycles
   val eventCycles = new ListBuffer[EventCycle]()
 
+  // Fosstrak ALEClient instance
+  val ALEClient = new FosstrakALEClient()
+
+  // Fosstrak ALELRClient instance
+  val ALELRClient = new FosstrakALELRClient()
+
   // Print the options for the user choose
   def printOptions() {
     listOptions.foreach(println)
@@ -46,7 +49,7 @@ object Cloud4ThingsCLI {
   }
 
   /* A dictionary-based function that invokes a function based
-     on the input entered by the user.*/
+         on the input entered by the user.*/
   def selectOption(option: String) = option match {
     case "1" => setALELRServiceURL()
     case "2" => setALEServiceURL()
@@ -55,21 +58,19 @@ object Cloud4ThingsCLI {
     case "5" => println("Need help!\n")
     case "6" => showReaders()
     case "7" => showEventCycles()
-    case "8" => generateReadersConfig()
-    case "9" => generateEventCyclesConfig()
-    case _ => deleteReader("TestReader")//println("ERROR: Invalid option, choose another one.\n")
+    case _ => println("ERROR: Invalid option, choose another one.\n")
   }
 
-  // Set the URL of the ALELRService at the Filtering & Collecting server
+  //Set the URL of the ALELRService at the Filtering & Collecting server
   def setALELRServiceURL() {
     print("Enter the ALELRService URL: ")
-    ALELRServiceURL = StdIn.readLine()
+    ALELRClient.setAleLrServiceEndpointAddress(StdIn.readLine())
   }
 
   // Set the URL of the ALEService at the Filtering & Collecting server
   def setALEServiceURL() {
     print("Enter the ALEService URL: ")
-    ALEServiceURL = StdIn.readLine()
+    ALEClient.setAleServiceEndpointAddress(StdIn.readLine())
   }
 
   // Create a new Reader
@@ -86,16 +87,7 @@ object Cloud4ThingsCLI {
   // List all Readers
   def showReaders() {
     println("Printing readers ....")
-    for (reader <- readers)
-      println(reader.readerName)
-  }
-
-  // Generate the Reader configuration file in XML format
-  def generateReaderSpecXML(reader : Reader) {}
-
-  // Generate the configuration files for all readers
-  def generateReadersConfig() = {
-    readers.foreach(generateReaderSpecXML)
+    readers.foreach(_.readerName)
   }
 
   // Create a new EventCycle
@@ -112,18 +104,8 @@ object Cloud4ThingsCLI {
   // List all EventCycles
   def showEventCycles() {
     println("Printing event cycles ....")
-    for (eventCycle <- eventCycles)
-      println(eventCycle.eventName)
+    eventCycles.foreach(_.eventName)
   }
-
-  // Generate the EventCycle configuration file in XML format
-  def generateEventCycleSpecXML(eventCycle : EventCycle) {}
-
-  // Generate the configuration files for all EventCycles
-  def generateEventCyclesConfig() = {
-    eventCycles.foreach(generateEventCycleSpecXML)
-  }
-
 
   // Subscribe the EventCycles to the URL of the capturing application
   def subscribeEventCycle(name: String, url: String) {}

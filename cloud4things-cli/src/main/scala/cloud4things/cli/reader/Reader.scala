@@ -1,4 +1,4 @@
-package cloud4things.cli.utils
+package cloud4things.cli.reader
 
 /* Reader: class that represents a RFID reader.
    Params:
