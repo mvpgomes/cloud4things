@@ -1,0 +1,30 @@
+{ "smart-place" : {
+
+  "name": "",
+
+  "readers": [
+
+    {"reader": {
+      "name": "",
+      "description": "",
+      "reader-type": "",
+      "read-time-interval": "",
+      "is-composite": "",
+      "properties-file-path": ""
+     }
+    }
+  ],
+
+  "event-cycles" : [
+    
+    { "event-cycle" : {
+      "name": "",
+      "associated-reader": "",
+      "repeat-period": "",
+      "duration": "",
+      "stable-set-interval": ""
+     }
+    }
+  ]
+ }
+}

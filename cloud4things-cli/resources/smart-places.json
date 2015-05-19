@@ -1,0 +1,17 @@
+{ "smartplaces" : [
+
+  { "smartplace" : {
+
+    "name": "",
+
+    "readers": [
+      {"reader": {} }
+    ],
+
+    "eventcycles" : [
+
+      { "eventcycle" : {} }
+    ]
+   }
+  }
+]}
