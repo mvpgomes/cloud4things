@@ -10,37 +10,40 @@
       each reader.
    ------------------------------------------------------- */
 
+import cloud4things.cli.configuration.Configuration
 import cloud4things.cli.eventcycle.EventCycle
-import cloud4things.cli.fosstrak.client.{FosstrakALELRClient, FosstrakALEClient}
+import cloud4things.cli.fosstrak.client.{FosstrakALEClient, FosstrakALELRClient}
 import cloud4things.cli.reader.Reader
 
-import scala.collection.mutable.ListBuffer
 import scala.io.{Source, StdIn}
 
 object Cloud4ThingsCLI {
 
   // List that contains the options available for the user
-  val listOptions = List("1 - Set ALELRService endpoint",
+  private val listOptions = List("1 - Set ALELRService endpoint",
     "2 - Set ALEService endpoint",
     "3 - Define Reader",
     "4 - Define Event-Cycle",
     "5 - Help",
     "6 - Show Readers",
-    "7 - Show EventCycles",
-    "8 - Generate Readers Config",
-    "9 - Generate EventCycles Config")
-
-  // List of Readers
-  val readers = new ListBuffer[Reader]()
-
-  // List of EventCycles
-  val eventCycles = new ListBuffer[EventCycle]()
+    "7 - Show EventCycles")
 
   // Fosstrak ALEClient instance
-  val ALEClient = new FosstrakALEClient()
+  private val ALEClient = new FosstrakALEClient()
 
   // Fosstrak ALELRClient instance
-  val ALELRClient = new FosstrakALELRClient()
+  private val ALELRClient = new FosstrakALELRClient()
+
+  // Smart-places configuration
+  private val smartConfiguration = new scala.collection.mutable.Map[String, Configuration] {
+    override def get(key: String): Option[Configuration] = ???
+
+    override def iterator: Iterator[(String, Configuration)] = ???
+
+    override def +=(kv: (String, Configuration)): this.type = ???
+
+    override def -=(key: String): this.type = ???
+  }
 
   // Print the options for the user choose
   def printOptions() {
@@ -53,68 +56,54 @@ object Cloud4ThingsCLI {
   def selectOption(option: String) = option match {
     case "1" => setALELRServiceURL()
     case "2" => setALEServiceURL()
-    case "3" => defineReader()
-    case "4" => defineEventCycle()
-    case "5" => println("Need help!\n")
-    case "6" => showReaders()
-    case "7" => showEventCycles()
     case _ => println("ERROR: Invalid option, choose another one.\n")
   }
 
-  //Set the URL of the ALELRService at the Filtering & Collecting server
-  def setALELRServiceURL() {
-    print("Enter the ALELRService URL: ")
-    ALELRClient.setAleLrServiceEndpointAddress(StdIn.readLine())
-  }
-
   // Set the URL of the ALEService at the Filtering & Collecting server
-  def setALEServiceURL() {
+  def setALEServiceURL() = {
     print("Enter the ALEService URL: ")
-    ALEClient.setAleServiceEndpointAddress(StdIn.readLine())
+    ALEClient.setAleServiceEndpointAddress(StdIn.readLine)
   }
 
-  // Create a new Reader
-  def defineReader() {
-    print("Enter the reader name: ")
-    readers += new Reader(StdIn.readLine())
+  //Set the URL of the ALELRService at the Filtering & Collecting server
+  def setALELRServiceURL() = {
+    print("Enter the ALELRService URL: ")
+    ALELRClient.setAleLrServiceEndpointAddress(StdIn.readLine)
   }
 
-  // Delete a Reader with name {name}
-  private def deleteReader(name: String) {
-    readers.filter(_.readerName == name).foreach(readers -= _)
+  // Create a new smart-place configuration
+  def createSmartPlaceConfiguration(name: String) = {
+    smartConfiguration += (name -> new Configuration(name))
   }
 
-  // List all Readers
-  def showReaders() {
-    println("Printing readers ....")
-    readers.foreach(_.readerName)
+  // Add a reader to a configuration
+  def addReaderToConfiguration(configName: String, reader: Reader) = {
+    smartConfiguration(configName).addReader(reader)
   }
 
-  // Create a new EventCycle
-  def defineEventCycle() {
-    print("Enter the event cycle name: ")
-    eventCycles += new EventCycle(StdIn.readLine())
+  //  Delete a reader from a configuration
+  def deleteReaderFromConfiguration(configName: String, readerName: String) = {
+    smartConfiguration(configName).deleteReader(readerName)
   }
 
-  // Delete a EventCycle with name {name}
-  private def deleteEventCycle(name: String) {
-    eventCycles.filter(_.eventName == name).foreach(eventCycles -= _)
+  // Add event cycle to a configuration
+  def addEventCycleToConfiguration(configName: String, eventCycle: EventCycle) = {
+    smartConfiguration(configName).addEventCycle(eventCycle)
   }
 
-  // List all EventCycles
-  def showEventCycles() {
-    println("Printing event cycles ....")
-    eventCycles.foreach(_.eventName)
+  //  Delete a eventCycle from a configuration
+  def deleteEventFromConfiguration(configName: String, eventName: String) = {
+    smartConfiguration(configName).deleteEventCycle(eventName)
   }
 
   // Subscribe the EventCycles to the URL of the capturing application
-  def subscribeEventCycle(name: String, url: String) {}
+  def subscribeEventCycle(name: String, url: String) = {}
 
   /*
     - main : the main functions runs an interactive command-line
       prompt allowing the user to define the scenario of the EPC application.
   */
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) = {
     printOptions()
     for (line <- Source.stdin.getLines) {
       selectOption(line)
