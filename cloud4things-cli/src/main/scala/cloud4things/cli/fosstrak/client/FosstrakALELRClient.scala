@@ -28,7 +28,6 @@ class FosstrakALELRClient() extends FosstrakClient(classOf[ALELRServicePortType]
     getAleLrServiceProxy.getLRSpec(reader)
   }
 
-
   def removeReaders() = {
     val readers: RemoveReaders = null
     getAleLrServiceProxy.removeReaders(readers)
@@ -37,7 +36,7 @@ class FosstrakALELRClient() extends FosstrakClient(classOf[ALELRServicePortType]
   def setReaders() = {
     val readers: SetReaders = null
     getAleLrServiceProxy.setReaders(readers)
-  } 
+  }
 
   def setReaderProperties() = {
     val properties: SetProperties = null
@@ -55,7 +54,6 @@ class FosstrakALELRClient() extends FosstrakClient(classOf[ALELRServicePortType]
   }
 
   def getLogicalReaderNames(): ArrayOfString = getAleLrServiceProxy.getLogicalReaderNames(new EmptyParms)
-
 
   def getStandardVersion(): String = getAleLrServiceProxy.getStandardVersion(new EmptyParms)
 
