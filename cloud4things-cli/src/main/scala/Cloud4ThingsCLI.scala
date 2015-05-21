@@ -20,13 +20,9 @@ import scala.io.{Source, StdIn}
 object Cloud4ThingsCLI {
 
   // List that contains the options available for the user
-  private val listOptions = List("1 - Set ALELRService endpoint",
-    "2 - Set ALEService endpoint",
-    "3 - Define Reader",
-    "4 - Define Event-Cycle",
-    "5 - Help",
-    "6 - Show Readers",
-    "7 - Show EventCycles")
+  private val listOptions = List(
+    "1 - Set ALELRService endpoint",
+    "2 - Set ALEService endpoint")
 
   // Fosstrak ALEClient instance
   private val ALEClient = new FosstrakALEClient()
