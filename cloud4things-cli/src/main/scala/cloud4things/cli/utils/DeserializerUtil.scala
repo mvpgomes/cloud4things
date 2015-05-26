@@ -1,6 +1,6 @@
 package cloud4things.cli.utils
 
-import java.io.{FileInputStream, InputStream}
+import java.io.{File, FileInputStream, InputStream}
 import javax.xml.bind.helpers.DefaultValidationEventHandler
 import javax.xml.bind.{JAXBContext, Unmarshaller, ValidationEventHandler}
 import javax.xml.transform.stream.StreamSource
@@ -12,7 +12,7 @@ import org.fosstrak.ale.xsd.ale.epcglobal._
 object DeserializerUtil {
 
   def deserializeECSpec(filePath: String) : ECSpec = {
-    unmarshall("org.fosstrak.ale.xsd.ale.epcglobal", filePath, null, classOf[ECSpec]).asInstanceOf[ECSpec]
+    deserializeECSpec(new FileInputStream(new File(filePath)))
   }
 
   def deserializeECSpec(is: InputStream) : ECSpec = {
@@ -20,7 +20,7 @@ object DeserializerUtil {
   }
 
   def deserializeLRSpec(filePath: String) : LRSpec = {
-    unmarshall("org.fosstrak.ale.wsdl.alelr.epcglobal", filePath, null, classOf[LRSpec]).asInstanceOf[LRSpec]
+    deserializeLRSpec(new FileInputStream(new File(filePath)))
   }
 
   def deserializeLRSpec(is: InputStream) : LRSpec = {
@@ -53,6 +53,7 @@ object DeserializerUtil {
 
   private def getUnmarshaller(contextPath: String, handler: ValidationEventHandler): Unmarshaller = {
 
+    // TODO: review this fragment of code
     val context: JAXBContext = JAXBContext.newInstance(contextPath)
 
     val unmarshaller: Unmarshaller = context.createUnmarshaller()
@@ -73,9 +74,7 @@ object DeserializerUtil {
 
     val unmarshaller: Unmarshaller = getUnmarshaller(context, handler)
 
-    val in: InputStream = new FileInputStream(filePath)
-
-    val json:StreamSource = new StreamSource(in)
+    val json:StreamSource = new StreamSource(new FileInputStream(filePath))
 
     unmarshaller.unmarshal(json, clazz.getClass).getValue()
   }
