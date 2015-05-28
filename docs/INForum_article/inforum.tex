@@ -44,26 +44,76 @@ based on Fosstrak with other approaches, such as full Virtual Machines and TOSCA
 % -------------------------------------------------------------------------------------------------
 \section{Introduction}
 \label{sec:introduction}
+In this section we will describe the problem that we want to solve with Cloud4Things, i.e, automating
+the configuration and provisioning of smart places applications based on the RFID technology in the
+Cloud, in our case the Fosstrak platform, that implements the GS1 EPC Network specifications.
+
+Cloud4Things will perform the automatic provisioning aiming the required software stack by the smart
+place infrastructure and the application performance.
+
+We also will give some examples of smart places and describe the life-cycle of a smart place
+application and point out what are the stages that will be the target of our work.
 % -------------------------------------------------------------------------------------------------
 % RELATED WORK
 % -------------------------------------------------------------------------------------------------
 \section{Related Work}
 \label{sec:related_work}
+In this section we will describe the most relevant work that is related with Cloud4Things, starting
+by the work developed by Guinard and Floerkmeier (EPC Cloud), and later by presenting the other
+solutions related with our work such as TOSCA, automatic provisioning with configuration management
+tools + VMs and proprietary solutions such as Amazon VM import and Amazon Elastic Beanstalk.
 % -------------------------------------------------------------------------------------------------
 % SOLUTION ARCHITECTURE
 % -------------------------------------------------------------------------------------------------
 \section{Solution}
 \label{sec:solution}
+In this section we will describe the solution of work, i.e, Cloud4Things architecture:
+% -------------------------------------------------------------------------------------------------
+% DOCKER
+% -------------------------------------------------------------------------------------------------
+\subsection{Docker}
+\label{sub:docker}
+% -------------------------------------------------------------------------------------------------
+% AUTOMATIC PROVISIONING
+% -------------------------------------------------------------------------------------------------
+\subsection{Automatic Provisioning}
+\label{sub:Automatic Provisioning}
+% -------------------------------------------------------------------------------------------------
+% SMART PLACE AUTOMATIC CONFIGURATION
+% -------------------------------------------------------------------------------------------------
+\subsection{Smart Place Automatic Configuration}
+\label{sub:Smart Place Automatic Configuration}
 % -------------------------------------------------------------------------------------------------
 % QUALITATIVE EVALUATION
 % -------------------------------------------------------------------------------------------------
 \section{Qualitative Evaluation}
 \label{sec:qualitative_evaluation}
+In this section we will perform a qualitative evaluation of the developed work until the date. The
+evaluation consists in compare the efficiency of the software stack required by our solution with
+the other alternative solutions that are mentioned in the Related Work.
+
+Another component that can be evaluated is the process to configure a smart place based on the
+Fosstrak platform. In the standard solution there are two implemented clients that can be used to
+configure the readers and events that belongs to a smart place. However, configure a smart place
+with those clients is a manual process that is ineffective and error prone. In order to turn this
+configuration process more automatic, our approach is to provide a client application that allows
+the user to describe the smart place configuration in a JSON file, that later will be used by the
+client to setup the readers and events in the application that is running in the Cloud.
 % -------------------------------------------------------------------------------------------------
 % CONCLUSION
 % -------------------------------------------------------------------------------------------------
 \section{Conclusion}
 \label{sec:conclusion}
+In this section we will present the conclusion of the paper and also we will discuss about some
+enhancements of our work.
+
+At the top of the Future Work list is the measure of the elasticity of the application regarding
+the events that occur in the physical world. Currently our solution is centralized, i.e, all the
+container that runs the Fosstrak application are located in the same machine, a important component
+of our work is to compare the current approach with a distributed solution. Finally, the client
+application still is textual, in the future a important feature that can be added to our solution
+is a GUI that allows the user to have a more visual perspective of the configuration of the smart
+place. 
 % -------------------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
 % -------------------------------------------------------------------------------------------------
