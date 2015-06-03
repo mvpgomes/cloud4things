@@ -1,0 +1,55 @@
+% -------------------------------------------------------------------------------------------------
+% RELATED WORK
+% -------------------------------------------------------------------------------------------------
+\section{Related Work}
+\label{sec:related_work}
+
+
+% ----------------------------------------
+% INTERNET OF THINGS AND CLOUD COMPUTING
+% ----------------------------------------
+\subsubsection{EPC Cloud}
+\label{subs:epc-cloud}
+In RFID-based IoT applications, Guinard et al. \cite{guinard2011cloud} point out that the
+deployment of RFID applications are cost-intensive mostly because they involve the
+deployment of often rather large and heterogeneous distributed systems. As a consequence,
+these systems are often only suitable for big corporations and large implementations and
+do not fit the limited resources of small to mid-size businesses and small scale applications
+both in terms of required skill-set and costs. To address this problem, Guinard et al. propose
+a Cloud-based solution that integrates virtualization technologies and the architecture of
+the Web and its services. The case of study consists in a IoT application that uses RFID technology
+to substitute existing Electronic Article Surveillance (EAS) technology, such as those used in
+clothing stores to track the products. In this scenario they applied the Utility Computing blueprint
+to the software stack required by the application using the AWS platform and the EC2 service. To
+evaluate the Cloud-based solution, two prototypes was successfully implemented to prove that
+the pain points of the RFID applications can be relaxed by adopting the proposed solution.\\
+
+% ---------------------------------------------
+% TOSCA
+% ---------------------------------------------
+\subsubsection{TOSCA}
+\label{subs:tosca}
+TOSCA (Topology and Orchestration Specification for Cloud Applications) \cite{li2013towards} is
+proposed in order to improve the reusability of service management processes and automate IoT application
+ratified by OASIS in deployment in heterogeneous environments. TOSCA is a new cloud standard to formally
+describe the internal topology of application components and the deployment process of Cloud applications.
+The structure and management of IT services is specified by a meta-model, which consists of
+a \textit{Topology Template}, that is responsible for describing the structure of a service, then there
+are the \textit{Artifacts}, that describe the files, scripts and software components necessary to be
+deployed in order to run the application, and finally the \textit{Plans}, that defined the management process
+of creating, deploying and terminating a service. The correct topology and management procedure can be inferred
+by a TOSCA environment just by interpreting the topology template, this is known as ``declarative" approach.
+Plans realize an ``imperative" approach that explicitly specifies how each management process should be done.
+The topology templates, plans and artifacts of an application are packaged in a Cloud Service Archive (.csar file)
+and deployed in a TOSCA environment, which is able to interpret the models and perform the specified management
+operations. These .csar files are portable across different Cloud providers, which is a great benefit in terms
+of deployment flexibility. To evaluate its feasibility, TOSCA was used in the specification of a typical
+application in building automation. an application to control an Air Handling Unit (AHU). The common IoT
+components, such as gateways and drivers will be modeled, and the gateway-specific artifacts that are
+necessary for application deployment will also be specified. By archiving the previous specifications
+and corresponding artifacts into a .csar file, and deploying it in a TOSCA environment, the deployment
+of AHU application onto various gateways can be automated. As a newly established standard to counter
+growing complexity and isolation in cloud applications environments, TOSCA is gaining momentum in industrial
+adoption as well for academic interest.\\
+
+Talk about proprietary solutions as Amazon VM import and Amazon Elastic Beanstalk.
