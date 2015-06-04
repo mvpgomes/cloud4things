@@ -20,41 +20,68 @@ memory and CPU overhead, they also are completable portable between different vi
 
 In our solution, we are using Docker containers for provisioning the software stack of the Fosstrak platform.
 A complete installation of the Fosstrak platform requires a compatible Java SDK, a full MySQL database and
-a Apache Tomcat server. In order to improve the application scalability we are provisioning a single container 
+a Apache Tomcat server. In order to improve the application scalability we are provisioning a single container
 for each component of the Fosstrak platform, the EPCIS repository, the Capture application, the ALE server,
 and also for the MySQL database, as illustrated on Figure \ref{fig:docker_stack}.
 
 % Dockerized application stack
-\begin{figure}
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=.5\textwidth]{images/docker-stack}
   \caption{Docker-based application stack.}
   \label{fig:docker_stack}
 \end{figure}
 
-By default each container runs a process that is isolated from the other processes that are executed in the
-same machine, inclusive the processes that runs in other containers. In order to connect the different
-modules of the Fosstrak platform, our containers are linked through the \textit{linking} mechanism provided
-by Docker.
+By default each container runs a process that is isolated from the other processes that are executed in
+the same machine. In order to connect the different modules of the Fosstrak platform, our containers are
+linked through the \textit{linking} mechanism provided by Docker. Another benefit that the Docker platform
+provides is the Docker Registry service, a public repository that stores Docker images used to create the
+containers. In our solution we built the Docker images of the Fosstrak modules and publish them
+in Docker registry to later be used to create our containers.
+% -------------------------------------------------------------------------------------------------
+% Chef
+% -------------------------------------------------------------------------------------------------
+\subsection{Chef}
+\label{sub:chef}
+In our solution, the automatic provisioning of the infrastructure is performed through configuration
+management tools, where for Cloud4Things we choose to use Chef\footnote{https://www.chef.io/}. Chef
+allows to describe the infrastructure as code, in that way it is possible to automate how the
+infrastructure is built, deployed and managed.
+
+Chef architecture is composed of the Chef Server - that stores the recipes and other configuration data -
+and the  Chef Client - that is installed in each server, VM or container, i.e, the nodes that are managed with Chef.
+The Chef client periodically polls Chef server latest policy and state of the network, and if anything on the
+node is out of date, the client update its state in order to be consistent with the latest policy.
+
+Chef was built from the ground with the cloud infrastructure in mind. With Chef, is possible to dynamically
+provision and de-provision the application infrastructure on demand to keep up with peaks in usage and traffic.
+For instance, Chef offers several plugins for provisioning cloud resources in different hosts such as
+Amazon EC2, Google Compute Engine and OpenStack.
 % -------------------------------------------------------------------------------------------------
 % AUTOMATIC PROVISIONING
 % -------------------------------------------------------------------------------------------------
 \subsection{Automatic Provisioning}
-\label{sub:Automatic Provisioning}
-In this section we will introduce the configuration management tools, in particular Chef, and then
-we will present a detailed explanation about how we use Chef to perform the automatic provisioning
-in the Cloud providers, in our case AWS, but by using Chef it is possible to port the
-infrastructure to others providers.
-\begin{figure}
+\label{sub:automatic_provisioning}
+The automatic provisioning of the smart place in the cloud is performed through Chef. The recipes
+that describe our infrastructure are based on the Docker \textit{cookbooks} that are available on the Chef
+Supermarket. These recipes describe how our software stack - the docker containers - are provisioned
+in the cloud instances. In our current prototype, we choose to use Amazon Web Services as cloud provider,
+to provisioning the resources in the Amazon EC2 instances we will use \textit{knife}, a
+command-line tool that provides an interface between a local chef repository and the Chef server.
+The provisioning workflow is illustrated in Figure \ref{fig:automatic_provisioning}.
+% Automatic provisioning diagram
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=.8\textwidth]{images/docker-c4t}
+  \caption{Automatic provisioning workflow.}
+  \label{fig:automatic_provisioning}
 \end{figure}
-% -------------------------------------------------------------------------------------------------
-% SMART PLACE AUTOMATIC CONFIGURATION
-% -------------------------------------------------------------------------------------------------
-\subsection{Smart Place Automatic Configuration}
-\label{sub:Smart Place Automatic Configuration}
-In this section we will introduce the Cloud4Things CLI, a command line interface that allows the
-users to upload a predefined configuration of a smart place to the Fosstrak server. We will explain
-the procedures required to configure a smart place, i.e, the template that is used to describe the
-configuration.
+
+In a development environment the Docker images are built and then uploaded to the Docker Registry
+repository (1). The provisioning of the cloud resources is described in the cookbooks that are uploaded
+to the Chef server (2). The provisioning request (3) is performed using knife - knife has a plugin for EC2
+that allows to describe the image type, the instance type and the policies that need to be applied on
+each provisioned node. The Chef client runs the configuration recipes that are sent by the Chef server (4).
+In our solution this configuration recipes describe that a our nodes must have a set of Docker containers
+running on it. The Chef client pulls the Docker images from the remote repository, built the
+containers based on those images and finally apply the configuration that is associated to each container.   
