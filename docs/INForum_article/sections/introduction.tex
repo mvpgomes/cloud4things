@@ -3,30 +3,15 @@
 % -------------------------------------------------------------------------------------------------
 \section{Introduction}
 \label{sec:introduction}
-In recent years computing is becoming more ubiquitous in the physical world. This
-notion of ubicomp was introduced by Weiser \cite{weiser1999origins}, where the concept of
-smart environment was defined as ``\textit{a physical world richly and invisibly
-interwoven with sensors, actuators, displays, and computational elements, embedded
-seamlessly in the everyday objects of our lives and connected through a continuous network}''.
-Through the years, technology advances such as the creation of the Internet contributes
-to achieving the ubicomp's vision which enables individual devices to communicate between
-themselves from any part of the world \cite{gubbi2013internet}. In Weiser's vision of
-ubiquitous computing, information seamlessly moves in and out of attention as automation
-gives way to human interaction \cite{weiser1991computer}.
+In recent years, computing is becoming more ubiquitous in the physical world. This
+notion where computational elements are embedded seamlessly in ordinary objects that
+are connected through a continuous network was introduced many years ago\cite{weiser1991computer}.
+Despite the progress towards ubiquitous computing has been slower than the expected,
+technology advances such as the creation of the Internet contributes to achieve this vision in
+which individual devices are able to communicate between themselves from any part of the
+world\cite{gubbi2013internet}.
 
-The progress towards ubiquitous computing has been slower than expected \cite{greenfield2010everyware},
-another approaches for ubiquitous computing that contrasts with Weiser vision becomes relevant.
-Rogers proposes an approach which focuses in designing technologies for engaging user
-experiences that, in a creative and constructive way, extend the peoples' capabilities \cite{rogers2006moving}.
-Rogers points that ubiquitous technologies can be developed not only for individuals,
-but for particular domains that can be set up and customized by an organization according
-its needs, such as agriculture, retailing and logistics.
-
-The main difference between Weiser's and Rogers vision concerns with the user experience.
-In Weiser point of view computers take the initiative to act on people's behalf \cite{tennenhouse2000proactive},
-while in Rogers vision is not the computer that is proactive, the user assumes that role.
-
-Actually, Weiser vision is close to becoming reality thanks to the Internet of Things
+Recently, this ubiquitous world is close to becoming reality thanks to the Internet of Things
 and Cloud Computing \cite{caceres2012ubicomp}. This world where things are connected
 through a continuous network is a vision thats represents the Internet of Things (IoT).
 In this vision, physical items are continuously connected to the virtual world and can
@@ -47,13 +32,19 @@ are identified with RFID tags. The data transmitted by the tags is processed to 
 infrastructure of the smart place and then transformed into information. For instance,
 Fosstrak can use this information to determine the objects that enter and leaves the smart place.
 
+A common issue regarding RFID-based smart places concerns with the provisioning of the infrastructure of
+a smart place. The current solution requires a physical infrastructure that is cost ineffective and presents
+a low scalability. To solve those problems, an alternative is to allocate the smart place infrastructure
+in the cloud. However, provisioning the smart place infrastructure in the cloud still is a manual
+process that requires considerable effort and expertise to be executed.
 
-In this section we will describe the problem that we want to solve with Cloud4Things, i.e, automating
-the configuration and provisioning of smart places applications based on the RFID technology in the
-Cloud, in our case the Fosstrak platform, that implements the GS1 EPC Network specifications.
+In order to solve those problems we propose Cloud4Things, a solution that automates the provisioning of RFID
+software in the cloud by relying on configuration management tools that leverage existing stacks.
+With Cloud4Things we want to support the life-cycle of smart place applications, from the initial
+provisioning to day-to-day operations, such as application management and QoS monitoring.
 
-Cloud4Things will perform the automatic provisioning aiming the required software stack by the smart
-place infrastructure and the application performance.
-
-We also will give some examples of smart places and describe the life-cycle of a smart place
-application and point out what are the stages that will be the target of our work.
+The remainder of this paper is organized as the follows. In Section \ref{sec:related_work} we
+present the related work in the area. Section \ref{sec:solution} presents a description of our
+solution architecture and the current implemented prototype. In Section \ref{sec:qualitative_evaluation}
+we will perform a qualitative evaluation and compare our solution with the current state of the art.
+Section \ref{sec:conclusion} presents the conclusion of this paper.

@@ -3,8 +3,8 @@
 % -------------------------------------------------------------------------------------------------
 \section{Related Work}
 \label{sec:related_work}
-
-
+\textit{Before to introduce the related work we must to have a context that emphasizes the
+problem that we want to solve and what are the most relevant work until the date.}
 % ----------------------------------------
 % INTERNET OF THINGS AND CLOUD COMPUTING
 % ----------------------------------------
@@ -20,9 +20,28 @@ a Cloud-based solution that integrates virtualization technologies and the archi
 the Web and its services. The case of study consists in a IoT application that uses RFID technology
 to substitute existing Electronic Article Surveillance (EAS) technology, such as those used in
 clothing stores to track the products. In this scenario they applied the Utility Computing blueprint
-to the software stack required by the application using the AWS platform and the EC2 service. To
-evaluate the Cloud-based solution, two prototypes was successfully implemented to prove that
-the pain points of the RFID applications can be relaxed by adopting the proposed solution.\\
+to the software stack required by the application using the Amazon Web Services platform and the
+Amazon EC2 service. To evaluate the Cloud-based solution, two prototypes was successfully
+implemented to prove that the pain points of the RFID applications can be relaxed by adopting the
+proposed solution.
+
+% ---------------------------------------------
+% AWS
+% ---------------------------------------------
+\subsubsection{Amazon Web Services}
+\label{subs:aws}
+Amazon Web Services\footnote{http://aws.amazon.com/} (AWS) offers a variety of services that are able
+to automate the provisioning of the IT infrastructure at the Amazon EC2 (EC2). VM Import/Export is a
+service provided by AWS that enables to import virtual machine images from the development environment
+to EC2 instances and export them back to the on-premisies development environment. This offering allows
+to leverage the existing investments in the virtual machines that was built to meet the IT security,
+configuration management, and compliance requirements by bringing those virtual machines into EC2 as
+ready-to-use instances. The instances also can be exported to the on-premises virtualization infrastructure,
+allowing to deploy workloads across the IT infrastructure. Another service provided by AWS is Elastic Beanstalk.
+Elastic Beanstalk is a service available on AWS that allows to quickly deploy and manage an application in
+the AWS cloud. The application is uploaded to AWS, and Elastic Beanstalk automatically handles with the
+details of capacity provisioning, load balancing, scaling and application health monitoring. Elastic Beanstalk
+supports several types of applications, including Java, Python, Ruby on Rails and Docker containers.
 
 % ---------------------------------------------
 % TOSCA
@@ -50,6 +69,4 @@ necessary for application deployment will also be specified. By archiving the pr
 and corresponding artifacts into a .csar file, and deploying it in a TOSCA environment, the deployment
 of AHU application onto various gateways can be automated. As a newly established standard to counter
 growing complexity and isolation in cloud applications environments, TOSCA is gaining momentum in industrial
-adoption as well for academic interest.\\
-
-Talk about proprietary solutions as Amazon VM import and Amazon Elastic Beanstalk.
+adoption as well for academic interest.
