@@ -10,7 +10,7 @@ the architecture of Cloud4Things.
 % Automatic provisioning diagram
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=\textwidth]{images/c4t-generic-solution}
+  \includegraphics[width=.9\textwidth]{images/c4t-generic-solution}
   \caption{Cloud4Things architecture.}
   \label{fig:c4t_architecture}
 \end{figure}
@@ -32,7 +32,7 @@ state is consistent with the most recent police.
 % -------------------------------------------------------------------------------------------------
 The current implementation of Cloud4Things relies on Chef\footnote{https://www.chef.io/}. The recipes that describe our
 infrastructure are based on Docker \textit{cookbooks} that are available on the Chef Supermarket\footnote{https://supermarket.chef.io/}.
-These recipes describe how our software stack - the docker containers - are provisioned in the cloud instances.
+These recipes describe how our software stack - the Docker containers - are provisioned in the cloud instances.
 In our current prototype, we choose to use Amazon Web Services as cloud provider. To provisioning the
 resources in the Amazon EC2 instances we will use \textit{knife}, a command-line tool that provides
 an interface between a local chef repository and the Chef server. The provisioning workflow is illustrated
@@ -40,7 +40,8 @@ in Figure \ref{fig:automatic_provisioning}.
 % Automatic provisioning diagram
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=\textwidth]{images/docker-c4t}
+  \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{images/docker-c4t}}%
+  %\includegraphics[width=1.3\textwidth]{images/docker-c4t}
   \caption{Automatic provisioning workflow.}
   \label{fig:automatic_provisioning}
 \end{figure}
@@ -49,7 +50,7 @@ In a development environment the Docker images are built and then uploaded to th
 repository (1). The provisioning of the cloud resources is described in the cookbooks that are uploaded
 to the Chef server (2). The provisioning request (3) is performed using knife - knife has a plugin for EC2
 that allows to describe the image type, the instance type and the policies that need to be applied on
-each provisioned node. The Chef client runs the configuration recipes that are sent by the Chef server (4).
+each provisioned node. The Chef client runs the configuration recipes that are pooled from the Chef server (4).
 In our solution these configuration recipes describe that our nodes must have a set of Docker containers
 running on it. The Chef client pulls the Docker images from the remote repository, built the
 containers based on those images and finally apply the configuration that is associated to each container.
@@ -68,8 +69,8 @@ types of virtualization are similar, the virtualization at the operating-system 
 benefits compared to hypervisor-based solutions\cite{Merkel}. Docker containers are small, they have basically zero
 memory and CPU overhead, they also are completable portable between different virtualization environments.
 
-In our solution, we are using Docker containers for provisioning the software stack of the Fosstrak platform.
-A complete installation of the Fosstrak platform requires a compatible Java SDK, a full MySQL database and
+In our solution, Docker containers are used to provisioning the software stack of the Fosstrak platform.
+A complete installation of Fosstrak requires a compatible Java SDK, a full MySQL database and
 a Apache Tomcat server. In order to improve the application scalability we are provisioning a single container
 for each component of the Fosstrak platform, the EPCIS repository, the Capture application, the ALE server,
 and also for the MySQL database, as illustrated on Figure \ref{fig:docker_stack}.
@@ -83,7 +84,7 @@ and also for the MySQL database, as illustrated on Figure \ref{fig:docker_stack}
 \end{figure}
 
 By default each container runs a process that is isolated from the other processes that are executed in
-the same machine. In order to connect the different modules of the Fosstrak platform, our containers are
+the same environment. In order to connect the different modules of the Fosstrak, our containers are
 linked through the \textit{linking} mechanism provided by Docker. Another benefit that the Docker platform
 provides is the Docker Registry service, a public repository that stores Docker images used to create the
 containers. In our solution we built the Docker images of the Fosstrak modules and publish them

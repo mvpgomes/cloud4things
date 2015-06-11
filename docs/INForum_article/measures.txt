@@ -1,0 +1,19 @@
+/* --- AWS instance -- */
+
+AMI size : 8Gb
+Used : 2.6Gb
+
+
+/* -- Docker Images OSX -- */
+
+MySQL image: 284 MB
+EPCIS image: 388 MB
+Capture application image: 387 MB
+ALE image: 406 MB
+
+/* -- Docker Containers AWS -- */
+
+MySQL container: 290 MB
+EPCIS image: 400 MB
+Capture application image: 381 MB
+ALE image: 390 MB
