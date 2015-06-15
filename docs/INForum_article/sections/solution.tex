@@ -77,10 +77,11 @@ and also for the MySQL database.
 
 By default each container runs a process that is isolated from the other processes that are executed in
 the same environment. In order to connect the different modules of the Fosstrak, our containers are
-linked through the \textit{linking} mechanism provided by Docker. Another benefit that the Docker platform
-provides is the Docker Registry service, a public repository that stores Docker images used to create the
-containers. In our solution we built the Docker images of the Fosstrak modules and published them
-in Docker registry to later be used to create our containers.
+linked through the \textit{linking system}\footnote{https://docs.docker.com/userguide/dockerlinks/} provided by Docker.
+This mechanism creates a secure tunnel between the containers, allowing the recipient container to access select
+data about the source container. Another benefit that the Docker platform provides is the Docker Registry service,
+a public repository that stores Docker images used to create the containers. In our solution we built the Docker
+images of the Fosstrak modules and published them in Docker registry to later be used to create our containers.
 % -------------------------------------------------------------------------------------------------
 % Configuration Management Tools
 % -------------------------------------------------------------------------------------------------
@@ -91,7 +92,7 @@ it is possible to automate how the infrastructure is built, deployed and managed
 
 Chef architecture is composed of the Chef Server - that stores the recipes and other configuration data -
 and the  Chef Client - that is installed in each server, VM or container, i.e, the nodes that are managed with Chef.
-The Chef client periodically polls Chef server latest policy and state of the network, and if anything on the
+The Chef client periodically pulls Chef server latest policy and state of the network, and if anything on the
 node is out of date, the client update its state in order to be consistent with the latest policy.
 
 Chef was built from the ground with the cloud infrastructure in mind. With Chef, is possible to dynamically
