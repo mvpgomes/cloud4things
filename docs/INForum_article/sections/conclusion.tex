@@ -1,16 +1,16 @@
 % -------------------------------------------------------------------------------------------------
 % CONCLUSION
 % -------------------------------------------------------------------------------------------------
-\section{Conclusion}
+\section{Conclusion and Future Work}
 \label{sec:conclusion}
 In this paper we propose Cloud4Things, a solution to automate the provisioning of the smart places
 infrastructure in the cloud. Our solution relies on configuration management tools to automate the
 provisioning the RFID software in the cloud providers. In the current approach, we decide to use
 Docker containers to provisioning the software stack due to the performance benefits that this
-technology offers. Our current prototype already is capable to support the stages of a smart place
-application. For the future work we want to collect some metrics to compare the performance of our solution
-with the other solutions. For that, we will measure the elasticity of the application regarding the
-events that occur in the physical world. Another aspect that is important is to verify if our Docker-based approach
-compromise the latency of the events are uploaded to the application. Currently, our solution is centralized, i.e,
-all the container that runs the Fosstrak application are located in the same machine, a important component of our
-work will be to compare the current approach with a distributed solution.
+technology offers. Our current prototype already is capable of automating some of the most important
+life-cycle stages of a smart place. Currently, our solution is centralized, i.e, all the containers that run
+the Fosstrak application are located in the same machine, a important component of our work will be to
+compare the current approach with a distributed solution. For the future work we want to collect some
+metrics to further compare the performance of our solution with the other solutions. For that, we will measure
+the scalability of the application regarding the quantity of events that occur in the physical world. Another aspect
+that is important is to verify if the latency of the events processing is acceptable.
