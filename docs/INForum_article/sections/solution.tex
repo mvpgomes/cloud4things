@@ -79,9 +79,12 @@ By default each container runs a process that is isolated from the other process
 the same environment. In order to connect the different modules of the Fosstrak, our containers are
 linked through the \textit{linking system}\footnote{https://docs.docker.com/userguide/dockerlinks/} provided by Docker.
 This mechanism creates a secure tunnel between the containers, allowing the recipient container to access select
-data about the source container. Another benefit that the Docker platform provides is the Docker Registry service,
-a public repository that stores Docker images used to create the containers. In our solution we built the Docker
-images of the Fosstrak modules and published them in Docker registry to later be used to create our containers.
+data about the source container. For instance, if we have a web server container linked to a
+database container, the web server container is able to access information about the database container.
+
+Another benefit that Docker platform provides is the Docker Registry service, a public repository that stores
+Docker images used to create the containers. In our solution we built the Docker images of the Fosstrak modules
+and published them in Docker registry to later be used to create our containers.
 % -------------------------------------------------------------------------------------------------
 % Configuration Management Tools
 % -------------------------------------------------------------------------------------------------
