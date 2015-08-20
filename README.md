@@ -13,11 +13,15 @@ This repository contains all the resources and documentation of Cloud4Things.
 
 - ``chef-repo/`` : Contains the recipes and configuration files that are used to provisioning and deploy the Fosstrak software stack at the Cloud.
 
-- ``cloud4things-cli`` : Contains the SBT project of a command-line tool that is used to automate the configuration of the Readers and the Events of a smart-place. 
+- ``cloud4things-cli`` : Contains the SBT project of a command-line tool that is used to automate the configuration of the Readers and the Events of a smart-place.
 
 - ``dockerfiles/`` : Contains the Dockerfiles and scripts that are used to built the  Docker images of the Fosstrak software stack, namely a **MySQL** database, the **EPCIS** repository, the **Capturing Application** and the **ALE Filtering & Collection** server.
 
 - ``docs/`` : Contains all the technical documentation developed until the date, namely the Master Thesis Project report and Dissertation report.
+
+- ``evaluation/`` : Contains all the data used in the evaluation of our solution and the obtained results.
+
+- ``rec-play-session-deserializer/`` : A Java application developed to deserialized the data collected in the sessions recorded with the Rec&Play module in the development of the RFID Toys Master's Thesis.
 
 - ``Vagrantfile``: A Vagrant dev/test environment of a VM pre-configured with Chef Client.
 
