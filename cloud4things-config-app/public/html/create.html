@@ -1,0 +1,71 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Cloud4Things</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-right" role="logout">
+                <button type="submit" class="btn btn-primary">Logout</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!-- Smart Place Application endpoint -->
+
+<div class="container">
+    <h1>Name</h1>
+    <form role="form" data-ng-submit="setSmartPlaceName()">
+        <label for="">Smart Place Name</label>
+        <input type="text" placeholder="Name" data-ng-model="name"/>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <hr/>
+</div>
+
+<div class="container">
+    <h1>Application Endpoint</h1>
+    <form role="form" data-ng-submit="setSmartPlaceUrl()">
+        <label for="">Smart Place Application URL</label>
+        <input type="text" placeholder="Application URL" data-ng-model="endpoint"/>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <hr/>
+</div>
+
+<!-- Smart Place Readers -->
+<div class="container">
+    <h1>Readers</h1>
+    <form role="form" data-ng-submit="addReader()">
+        <label for="">Reader Name</label>
+        <input type="text" placeholder="Reader Name" data-ng-model="reader_name"/>
+        <label for="">Reader Description</label>
+        <input type="text" placeholder="Reader Description" data-ng-model="reader_description"/>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <hr/>
+</div>
+<!-- Smart Place events -->
+<div class="container">
+    <h1>Event Cycles</h1>
+    <form role="form" data-ng-submit="addEvent()">
+        <label for="">Event Name</label>
+        <input type="text" placeholder="Event Name" data-ng-model="event_name"/>
+        <label for="">Associated Reader</label>
+        <input type="text" placeholder="Reader Name" data-ng-model="associated_reader"/>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <hr/>
+</div>
+<!-- Configuration actions -->
+<div class="container">
+    <button type="button" class="btn btn-danger" ng-click="cancelConfiguration()">Cancel</button>
+    <button type="button" class="btn btn-success" ng-click="createSmartPlaceConfiguration()">Save</button>
+</div>

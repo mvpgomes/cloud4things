@@ -1,0 +1,65 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Cloud4Things</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-right" role="logout">
+                <button type="submit" class="btn btn-primary">Logout</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!--  Smart Place Name -->
+<div class="container name-container">
+    <span>
+        <h1>Name</h1>
+        <p>{{smart_place.name}}</p>
+    </span>
+</div>
+
+<!--  Smart Place Endpoint -->
+<div class="container endpoint-container">
+    <span>
+        <h1>Endpoint</h1>
+        <p>{{smart_place.endpoint}}</p>
+    </span>
+</div>
+
+<!--  Readers List  -->
+<div class="container readers-container">
+    <h1>Readers</h1>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="reader in smart_place.readers">
+            {{reader.reader_name}} | {{reader.reader_description}}
+        </li>
+    </ul>
+</div>
+
+<!--  Events List  -->
+<div class="container events-container">
+    <h1>Events</h1>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="event in smart_place.events">
+            {{event.event_name}} | {{event.associated_reader}}
+        </li>
+    </ul>
+</div>
+
+<!-- Configuration actions -->
+<div class="container">
+    <span>
+        <button type="button" class="btn btn-danger">Cancel</button>
+        <button type="button" class="btn btn-alert">Edit</button>
+        <button type="button" class="btn btn-success">Deploy</button>
+    </span>
+</div>
