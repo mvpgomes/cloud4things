@@ -1,0 +1,136 @@
+# ALE Edge ECspec 2015-08-11
+
+- Report 1
+----------------
+
+Reader Start to Send Data [Network Time]: 20:02:33.856533
+Notification Received by ALE [Processing Time]: 20:02:33.863
+Create Report and Delivery to the Client [Processing Time]: 20:02:40.441
+Client Receive Report [Network Time]: 20:02:40.453326
+
+RTT: 6.597s
+Connection Time: 0.007s + 0.012 = 0.019s
+Data Processing Time: 6.578s
+
+- Report 2
+----------------
+
+Reader Start to Send Data [Network Time]: 20:02:44.385572
+Notification Received by ALE [Processing Time]: 20:02:44.388
+Create Report and Delivery to the Client [Processing Time]: 20:02:50.442
+Client Receive Report [Network Time]: 20:02:50.451170
+
+RTT:
+Connection Time: 0.003s + 0.009s = 0.012s
+Data Processing Time: 6.054s
+
+- Report 3
+----------------
+
+Reader Start to Send Data [Network Time]: 20:02:52.809186
+Notification Received by ALE [Processing Time]: 20:02:52.812
+Create Report and Delivery to the Client [Processing Time]: 20:03:00.455
+Client Receive Report [Network Time]: 20:03:00.461372
+
+RTT:
+Connection Time: 0.003s + 0.006 = 0.009s
+Data Processing Time: 7.643s
+
+- Report 4
+----------------
+
+Reader Start to Send Data [Network Time]: 20:03:01.758246
+Notification Received by ALE [Processing Time]: 20:03:01.760
+Create Report and Delivery to the Client [Processing Time]: 20:03:10.448
+Client Receive Report [Network Time]: 20:03:10.469725
+
+RTT:
+Connection Time: 0.002s + 0.021s = 0.023s
+Data Processing Time: 8.688s
+
+
+- Report 5
+----------------
+
+Reader Start to Send Data [Network Time]: 20:03:13.337829
+Notification Received by ALE [Processing Time]: 20:03:13.342
+Create Report and Delivery to the Client [Processing Time]: 20:03:20.446
+Client Receive Report [Network Time]: 20:03:20.452722
+
+RTT:
+Connection Time: 0.005s + 0.006 = 0.011s
+Data Processing Time: 7.104s
+
+# ALE Edge ECspec 2015-08-18
+
+- Report 1
+----------------
+
+Reader Start to Send Data [Network Time]: 11:43:38.212090
+Notification Received by ALE [Processing Time]: 11:43:38.226
+Create Report and Delivery to the Client [Processing Time]: 11:43:46.709
+Client Receive Report [Network Time]: 11:43:46.724181
+
+RTT: 8.512s
+Connection Time: 8.483s
+Data Processing Time: 0.029s
+
+- Report 2
+----------------
+
+Reader Start to Send Data [Network Time]: 11:43:48.211440
+Notification Received by ALE [Processing Time]: 11:43:48.215
+Create Report and Delivery to the Client [Processing Time]: 11:43:56.710
+Client Receive Report [Network Time]: 11:43:56.721760
+
+RTT: 8.510s
+Connection Time: 8.495s
+Data Processing Time: 0.015s
+
+- Report 3
+----------------
+
+Reader Start to Send Data [Network Time]: 11:44:03.481937
+Notification Received by ALE [Processing Time]: 11:44:03.485
+Create Report and Delivery to the Client [Processing Time]: 11:44:06.710
+Client Receive Report [Network Time]: 11:44:06.725736
+
+RTT: 3.244s
+Connection Time: 3.225s
+Data Processing Time: 0.019s
+
+- Report 4
+----------------
+
+Reader Start to Send Data [Network Time]: 11:44:07.168197
+Notification Received by ALE [Processing Time]: 11:44:07.174
+Create Report and Delivery to the Client [Processing Time]: 11:44:16.713
+Client Receive Report [Network Time]: 11:44:16.718951
+
+RTT: 9.550s
+Connection Time: 9.539s
+Data Processing Time: 0.011s
+
+- Report 5
+----------------
+
+Reader Start to Send Data [Network Time]: 11:44:18.231622
+Notification Received by ALE [Processing Time]: 11:44:18.238
+Create Report and Delivery to the Client [Processing Time]: 11:44:26.713
+Client Receive Report [Network Time]: 11:44:26.719686
+
+RTT: 8.488s
+Connection Time: 8.475s
+Data Processing Time: 0.013s
+
+- Report 6
+----------------
+
+Reader Start to Send Data [Network Time]: 11:44:28.226582
+Notification Received by ALE [Processing Time]: 11:44:28.231
+Create Report and Delivery to the Client [Processing Time]: 11:44:36.714
+Client Receive Report [Network Time]: 11:44:36.723575
+
+RTT: 8.497s
+Connection Time: 8.483s
+Data Processing Time: 0.014s
