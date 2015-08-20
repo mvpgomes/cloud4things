@@ -7,4 +7,3 @@ set -x
 . epcis/run_epcis_container.sh
 . capture/run_capture_container.sh
 . ale_server/run_ale_server_container.sh
-. ale_webclient/run_ale_web_container.sh

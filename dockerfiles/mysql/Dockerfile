@@ -11,9 +11,6 @@ ADD files/run_db.sh files/init_db.sh files/epcis_schema.sql /tmp/
 # to default_mysql_db.tar.gz
 RUN /tmp/init_db.sh
 
-
-EXPOSE 3306
-
 # run_db starts mysqld, but first it checks
 # to see if the /var/lib/mysql directory is empty, if
 # it is it is seeded with default_mysql_db.tar.gz before

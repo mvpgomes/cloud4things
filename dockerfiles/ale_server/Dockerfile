@@ -15,14 +15,21 @@ RUN unzip fc-server.zip && \
     unzip fc-server/*.war -d /usr/local/tomcat/webapps/fc-server-1.2.0 && \
     rm -r fc-server
 
-# Add the Client configuration file
-ADD files/SimulatorClient.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/props/SimulatorClient.xml
-
-# Add the Controller configuration file
-ADD files/SimulatorController.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/props/SimulatorController.xml
-
 # Add log4j configuration file
 ADD files/log4j.xml /usr/local/tomcat/webapps/fc-server-1.2.0/WEB-INF/classes/log4j.xml
 
+# Add a script to set the $CATALINA_OPTS environment variable
+ADD files/setenv.sh /usr/local/tomcat/bin/setenv.sh
+
+# Change working directory 
+WORKDIR /usr/local/tomcat/bin
+
+# Set the setenv.sh permissions
+RUN chmod +x setenv.sh
+
+# Set the CATALINA_OPTS variable
+CMD source setenv.sh
+
 # Run the server
 CMD ["catalina.sh", "run"]
+

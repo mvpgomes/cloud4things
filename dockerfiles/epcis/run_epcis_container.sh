@@ -2,4 +2,4 @@
 
 CONTAINER_NAME='fosstrak_epcis'
 
-docker run -it --name ${CONTAINER_NAME} --link fosstrak_db:db -p 8080:8080 -d clou4things/fosstrak_epcis
+docker run -it --name ${CONTAINER_NAME} --link fosstrak_db:db -p 8080:8080 -d cloud4things/fosstrak_epcis
