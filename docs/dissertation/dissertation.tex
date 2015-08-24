@@ -1,0 +1,71 @@
+% ------------------------------------------
+%  MASTER THESIS DISSERTATION
+% ------------------------------------------
+% Author:
+%
+% Advisors:
+%
+% ------------------------------------------
+\documentclass[10pt,twoside,a4paper]{report}
+% Set document margins to 1in in all sides
+\usepackage[margin=2.5cm]{geometry}
+% Line spacing package
+\usepackage{graphicx, helvet, hyperref, inputenc, setspace}
+\usepackage[portuguese,english]{babel}
+\usepackage[acronym]{glossaries}
+% Built the glossary when the main file is built.
+\makeglossaries
+% Set main font to Arial
+\renewcommand{\familydefault}{\sfdefault}
+% Define keywords macro
+\providecommand{\keywords}[1]{\textbf{Keywords:} #1}
+% Section numbering depth
+\setcounter{secnumdepth}{2}
+% Table of contents depth
+\setcounter{tocdepth}{3}
+% Set line spacing to 1.5cm
+\onehalfspacing
+% Page numbering
+\pagestyle{plain}
+
+% Glossary-File
+\input{glossary/glossary.tex}
+% Acronym-File
+\input{acronyms/acronyms.tex}
+
+% ------------------------------------------
+% MASTER THESIS DISSERTATION
+% ------------------------------------------
+
+\begin{document}
+\input{variables.tex}
+
+\include{cover}
+
+\if\includeAcknowledgments 1
+\input{acknowledgments/acknowledgments.tex}
+\fi
+
+\input{abstract/abstract-en.tex}
+\input{abstract/abstract-pt.tex}
+
+\tableofcontents
+\listoftables
+\listoffigures
+\printglossary[type=\acronymtype]
+
+\input{chapters/main.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliography/dissertation}
+
+% Appendix
+\appendix
+\include{appendix/appendixa}
+
+% Glossary and Acronym List
+\if\includeGlossary 1
+\printglossary
+\fi
+
+\end{document}
