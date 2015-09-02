@@ -25,12 +25,46 @@ systems in a large-scale perspective.\\
 This ubiquitous world is close to becoming reality thanks to the Utility Computing in the cloud
 and the \gls{IoT}. In one hand, the utility computing provides the illusion of infinite computing
 resources available on demand to the public users \cite{armbrust2010view}, which helps to reduce the
-infrastructure burden of the ubiquitous systems. In the other hand the \gls{IoT} aims to solve a key
+infrastructure burden of the ubiquitous systems. In the other hand, the \gls{IoT} aims to solve a key
 problem in wider adoption of ubiquitous systems, the tight coupling with a particular embedded
 infrastructure. With the \gls{IoT} a variety of \textit{objects} or \textit{things} - such as \gls{RFID},
 tags, sensors, actuators, etc. - will be able to interact with each other and cooperate with the
 surrounding \textit{things} to reach common goals \cite{atzori2010internet}.\\
 
+% Applications
+\section{Applications}
+\label{sec:applications}
+The Internet of Things offers a great potential that makes possible the development of a huge number
+of applications. There are several environments and domains where the \gls{IoT} applications will be
+able to improve the quality of life and provide competitive advantage against current solutions.
+Currently, the application domains that promises to play a big role in the adoption of \gls{IoT} are:
+% Smart Environments
+\subparagraph{Smart Places} is an environment that uses the intelligence of the objects within itself
+to makes the environment more comfortable and efficient. For instance, a room that has its
+temperature adapted according the weather, an office that has its light adapted according the time of
+the day and an automated industrial plant where its is possible to monitoring the production progress,
+to see the possible side-effects of a production delay due to a malfunction in a device.
+% Logistics
+\subparagraph{Logistics} applications are able to perform real-time information processing is based
+on technologies such as \gls{RFID} and NFC. This information allows to achieve real-time monitoring
+of almost every phase of the supply chain, ranging from raw material purchasing, transportation,
+storage, distribution and after-sales services.
+% Transportation
+\subparagraph{Transportation} covers a wide area, since personal vehicles from trains, mobile ticketing
+and transportation of goods. Cars, trains and buses equipped with sensors, actuators and computational
+power are able to provide information about the status of the vehicle, improve the navigation and even
+collision avoidance. Regarding the transportation of goods, it is possible to monitoring the conservation
+status of perishable goods - temperature, humidity, etc. -  during its transportation. In public
+transportation, NFC tags can be used to provide information about the available services - costs,
+schedule, etc.
+% Healthcare
+\subparagraph{Healthcare} is a domain that can benefit in a significant way from the \gls{IoT}
+technologies. For instance, \gls{RFID} tags can be use to monitoring the position of patients,
+hospital staff and also to control the inventory of materials. Sensors can be used to monitoring
+in real-time patient conditions, hospital environment conditions - temperature, air quality, etc.
+These technologies will provide the ability to perform patient identification, staff authentication
+access control and also to perform automatic data collection in order to improve the efficiency of
+the operations in the hospital. 
 % Motivation
 \section{Motivation}
 \label{section:motivation}
@@ -42,8 +76,9 @@ in the utility computing:
 % Challenges
 \begin{itemize}
   % Low-latency Interaction
-  \item \textbf{Low-latency Interaction} is a key requirement of \gls{IoT} systems. In cloud-based
-  solutions, part of the system's infrastructure is moved to the cloud - for instance the middleware layer,
+  \item \textbf{Low-latency Interaction} is a key requirement of \gls{IoT} systems. This requires that
+  both network access latency and data transmission latency be reduced. However, in cloud-based solutions,
+  part of the system's infrastructure is moved to the cloud - for instance the middleware layer,
   which is responsible for processing the information and take automatic decisions based on the results
   - is not possible to guarantee that the low-latency requirements of \gls{IoT} systems will be
   met for a cloud-based solution.
@@ -85,9 +120,9 @@ We believe that finding a solution to these problems is essential to the adoptio
 in a large-scale perspective. However, some of these problems has a socio-economical nature - such as
 management and investment of \gls{IoT} systems - and will take time to resolve this issues.
 
-% Related Work
-\section{Related Work}
-\label{section:related_work}
+% Topic Overview
+\section{Topic Overview}
+\label{section:overview}
 Recently a lot of research and effort has been dedicated to solve these existing problems. In this
 section we will present a summary of the most relevant related work that address to solve the
 problems of converging the Internet of Things and the utility computing:
@@ -122,7 +157,8 @@ scalable IoT service delivery. Solution providers are able to deliver new soluti
 computing resources and platform services - domain mediation, application context management, etc.
 - on the cloud. The proposed architecture aims to enable virtual vertical service delivery, for that
 it has a multi-tenant nature which is designed to help at the isolation of the environments of
-different solutions.\\
+different solutions.
+
 % Scalable Data Storage
 \subsection{Scalable Data Storage}
 \label{sub:data_storage}
@@ -145,7 +181,7 @@ Recently, some progress has been reached as regards scalable storage for \gls{RD
 most of the work still are in development, it is possible to highlight some solutions that are in a more
 mature state.
 
-\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is a in-memory clustered distributed \gls{RDBMS}. Compared with
+\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}. Compared with
 the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
 distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
 features such as failover, node recovery, synchronous data replication and no single point of failure.
@@ -156,7 +192,7 @@ it was reported that after scaling up to a few dozen nodes it starts to running 
 assumes a multi-node cluster architecture where the tables are partitioned over multiple servers. Tables
 can be replicated over servers - e.g. for fast access to data - shards are always replicated -
 to recovery the data in case of a node crash - and database snapshots are supported. Currently some
-features still are missing - online schema changes are limited and asynchronous WAN replication and
+features still are missing - online schema changes are limited and asynchronous \gls{WAN} replication and
 recovery are not yet implemented - but in its current implementation VoltDB already presents some
 features that improves the performance of SQL execution, as result the number of nodes that are needed
 to support a given application load can be reduced in a significant way.
@@ -164,8 +200,8 @@ to support a given application load can be reduced in a significant way.
 % Low-latency Interaction
 \subsection{Low-latency Interaction}
 \label{sub:low_latency_interaction}
-Talk about this requirement through the different applications domain, i.e, each domain have its own
-requirements for low-latency interaction.
+
+
 % Objectives
 \section{Objectives}
 \label{section:objectives}
@@ -178,6 +214,7 @@ The remainder of this document is organized as follows:
 % Document structure item list
 \begin{itemize}
   \item \textbf{Chapter \ref{chapter:background} Background}
+  \item \textbf{Chapter \ref{chapter:solution} Solution}
   \item \textbf{Chapter \ref{chapter:implementation} Implementation}
   \item \textbf{Chapter \ref{chapter:evaluation} Evaluation}
   \item \textbf{Chapter \ref{chapter:conclusion} Conclusion}
