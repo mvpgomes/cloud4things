@@ -64,7 +64,7 @@ hospital staff and also to control the inventory of materials. Sensors can be us
 in real-time patient conditions, hospital environment conditions - temperature, air quality, etc.
 These technologies will provide the ability to perform patient identification, staff authentication
 access control and also to perform automatic data collection in order to improve the efficiency of
-the operations in the hospital. 
+the operations in the hospital.
 % Motivation
 \section{Motivation}
 \label{section:motivation}
@@ -200,22 +200,55 @@ to support a given application load can be reduced in a significant way.
 % Low-latency Interaction
 \subsection{Low-latency Interaction}
 \label{sub:low_latency_interaction}
-
+Finding a general solution for the low-latency requirement of \gls{IoT} systems is not a easy task.
+Since there are several application domains, is natural that each application domain requires
+that different values of network latency and data transmission latency are met.
 
 % Objectives
 \section{Objectives}
 \label{section:objectives}
-In this section I want to specify the application domain - RFID smart places - and describe the
-objectives of our work.
+The objective of this work is to discover if the cloud-based solutions met the requirements of Internet of
+Things applications. However, in our view is not reasonable try to find a solution that fulfill the
+requirements of all application domains of \gls{IoT} systems.\\
+
+Thus, in this work our efforts will be focused in determine if a cloud-based solution is suitable
+for a smart place that relies on the \gls{RFID} technology. Our smart place is an automated warehouse
+where products - which are transported through automated guided vehicles - are tagged with \gls{RFID}
+tags that can be identified by \gls{RFID} readers. Through the data collected by these readers is
+possible to gather knowledge about the smart place. For instance, is possible determine which ones
+enters or leaves the warehouse. A complete example of a platform that allows the transformation of
+that data into information is Fosstrak\footnote{http://fosstrak.github.io/}, an open source \gls{RFID}
+software that implements the \gls{EPC} Network standards.\\
+
+A possible scenario is where a product is being transported from the warehouse inventory section to
+the processing section and there is a door that separates the two sections. When the reader that is
+close to the door detects that a product is approaching the door, an event is triggered and the
+application middleware is responsible to process this event and take the correct decision, in this
+case it must open the warehouse door. In that case we need to determine if a cloud-based solution
+can met the latency interaction requirements for that smart place, otherwise if these requirements are
+not met, a possible situation is where the automated vehicle crashes with door because the request latency
+was to high and then the door took longer to open than expected.\\
+
 % Document Structure
 \section{Thesis Outline}
 \label{section:outline}
 The remainder of this document is organized as follows:
 % Document structure item list
 \begin{itemize}
-  \item \textbf{Chapter \ref{chapter:background} Background}
-  \item \textbf{Chapter \ref{chapter:solution} Solution}
-  \item \textbf{Chapter \ref{chapter:implementation} Implementation}
-  \item \textbf{Chapter \ref{chapter:evaluation} Evaluation}
-  \item \textbf{Chapter \ref{chapter:conclusion} Conclusion}
+  % Background
+  \item \textbf{Chapter \ref{chapter:background}. Background} introduces some key concepts that supports
+  our work such as a description of the Fosstrak platform, etc.
+  % Solution
+  \item \textbf{Chapter \ref{chapter:solution}. Solution} presents the approaches adopted to deploy
+  and provisioning the smart place software stack, i.e the software stack required to deploy
+  an application based on the Fosstrak platform.
+  % Implementation
+  \item \textbf{Chapter \ref{chapter:implementation}. Implementation} details the implementation
+  for the proposed solution, the provisioning strategies, the virtualization technologies, etc.
+  % Evaluation
+  \item \textbf{Chapter \ref{chapter:evaluation}. Evaluation} describes the experiments made to meet
+  the defined objectives and presents an analysis of its results.
+  % Conclusion
+  \item \textbf{Chapter \ref{chapter:conclusion}. Conclusion} summarizes the presented work,
+  presents the main conclusion and some important research points for future work.
 \end{itemize}
