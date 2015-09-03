@@ -14,12 +14,12 @@ remotely and physical access points to Internet Services \cite{mattern2010intern
 However, there are some challenges that must be addressed in order to make these \gls{ubicomp} systems
 truly ubiquitous \cite{caceres2012ubicomp}. An important concern regards about ubiquitous data: \textit{Where it is located?},
 \textit{Who can access it?} and \textit{How much time this data should persist?}. Also, ubiquitous systems
-are constantly interacting with the surrounding environment, thus these systems need to understand
+are constantly interacting with the surrounding environment. Thus, these systems need to understand
 the context in that they are inserted and also to adapt to the changes that occur in this environment.
 Another import concern regards about the infrastructure burden of the ubiquitous systems. These
 systems requires low-latency interaction with users and environments, which implies that at least part
 of an \gls{ubicomp} application needs to be tightly bounded to the local infrastructure of the interacting
-environment. This requirement for local infrastructure is a barrier in the adoption of ubiquitous
+environment. This requirement for local infrastructure can be a barrier in the adoption of ubiquitous
 systems in a large-scale perspective.\\
 
 This ubiquitous world is close to becoming reality thanks to the Utility Computing in the cloud
@@ -36,39 +36,40 @@ surrounding \textit{things} to reach common goals \cite{atzori2010internet}.\\
 \label{sec:applications}
 The Internet of Things offers a great potential that makes possible the development of a huge number
 of applications. There are several environments and domains where the \gls{IoT} applications will be
-able to improve the quality of life and provide competitive advantage against current solutions.
-Currently, the application domains that promises to play a big role in the adoption of \gls{IoT} are:
+able to improve the quality of life of the people that lives and works in these environments and also
+will provide competitive advantage against current solutions. Currently, the application domains that
+promises to play a big role in the adoption of \gls{IoT} are:
 % Smart Environments
-\subparagraph{Smart Places} is an environment that uses the intelligence of the objects within itself
-to makes the environment more comfortable and efficient. For instance, a room that has its
-temperature adapted according the weather, an office that has its light adapted according the time of
-the day and an automated industrial plant where its is possible to monitoring the production progress,
-to see the possible side-effects of a production delay due to a malfunction in a device.
+\subparagraph{Smart Places} are environments that uses the intelligence of the objects within itself
+to become a more comfortable and efficient environment. For instance, a room that has its temperature
+adapted according the weather, an office that has its lights adapted according the time of the day and
+an automated industrial plant where its is possible to monitoring the production progress and to see
+the  possible side-effects of a production delay due to a malfunction in a device.
 % Logistics
-\subparagraph{Logistics} applications are able to perform real-time information processing is based
-on technologies such as \gls{RFID} and NFC. This information allows to achieve real-time monitoring
+\subparagraph{Logistics} applications are able to perform real-time information processing based
+on technologies such as \gls{RFID} and \gls{NFC}. This information allows to achieve real-time monitoring
 of almost every phase of the supply chain, ranging from raw material purchasing, transportation,
 storage, distribution and after-sales services.
 % Transportation
 \subparagraph{Transportation} covers a wide area, since personal vehicles from trains, mobile ticketing
 and transportation of goods. Cars, trains and buses equipped with sensors, actuators and computational
 power are able to provide information about the status of the vehicle, improve the navigation and even
-collision avoidance. Regarding the transportation of goods, it is possible to monitoring the conservation
-status of perishable goods - temperature, humidity, etc. -  during its transportation. In public
-transportation, NFC tags can be used to provide information about the available services - costs,
-schedule, etc.
+to perform collision avoidance. Regarding the transportation of goods, it is possible to monitoring
+the conservation status of perishable goods - temperature, humidity, etc. -  during its transportation.
+In public transportation, NFC tags can be used to provide information about the available services
+- costs, schedule, etc.
 % Healthcare
 \subparagraph{Healthcare} is a domain that can benefit in a significant way from the \gls{IoT}
-technologies. For instance, \gls{RFID} tags can be use to monitoring the position of patients,
+technologies. For instance, \gls{RFID} tags can be used to monitoring the position of patients,
 hospital staff and also to control the inventory of materials. Sensors can be used to monitoring
 in real-time patient conditions, hospital environment conditions - temperature, air quality, etc.
-These technologies will provide the ability to perform patient identification, staff authentication
+Moreover, these technologies will provide the ability to perform patient identification, staff authentication,
 access control and also to perform automatic data collection in order to improve the efficiency of
-the operations in the hospital.
+the operations in the hospitals.
 % Motivation
 \section{Motivation}
 \label{section:motivation}
-This recent progress in the utility computing and the Internet of Things has been contributing to grow the
+The recent progress in the utility computing and the Internet of Things has been contributing to grow the
 \gls{ubicomp} infrastructure. However, it is possible to identify new challenges \cite{caceres2012ubicomp}
 for the construction of ubiquitous systems that arises from the integration of the Internet of Things
 in the utility computing:
@@ -80,11 +81,11 @@ in the utility computing:
   both network access latency and data transmission latency be reduced. However, in cloud-based solutions,
   part of the system's infrastructure is moved to the cloud - for instance the middleware layer,
   which is responsible for processing the information and take automatic decisions based on the results
-  - is not possible to guarantee that the low-latency requirements of \gls{IoT} systems will be
-  met for a cloud-based solution.
+  - is not possible to guarantee that this cloud-based approach will be met the low-latency requirements
+  of \gls{IoT} systems.
   % Scalable Data Storage
   \item \textbf{Data} is continuously generated by the \textit{things} that composes the \gls{IoT}
-  system. That data must be stored, processed and presented in an seamless and efficient way. Several
+  system. These data must be stored, processed and presented in a seamless and efficient way. Several
   middleware solutions for \gls{IoT} \cite{floerkemeier2007rfid}\cite{eisenhauer2010hydra}\cite{de2008socrades}
   rely on consistent transactions supported by \glspl{RDBMS}, which unfortunately is not scalable
   \cite{hofmann2010cloud}. Since there is no industrial-grade solution for applications that rely on
@@ -102,13 +103,13 @@ in the utility computing:
   is already proved that end-users are unable to manage their own personal computers systems well
   \cite{doll1988measurement}. Since there is no reason to believe that they will had a better
   performance at managing a much more complex system - such as an \gls{IoT} system - is reasonable to
-  assume service providers will perform the management of the services . In the other hand, if we
+  assume that service providers will perform the management of the services . In the other hand, if we
   consider applications that are deployed in large-scale - such as smart cities - these managed
   services introduces new questions that must be answered. For instance, who will pay for this
   services and who will control this services?
   % Investment
   \item \textbf{Investment} in infrastructure is a relevant part of building an \gls{IoT} system,
-  is this system deployed in a an small business or in a entire city. Is reasonable to assume that
+  is this system deployed in a an small business or in an entire city. Is reasonable to assume that
   these investments need to be repaid. For instance, for businesses the return of investment is
   achieved with the improvement of its business processes, which can help to reduce the manufacturing
   cost of goods, to increase the efficiency of the supply chain, etc. However, for a large-scale
@@ -116,7 +117,7 @@ in the utility computing:
   providers need to be established.
 \end{itemize}
 
-We believe that finding a solution to these problems is essential to the adoption of \gls{IoT} systems
+We believe that finding a solution for these problems is essential for the adoption of \gls{IoT} systems
 in a large-scale perspective. However, some of these problems has a socio-economical nature - such as
 management and investment of \gls{IoT} systems - and will take time to resolve this issues.
 
@@ -124,8 +125,8 @@ management and investment of \gls{IoT} systems - and will take time to resolve t
 \section{Topic Overview}
 \label{section:overview}
 Recently a lot of research and effort has been dedicated to solve these existing problems. In this
-section we will present a summary of the most relevant related work that address to solve the
-problems of converging the Internet of Things and the utility computing:
+section we will present a summary of the most relevant work that address to solve the problems of
+converging the Internet of Things and the utility computing:
 
 % Infrastructure Provisioning
 \subsection{Infrastructure Provisioning}
@@ -134,12 +135,13 @@ The research area for infrastructure provisioning of IoT solutions is the one th
 notable progress until now.
 
 % Soldatos
-\subparagraph{Soldatos} et al. \cite{soldatos2012convergence} presented the idea of converging the IoT and the utility computing in the
-cloud. The proposed architecture is the core concept of the OpenIoT Project\footnote{http://openiot.eu},
-and is based on CoAP \cite{shelby2014constrained} and linked data. The cloud is used at infrastructure
-level, which allows to measure the utility of the services provided by inter-connected objects.
+\subparagraph{Soldatos} et al. \cite{soldatos2012convergence} presented the idea of converging the IoT
+and the utility computing in the cloud. The proposed architecture is the core concept of the OpenIoT
+Project\footnote{http://openiot.eu}, and is based on CoAP \cite{shelby2014constrained} and linked data.
+The cloud is used at infrastructure level, which allows to measure the utility of the services provided
+by inter-connected objects.
 % Distefano
-\subparagraph{Distefano} et al. \cite{distefano2012enabling} proposes an conceptual architecture by mapping various
+\subparagraph{Distefano} et al. \cite{distefano2012enabling} proposed a conceptual architecture by mapping various
 elements in both clouds and IoT to the three layers of cloud architecture (\gls{PaaS}, \gls{SaaS} and \gls{IaaS}).
 In this proposal IoT resources are provided voluntarily by their owners, while management functions
 - such as node management and policy enforcement - are viewed as peer functions of cloud infrastructure
@@ -170,10 +172,10 @@ cloud providers started to implement its own solutions.
 distribute both data and load of simple operations through many servers - but it has a weaker concurrency model
 than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
 
-\subparagraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API
-built to run on top of existing performance predictable key-value stores, that provides many of the benefits
-using a traditional \gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic
-data parallelism, physical data independence and automatic index selection and maintenance, all while
+\subparagraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
+performance predictable key-value stores, that provides many of the benefits of using a traditional
+\gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic data
+parallelism, physical data independence and automatic index selection and maintenance, all while
 maintaining the soft real-time guarantees on application performance that come from the underlying
 key-value store.\\
 
@@ -185,8 +187,9 @@ mature state.
 the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
 distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
 features such as failover, node recovery, synchronous data replication and no single point of failure.
-MySQL Cluster seem to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit -
-it was reported that after scaling up to a few dozen nodes it starts to running into bottlenecks \cite{bunch2010evaluation}.
+MySQL Cluster seem to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
+However, it was reported that after scaling up to a few dozen nodes it starts to running into
+bottlenecks \cite{bunch2010evaluation}.
 
 \subparagraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability. VoltDB
 assumes a multi-node cluster architecture where the tables are partitioned over multiple servers. Tables
@@ -202,7 +205,7 @@ to support a given application load can be reduced in a significant way.
 \label{sub:low_latency_interaction}
 Finding a general solution for the low-latency requirement of \gls{IoT} systems is not a easy task.
 Since there are several application domains, is natural that each application domain requires
-that different values of network latency and data transmission latency are met.
+that different values for network latency and data transmission latency are guaranteed.
 
 % Objectives
 \section{Objectives}
@@ -211,23 +214,25 @@ The objective of this work is to discover if the cloud-based solutions met the r
 Things applications. However, in our view is not reasonable try to find a solution that fulfill the
 requirements of all application domains of \gls{IoT} systems.\\
 
-Thus, in this work our efforts will be focused in determine if a cloud-based solution is suitable
+\subsection{Domain}
+\label{sub:domain}
+In this work our efforts will be focused in determine if a cloud-based solution is suitable
 for a smart place that relies on the \gls{RFID} technology. Our smart place is an automated warehouse
 where products - which are transported through automated guided vehicles - are tagged with \gls{RFID}
 tags that can be identified by \gls{RFID} readers. Through the data collected by these readers is
-possible to gather knowledge about the smart place. For instance, is possible determine which ones
+possible to gather knowledge about the smart place. For instance, is possible determine which products
 enters or leaves the warehouse. A complete example of a platform that allows the transformation of
 that data into information is Fosstrak\footnote{http://fosstrak.github.io/}, an open source \gls{RFID}
 software that implements the \gls{EPC} Network standards.\\
 
-A possible scenario is where a product is being transported from the warehouse inventory section to
-the processing section and there is a door that separates the two sections. When the reader that is
-close to the door detects that a product is approaching the door, an event is triggered and the
-application middleware is responsible to process this event and take the correct decision, in this
-case it must open the warehouse door. In that case we need to determine if a cloud-based solution
-can met the latency interaction requirements for that smart place, otherwise if these requirements are
-not met, a possible situation is where the automated vehicle crashes with door because the request latency
-was to high and then the door took longer to open than expected.\\
+%A possible scenario is where a product is being transported from the warehouse inventory section to
+%the processing section and there is a door that separates the two sections. When the reader that is
+%close to the door detects that a product is approaching the door, an event is triggered and the
+%application middleware is responsible to process this event and take the correct decision, in this
+%case it must open the warehouse door. In that case we need to determine if a cloud-based solution
+%can met the latency interaction requirements for that smart place, otherwise if these requirements are
+%not met, a possible situation is where the automated vehicle crashes with door because the request latency
+%was to high and then the door took longer to open than expected.\\
 
 % Document Structure
 \section{Thesis Outline}
