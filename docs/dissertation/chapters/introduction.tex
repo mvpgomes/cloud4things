@@ -121,98 +121,13 @@ We believe that finding a solution for these problems is essential for the adopt
 in a large-scale perspective. However, some of these problems has a socio-economical nature - such as
 management and investment of \gls{IoT} systems - and will take time to resolve this issues.
 
-% Topic Overview
-\section{Topic Overview}
-\label{section:overview}
-Recently a lot of research and effort has been dedicated to solve these existing problems. In this
-section we will present a summary of the most relevant work that address to solve the problems of
-converging the Internet of Things and the utility computing:
-
-% Infrastructure Provisioning
-\subsection{Infrastructure Provisioning}
-\label{sub:provisioning}
-The research area for infrastructure provisioning of IoT solutions is the one that presents the most
-notable progress until now.
-
-% Soldatos
-\subparagraph{Soldatos} et al. \cite{soldatos2012convergence} presented the idea of converging the IoT
-and the utility computing in the cloud. The proposed architecture is the core concept of the OpenIoT
-Project\footnote{http://openiot.eu}, and is based on CoAP \cite{shelby2014constrained} and linked data.
-The cloud is used at infrastructure level, which allows to measure the utility of the services provided
-by inter-connected objects.
-% Distefano
-\subparagraph{Distefano} et al. \cite{distefano2012enabling} proposed a conceptual architecture by mapping various
-elements in both clouds and IoT to the three layers of cloud architecture (\gls{PaaS}, \gls{SaaS} and \gls{IaaS}).
-In this proposal IoT resources are provided voluntarily by their owners, while management functions
-- such as node management and policy enforcement - are viewed as peer functions of cloud infrastructure
-management. IoT resources and cloud infrastructure are mashed up for applications, which are delivered
-through \gls{SaaS}.
-% CloudThings
-\subparagraph{CloudThings} \cite{zhou2013cloudthings} is an architecture that uses a common
-approach to integrate Internet of Things and Cloud Computing. The proposed architecture is an online
-platform which accommodates \gls{IaaS}, \gls{PaaS}, \gls{SaaS} and allows system integrators and
-solution providers to leverage the complete application infrastructure for developing, operating
-and composing applications and services.
-% IoT PaaS
-\subparagraph{Li} et. al \cite{li2013efficient} proposed IoT PaaS, a cloud platform that supports
-scalable IoT service delivery. Solution providers are able to deliver new solutions by leveraging
-computing resources and platform services - domain mediation, application context management, etc.
-- on the cloud. The proposed architecture aims to enable virtual vertical service delivery, for that
-it has a multi-tenant nature which is designed to help at the isolation of the environments of
-different solutions.
-
-% Scalable Data Storage
-\subsection{Scalable Data Storage}
-\label{sub:data_storage}
-Since that no general solution for scalable data storage and retrieval in the cloud was developed,
-cloud providers started to implement its own solutions.
-
-\subparagraph{Google Big Table, Facebook Cassandra and  Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
-\cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that has the ability to horizontally scale - i.e,
-distribute both data and load of simple operations through many servers - but it has a weaker concurrency model
-than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
-
-\subparagraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
-performance predictable key-value stores, that provides many of the benefits of using a traditional
-\gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic data
-parallelism, physical data independence and automatic index selection and maintenance, all while
-maintaining the soft real-time guarantees on application performance that come from the underlying
-key-value store.\\
-
-Recently, some progress has been reached as regards scalable storage for \gls{RDBMS} systems. Although
-most of the work still are in development, it is possible to highlight some solutions that are in a more
-mature state.
-
-\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}. Compared with
-the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
-distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
-features such as failover, node recovery, synchronous data replication and no single point of failure.
-MySQL Cluster seem to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
-However, it was reported that after scaling up to a few dozen nodes it starts to running into
-bottlenecks \cite{bunch2010evaluation}.
-
-\subparagraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability. VoltDB
-assumes a multi-node cluster architecture where the tables are partitioned over multiple servers. Tables
-can be replicated over servers - e.g. for fast access to data - shards are always replicated -
-to recovery the data in case of a node crash - and database snapshots are supported. Currently some
-features still are missing - online schema changes are limited and asynchronous \gls{WAN} replication and
-recovery are not yet implemented - but in its current implementation VoltDB already presents some
-features that improves the performance of SQL execution, as result the number of nodes that are needed
-to support a given application load can be reduced in a significant way.
-
-% Low-latency Interaction
-\subsection{Low-latency Interaction}
-\label{sub:low_latency_interaction}
-Finding a general solution for the low-latency requirement of \gls{IoT} systems is not a easy task.
-Since there are several application domains, is natural that each application domain requires
-that different values for network latency and data transmission latency are guaranteed.
-
 % Objectives
 \section{Objectives}
 \label{section:objectives}
-The objective of this work is to discover if the cloud-based solutions met the requirements of Internet of
-Things applications. However, in our view is not reasonable try to find a solution that fulfill the
-requirements of all application domains of \gls{IoT} systems.\\
+The objective of this work is to discover if the cloud-based solutions met the fundamental requirements
+of Internet of Things applications. In this work we will focus to determine if a cloud-based solution meet
+the requirements of scalable data storage and low-latency interaction. However, in our view is not
+reasonable try to find a solution that fulfill the requirements of all application domains of \gls{IoT} systems.\\
 
 \subsection{Domain}
 \label{sub:domain}
@@ -225,15 +140,6 @@ enters or leaves the warehouse. A complete example of a platform that allows the
 that data into information is Fosstrak\footnote{http://fosstrak.github.io/}, an open source \gls{RFID}
 software that implements the \gls{EPC} Network standards.\\
 
-%A possible scenario is where a product is being transported from the warehouse inventory section to
-%the processing section and there is a door that separates the two sections. When the reader that is
-%close to the door detects that a product is approaching the door, an event is triggered and the
-%application middleware is responsible to process this event and take the correct decision, in this
-%case it must open the warehouse door. In that case we need to determine if a cloud-based solution
-%can met the latency interaction requirements for that smart place, otherwise if these requirements are
-%not met, a possible situation is where the automated vehicle crashes with door because the request latency
-%was to high and then the door took longer to open than expected.\\
-
 % Document Structure
 \section{Thesis Outline}
 \label{section:outline}
@@ -241,8 +147,8 @@ The remainder of this document is organized as follows:
 % Document structure item list
 \begin{itemize}
   % Background
-  \item \textbf{Chapter \ref{chapter:background}. Background} introduces some key concepts that supports
-  our work such as a description of the Fosstrak platform, etc.
+  \item \textbf{Chapter \ref{chapter:background}. Background} summarizes the relevant work in the field and
+  introduces some key concepts that supports our work such as a description of the Fosstrak platform, etc.
   % Solution
   \item \textbf{Chapter \ref{chapter:solution}. Solution} presents the approaches adopted to deploy
   and provisioning the smart place software stack, i.e the software stack required to deploy
