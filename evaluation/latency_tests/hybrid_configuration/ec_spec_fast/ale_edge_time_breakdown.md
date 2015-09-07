@@ -10,7 +10,7 @@ Client Receive Report [Network Time]: 15:24:48.814010
 
 RTT: 4.956s
 Connection Time: 4.933s
-Data Processing Time: 0.023s
+Data Processing Time: 0.003s + 0.020s = 0.023s
 
 - Report 2
 ----------------
@@ -21,8 +21,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:24:53.796
 Client Receive Report [Network Time]: 15:24:53.807667
 
 RTT: 1.003s
-Connection Time: 0.99s
-Data Processing Time: 0.013s
+Connection Time: 0.002s + 0.011s = 0.013s
+Data Processing Time: 0.99s
 
 
 - Report 3
@@ -34,8 +34,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:24:58.801
 Client Receive Report [Network Time]: 15:24:58.807775
 
 RTT: 4.952s
-Connection Time: 4.944
-Data Processing Time: 0.008s
+Connection Time: 0.002s + 0.006s = 0.008s
+Data Processing Time: 4.944s
 
 - Report 4
 ----------------
@@ -46,8 +46,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:03.797
 Client Receive Report [Network Time]: 15:25:03.802861
 
 RTT: 2.569s
-Connection Time: 2.561s
-Data Processing Time: 0.008s
+Connection Time: 0.003s + 0.005s = 0.008s
+Data Processing Time: 2.561s
 
 - Report 5
 ----------------
@@ -58,8 +58,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:08.799
 Client Receive Report [Network Time]: 15:25:08.806374
 
 RTT: 4.942s
-Connection Time: 4.933s
-Data Processing Time: 0.009s
+Connection Time: 0.002s + 0.007s = 0.009s
+Data Processing Time: 4.933s
 
 - Report 6
 ----------------
@@ -70,8 +70,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:23.800
 Client Receive Report [Network Time]: 15:25:23.807455
 
 RTT: 2.574s
-Connection Time: 2.550s
-Data Processing Time: 0.024
+Connection Time: 0.017s + 0.007s = 0.024s
+Data Processing Time: 2.550s
 
 - Report 7
 ----------------
@@ -82,8 +82,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:28.801
 Client Receive Report [Network Time]: 15:25:28.812756
 
 RTT: 4.948s
-Connection Time: 4.916s
-Data Processing Time: 0.032s
+Connection Time: 0.021 + 0.011s = 0.032s
+Data Processing Time: 4.916s
 
 - Report 8
 ----------------
@@ -94,8 +94,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:33.802
 Client Receive Report [Network Time]: 15:25:33.807973
 
 RTT: 3.104s
-Connection Time: 3.090s
-Data Processing Time: 0.014s
+Connection Time: 0.009s + 0.005s = 0.014s
+Data Processing Time: 3.090s
 
 
 - Report 9
@@ -107,8 +107,8 @@ Create Report and Delivery to the Client [Processing Time]: 15:25:38.804
 Client Receive Report [Network Time]: 15:25:38.811400
 
 RTT: 4.951s
-Connection Time: 4.941s
-Data Processing Time: 0.010s
+Connection Time: 0.003s + 0.007s = 0.010s
+Data Processing Time: 4.941s
 
 # ALE Edge 2015-08-18
 
@@ -121,8 +121,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:22.935
 Client Receive Report [Network Time]: 12:05:22.959446
 
 RTT: 4.539s
-Connection Time: 4.508s
-Data Processing Time: 0.031s
+Connection Time: 0.007s + 0.024s = 0.031s
+Data Processing Time: 4.508s
 
 - Report 2
 ----------------
@@ -133,8 +133,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:27.938
 Client Receive Report [Network Time]: 12:05:27.948052
 
 RTT: 4.791s
-Connection Time: 4.769s
-Data Processing Time: 0.022s
+Connection Time: 0.012s + 0.010s = 0.022s
+Data Processing Time: 4.769s
 
 - Report 3
 ----------------
@@ -145,8 +145,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:32.951
 Client Receive Report [Network Time]: 12:05:32.957703
 
 RTT: 4.540s
-Connection Time: 4.531
-Data Processing Time: 0.009s
+Connection Time: 0.003s + 0.006s = 0.009s
+Data Processing Time: 4.531s
 
 - Report 4
 ----------------
@@ -157,8 +157,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:37.937
 Client Receive Report [Network Time]: 12:05:37.944649
 
 RTT: 4.786s
-Connection Time: 4.772s
-Data Processing Time: 0.014s
+Connection Time: 0.007s + 0.007s = 0.014s
+Data Processing Time: 4.772s
 
 - Report 5
 ----------------
@@ -169,8 +169,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:42.940
 Client Receive Report [Network Time]: 12:05:42.946238
 
 RTT: 4.526s
-Connection Time: 4.516s
-Data Processing Time: 0.010s
+Connection Time: 0.004s + 0.006s = 0.010s
+Data Processing Time: 4.516s
 
 - Report 6
 ----------------
@@ -181,8 +181,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:47.944
 Client Receive Report [Network Time]: 12:05:47.951034
 
 RTT: 4.794s
-Connection Time: 4.781s
-Data Processing Time: 0.013s
+Connection Time: 0.006s + 0.007s = 0.013s
+Data Processing Time: 4.781s
 
 - Report 7
 ----------------
@@ -193,8 +193,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:52.947
 Client Receive Report [Network Time]: 12:05:52.952182
 
 RTT: 4.534s
-Connection Time: 4.527s
-Data Processing Time: 0.007s
+Connection Time: 0.002s + 0.005s = 0.007s
+Data Processing Time: 4.527s
 
 - Report 8
 ----------------
@@ -205,8 +205,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:05:57.953
 Client Receive Report [Network Time]: 12:05:57.968758
 
 RTT: 4.814s
-Connection Time: 4.795s
-Data Processing Time: 0.019s
+Connection Time: 0.004s + 0.015s = 0.019s
+Data Processing Time: 4.795s
 
 - Report 9
 ----------------
@@ -217,8 +217,8 @@ Create Report and Delivery to the Client [Processing Time]: 12:06:02.945
 Client Receive Report [Network Time]: 12:06:02.952489
 
 RTT: 4.535s
-Connection Time: 4.524s
-Data Processing Time: 0.011s
+Connection Time: 0.004s + 0.007s = 0.011s
+Data Processing Time: 4.524s
 
 - Report 10
 ----------------
@@ -229,5 +229,5 @@ Create Report and Delivery to the Client [Processing Time]: 12:06:07.948
 Client Receive Report [Network Time]: 12:06:07.962478
 
 RTT: 4.807s
-Connection Time: 4.790s
-Data Processing Time: 0.017s
+Connection Time: 0.003s + 0.014s = 0.017s
+Data Processing Time: 4.790s
