@@ -65,17 +65,17 @@ Recently, some progress has been reached as regards scalable storage for \gls{RD
 most of the work still are in development, it is possible to highlight some solutions that are in a more
 mature state.
 
-\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}. Compared with
-the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
+\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
+Compared with the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
 distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
 features such as failover, node recovery, synchronous data replication and no single point of failure.
 MySQL Cluster seem to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
 However, it was reported that after scaling up to a few dozen nodes it starts to running into
 bottlenecks \cite{bunch2010evaluation}.
 
-\subparagraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability. VoltDB
-assumes a multi-node cluster architecture where the tables are partitioned over multiple servers. Tables
-can be replicated over servers - e.g. for fast access to data - shards are always replicated -
+\subparagraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
+VoltDB assumes a multi-node cluster architecture where the tables are partitioned over multiple servers.
+Tables can be replicated over servers - e.g. for fast access to data - shards are always replicated -
 to recovery the data in case of a node crash - and database snapshots are supported. Currently some
 features still are missing - online schema changes are limited and asynchronous \gls{WAN} replication and
 recovery are not yet implemented - but in its current implementation VoltDB already presents some
@@ -89,3 +89,72 @@ Finding a general solution for the low-latency requirement of \gls{IoT} systems 
 Since there are several application domains, is natural that each application domain requires
 that different values for network latency and data transmission latency are guaranteed.
 % Talk about fog computing
+
+ % Concepts
+ \section{Concepts}
+ \label{sec:Concepts}
+
+% EPC Network
+\subsection{EPC Network}
+\label{sub:epc_network}
+For our work we will focus on software for an RFID smart place. The software to use will be based on
+the GS1 EPCglobal standards for RFID.\\
+
+The EPC Application Level Events (ALE) provides interfaces to filter and collect data. The EPC
+Information Services (IS) provides interfaces to interpret, store persistently and query captured
+EPC event data. The EPC Low-Level Reader Protocol (LLRP), that is not demonstrated in this
+architecture, provides an interface to configure and control RFID readers.
+
+% Fosstrak
+\subsection{Fosstrak}
+\label{sub:fosstrak}
+
+% Containers
+\subsection{Containers}
+\label{sub:containers}
+Docker5 is an open source project to pack, ship and run any application as a lightweight container.
+Docker containers are hardware-agnostic and platform-agnostic, this means that these containers can
+run anywhere, from a laptop to a EC2 compute instance. Since Docker is based in Linux Containers (LXC),
+the virtualization is performed at operating-system level, di↵erent of hypervisor-based solutions where
+the virtualization is performed at hardware- level. While the e↵ect of both types of virtualization
+are similar, the virtualization at the operating-system level provides significant benefits compared
+to hypervisor-based solutions. Docker containers are small, they have low memory and CPU overhead,
+they also are portable between di↵erent virtualization environments.\\
+
+% TODO: Move to implementation chapter
+In our solution, Docker containers are used to provisioning the software stack of the Fosstrak platform.
+A complete installation of Fosstrak requires a compatible Java SDK, a full MySQL database and a Apache
+Tomcat server. In order to improve the application scalability we are provisioning a single container
+for each component of the Fosstrak platform, the EPCIS repository, the Capture application, the ALE
+server, and also for the MySQL database.\\
+
+By default each container runs a process that is isolated from the other processes that are executed
+in the same environment. In order to connect the different modules of the Fosstrak, our containers are
+linked through the linking system6 provided by Docker. This mechanism creates a secure tunnel between the
+containers, allowing the recipient container to access select data about the source container. For instance,
+if we have a web server container linked to a database container, the web server container is able to access
+information about the database container.\\
+
+Another benefit that Docker platform provides is the Docker Registry service, a public repository
+that stores Docker images used to create the containers. In our solution we built the Docker images
+of the Fosstrak modules and published them in Docker registry to later be used to create our containers.
+
+% Configuration Management Tools
+\subsection{Configuration Management Tools}
+\label{sub:cm_tools}
+Chef is a configuration management tool that allows to describe the infrastructure as code.
+In that way it is possible to automate how the infrastructure is built, deployed and managed.
+Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
+data - and the Chef Client - that is installed in each server, VM or container, i.e, the nodes that
+are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
+network, and if anything on the node is out of date, the client update its state in order to be
+consistent with the latest policy.\\
+
+Chef was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
+dynamically provision and de-provision the application infrastructure on demand to keep up with
+peaks in usage and track. For instance, Chef offers several plugins for provisioning cloud resources
+in different hosts such as Amazon EC2, Google Compute Engine and OpenStack.
+
+% Fog Computing
+\subsection{Fog Computing}
+\label{sub:Fog Computing}
