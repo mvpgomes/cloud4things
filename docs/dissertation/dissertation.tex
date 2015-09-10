@@ -6,19 +6,28 @@
 % Advisors:
 %
 % ------------------------------------------
-\documentclass[10pt,twoside,a4paper]{report}
+\documentclass[10pt,twoside,openright,a4paper]{report}
+\usepackage{inputenc}
 % Set document margins to 1in in all sides
 \usepackage[margin=2.5cm]{geometry}
 % Line spacing package
-\usepackage{graphicx, helvet, hyperref, inputenc, setspace}
+\usepackage{graphicx, helvet, hyperref, setspace}
 \usepackage[portuguese,english]{babel}
-\usepackage[acronym]{glossaries}
+\usepackage[acronym, toc]{glossaries}
+
 % Built the glossary when the main file is built.
 \makeglossaries
 % Set main font to Arial
 \renewcommand{\familydefault}{\sfdefault}
 % Define keywords macro
 \providecommand{\keywords}[1]{\textbf{Keywords:} #1}
+% Define the NewPage macro
+\newcommand*\NewPage{\newpage\null\thispagestyle{empty}\cleardoublepage}
+% Abstract-en page numbering
+\newcommand {\abstractEnglishPageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractEnglishPage}}
+% Abstract-pt page numbering
+\newcommand {\abstractPortuguesePageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractPortuguesePage}}
+
 % Section numbering depth
 \setcounter{secnumdepth}{2}
 % Table of contents depth
@@ -38,26 +47,54 @@
 % ------------------------------------------
 
 \begin{document}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\clearpage
+\thispagestyle{empty}
 \input{variables.tex}
 
 \include{cover}
+\NewPage
 
+\pagenumbering{roman}
+
+% Acknowledgments Page
+\setcounter{page}{\acknowledgmentsPage}
 \if\includeAcknowledgments 1
 \input{acknowledgments/acknowledgments.tex}
+\NewPage
 \fi
 
+% Abstract - English
 \input{abstract/abstract-en.tex}
+\NewPage
+
+% Abstract - Portuguese
 \input{abstract/abstract-pt.tex}
+\NewPage
 
+% Table of contents
 \tableofcontents
+
+% List of Table
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+\NewPage
+
+% List of figures
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+\NewPage
+
+% List of acronyms
 \printglossary[type=\acronymtype]
+\NewPage
 
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
 \input{chapters/main.tex}
+\NewPage
 
-\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{ieeetr}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{bibliography/dissertation}
 
 % Appendix
