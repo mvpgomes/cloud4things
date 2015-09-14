@@ -4,29 +4,29 @@
 \label{chapter:evaluation}
 % 1. Present an overview of the evaluation, what we want to evaluate, what we want to conclude.
 The present chapter describes the evaluation methodology as also the experiments performed to determine
-if a cloud-based approach is adequate to host \gls{RFID} applications middleware. The evaluation process
-will focus on establish if such approach can met the low-latency and scalable data storage requirements
-for those applications.\\
+if a fog-based or a cloud-based approach is more adequate to deploy \gls{RFID} applications based on
+Fosstrak in a smart warehouse. The evaluation process will focus on establish if the approaches are
+able to met the low-latency and scalable data storage requirements for those applications.\\
 
-Our main goal is to obtain statistical values that allow us to assert if a cloud-based approach is able
-to fulfill the expected requirements. With these results, we want to specify which domains can rely in such
-approach.
+Our main goal is to obtain statistical values that allow us to assert what approach is more suitable
+to fulfill the expected requirements. Furthermore, with these results we intend to specify what
+approach is more adequate for the application domains described in Section~\ref{sec:applications}.
 
 % 2. Present the evaluation methodology for both cases
 \section{Evaluation Methodology}
 \label{sec:eval_methodology}
-In order to determine if a cloud-based \gls{RFID} application is able to met the latency and data
-storage scalability requirements, we propose the following methodologies to perform the evaluation:
+In order to determine which approach is more adequate to met the latency and data storage scalability
+requirements, we propose the following methodologies to perform the evaluation:
 
 % Evaluation Methodologies : Data Storage
 \subsection{Data Storage Scalability}
 \label{sub:eval_methodology_data}
 To evaluate the data storage scalability for a \gls{RFID} application based on Fosstrak, the proposed
 methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
-concurrently sending events - through \gls{HTTP} requests - to the \gls{EPCIS} repository that is
+concurrently sending events - through \gls{HTTP} requests - to the repository that is
 running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}. The cloud server is
 running a monitoring system that periodically stores data related to a set of system metrics,
-such as \textit{CPU Utilization} and \textit{Network Traffic}.\\
+such as \textit{CPU Utilization} and \textit{Network In}.\\
 
 % Data Storage Evaluation Methodology Figure
 \begin{figure}[ht!]
@@ -36,14 +36,14 @@ such as \textit{CPU Utilization} and \textit{Network Traffic}.\\
   \label{fig:eval_data_methodology}
 \end{figure}
 
-The analysis of these metrics allows to observe how the performance and behavior of the \gls{EPCIS}
-module is affected regarding the amount of events that are processed.
+The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
+module is affected regarding the amount of events that are being processed.
 
 % Evaluation Methodologies : Latency
 \subsection{Latency Interaction}
 \label{sub:eval_methodology_latency}
-To evaluate the response time between an event that occurs in the smart place and the corresponding
-action that is triggered in the smart place, according the proposed methodology in Figure~\ref{fig:eval_latency_methodology}.\\
+The response time between an event that occurs in the smart warehouse and the corresponding action
+that is triggered in the physical space will be evaluated according the proposed methodology in Figure~\ref{fig:eval_latency_methodology}.\\
 
 % Latency Interaction Evaluation Methodology Figure
 \begin{figure}[ht!]
@@ -56,49 +56,49 @@ action that is triggered in the smart place, according the proposed methodology 
 The \gls{ALE} module is responsible to collect and process the reader events and take the
 correct decisions based on those events. In the Fosstrak implementation the collection and processing
 of reader events is performed according to an \textit{Event Cycle} specification. The \textit{Event Cycle}
-is a set of periodical read cycles where the \gls{ALE} module collect the events from readers. The data
+is a set of periodical cycles where the \gls{ALE} module collect the events from the readers. The data
 about the \textit{Event Cycle} is delivered to the client through a report. The information in the report
-can be used to notify the client regarding a situation in the smart place or even to trigger a new event
-in the smart place such as open or close a door.\\
+can be used to notify the client regarding an event in the smart warehouse or even to trigger a new event
+in the warehouse such as open or close a door.\\
 
-The smart place is running a monitoring system that stores information about the incoming and outgoing
+The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
 connections. The Fosstrak \gls{ALE} module can be configured to generate information to register
-when a new event is processed and also when a new reports is delivered to the client. Thus, with the
+when a new event is processed and also when a new report is delivered to the client. Thus, with the
 information provided by the monitoring system and the \gls{ALE} module it is possible to calculate
-the latency request for an event that occurs in the smart place.\\
+the latency request for an event that occurs in the warehouse.\\
 
 With this methodology we intend to obtain information regarding how the communication time is spent
-when a event is triggered in the smart place the approaches described in \ref{sec:smart_place_architecture}.
-In order to determine what approach is more adequate to host the application middleware, the proposed
-metrics are considered:
+when a event is triggered in the warehouse for the approaches described in \ref{sec:smart_place_architecture}.
+In order to determine which approach is more adequate to deploy the application, we proposed the
+following metrics:
 
 % Metrics
 \begin{itemize}
   \item \textit{Event Latency}: the time spent from the moment that an event is triggered in the
-  smart place to the moment when the client application receives the notification of the event.
+  warehouse to the moment when the client application receives the notification of the event.
   \item \textit{Upload Latency}: the time spent from the moment that an event is triggered in the
-  smart place from the moment when the \gls{ALE} module process the event.
-  \item \textit{Processing Latency}: the time spent from the moment that the \gls{ALE} module process
-  an event from the moment that the \textit{Event Cycle} report is created.
+  warehouse to the moment when the \gls{ALE} module receives the event.
+  \item \textit{Processing Latency}: the time spent from the moment that the \gls{ALE} module
+  receives an event to the moment that the \textit{Event Cycle} report is created.
   \item \textit{Response Latency}: the time spent from the moment that the \gls{ALE} module delivers
   the \textit{Event Cycle} report to the moment that the client receives it.
 \end{itemize}
 
 The analysis of those metrics will allow us to compare the performance of both approaches and help to
-determine which one is more adequate to host \gls{RFID} applications middleware.
+determine which one is more adequate to deploy the application in the warehouse.
 
 % Evaluation Setup
 \section{Evaluation Setup}
 \label{sec:eval_setup}
 To perform the evaluation experiments we choose \gls{AWS} as cloud provider. All the experiments were
 conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux AMI operating system. The virtual
-machines presents a configuration with a 2.5\textit{\gls{GHz}} single-core processor with 1\textit{\gls{GB}} of
+machines presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1\textit{\gls{GB}} of
 \gls{RAM}. In the fog-aprroach configuration, where the \gls{ALE} module is provisioned in the smart place,
-the experiments were conducted in a virtual machine with a 2.6\textit{\gls{GHz}} dual-core processor
-with 2\textit{\gls{GB}} of \gls{RAM} and running the \textit{Linux Ubuntu 14.04.1 LTS} operating system.
-Regarding the smart place infrastructure, the evaluation was performed through a \gls{ADSL} connection
-and the Rifidi Emulator\footnote{http://rifidi.org} was used to emulate the physical readers that are
-in the smart place.\\
+the experiments were conducted in a virtual machine with a 2.6 \textit{\gls{GHz}} dual-core processor
+with 2 \textit{\gls{GB}} of \gls{RAM} and running the \textit{Linux Ubuntu 14.04.1 LTS} operating system.
+Regarding the smart warehouse infrastructure, the evaluation was performed through a \gls{ADSL} connection
+The Rifidi Emulator\footnote{http://rifidi.org} was used to emulate the physical readers that are
+in the warehouse.\\
 
 Regarding software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{http://tomcat.apache.org/}
 with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} middleware used was the Fosstrak
@@ -117,14 +117,14 @@ Master Thesis.
 \subsection{Data Scalability}
 \label{sub:eval_exp_data}
 To evaluate the data scalability for the Fosstrak middleware we use the data recorded with the Rec\&Play
-- which is able to record \gls{RFID} sessions that stores the events occurred in the smart place
-maintaining the order and time from the beginning of the session - module were used as base to execute
+module - which is able to record \gls{RFID} sessions that stores the events occurred in the warehouse
+maintaining the order and time from the beginning of the session - were used as base to execute
 the tests.\\
 
 As described in Section \ref{sub:eval_methodology_data}, the methodology consists in simulate a given
-number of readers that are in the warehouse. The simulation was performed through Jmeter\footnote{http://jmeter.apache.org/},
+number of readers that are sending events in the warehouse. This simulation was performed through JMeter\footnote{http://jmeter.apache.org/},
 a Java application designed to perform load testing and measure the application performance.
-In order to reproduce some situations that can occur in a real smart place, we perform the following
+In order to reproduce some situations that can occur in a real smart warehouse, we perform the following
 variations in the tests:
 
 % Test variations
@@ -136,14 +136,13 @@ variations in the tests:
   the recorded session.
 \end{itemize}
 
-Each test case was executed simulating 5 readers at most in two scenarios, \textbf{Baseline} and
-\textbf{Track 3 Laps}.
+The evaluation was executed in two scenarios, \textbf{Baseline} and \textbf{Track 3 Laps}, where we
+simulate up to 5 readers sending events concurrently.
 
-\subparagraph{Baseline}
+\subparagraph{Baseline.}
 \label{subp:eval_exp_data_baseline}
-In the \textbf{Baseline} scenario the session contains the data recorded based in the events generated
-during a 1 lap in the track. The parameters used to execute the test for this scenario are described in
-Table~\ref{tab:baseline_parameters}.
+In this scenario the session contains the data recorded based in the events generated during a 1 lap
+in the track. The parameters used to execute the tests for this scenario are described in Table~\ref{tab:baseline_parameters}.
 
 % Baseline parameters
 \begin{table}[ht!]
@@ -176,23 +175,23 @@ Table~\ref{tab:baseline_parameters}.
 \end{figure}
 
 Figure~\ref{fig:eval_baseline_cpu} presents the system metric \textit{CPU Utilization} for the current
-experiment. Comparing the values obtained in the experiment for the three variations, for the
-\textit{Standard} and the \textit{Double of Requests} variations the behavior is very similar and tend
+experiment. Comparing the values obtained in the experiment for the proposed variations, in the
+\textit{Standard} and \textit{Double of Requests} variations the behavior is very similar and tend
 to take a linear pattern. For the \textit{Half of Interval} variation, it is possible to observe
-that in this variation, the metric value is always higher - maximum close to 16$\%$ - compared with the other
+that the metric value is always higher - maximum close to 16$\%$ - when compared with the other
 variations. The metric behavior changes according the number of threads that are sending events and
 tend to take a sinusoidal pattern.\\
 
 The system metric \textit{Network In}, presented in Figure~\ref{fig:eval_baseline_network}, assumes a
-similar behavior to the previous metric. For the \textit{Standard} and \textit{Double of Requests} variations,
+similar behavior of the previous metric. For the \textit{Standard} and \textit{Double of Requests} variations,
 the values are similar and the behavior tend to take a linear pattern. It is possible to take the same
 conclusions for the \textit{Half of Interval} variation, where the values are always higher - maximum
 close to 3 \gls{MB} - and the behavior tends to take a sinusoidal pattern.
 
-\subparagraph{Track 3 Laps}
+\subparagraph{Track 3 Laps.}
 \label{subp:eval_exp_data_3laps}
-In the \textbf{Track 3 Laps} scenario the session contains the data recorded based in the events generated
-during 3 laps in the track. The parameters used to execute the test for this scenario are described in
+In this scenario the session contains the data recorded based in the events generated during 3 laps
+in the track. The parameters used to execute the test for this scenario are described in
 Table~\ref{tab:3laps_parameters}.\\
 
 % 3 Lap parameters
@@ -226,8 +225,8 @@ Table~\ref{tab:3laps_parameters}.\\
 \end{figure}
 
 Figure~\ref{fig:eval_3laps_cpu} presents the system metric \textit{CPU Utilization} for the current
-experiment. Comparing the values values obtained in the experiment, it is possible to observe that
-the values are very similar for all variations. The \textit{Half of Interval} continues to present
+experiment. Comparing the values obtained in the experiment, it is possible to observe that
+they are very similar for all variations. The \textit{Half of Interval} continues to present
 the highest values - maximum close to 18$\%$ - while the other variations presents almost identical
 values. Regarding the metric behavior, all variations tends to take a linear pattern.\\
 
@@ -235,31 +234,28 @@ As in the previous experiment, the system metric \textit{Network In}, presented 
 is very similar to the previous regarding its values and behavior. The \textit{Half of Interval}
 variation still presents the highest values - maximum close to 3.5 \gls{MB} - but as the number of
 threads increase, it is possible to observe that the values of the \textit{Double of Requests}
-variation tend to be close to the \textit{Half of Interval} variation.
+variation tend to be close to the \textit{Half of Interval}.
 
 
 \subsection{Latency Interaction}
 \label{sub:eval_exp_latency}
-To evaluate the latency interaction for an event that occurs in the smart place and the corresponding
-action that is triggered in the smart place, we use the scenario where a tagged robot was programmed to
-execute a given number of laps in the warehouse plant where \gls{RFID} readers are placed to detect
-when the robot is approaching. During the lap the robot stops during 5 seconds near to a reader and
-then continues its lap.\\
+To evaluate the latency interaction according the methodology proposed in Section~\ref{sub:eval_methodology_latency},
+we use a scenario where a tagged robot was programmed to execute a given number of laps in the
+warehouse plant where \gls{RFID} readers are placed to detect when the robot is approaching.
+During the lap the robot stops during 5 seconds near to a reader and then continues its lap.\\
 
-According the methodology described in Section~\ref{sub:eval_methodology_latency}, the smart place
-network connection was monitored to allow the inspection of incoming and outgoing connections and
-determine how the connection time is spent in the cloud-based approach and the fog-based approach,
-based on the proposed metrics. In our simulation the smart place was monitored through the
-\textit{tcpdump}\footnote{http://www.tcpdump.org/} tool, that allows to monitoring the packets that
-are being transmitted or received over a network.\\
+The warehouse network connection was monitored with the \textit{tcpdump}\footnote{http://www.tcpdump.org/},
+a command-line tool that allows that allows to monitoring the packets that are being transmitted or
+received over a network. Through the logs produced by this tool, we are able to determine how the
+connection time is spent for the cloud-based approach and the fog-based approach.\\
 
 The simulation was performed according two different specifications for the \gls{ALE} module,
 \textit{Base Event Cycle} and \textit{Half-period Event Cycle} .
 
 % Standard Event Cycle
-\subparagraph{Baseline Event Cycle}
+\subparagraph{Baseline Event Cycle.}
 \label{subp:eval_exp_latency_ecspec}
- In the baseline scenario, we define the \textit{Base ECspec} to configure the \gls{ALE} module. The
+ In this scenario, we define the \textit{Baseline ECspec} to configure the \gls{ALE} module. The
  configuration parameters are described in Table~\ref{table:ecspec_base}.
 
 % Base ECspec parameters
@@ -269,7 +265,7 @@ The simulation was performed according two different specifications for the \gls
      Period & Duration \\ \hline
      10s    & 9.5s     \\ \hline
   \end{tabular}
-  \caption{Base ECspec parameters.}
+  \caption{Baseline ECspec parameters.}
   \label{table:ecspec_base}
  \end{table}
 
@@ -297,7 +293,7 @@ Figure~\ref{fig:ecspec_breakdown} presents the event latency breakdown for the c
 Comparing the latency breakdown for the fog-based approach, presented in Figure~\ref{fig:ecspec_local},
 with the cloud-based approach, presented in Figure~\ref{fig:ecspec_cloud}, it is possible to observe
 that the value of the \textit{Upload Latency} and \textit{Response Latency} metrics for the cloud-approach
-- close to 9$\%$ of the \textit{Event Latency} - is considerable higher when compared with the fog-approach,
+- close to 9$\%$ of the \textit{Event Latency} - are considerable higher when compared with the fog-approach,
 where those values represent less then 0.5$\%$ of the \textit{Event Latency} metric. Is important to
 point that the behavior for the \textit{Upload Latency} and \textit{Response Latency} metrics are
 different for both approaches, in the fog-based approach the value of the \textit{Upload Latency}
@@ -335,7 +331,7 @@ immediately is possible to observe that there is a huge difference between the v
 difference reflects in the value of the \textit{Event Latency} metric, where the fog-based approach
 is almost 1s faster then the cloud-based approach.
 
-\subparagraph{Half-Period Event Cycle}
+\subparagraph{Half-Period Event Cycle.}
 \label{subp:eval_exp_latency_ecspec_fast}
 In this scenario, we define the \textit{Half-period ECspec} to configure the \gls{ALE} module.
 The configuration parameters are described in Table~\ref{table:ecspec_fast}.
@@ -375,11 +371,12 @@ Figure~\ref{fig:ecspec_fast_breakdown} presents the event latency breakdown for 
 Comparing the latency breakdown for the fog-based approach, presented in Figure~\ref{fig:ecspec_fast_local},
 with the cloud-based approach, presented in Figure~\ref{fig:ecspec_fast_cloud}, as in the previous experiment
 it is possible to observe that the values of the \textit{Upload Latency} and \textit{Response Latency}
-metrics for the cloud-approach are higher - close to 14$\%$ of the \textit{Event Latency} metric - to
-the obtained in the \textit{Baseline} experiment, while the values obtained for the fog-approach
-- close to 0.5$\%$ - maintained similar values. Regarding the behavior for those metrics, compared
-with the \textit{Baseline} experiment, the behavior pattern observed in the previous experiment
-was maintained.
+metrics for the cloud-approach - close to 14$\%$ of the \textit{Event Latency} metric - are considerable
+higher than the the values obtained for the fog-based approach - close to 0.5$\%$. When compared with
+the values obtained in the previous experiment those values are similar, although the percentage in
+the event breakdown is higher than in the \textit{Baseline} experiment. Regarding the behavior for
+those metrics, it is possible to observe that the pattern identified in the previous experiment was
+maintained.
 
 % % ECSpec fast local breakdown table
 \begin{table}[ht!]
@@ -409,16 +406,16 @@ of 20 events that were generated during the experiment, while the values for the
 obtained through the average of 23 events. As in the \textit{Baseline} experiment, the latency values
 of the \textit{Upload Latency} and \textit{Response Latency} metrics presents a significant difference
 between both approaches, where the values for the cloud-based approach continues to be higher.
-However, in this experiment the fog-based approach present higher values for the \textit{Event Latency}
+However, in this experiment the fog-based approach presented higher values for the \textit{Event Latency}
 metric. Comparing the values presented in Table~\ref{table:ecspec_fast_local} and Table~\ref{table:ecspec_fast_cloud},
-is possible to observe that the cause for that was the result tof he \textit{Processing Time}
-metric, where the fog-based approach presented a better than the cloud-based approach.
+is possible to observe that the cause for that was the result of the \textit{Processing Time}
+metric, where the fog-based approach presented a better performance than the cloud-based approach.
 
 % Evaluation Analysis
 \section{Results Analysis and Discussion}
 \label{sec:eval_analysis}
 Based on the results obtained and in the requirements of application domains, it is possible to specify
-which is the most adequate approach to deploy a smart place application that relies on \gls{RFID}
+which is the most adequate approach to deploy a smart warehouse application that relies on \gls{RFID}
 technology and in the Fosstrak middleware.
 
 % Data scalability
@@ -427,12 +424,16 @@ technology and in the Fosstrak middleware.
 Regarding the data scalability for the Fosstrak middleware, is possible to conclude that the metrics
 of \textit{CPU Utilization} and \textit{Network In} increase as the threads and requests are growing.
 These results are concise with the ones obtained by Gomes et al. \cite{gomes2014future}, which
-proposes a new \gls{IoT} infrastructure for \gls{EPC}Global middleware. Moreover, in the experiments
+proposes a new \gls{IoT} infrastructure for \gls{EPC}Global middleware. Furthermore, in the experiments
 performed Gomes detected that when the \textit{CPU Utilization} crosses the value of 95$\%$, the
-outbound traffic started to decrease. After an analyzing the stored data, they conclude that the
-\gls{CPU} exhaustion caused by the \gls{EPCIS} affected the performance of \gls{ALE} module,
-resulting in a delay of data storage in the \gls{EPCIS} repository, which explains the observed
-behavior.
+outbound traffic started to decrease. After analyzing the stored data, the conclusion was that the
+\gls{CPU} exhaustion caused by the \gls{EPCIS} affected the performance of \gls{ALE} module - when
+executed in the same machine - resulting in a delay of data storage in the \gls{EPCIS} repository,
+which explains the observed behavior.\\
+
+With these results, is reasonable to assume that the scalability of the data storage mechanism of
+the Fosstrak implementation can be a bottleneck. However, in the general case the overall
+performance will met the requirements of \gls{RFID} applications.
 
 % Latency Interaction
 \subparagraph{Latency Interaction.}
@@ -462,14 +463,14 @@ But it will be this approach the best choice for all application domains?\\
 
 Table \ref{table:smart_places_requirements} presents the requirements of \gls{IoT} applications
 for several domains. For instance, for application domains with a small network size, low network
-bandwidth requirements, low scalability and does not require low latency interaction - such as Smart
-Home/Office and Smart Retail scenarios - a cloud-based approach is suitable, but probably the more adequate
+bandwidth requirements, low scalability and does not require low latency interaction - such as Ambient
+Intelligence and Retail - a cloud-based approach is suitable, but probably the more adequate
 solution it will be to provisioning the infrastructure in local, since that in most cases a local
 server is able to host such applications.\\
 
 For domains with a medium/large network size and network bandwidth requirements, that does not require
-a low latency interaction but presents high scalability - such as Smart Agriculture and Smart Water
+low latency interaction, but presents high scalability - such as Smart Agriculture and Smart Water
 scenarios - a cloud-based approach is the most reasonable choice. Finally, for domains with a
 medium/large network size and network bandwidth requirements, that requires low latency interaction
-and presents high scalability - such as Smart Cities and Smart Transportation scenarios - the
+and presents high scalability - such as Smart Cities, Smart Transportation and Healthcare - the
 fog-based approach is the best solution.
