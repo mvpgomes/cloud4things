@@ -14,6 +14,8 @@
 \usepackage{graphicx, helvet, hyperref, setspace}
 \usepackage[portuguese,english]{babel}
 \usepackage[acronym, toc]{glossaries}
+\usepackage{subcaption, floatrow}
+\usepackage{adjustbox, pdflscape, booktabs}
 
 % Built the glossary when the main file is built.
 \makeglossaries
@@ -27,7 +29,6 @@
 \newcommand {\abstractEnglishPageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractEnglishPage}}
 % Abstract-pt page numbering
 \newcommand {\abstractPortuguesePageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractPortuguesePage}}
-
 % Section numbering depth
 \setcounter{secnumdepth}{2}
 % Table of contents depth
