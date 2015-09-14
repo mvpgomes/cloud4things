@@ -17,11 +17,18 @@ application, the low scalability, the costs of infrastructure and its maintenanc
 By converging the IoT applications with the Cloud computing paradigm the objective is simplify the
 smart space architecture by leveraging the required infrastructure by these applications to the
 Cloud providers, as illustrated in Figure 3, allowing to take advantage of the benefits offered by
-Cloud computing (as referenced in 1.2).\\
+Cloud computing.\\
 
 The convergence between the IoT applications and the Cloud allow to simplify the architecture of the
 smart place in a significantly way. However, as earlier mentioned these solution still presents some
 issues to be resolved, namely the deployment of the application.
+
+\subsection{Fog Configuration}
+\label{sub:sol_fog}
+
+\subsection{Cloud Configuration}
+\label{sub:sol_cloud}
+
 
 % Provisioning
 \section{Provisioning}
@@ -29,6 +36,14 @@ issues to be resolved, namely the deployment of the application.
 Cloud4Things is a solution that automates the provisioning of software for Internet of Things applications
 in the cloud. Our solution relies on configuration management tools that leverage existing software
 stacks - e.g RFID software. In Figure 2 we present the architecture of Cloud4Things.\\
+
+% C4T conceptual architecture
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=.7\textwidth]{images/c4t-generic-solution.pdf}
+  \caption{Cloud4Things conceptual architecture.}
+  \label{fig:c4t_generic_solution}
+\end{figure}
 
 In our architecture, the provisioning policies and software images of a smart place are defined and
 configured in a local environment and then uploaded to its respective repositories. When the provisioned
