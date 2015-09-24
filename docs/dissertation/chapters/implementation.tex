@@ -91,18 +91,16 @@ The provisioning workflow is illustrated in Figure~\ref{fig:provisioning_tech_ar
 
 In a development environment the Docker images are built and then uploaded to the Docker Registry
 repository (1). The provisioning of the cloud resources is described in the cookbooks that are uploaded
-to the Chef server (2). The provisioning request (3) is performed using \textit{knife} - \textit{knife}
-has a plugin for several providers - \gls{AWS}\footnote{https://aws.amazon.com/}, Google Compute Engine\footnote{https://cloud.google.com/compute/}
-and Openstack\footnote{https://www.openstack.org/} - that allows to describe the image type, the instance
-type and the policies that need to be applied on each provisioned node. Then the Chef client runs the
-configuration recipes that are pulled from the Chef server (4). In our solution these configuration
-recipes describe that our nodes must have a set of Docker containers running on it. The Chef client
-pulls the Docker images from the remote repository, build the containers based on those images and
-finally applies the configuration that is associated to each container.
+to the Chef server (2). The provisioning request (3) is performed using \textit{knife}, that allows to
+describe the image type, the instance type and the policies that need to be applied on each provisioned node.
+Then the Chef client runs the configuration recipes that are pulled from the Chef server (4). In our
+solution these configuration recipes describe that our nodes must have a set of Docker containers
+running on it. The Chef client pulls the Docker images from the remote repository, build the containers
+based on those images and finally applies the configuration that is associated to each container.
 
 % Chef
 \subsection{Chef}
-\label{sub:chef}
+\label{sub:impl_chef}
 Chef is a configuration management tool that allows to describe the infrastructure as code.
 In that way it is possible to automate how the infrastructure is built, deployed and managed.
 Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
@@ -111,23 +109,36 @@ are managed with Chef. The Chef client periodically pulls Chef server latest pol
 network, and if anything on the node is out of date, the client update its state in order to be
 consistent with the latest policy.\\
 
-Chef was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
+The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
 dynamically provision and deprovision the application infrastructure on demand to keep up with
-peaks in usage and track. For instance, Chef offers several plugins for provisioning cloud resources
-in different hosts such as Amazon \gls{EC2}, Google Compute Engine and OpenStack.
+peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
+across several cloud providers - \gls{AWS}\footnote{https://aws.amazon.com/}, Google Compute
+Engine\footnote{https://cloud.google.com/compute/} and Openstack\footnote{https://www.openstack.org/}.\\
+
+We decide to chose Chef instead of its strongest competitors - i.e. Puppet and Ansible - for several
+reasons, where the main one is \textit{knife}. \textit{knife} is very powerful and allow us to
+interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
+apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
+possible to execute a command on a certain any number of nodes in our environment.
 
 % Docker containers
-\subsection{Docker containers}
-\label{sub:impl_containers}
-In our solution, Docker containers are used to provisioning the software stack of the Fosstrak platform.
-A complete installation of Fosstrak requires a compatible Java SDK, a full MySQL database and a Apache
-Tomcat server. In order to improve the application scalability we are provisioning a single container
-for each component of the Fosstrak platform, the \gls{EPCIS} repository, the Capture application, the
-\gls{FCServer}, and also for the MySQL database.\\
+\subsection{Docker Platform}
+\label{sub:impl_docker}
+Docker containers are used to provisioning the software stack of the Fosstrak platform. A complete
+installation of Fosstrak requires a compatible Java \gls{SDK}, a full MySQL database and a Apache Tomcat
+server. In order to improve the application scalability we are provisioning a single container for each
+component of the Fosstrak platform, the \gls{EPCIS} repository, the Capture application, the \gls{FCServer},
+and also for the MySQL database. In our implementation, the container images of the Fosstrak stack
+are published in the Docker Hub repository to later be used to create the containers.\\
 
 By default each container runs a process that is isolated from the other processes that are executed
 in the same environment. In order to connect the different modules of the Fosstrak, our containers are
-linked through the linking system provided by Docker. This mechanism creates a secure tunnel between the
-containers, allowing the recipient container to access select data about the source container. For instance,
-if we have a web server container linked to a database container, the web server container is able to access
-information about the database container.\\
+linked through the \textit{linking system} provided by Docker. This mechanism creates a secure tunnel
+between the containers, allowing the recipient container to access select data about the source container.
+For instance, if we have a web server container linked to a database container, the web server container
+is able to access information about the database container.\\
+
+The reasons to chose Docker containers instead of traditional \glspl{VM} is that containers are a
+virtualization platform which its images requires less disk space and I/O when compared with traditional
+\gls{VM} images \cite{merkel2014docker}. Furthermore, Docker containers are portable, which means that
+they can be moved across different infrastructures depending on how the application scales.
