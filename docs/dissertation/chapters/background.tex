@@ -162,7 +162,8 @@ GS1\footnote{http://www.gs1.org} is an organization that is responsible for the 
 supply chain. One of the standards developed by GS1 is the \gls{EPC}, which is a unique serial identifier
 for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{http://www.gs1.org/epcglobal} created
 the EPCglobal Architecture Framework, that currently is the standard for \gls{RFID} platforms.
-Figure~\ref{fig:epc_architecture} presents the architecture of the EPCglobal framework.\\
+Figure~\ref{fig:epc_architecture} presents the a high-level architecture of the EPCglobal framework
+that shows its main interfaces and roles.\\
 
 % EPC Architecture
 \begin{figure}[ht!]
@@ -174,7 +175,8 @@ Figure~\ref{fig:epc_architecture} presents the architecture of the EPCglobal fra
 
 The framework\footnote{For more information about the EPCglobal Framework Architecture standard, the
 full documentation is available at \href{http://www.gs1.org/gs1-architecture}{GS1 standards}} has a
-set of standardized interfaces that enables the interchange of information between entities:
+set of standardized interfaces that enables the interchange of information between entities. In the
+context of our work, the most relevant components of framework architecture are:
 
 % EPC Architecture components
 \begin{itemize}
@@ -204,11 +206,9 @@ set of standardized interfaces that enables the interchange of information betwe
 % Fosstrak
 \subsection{Fosstrak Platform}
 \label{sub:fosstrak}
-The Free and Open-Source for TRAcK and trace (Fosstrak), designed and implemented by Floerkemeier et
-al. (2007), is an open source platform compliant with EPCglobal Network specifications, freely available
-to any company and / or researcher that wants to use or develop on top of it. Figure 2.7 shows the architecture
-with all the available modules. Comparing with EPCglobal architecture presented in Figure 2.6 the
-Fosstrak platform covers all the “End User” components except the “Local ONS” module.
+The Free and Open Source Software for Track and Trace (Fosstrak) is an EPCglobal Network compliant
+\gls{RFID} software platform that was developed by Floerkemeier et. al \cite{floerkemeier2007rfid}.
+Figure~\ref{fig:fosstrak_architecture} presents the architecture of the Fosstrak platform.
 
 % Fosstrak Architecture
 \begin{figure}[ht!]
@@ -218,40 +218,33 @@ Fosstrak platform covers all the “End User” components except the “Local O
   \label{fig:fosstrak_architecture}
 \end{figure}
 
-% FC Server
-\subparagraph{Filtering \& Collection Server}
-FCServer is the module responsible to abstract the readers from the rest of the Fosstrak’s architecture.
-It has two types of connections, one named Hardware Abstraction Layer (HAL) where it is possible to
-develop a custom connection to each reader. And the LLRP connection to enable all LLRP complaint
-readers to be connected to the middleware just by configuration. Internally, these readers are
-LogicalReader instances and configured through a LRSpec document as defined by EPCglobal (2009).
-Fosstrak implements the mechanism specified in EPCglobal (2009) to reduce the number of false readings
-called Event Cycle. This mechanism is implemented in the Data Cleaning module where it is possible to
-programmatically change the data cleaning strategy. The output of the Data Cleaning module is an
-ECReport document that is sent to the Capture Application.
+The Fosstrak platform is composed of three modules that implements the corresponding roles in the
+\gls{EPC} Network: \textit{Reader Module}, \textit{Filtering and Collection Middleware Module} and
+\textit{EPCIS Module}. For our work the relevant modules of the platform are:
 
-% Capture Application
-\subparagraph{Capture Application}
-Before a business event is sent to the EPCIS Repository, the capture application
-may request more information about the identified object to external services. For example, a
-specific product is identified in the reader deployed in the warehouse’s entrance, the capture
-application can now request information about this product from the ERP system to know if it is an
-expected product from a supplier or a returned product from a costumer. Regarding its implementation,
-the Capture Application is built on top of a Drools1 engine where rules can be specified in the form of:
-“when” a tag is received from the warehouse entrance, “then” do “this”. Unfortunately, all rules must
-be predefined and can not be changed during runtime if needed.
-
-% EPCIS
-\subparagraph{EPCIS}
-This module is EPCglobal-certified meaning that all Fosstrak EPCIS modules and interfaces are
-verified by the EPCglobal organization. Additionally, it implements a Query Callback Interface on which
-those events matching a specific criteria are sent. Criterias are defined through subscriptions that
-must be previously configured by an EPCIS Accessing Application. The EPCIS Repository stores the following
-information for each business event: a) Read Point where the read was taken, for instance in the warehouse’s
-dock door; b) Business Location where the tag was identified, for instance the warehouse as a whole or other
-specific area; c) Disposition specifies the state of the tagged object, for example the tagged product is
-in the packaging area; and d) Business Step is the business action associated with the event, normally it
-is used a verb to represent the action being taken, for instance entering the packaging area.
+% Fosstrak Modules
+\begin{itemize}
+  % FCServer
+  \item \textit{Filtering \& Collection Server} is the module responsible to filter and collect data
+  from \gls{RFID} readers. To communicate with readers, the module uses the \gls{LLRP} standard to
+  for \gls{LLRP} compliant readers and uses the Fosstrak \gls{HAL} for unsupported readers. The
+  module internally abstracts the readers as LogicalReaders instances, that are defined and configured
+  through a \textit{LRSpec} document as defined by EPCglobal. Fosstrak also implements the
+  \textit{Event Cycle}, that is the interval of time during which tags are read. The output of
+  an \textit{Event Cycle} is the ECReport document that is sent to the Capturing Application.
+  % Capturing Application
+  \item \textit{Capturing Application} is part of the EPCIS module. This module is responsible to
+  transform the uninterpreted events received on the ECReports into meaningful business events.
+  Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{http://www.drools.org/}
+  engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
+  Unfortunately, the rules are static and ones defined they can not be updated in runtime if needed.
+  \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository. This means that
+  all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. The module
+  provides persistence for \gls{EPCIS} events. To store new events the module provides the
+  \textit{capture interface} and to retrieve historical events the module provides the \textit{query
+  interface}. The module provides two EPC Network-conformant interfaces to a relational database
+  (currently MySQL).
+\end{itemize}
 
 % Containers
 \subsection{Containers}
@@ -288,4 +281,4 @@ most relevant are Chef\footnote{https://www.chef.io/}, Puppet\footnote{https://p
 Ansible\footnote{http://www.ansible.com/} and Salt\footnote{http://saltstack.com/}. The main difference
 between these tools is that some of the them are oriented to developers, which is the of Chef and Puppet
 that requires some programming to be used, while others are oriented to system administrators, which
-is the case of Ansible and Salt.  
+is the case of Ansible and Salt.
