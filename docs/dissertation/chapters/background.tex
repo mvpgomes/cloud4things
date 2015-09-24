@@ -253,23 +253,27 @@ specific area; c) Disposition specifies the state of the tagged object, for exam
 in the packaging area; and d) Business Step is the business action associated with the event, normally it
 is used a verb to represent the action being taken, for instance entering the packaging area.
 
-% Configuration Management Tools
-\subsection{Configuration Management Tools}
-\label{sub:cm_tools}
-
-
 % Containers
 \subsection{Containers}
 \label{sub:containers}
-Docker is an open source project to pack, ship and run any application as a lightweight container.
-Docker containers are hardware-agnostic and platform-agnostic, this means that these containers can
-run anywhere, from a laptop to a cloud instance. Since Docker is based in Linux Containers (LXC),
-the virtualization is performed at operating-system level, di↵erent of hypervisor-based solutions where
-the virtualization is performed at hardware- level. While the e↵ect of both types of virtualization
-are similar, the virtualization at the operating-system level provides significant benefits compared
-to hypervisor-based solutions. Docker containers are small, they have low memory and CPU overhead,
-they also are portable between di↵erent virtualization environments.\\
+Containers are a virtualization technique that is performed at \gls{OS} level, different of
+hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at hardware-level.
+In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
+While the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
+an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
+operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
+benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
+\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
 
-Another benefit that Docker platform provides is the Docker Registry service, a public repository
-that stores Docker images used to create the containers. In our solution we built the Docker images
-of the Fosstrak modules and published them in Docker registry to later be used to create our containers.
+Docker\footnote{https://www.docker.com/} is an open source project to pack, ship and run any application as
+a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
+this means that these containers can run anywhere\footnote{Initially, Docker required that the physical
+machine where the containers will be created was running a Linux kernel. However, recently Microsoft
+launched Windows Server Containers, a \gls{OS} level virtualization mechanism where is possible to
+perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
+benefit that Docker platform provides is the Docker Hub\footnote{https://hub.docker.com/} service,
+a public repository that stores Docker images used to create the containers.
+
+% Configuration Management Tools
+\subsection{Configuration Management Tools}
+\label{sub:cm_tools}
