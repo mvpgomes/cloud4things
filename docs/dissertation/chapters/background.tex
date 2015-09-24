@@ -277,3 +277,15 @@ a public repository that stores Docker images used to create the containers.
 % Configuration Management Tools
 \subsection{Configuration Management Tools}
 \label{sub:cm_tools}
+\gls{CM} tools are software management tools are software tools that allows to automate and specify
+the deployment of an application. Usually, users describes the system resources and their desired
+state and the \gls{CM} tool is responsible to enforce the state specified by the user.
+For instance, \gls{CM} tools allows to automate the provisioning of physical and virtual machines,
+perform dependency management of software components and to configure management tasks.\\
+
+Currently, there are several solutions to perform configuration management of software, where the
+most relevant are Chef\footnote{https://www.chef.io/}, Puppet\footnote{https://puppetlabs.com/},
+Ansible\footnote{http://www.ansible.com/} and Salt\footnote{http://saltstack.com/}. The main difference
+between these tools is that some of the them are oriented to developers, which is the of Chef and Puppet
+that requires some programming to be used, while others are oriented to system administrators, which
+is the case of Ansible and Salt.  
