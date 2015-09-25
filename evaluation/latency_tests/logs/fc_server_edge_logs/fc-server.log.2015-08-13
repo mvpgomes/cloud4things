@@ -1,0 +1,320 @@
+INFO  2015-08-13 16:14:29,364 [localhost-startStop-1] org.springframework.web.context.ContextLoader:194: Root WebApplicationContext: initialization started
+INFO  2015-08-13 16:14:29,397 [localhost-startStop-1] org.springframework.web.context.support.XmlWebApplicationContext:456: Refreshing Root WebApplicationContext: startup date [Thu Aug 13 16:14:29 WEST 2015]; root of context hierarchy
+INFO  2015-08-13 16:14:29,478 [localhost-startStop-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315: Loading XML bean definitions from class path resource [applicationContext.xml]
+INFO  2015-08-13 16:14:29,794 [localhost-startStop-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315: Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+INFO  2015-08-13 16:14:29,823 [localhost-startStop-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315: Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+INFO  2015-08-13 16:14:29,871 [localhost-startStop-1] org.springframework.context.annotation.ClassPathBeanDefinitionScanner:178: JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+INFO  2015-08-13 16:14:30,489 [localhost-startStop-1] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer:177: Loading properties file from URL [file:/var/lib/tomcat7/webapps/fc-server-1.2.0/WEB-INF/classes/ale.properties]
+INFO  2015-08-13 16:14:30,526 [localhost-startStop-1] org.springframework.beans.factory.support.DefaultListableBeanFactory:557: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e41389: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,ecSpecValidator,ecReportsHelper,persistenceFileUtils,persistenceConfig,persistenceInit,readConfigImpl,writeConfigImpl,removeConfigImpl,ale,aleApplicationContext,aleSettings,readerProvider,logicalReaderManager,llrpManager,llrpControllerManager,ALEService,ALELRService,ALEController,LLRPController]; root of factory hierarchy
+DEBUG 2015-08-13 16:14:30,675 [localhost-startStop-1] org.fosstrak.ale.server.impl.ALEImpl:97: initializing ALE.
+INFO  2015-08-13 16:14:30,675 [localhost-startStop-1] org.fosstrak.ale.server.impl.ALEImpl:106: ALE initialized
+DEBUG 2015-08-13 16:14:30,678 [localhost-startStop-1] org.fosstrak.ale.server.util.ECSpecValidator:72: setting logical reader managerorg.fosstrak.ale.server.readers.impl.LogicalReaderManagerImpl
+INFO  2015-08-13 16:14:30,705 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:62: initializing ALEApplicationContext
+INFO  2015-08-13 16:14:30,709 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:64: initialized ALEApplicationContext.
+DEBUG 2015-08-13 16:14:30,710 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:73: initializing application ...
+DEBUG 2015-08-13 16:14:30,710 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:76: instantiated LogicalReaderManager: org.fosstrak.ale.server.readers.impl.LogicalReaderManagerImpl
+DEBUG 2015-08-13 16:14:30,711 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:78: instantiated ALE: org.fosstrak.ale.server.impl.ALEImpl
+DEBUG 2015-08-13 16:14:30,711 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:80: instantiated Persistence: org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl
+INFO  2015-08-13 16:14:30,711 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl:51: ALE Persistence => start
+DEBUG 2015-08-13 16:14:30,712 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl:53: ALE Persistence real path of the webapp: /var/lib/tomcat7/webapps/fc-server-1.2.0/
+DEBUG 2015-08-13 16:14:30,712 [localhost-startStop-1] org.fosstrak.ale.server.persistence.type.PersistenceConfig:38: set real path of webapp: /var/lib/tomcat7/webapps/fc-server-1.2.0/
+INFO  2015-08-13 16:14:30,716 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl:56: ALE Persistence initialize configuration
+DEBUG 2015-08-13 16:14:30,716 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:239: start read and load all lrspec
+DEBUG 2015-08-13 16:14:30,717 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:77: add file LogicalReader1.xml to list to read
+DEBUG 2015-08-13 16:14:30,717 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:84: list of file: [LogicalReader1.xml]
+DEBUG 2015-08-13 16:14:30,717 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:256: try to read lrspec LogicalReader1.xml
+DEBUG 2015-08-13 16:14:31,029 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:259: read lrspec LogicalReader1.xml
+DEBUG 2015-08-13 16:14:31,030 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:276: Loading LRSpec LogicalReader1 ...
+DEBUG 2015-08-13 16:14:31,030 [localhost-startStop-1] org.fosstrak.ale.server.readers.LogicalReaderManager:295: define
+DEBUG 2015-08-13 16:14:31,031 [localhost-startStop-1] org.fosstrak.ale.server.readers.LogicalReaderFactory:89: creating base reader
+DEBUG 2015-08-13 16:14:31,060 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:150: create a new LLRP reader
+ERROR 2015-08-13 16:14:31,066 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPManager:112: no config file - therefore using defaults...
+INFO  2015-08-13 16:14:31,066 [localhost-startStop-1] org.fosstrak.llrp.adaptor.AdaptorManagement:926: config not specified -> create a default configuration
+ERROR 2015-08-13 16:14:31,123 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPManager:129: Could not initialize the repository - disabling it.
+INFO  2015-08-13 16:14:31,123 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPManager:75: llrp adaptor is bound
+DEBUG 2015-08-13 16:14:31,128 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:177: defining new reader with settings:name: LogicalReader1, ip: localhost, port: 5084, clientinitiated: true
+DEBUG 2015-08-13 16:14:31,158 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:206: register the adaptor for asynchronous notifications from the llrp reader
+ERROR 2015-08-13 16:14:31,240 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPManager:255: An exception occured:
+org.fosstrak.llrp.adaptor.exception.LLRPRuntimeException: Could not connect to reader LogicalReader1 on adapter server adaptor - 127.0.1.1:
+Exception: Failed to get the session.
+	at org.fosstrak.llrp.adaptor.ReaderImpl.connect(ReaderImpl.java:219)
+	at org.fosstrak.ale.server.readers.llrp.LLRPAdaptor.initialize(LLRPAdaptor.java:211)
+	at org.fosstrak.ale.server.readers.LogicalReaderFactory.createReader(LogicalReaderFactory.java:92)
+	at org.fosstrak.ale.server.readers.impl.type.ReaderProvider.createReader(ReaderProvider.java:49)
+	at org.fosstrak.ale.server.readers.impl.LogicalReaderManagerImpl.define(LogicalReaderManagerImpl.java:300)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.defineLRSpecs(ReadConfigImpl.java:278)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readLRSpecs(ReadConfigImpl.java:242)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:86)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR 2015-08-13 16:14:31,242 [localhost-startStop-1] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:220: Error when initializing the Reader
+org.fosstrak.llrp.adaptor.exception.LLRPRuntimeException: Could not connect to reader LogicalReader1 on adapter server adaptor - 127.0.1.1:
+Exception: Failed to get the session.
+	at org.fosstrak.llrp.adaptor.ReaderImpl.connect(ReaderImpl.java:219)
+	at org.fosstrak.ale.server.readers.llrp.LLRPAdaptor.initialize(LLRPAdaptor.java:211)
+	at org.fosstrak.ale.server.readers.LogicalReaderFactory.createReader(LogicalReaderFactory.java:92)
+	at org.fosstrak.ale.server.readers.impl.type.ReaderProvider.createReader(ReaderProvider.java:49)
+	at org.fosstrak.ale.server.readers.impl.LogicalReaderManagerImpl.define(LogicalReaderManagerImpl.java:300)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.defineLRSpecs(ReadConfigImpl.java:278)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readLRSpecs(ReadConfigImpl.java:242)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:86)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR 2015-08-13 16:14:31,243 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:286: Implementation exception.
+org.fosstrak.ale.exception.ImplementationException: Error when initializing the Reader
+	at org.fosstrak.ale.server.readers.llrp.LLRPAdaptor.initialize(LLRPAdaptor.java:221)
+	at org.fosstrak.ale.server.readers.LogicalReaderFactory.createReader(LogicalReaderFactory.java:92)
+	at org.fosstrak.ale.server.readers.impl.type.ReaderProvider.createReader(ReaderProvider.java:49)
+	at org.fosstrak.ale.server.readers.impl.LogicalReaderManagerImpl.define(LogicalReaderManagerImpl.java:300)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.defineLRSpecs(ReadConfigImpl.java:278)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readLRSpecs(ReadConfigImpl.java:242)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:86)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+DEBUG 2015-08-13 16:14:31,244 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:288:  ... loading LRSpec LogicalReader1 done
+DEBUG 2015-08-13 16:14:31,244 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:243: end read and load all lrspec
+DEBUG 2015-08-13 16:14:31,244 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:118: start read and load all ecspec
+DEBUG 2015-08-13 16:14:31,244 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:77: add file specCURRENT.xml to list to read
+DEBUG 2015-08-13 16:14:31,244 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:84: list of file: [specCURRENT.xml]
+DEBUG 2015-08-13 16:14:31,245 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:137: try to read ecspec specCURRENT.xml
+DEBUG 2015-08-13 16:14:31,325 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:140: read ecspec specCURRENT.xml
+DEBUG 2015-08-13 16:14:31,326 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:158: Loading ECSpec specCURRENT ...
+DEBUG 2015-08-13 16:14:31,328 [localhost-startStop-1] org.fosstrak.ale.server.ReportsGenerator:142: Try to create new ReportGenerator 'specCURRENT'.
+DEBUG 2015-08-13 16:14:31,328 [localhost-startStop-1] org.fosstrak.ale.server.util.ECSpecValidator:326: LogicalReader 'LogicalReader1' is unknown.
+ERROR 2015-08-13 16:14:31,328 [localhost-startStop-1] org.fosstrak.ale.server.ReportsGenerator:153: ECSpecValidationException: LogicalReader 'LogicalReader1' is unknown.
+org.fosstrak.ale.exception.ECSpecValidationException: LogicalReader 'LogicalReader1' is unknown.
+	at org.fosstrak.ale.server.util.ECSpecValidator.logAndCreateECSpecValidationException(ECSpecValidator.java:327)
+	at org.fosstrak.ale.server.util.ECSpecValidator.checkReadersAvailable(ECSpecValidator.java:109)
+	at org.fosstrak.ale.server.util.ECSpecValidator.validateSpec(ECSpecValidator.java:90)
+	at org.fosstrak.ale.server.impl.ReportsGeneratorImpl.<init>(ReportsGeneratorImpl.java:151)
+	at org.fosstrak.ale.server.impl.ReportsGeneratorImpl.<init>(ReportsGeneratorImpl.java:128)
+	at org.fosstrak.ale.server.impl.type.ReportsGeneratorsProvider.createNewReportGenerator(ReportsGeneratorsProvider.java:56)
+	at org.fosstrak.ale.server.impl.ALEImpl.define(ALEImpl.java:120)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.defineECSpecs(ReadConfigImpl.java:159)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readECSpecs(ReadConfigImpl.java:122)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:92)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR 2015-08-13 16:14:31,329 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:164: ECSpec specCURRENT is not valid.
+org.fosstrak.ale.exception.ECSpecValidationException: LogicalReader 'LogicalReader1' is unknown.
+	at org.fosstrak.ale.server.util.ECSpecValidator.logAndCreateECSpecValidationException(ECSpecValidator.java:327)
+	at org.fosstrak.ale.server.util.ECSpecValidator.checkReadersAvailable(ECSpecValidator.java:109)
+	at org.fosstrak.ale.server.util.ECSpecValidator.validateSpec(ECSpecValidator.java:90)
+	at org.fosstrak.ale.server.impl.ReportsGeneratorImpl.<init>(ReportsGeneratorImpl.java:151)
+	at org.fosstrak.ale.server.impl.ReportsGeneratorImpl.<init>(ReportsGeneratorImpl.java:128)
+	at org.fosstrak.ale.server.impl.type.ReportsGeneratorsProvider.createNewReportGenerator(ReportsGeneratorsProvider.java:56)
+	at org.fosstrak.ale.server.impl.ALEImpl.define(ALEImpl.java:120)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.defineECSpecs(ReadConfigImpl.java:159)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readECSpecs(ReadConfigImpl.java:122)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:92)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+DEBUG 2015-08-13 16:14:31,329 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:124: end read and load all ecspec
+DEBUG 2015-08-13 16:14:31,330 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:173: start read and load all ecspec subscriber
+DEBUG 2015-08-13 16:14:31,330 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:77: add file specCURRENT.properties to list to read
+DEBUG 2015-08-13 16:14:31,330 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:84: list of file: [specCURRENT.properties]
+DEBUG 2015-08-13 16:14:31,331 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:190: try to read ecspec subscriber specCURRENT.properties
+DEBUG 2015-08-13 16:14:31,332 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:199: read ecspec subscribers specCURRENT.properties
+DEBUG 2015-08-13 16:14:31,332 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:219: try to define subscribers for specName specCURRENT
+DEBUG 2015-08-13 16:14:31,337 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:223: defining notification URI: http://localhost:9999
+ERROR 2015-08-13 16:14:31,339 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:232: ECSpec does not exist
+org.fosstrak.ale.exception.NoSuchNameException: No ECSpec with such name defined: specCURRENT
+	at org.fosstrak.ale.server.impl.ALEImpl.throwNoSuchNameExceptionIfNoSuchSpec(ALEImpl.java:249)
+	at org.fosstrak.ale.server.impl.ALEImpl.subscribe(ALEImpl.java:149)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.subscribeSubscribers(ReadConfigImpl.java:224)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.readECSpecsSubscriber(ReadConfigImpl.java:177)
+	at org.fosstrak.ale.server.persistence.impl.ReadConfigImpl.init(ReadConfigImpl.java:98)
+	at org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl.init(PersistenceInitImpl.java:57)
+	at org.fosstrak.ale.server.ALEApplicationContext.initializeApplication(ALEApplicationContext.java:81)
+	at org.fosstrak.ale.server.ALEApplicationContext.setServletContext(ALEApplicationContext.java:69)
+	at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4973)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1073)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:178: end read and load all ecspec subscriber
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:294: start read and load all rospecs
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:84: list of file: []
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:321: end read and load all rospec
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:326: start read and load all accessspecs
+DEBUG 2015-08-13 16:14:31,340 [localhost-startStop-1] org.fosstrak.ale.server.persistence.util.FileUtils:84: list of file: []
+DEBUG 2015-08-13 16:14:31,341 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.ReadConfigImpl:352: end read and load all acccessspec
+INFO  2015-08-13 16:14:31,341 [localhost-startStop-1] org.fosstrak.ale.server.persistence.impl.PersistenceInitImpl:59: ALE Persistence => end
+DEBUG 2015-08-13 16:14:31,341 [localhost-startStop-1] org.fosstrak.ale.server.ALEApplicationContext:86: ... initialization done.
+INFO  2015-08-13 16:14:31,420 [localhost-startStop-1] org.apache.cxf.service.factory.ReflectionServiceFactoryBean:441: Creating Service {http://service.jaxws.cxf.apache.org/service}ALEService from class org.fosstrak.ale.wsdl.ale.epcglobal.ALEServicePortType
+INFO  2015-08-13 16:14:32,189 [localhost-startStop-1] org.apache.cxf.endpoint.ServerImpl:94: Setting the server's publish address to be /ALEService
+INFO  2015-08-13 16:14:32,238 [localhost-startStop-1] org.apache.cxf.service.factory.ReflectionServiceFactoryBean:441: Creating Service {http://service.jaxws.cxf.apache.org/service}ALELRService from class org.fosstrak.ale.wsdl.alelr.epcglobal.ALELRServicePortType
+INFO  2015-08-13 16:14:32,524 [localhost-startStop-1] org.apache.cxf.endpoint.ServerImpl:94: Setting the server's publish address to be /ALELRService
+INFO  2015-08-13 16:14:32,537 [localhost-startStop-1] org.apache.cxf.service.factory.ReflectionServiceFactoryBean:441: Creating Service {http://service.jaxws.cxf.apache.org/service}ALEControllerService from class org.fosstrak.ale.server.controller.ALEController
+INFO  2015-08-13 16:14:32,662 [localhost-startStop-1] org.apache.cxf.endpoint.ServerImpl:94: Setting the server's publish address to be /ALEControllerService
+INFO  2015-08-13 16:14:32,673 [localhost-startStop-1] org.apache.cxf.service.factory.ReflectionServiceFactoryBean:441: Creating Service {http://service.jaxws.cxf.apache.org/service}LLRPControllerService from class org.fosstrak.ale.server.llrp.LLRPController
+INFO  2015-08-13 16:14:32,712 [localhost-startStop-1] org.apache.cxf.endpoint.ServerImpl:94: Setting the server's publish address to be /LLRPControllerService
+INFO  2015-08-13 16:14:32,715 [localhost-startStop-1] org.springframework.web.context.ContextLoader:221: Root WebApplicationContext: initialization completed in 3347 ms
