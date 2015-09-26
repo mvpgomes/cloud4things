@@ -3,134 +3,375 @@
 - Report 1
 ----------------
 
-Reader Start to Send Data [Network Time]: 20:02:33.856533
-Notification Received by ALE [Processing Time]: 20:02:33.863
-Create Report and Delivery to the Client [Processing Time]: 20:02:40.441
-Client Receive Report [Network Time]: 20:02:40.453326
+Reader Start to Send Data:
+20:02:33.856
 
-RTT: 6.597s
-Connection Time: 0.007s + 0.012 = 0.019s
-Data Processing Time: 6.578s
+Notification Received by ALE:
+20:02:33.862
+
+Finished the Tag Process by ALE:
+20:02:33.863
+
+Idle Time [Repeated Tags]:
+20:02:38.617
+
+Start to create the ECReport:
+20:02:38.617
+
+Finished the ECReport creation:
+20:02:40.441
+
+Create Post request to the Client
+20:02:40.441
+
+Client Receive Report:
+20:02:40.453
+
+- RTT: 6.597s
+- Upload Time: 0.006s
+- Tag Processing Time: 0.001s
+- Idle Time: 4.754s
+- Report Creation Time: 1.824s
+- Response Time: 0.012s
 
 - Report 2
 ----------------
 
-Reader Start to Send Data [Network Time]: 20:02:44.385572
-Notification Received by ALE [Processing Time]: 20:02:44.388
-Create Report and Delivery to the Client [Processing Time]: 20:02:50.442
-Client Receive Report [Network Time]: 20:02:50.451170
+Reader Start to Send Data:
+20:02:44.385
 
-RTT:
-Connection Time: 0.003s + 0.009s = 0.012s
-Data Processing Time: 6.054s
+Notification Received by ALE:
+20:02:44,387
+
+Finished the Tag Process by ALE:
+20:02:44,388
+
+Idle Time [Repeated Tags]:
+20:02:49,682
+
+Start to create the ECReport:
+20:02:50,440
+
+Finished the ECReport creation:
+20:02:50,442
+
+Create Post request to the Client
+20:02:50.442
+
+Client Receive Report:
+20:02:50.451
+
+- RTT: 6.066s
+- Upload Time: 0.002s
+- Tag Processing Time: 0.001s
+- Idle Time: 5.294s
+- Report Creation Time: 0.002s
+- Response Time: 0.009s
 
 - Report 3
 ----------------
 
-Reader Start to Send Data [Network Time]: 20:02:52.809186
-Notification Received by ALE [Processing Time]: 20:02:52.812
-Create Report and Delivery to the Client [Processing Time]: 20:03:00.455
-Client Receive Report [Network Time]: 20:03:00.461372
+Reader Start to Send Data:
+20:02:52.809
 
-RTT:
-Connection Time: 0.003s + 0.006 = 0.009s
-Data Processing Time: 7.643s
+Notification Received by ALE:
+20:02:52,812
+
+Finished the Tag Process by ALE:
+20:02:52,812
+
+Idle Time [Repeated Tags]:
+20:02:57,558
+
+Start to create the ECReport:
+20:03:00,443
+
+Finished the ECReport creation:
+20:03:00,454
+
+Create Post request to the Client
+20:03:00.455
+
+Client Receive Report:
+20:03:00.461
+
+- RTT: 7.652s
+- Upload Time: 0.003s
+- Tag Processing Time: 0.001s
+- Idle Time: 4.746s
+- Report Creation Time: 0.001s
+- Response Time: 0.006s
 
 - Report 4
 ----------------
 
-Reader Start to Send Data [Network Time]: 20:03:01.758246
-Notification Received by ALE [Processing Time]: 20:03:01.760
-Create Report and Delivery to the Client [Processing Time]: 20:03:10.448
-Client Receive Report [Network Time]: 20:03:10.469725
+Reader Start to Send Data:
+20:03:01.758
 
-RTT:
-Connection Time: 0.002s + 0.021s = 0.023s
-Data Processing Time: 8.688s
+Notification Received by ALE:
+20:03:01.760
 
+Finished the Tag Process by ALE:
+20:03:01.761
+
+Idle Time [Repeated Tags]:
+20:03:07,029
+
+Start to create the ECReport:
+20:03:10,443
+
+Finished the ECReport creation:
+20:03:10,447
+
+Create Post request to the Client
+20:03:10,448
+
+Client Receive Report:
+20:03:10.469
+
+- RTT: 8.711s
+- Upload Time: 0.002s
+- Tag Processing Time: 0.001s
+- Idle Time: 5.268s
+- Report Creation Time: 0.001s
+- Response Time: 0.021s
 
 - Report 5
 ----------------
 
-Reader Start to Send Data [Network Time]: 20:03:13.337829
-Notification Received by ALE [Processing Time]: 20:03:13.342
-Create Report and Delivery to the Client [Processing Time]: 20:03:20.446
-Client Receive Report [Network Time]: 20:03:20.452722
+Reader Start to Send Data:
+20:03:13.337
 
-RTT:
-Connection Time: 0.005s + 0.006 = 0.011s
-Data Processing Time: 7.104s
+Notification Received by ALE:
+20:03:13.341
+
+Finished the Tag Process by ALE:
+20:03:13.343
+
+Idle Time [Repeated Tags]:
+20:03:18,081
+
+Start to create the ECReport:
+20:03:18,081
+
+Finished the ECReport creation:
+20:03:18,081
+
+Create Post request to the Client
+20:03:20.446
+
+Client Receive Report:
+20:03:20.452
+
+- RTT: 7.115s
+- Upload Time: 0.004s
+- Tag Processing Time: 0.002s
+- Idle Time: 4.738s
+- Report Creation Time: 0.001s
+- Response Time: 0.006s
 
 # ALE Edge ECspec 2015-08-18
 
 - Report 1
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:43:38.212090
-Notification Received by ALE [Processing Time]: 11:43:38.226
-Create Report and Delivery to the Client [Processing Time]: 11:43:46.709
-Client Receive Report [Network Time]: 11:43:46.724181
+Reader Start to Send Data:
+11:43:38.212
 
-RTT: 8.512s
-Connection Time: 0.014s + 0.015s = 0.029s
-Data Processing Time: 8.483s
+Notification Received by ALE:
+11:43:38,226
+
+Finished the Tag Process by ALE:
+11:43:38,226
+
+Idle Time [Repeated Tags]:
+11:43:44,005
+
+Start to create the ECReport:
+11:43:46,707
+
+Finished the ECReport creation:
+11:43:46,709
+
+Create Post request to the Client
+11:43:46,709
+
+Client Receive Report:
+11:43:46.724
+
+- RTT: 8.512s
+- Upload Time: 0.014s
+- Tag Processing Time: 0.001s
+- Idle Time: 5.779s
+- Report Creation Time: 0.002s
+- Response Time: 0.015s
 
 - Report 2
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:43:48.211440
-Notification Received by ALE [Processing Time]: 11:43:48.215
-Create Report and Delivery to the Client [Processing Time]: 11:43:56.710
-Client Receive Report [Network Time]: 11:43:56.721760
+Reader Start to Send Data:
+11:43:48.211
 
-RTT: 8.510s
-Connection Time: 0.004s + 0.011s = 0.015s
-Data Processing Time: 8.495s
+Notification Received by ALE:
+11:43:48,214
+
+Finished the Tag Process by ALE:
+11:43:48,215
+
+Idle Time [Repeated Tags]:
+11:43:54,006
+
+Start to create the ECReport:
+11:43:56,708
+
+Finished the ECReport creation:
+11:43:56,710
+
+Create Post request to the Client
+11:43:56,710
+
+Client Receive Report:
+11:43:56.721
+
+- RTT: 8.510s
+- Upload Time: 0.003s
+- Tag Processing Time: 0.001s
+- Idle Time: 5.791s
+- Report Creation Time: 0.002s
+- Response Time: 0.011s
 
 - Report 3
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:44:03.481937
-Notification Received by ALE [Processing Time]: 11:44:03.485
-Create Report and Delivery to the Client [Processing Time]: 11:44:06.710
-Client Receive Report [Network Time]: 11:44:06.725736
+Reader Start to Send Data:
+11:44:03.481
 
-RTT: 3.244s
-Connection Time: 0.004s + 0.015s = 0.019s
-Data Processing Time: 3.225s
+Notification Received by ALE:
+11:44:03,484
+
+Finished the Tag Process by ALE:
+11:44:03,486
+
+Idle Time [Repeated Tags]:
+11:44:06,649
+
+Start to create the ECReport:
+11:44:06,649
+
+Finished the ECReport creation:
+11:44:06,710
+
+Create Post request to the Client
+11:44:06,710
+
+Client Receive Report:
+11:44:06.725
+
+- RTT: 3.244s
+- Upload Time: 0.003s
+- Tag Processing Time: 0.002s
+- Idle Time: 3.163s
+- Report Creation Time: 0.002s
+- Response Time: 0.015s
 
 - Report 4
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:44:07.168197
-Notification Received by ALE [Processing Time]: 11:44:07.174
-Create Report and Delivery to the Client [Processing Time]: 11:44:16.713
-Client Receive Report [Network Time]: 11:44:16.718951
+Reader Start to Send Data:
+11:44:07.168
 
-RTT: 9.552s
-Connection Time: 0.007s + 0.006s = 0.013s
-Data Processing Time: 9.539s
+Notification Received by ALE:
+11:44:07,697
+
+Finished the Tag Process by ALE:
+11:44:07,698
+
+Idle Time [Repeated Tags]:
+11:44:09,281
+
+Start to create the ECReport:
+11:44:16,709
+
+Finished the ECReport creation:
+11:44:16,713
+
+Create Post request to the Client
+11:44:16,713
+
+Client Receive Report:
+11:44:16.718
+
+- RTT: 9.550s
+- Upload Time: 0.529s
+- Tag Processing Time: 0.001s
+- Idle Time: 7.428s
+- Report Creation Time: 0.001s
+- Response Time: 0.005s
 
 - Report 5
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:44:18.231622
-Notification Received by ALE [Processing Time]: 11:44:18.238
-Create Report and Delivery to the Client [Processing Time]: 11:44:26.713
-Client Receive Report [Network Time]: 11:44:26.719686
+Reader Start to Send Data:
+11:44:18.231
 
-RTT: 8.488s
-Connection Time: 0.007s + 0.006s = 0.013s
-Data Processing Time: 8.475s
+Notification Received by ALE:
+11:44:18,237
+
+Finished the Tag Process by ALE:
+11:44:18,239
+
+Idle Time [Repeated Tags]:
+11:44:23,500
+
+Start to create the ECReport:
+11:44:26,709
+
+Finished the ECReport creation:
+11:44:26,712
+
+Create Post request to the Client
+11:44:16,713
+
+Client Receive Report:
+11:44:26.719
+
+- RTT: 8.488s
+- Upload Time: 0.006s
+- Tag Processing Time: 0.001s
+- Idle Time: 7.428s
+- Report Creation Time: 0.001s
+- Response Time: 0.005s
 
 - Report 6
 ----------------
 
-Reader Start to Send Data [Network Time]: 11:44:28.226582
-Notification Received by ALE [Processing Time]: 11:44:28.231
-Create Report and Delivery to the Client [Processing Time]: 11:44:36.714
-Client Receive Report [Network Time]: 11:44:36.723575
+Reader Start to Send Data:
+11:44:28.226
 
-RTT: 8.497s
-Connection Time: 0.005s + 0.009s = 0.014s
-Data Processing Time: 8.483s
+Notification Received by ALE:
+11:44:28.231
+
+Finished the Tag Process by ALE:
+11:44:28.232
+
+Idle Time [Repeated Tags]:
+11:44:34,545
+
+Start to create the ECReport:
+11:44:36,711
+
+Finished the ECReport creation:
+11:44:36,714
+
+Create Post request to the Client
+11:44:36.714
+
+Client Receive Report:
+11:44:36.723
+
+- RTT: 8.497s
+- Upload Time: 0.005s
+- Tag Processing Time: 0.001s
+- Idle Time: 7.428s
+- Report Creation Time: 0.001s
+- Response Time: 0.005s

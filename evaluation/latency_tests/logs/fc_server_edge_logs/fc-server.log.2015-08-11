@@ -125,170 +125,170 @@ INFO  2015-08-11 20:01:50,936 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 DEBUG 2015-08-11 20:01:53,365 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:53,365 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-11 20:01:53,382 [Thread-6] org.fosstrak.ale.server.util.TagHelper:241: Initialize TDT Engine for tag translation.
-DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,705 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,714 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:53,715 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,726 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:53,859 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:53,859 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:53,860 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,860 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,860 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:53,868 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:53,885 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:53,893 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:53,893 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:53,895 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:53,895 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:53,895 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:53,896 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,407 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:54,410 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,417 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,421 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,421 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,421 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,422 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,422 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,422 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,422 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,423 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,912 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:54,912 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,915 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,916 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,916 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,916 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,916 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,917 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,917 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:54,917 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:54,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:54,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:54,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:54,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:54,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:54,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,435 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:55,436 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,440 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,449 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,963 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:55,964 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,966 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,967 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:55,971 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:56,491 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:56,491 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:56,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:56,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:56,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:56,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:56,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:56,493 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:56,493 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:56,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:56,495 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:56,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,017 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:57,017 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,018 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,019 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,019 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,019 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,019 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,020 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:57,020 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,020 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,040 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,040 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,040 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,041 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,041 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:57,041 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,541 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:01:57,542 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,542 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,542 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,542 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,543 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,544 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,544 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
 DEBUG 2015-08-11 20:01:57,544 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:01:57,544 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:01:57,545 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:01:57,545 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:01:57,545 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:01:57,545 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:01:57,548 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:1970465.811485.249984317543'.
@@ -324,193 +324,194 @@ DEBUG 2015-08-11 20:02:30,939 [specCURRENT] org.fosstrak.ale.server.impl.EventCy
 DEBUG 2015-08-11 20:02:30,939 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues
 INFO  2015-08-11 20:02:30,939 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:468: EventCycle specCURRENT_0: Starting (Round 7).
 DEBUG 2015-08-11 20:02:33,860 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-11 20:02:33,862 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 
 DEBUG 2015-08-11 20:02:33,863 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
-
 DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:33,864 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:33,873 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:33,873 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:33,873 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:33,873 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:33,873 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:33,874 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,388 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,390 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,391 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,912 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:34,912 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,912 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,912 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,913 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,913 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,913 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,913 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,913 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,914 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,914 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,914 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,914 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,914 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,916 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:34,916 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:34,917 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:34,917 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:34,917 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:34,918 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:34,918 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:34,918 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,437 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:35,437 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,438 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,439 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,439 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,439 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,439 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,440 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,440 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,441 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,441 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,441 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,441 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,964 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:35,964 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,967 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,967 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,967 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,967 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,968 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:35,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:36,490 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:36,491 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:36,491 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:36,491 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:36,491 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:36,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:36,492 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:36,494 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:36,494 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:36,496 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:36,498 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,026 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:37,026 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,027 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,545 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:37,545 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,546 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,546 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,546 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,546 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,546 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,547 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,547 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,547 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,547 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,547 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,548 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,548 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,548 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:37,550 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:37,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:37,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:37,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:37,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:37,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:37,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,070 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:38,070 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,071 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,072 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,072 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,074 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:38,074 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,074 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,074 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,074 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,075 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,595 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:38,595 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,606 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,606 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,606 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:38,606 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:38,607 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,608 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,608 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:38,608 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
+
 DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:086217108.5022.232382095443'.
 DEBUG 2015-08-11 20:02:38,617 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
@@ -520,839 +521,859 @@ DEBUG 2015-08-11 20:02:40,440 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 DEBUG 2015-08-11 20:02:40,440 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:414: Group 'null' does not already exist, create it
 DEBUG 2015-08-11 20:02:40,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:494: Tag 'urn:epc:id:sgtin:086217108.5022.232382095443' successfully added to group 'null' of report 'null'
 DEBUG 2015-08-11 20:02:40,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 1
+
 DEBUG 2015-08-11 20:02:40,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:63: Write reports 'specCURRENT' as post request to http socket 'localhost:9999'.
 DEBUG 2015-08-11 20:02:40,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:78: Create POST request with reports 'specCURRENT'.
+
 INFO  2015-08-11 20:02:40,453 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 7).
 DEBUG 2015-08-11 20:02:40,939 [specCURRENT] org.fosstrak.ale.server.impl.EventCycleImpl:570: launching eventCyclespecCURRENT_0
 DEBUG 2015-08-11 20:02:40,940 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues
 INFO  2015-08-11 20:02:40,940 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:468: EventCycle specCURRENT_0: Starting (Round 8).
 DEBUG 2015-08-11 20:02:44,387 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-11 20:02:44,387 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
+
 DEBUG 2015-08-11 20:02:44,388 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:44,389 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,398 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,398 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,398 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,398 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,399 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:44,399 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:44,921 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:44,923 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,927 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,927 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,927 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:44,927 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:44,927 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:44,928 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:44,929 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:44,929 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:44,929 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:44,929 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:44,929 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:44,930 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,441 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:45,441 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,443 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,443 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,443 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,444 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,446 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,447 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,968 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:45,968 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,969 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:45,970 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:45,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:45,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:45,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:45,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:45,971 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:45,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:46,505 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:46,505 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:46,524 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:46,525 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:46,526 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,022 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:47,022 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,023 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,025 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,549 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:47,549 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,550 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,550 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:47,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,078 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:48,078 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,083 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,084 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,084 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,602 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:48,602 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,603 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,604 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:48,605 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:48,614 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,137 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:49,138 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,138 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,138 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,138 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,138 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,139 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,140 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,157 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,158 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,158 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,158 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,158 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,161 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,161 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,161 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,161 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,653 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:49,653 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,656 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,656 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,657 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,657 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,657 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,657 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,658 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,660 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,660 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,674 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,674 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,674 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,674 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:49,674 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:66234450360.59.40864939736'.
 DEBUG 2015-08-11 20:02:49,682 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
+
 INFO  2015-08-11 20:02:50,440 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:514: EventCycle specCURRENT_0: Number of Tags read in the current EventCyle.java: 1
 DEBUG 2015-08-11 20:02:50,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:139: Event '[Tag id: 303031313030303030313030303130313131313031313031303131313131303030303131303030303030313130313131303030303131313031313030313030313130303030303131313031313131303130313131313131303131303131303030, ReaderName: LogicalReader1, OriginName: LogicalReader1, Trace: LogicalReader1-LogicalReader1, Timestamp: 1439319764388, Binary: 001100000100010111101101011111000011000000110111000011101100100110000011101111010111111011011000, PureID: urn:epc:id:sgtin:66234450360.59.40864939736]' is member of report 'null'
 DEBUG 2015-08-11 20:02:50,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:389: The group name for tag 'urn:epc:id:sgtin:66234450360.59.40864939736' is 'null'
 DEBUG 2015-08-11 20:02:50,441 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:414: Group 'null' does not already exist, create it
 DEBUG 2015-08-11 20:02:50,442 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:494: Tag 'urn:epc:id:sgtin:66234450360.59.40864939736' successfully added to group 'null' of report 'null'
 DEBUG 2015-08-11 20:02:50,442 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 1
+
 DEBUG 2015-08-11 20:02:50,442 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:63: Write reports 'specCURRENT' as post request to http socket 'localhost:9999'.
 DEBUG 2015-08-11 20:02:50,442 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:78: Create POST request with reports 'specCURRENT'.
+
 INFO  2015-08-11 20:02:50,456 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 8).
 DEBUG 2015-08-11 20:02:50,941 [specCURRENT] org.fosstrak.ale.server.impl.EventCycleImpl:570: launching eventCyclespecCURRENT_0
 DEBUG 2015-08-11 20:02:50,942 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues
 INFO  2015-08-11 20:02:50,942 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:468: EventCycle specCURRENT_0: Starting (Round 9).
 DEBUG 2015-08-11 20:02:52,811 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:52,812 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
+
 DEBUG 2015-08-11 20:02:52,813 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:52,821 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:52,822 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:52,822 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:52,822 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:52,822 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:52,823 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:52,823 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,359 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:53,359 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,359 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,359 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,360 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,360 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,360 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,360 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,360 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,368 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,369 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,369 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,369 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,380 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,380 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,380 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,864 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:53,864 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,868 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,886 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,886 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:53,886 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:53,888 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:53,888 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:53,888 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:53,888 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:53,899 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:53,899 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,390 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:54,391 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,400 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,400 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,401 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,401 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,401 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,401 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,401 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,402 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,403 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,922 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:54,923 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,924 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,924 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,924 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,924 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,925 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:54,926 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:54,927 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,442 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:55,443 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,445 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,446 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,450 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,971 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:55,971 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,972 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,974 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:55,975 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:55,984 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:56,498 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:56,498 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:56,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:56,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:56,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:56,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:56,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:56,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:56,502 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:56,503 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:56,504 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:56,504 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:56,504 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:56,504 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:56,505 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:56,505 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,024 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:57,024 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,025 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,026 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,555 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:02:57,555 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,556 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:02:57,557 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:5015925376.522.142400932455'.
 DEBUG 2015-08-11 20:02:57,558 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
+
 INFO  2015-08-11 20:03:00,443 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:514: EventCycle specCURRENT_0: Number of Tags read in the current EventCyle.java: 1
 DEBUG 2015-08-11 20:03:00,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:139: Event '[Tag id: 303031313030303031303030313030313030313031303130313131313130303031313131303031303130303030303030313030303030313031303130303030313030313030313131313130303030303131313030313031303031313030313131, ReaderName: LogicalReader1, OriginName: LogicalReader1, Trace: LogicalReader1-LogicalReader1, Timestamp: 1439319772812, Binary: 001100001000100100101010111110001111001010000000100000101010000100100111110000011100101001100111, PureID: urn:epc:id:sgtin:5015925376.522.142400932455]' is member of report 'null'
 DEBUG 2015-08-11 20:03:00,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:389: The group name for tag 'urn:epc:id:sgtin:5015925376.522.142400932455' is 'null'
 DEBUG 2015-08-11 20:03:00,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:414: Group 'null' does not already exist, create it
 DEBUG 2015-08-11 20:03:00,446 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:494: Tag 'urn:epc:id:sgtin:5015925376.522.142400932455' successfully added to group 'null' of report 'null'
 DEBUG 2015-08-11 20:03:00,454 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 1
+
 DEBUG 2015-08-11 20:03:00,454 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:63: Write reports 'specCURRENT' as post request to http socket 'localhost:9999'.
 DEBUG 2015-08-11 20:03:00,455 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:78: Create POST request with reports 'specCURRENT'.
+
 INFO  2015-08-11 20:03:00,465 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 9).
 DEBUG 2015-08-11 20:03:00,942 [specCURRENT] org.fosstrak.ale.server.impl.EventCycleImpl:570: launching eventCyclespecCURRENT_0
 DEBUG 2015-08-11 20:03:00,943 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues
 INFO  2015-08-11 20:03:00,943 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:468: EventCycle specCURRENT_0: Starting (Round 10).
 DEBUG 2015-08-11 20:03:01,759 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-11 20:03:01,760 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:01,760 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:01,760 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:01,760 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:01,760 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:01,761 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
+
 DEBUG 2015-08-11 20:03:01,761 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:01,769 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:01,770 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,286 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:02,286 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,287 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,292 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,293 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,294 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,815 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:02,815 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,816 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,817 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:02,831 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:02,832 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,339 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:03,339 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,341 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,341 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,342 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,343 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,349 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,349 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,349 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,349 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,349 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,350 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,865 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,867 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,867 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,876 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:03,877 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,392 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:04,392 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,393 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,396 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,396 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,396 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,397 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,398 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,918 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:04,919 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,919 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,919 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,919 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,919 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:04,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:04,922 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,447 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:05,447 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,448 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,449 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,449 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,451 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,452 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,972 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:05,972 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,973 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,974 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:05,975 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:05,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:05,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:05,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:05,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:05,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:05,979 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:06,498 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:06,499 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:06,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:06,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:06,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:06,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:07,023 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:07,023 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:07,024 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:07,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:07,027 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:07,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:07,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:07,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:07,028 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:07,028 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:047417437394.5.48742574351'.
 DEBUG 2015-08-11 20:03:07,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
+
 INFO  2015-08-11 20:03:10,443 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:514: EventCycle specCURRENT_0: Number of Tags read in the current EventCyle.java: 1
 DEBUG 2015-08-11 20:03:10,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:139: Event '[Tag id: 303031313030303030313030303030303030313031313030303031303130303130303131303031303130313130303131303130303130303130313030313031313031303131303031303130303130303031303130313030313030303031313131, ReaderName: LogicalReader1, OriginName: LogicalReader1, Trace: LogicalReader1-LogicalReader1, Timestamp: 1439319781760, Binary: 001100000100000000101100001010010011001010110011010010010100101101011001010010001010100100001111, PureID: urn:epc:id:sgtin:047417437394.5.48742574351]' is member of report 'null'
 DEBUG 2015-08-11 20:03:10,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:389: The group name for tag 'urn:epc:id:sgtin:047417437394.5.48742574351' is 'null'
 DEBUG 2015-08-11 20:03:10,444 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:414: Group 'null' does not already exist, create it
 DEBUG 2015-08-11 20:03:10,445 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:494: Tag 'urn:epc:id:sgtin:047417437394.5.48742574351' successfully added to group 'null' of report 'null'
 DEBUG 2015-08-11 20:03:10,447 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 1
+
 DEBUG 2015-08-11 20:03:10,447 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:63: Write reports 'specCURRENT' as post request to http socket 'localhost:9999'.
 DEBUG 2015-08-11 20:03:10,448 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:78: Create POST request with reports 'specCURRENT'.
+
 INFO  2015-08-11 20:03:10,471 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 10).
 DEBUG 2015-08-11 20:03:10,943 [specCURRENT] org.fosstrak.ale.server.impl.EventCycleImpl:570: launching eventCyclespecCURRENT_0
 DEBUG 2015-08-11 20:03:10,944 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues
 INFO  2015-08-11 20:03:10,944 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:468: EventCycle specCURRENT_0: Starting (Round 11).
 DEBUG 2015-08-11 20:03:13,341 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-11 20:03:13,341 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,342 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,343 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
+
 DEBUG 2015-08-11 20:03:13,343 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:13,344 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:13,345 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:13,867 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:13,867 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,868 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:13,869 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:13,869 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,870 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,870 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,870 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,870 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,870 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:13,871 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:13,871 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:13,872 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,391 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:14,391 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,392 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,392 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,392 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,392 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,393 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,393 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,405 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,405 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,406 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,406 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,406 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,406 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,406 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,407 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,407 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,407 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,408 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,408 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,408 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,919 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:14,919 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,920 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:14,921 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:14,922 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:14,922 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:14,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:14,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:14,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:14,923 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,446 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:15,446 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,455 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,455 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,455 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,455 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,456 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,456 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,456 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,456 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,456 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,457 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,457 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,457 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,457 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,457 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,458 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,973 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:15,973 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,974 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:15,975 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:15,978 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:16,499 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:16,499 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:16,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:16,500 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:16,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:16,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:16,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:16,501 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:16,501 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:16,502 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:16,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:16,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:16,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:16,503 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,025 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:17,025 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,029 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,030 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,030 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,031 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,031 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,031 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,031 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,031 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,033 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,550 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:17,550 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,551 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:17,552 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:17,553 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:18,078 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
 DEBUG 2015-08-11 20:03:18,078 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:18,079 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
 DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
 DEBUG 2015-08-11 20:03:18,080 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
-DEBUG 2015-08-11 20:03:18,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received. 
+DEBUG 2015-08-11 20:03:18,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-11 20:03:18,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
+
 DEBUG 2015-08-11 20:03:18,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:393: EventCycle specCURRENT_0: Received list of tags :
 DEBUG 2015-08-11 20:03:18,081 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:332: EventCycle 'specCURRENT_0' add Tag 'urn:epc:id:sgtin:7366079.334006.114382524929'.
 DEBUG 2015-08-11 20:03:18,082 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:343: tag already contained, therefore not adding.
@@ -1362,8 +1383,10 @@ DEBUG 2015-08-11 20:03:20,445 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 DEBUG 2015-08-11 20:03:20,445 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:414: Group 'null' does not already exist, create it
 DEBUG 2015-08-11 20:03:20,445 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.Report:494: Tag 'urn:epc:id:sgtin:7366079.334006.114382524929' successfully added to group 'null' of report 'null'
 DEBUG 2015-08-11 20:03:20,446 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 1
+
 DEBUG 2015-08-11 20:03:20,446 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:63: Write reports 'specCURRENT' as post request to http socket 'localhost:9999'.
 DEBUG 2015-08-11 20:03:20,446 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.type.HTTPSubscriberOutputChannel:78: Create POST request with reports 'specCURRENT'.
+
 INFO  2015-08-11 20:03:20,455 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 11).
 DEBUG 2015-08-11 20:03:20,944 [specCURRENT] org.fosstrak.ale.server.impl.EventCycleImpl:570: launching eventCyclespecCURRENT_0
 DEBUG 2015-08-11 20:03:20,944 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:554: eventcycle continues

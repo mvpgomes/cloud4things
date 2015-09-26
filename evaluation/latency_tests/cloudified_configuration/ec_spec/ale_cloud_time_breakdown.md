@@ -13,7 +13,7 @@ Finished the Tag Process by ALE:
 23:39:17,118
 
 Idle Time [Repeated Tags]:
-23:39:22.858
+23:39:22.254
 
 Start to create the ECReport:
 22:39:22.254
@@ -25,7 +25,14 @@ Create Post request to the Client
 23:39:22.257
 
 Client Receive Report:
-23:39:22.609035
+23:39:22.609
+
+- RTT: 5.567s
+- Upload Time: 0.075s
+- Tag Processing Time: 0.002s
+- Idle Time: 5.740s
+- Report Creation Time: 0.001s
+- Response Time: 0.352s
 
 - Report 2
 ----------------
@@ -52,8 +59,14 @@ Create POST request to the Client:
 23:39:32.259
 
 Client Receive Report:
-23:39:32.435947
+23:39:32.435
 
+- RTT: 6.975s
+- Upload Time: 0.075s
+- Tag Processing Time: 0.001s
+- Idle Time: 5.312s
+- Report Creation Time: 0.001s
+- Response Time: 0.176s
 
 - Report 3
 ----------------
@@ -80,13 +93,20 @@ Create Post request to the Client
 23:39:42.258
 
 Client Receive Report:
-23:39:42.881164
+23:39:42.881
+
+- RTT: 8.991s
+- Upload Time: 0.076s
+- Tag Processing Time: 0.008s
+- Idle Time: 8.281s
+- Report Creation Time: 0.003s
+- Response Time: 0.623s
 
 - Report 4
 ----------------
 
 Reader Start to Send Data:
-23:39:52.520619
+23:39:52.520
 
 Notification Received by ALE:
 23:39:52.904
@@ -107,8 +127,14 @@ Create Post request to the Client:
 23:40:02.411
 
 Client Receive Report:
-23:40:02.542976
+23:40:02.542
 
+- RTT: 10.122s
+- Upload Time: 0.384s
+- Tag Processing Time: 0.003s
+- Idle Time: 8.424s
+- Report Creation Time: 0.003s
+- Response Time: 0.131s
 
 # ALE Cloud ECspec 2015-08-18
 
@@ -116,7 +142,7 @@ Client Receive Report:
 ----------------
 
 Reader Start to Send Data:
-12:53:57.33093
+12:53:57.330
 
 Notification Received by ALE:
 12:53:57.395
@@ -137,14 +163,20 @@ Create Post request to the Client:
 12:54:00.706
 
 Client Receive Report:
-12:54:00.858661
+12:54:00.858
 
+- RTT: 3.528s
+- Upload Time: 0.065s
+- Tag Processing Time: 0.001s
+- Idle Time: 3.163s
+- Report Creation Time: 0.003s
+- Response Time: 0.152s
 
 - Report 2
 ----------------
 
 Reader Start to Send Data:
-12:54:01.115017
+12:54:01.115
 
 Notification Received by ALE:
 12:54:01.606
@@ -165,13 +197,20 @@ Create Post request to the Client:
 12:54:10.707
 
 Client Receive Report:
-12:54:10.863144
+12:54:10.863
+
+- RTT: 9.748s
+- Upload Time: 0.491s
+- Tag Processing Time: 0.001s
+- Idle Time: 8.947s
+- Report Creation Time: 0.004s
+- Response Time: 0.156s
 
 - Report 3
 ----------------
 
 Reader Start to Send Data:
-12:54:11.113253
+12:54:11.113
 
 Notification Received by ALE:
 12:54:11.606
@@ -192,14 +231,20 @@ Create Post request to the Client:
 12:54:20.708
 
 Client Receive Report:
-12:54:20.862898
+12:54:20.862
 
+- RTT: 9.749s
+- Upload Time: 0.493s
+- Tag Processing Time: 0.001s
+- Idle Time: 8.941s
+- Report Creation Time: 0.004s
+- Response Time: 0.154s
 
 - Report 4
 ----------------
 
 Reader Start to Send Data:
-12:54:21.105961
+12:54:21.105
 
 Notification Received by ALE:
 12:54:21.595
@@ -220,14 +265,20 @@ Create Post request to the Client:
 12:54:30.708
 
 Client Receive Report:
-12:54:30.862187
+12:54:30.862
 
+- RTT: 9.757s
+- Upload Time: 0.490s
+- Tag Processing Time: 0.001s
+- Idle Time: 8.956s
+- Report Creation Time: 0.002s
+- Response Time: 0.154s
 
 - Report 5
 ----------------
 
 Reader Start to Send Data:
-12:54:31.109744
+12:54:31.109
 
 Notification Received by ALE:
 12:54:31.601
@@ -248,4 +299,11 @@ Create Post request to the Client:
 11:54:40.711
 
 Client Receive Report:
-12:54:40.864668
+12:54:40.864
+
+- RTT: 9.755s
+- Upload Time: 0.492s
+- Tag Processing Time: 0.003s
+- Idle Time: 8.952s
+- Report Creation Time: 0.002s
+- Response Time: 0.154s
