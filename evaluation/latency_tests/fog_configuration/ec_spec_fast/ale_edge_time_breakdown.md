@@ -7,7 +7,7 @@ Reader Start to Send Data:
 15:24:43.858
 
 Notification Received by ALE:
-15:24:44,387
+15:24:43.860
 
 Finished the Tag Process by ALE:
 15:24:44,388
@@ -28,8 +28,8 @@ Client Receive Report:
 15:24:48.814
 
 - RTT: 4.956s
-- Upload Time: 0.529s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.002s
+- Tag Processing Time: 0.528s
 - Idle Time: 4.219s
 - Report Creation Time: 0.002s
 - Response Time: 0.020s
@@ -76,7 +76,7 @@ Reader Start to Send Data:
 15:24:53.855
 
 Notification Received by ALE:
-15:24:54,384
+15:24:53.856
 
 Finished the Tag Process by ALE:
 15:24:54,386
@@ -97,8 +97,8 @@ Client Receive Report:
 15:24:58.807
 
 - RTT: 4.952s
-- Upload Time: 0.529s
-- Tag Processing Time: 0.002s
+- Upload Time: 0.001s
+- Tag Processing Time: 0.530s
 - Idle Time: 3.698s
 - Report Creation Time: 0.007s
 - Response Time: 0.006s
@@ -144,7 +144,7 @@ Reader Start to Send Data:
 15:25:03.864
 
 Notification Received by ALE:
-15:25:04,395
+15:25:03.865
 
 Finished the Tag Process by ALE:
 15:25:04,396
@@ -165,8 +165,8 @@ Client Receive Report:
 15:25:08.806
 
 - RTT: 4.942s
-- Upload Time: 0.531s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.001s
+- Tag Processing Time: 0.531s
 - Idle Time: 2.635s
 - Report Creation Time: 0.004s
 - Response Time: 0.007s
@@ -212,7 +212,7 @@ Reader Start to Send Data:
 15:25:23.864
 
 Notification Received by ALE:
-15:25:24,392
+15:25:23.877
 
 Finished the Tag Process by ALE:
 15:25:24,393
@@ -233,8 +233,8 @@ Client Receive Report:
 15:25:28.812
 
 - RTT: 4.948s
-- Upload Time: 0.528s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.013s
+- Tag Processing Time: 0.516s
 - Idle Time: 2.115s
 - Report Creation Time: 0.003s
 - Response Time: 0.011s
@@ -280,7 +280,7 @@ Reader Start to Send Data:
 15:25:33.860
 
 Notification Received by ALE:
-15:25:34,390
+15:25:33.862
 
 Finished the Tag Process by ALE:
 15:25:34,391
@@ -301,8 +301,8 @@ Client Receive Report:
 15:25:38.811
 
 - RTT: 4.951s
-- Upload Time: 0.530s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.002s
+- Tag Processing Time: 0.529s
 - Idle Time: 1.588s
 - Report Creation Time: 0.004s
 - Response Time: 0.007s
@@ -350,7 +350,7 @@ Reader Start to Send Data:
 12:05:23.157
 
 Notification Received by ALE:
-12:05:23,686
+12:05:23.169
 
 Finished the Tag Process by ALE:
 12:05:23,688
@@ -371,8 +371,8 @@ Client Receive Report:
 12:05:27.948
 
 - RTT: 4.781s
-- Upload Time: 0.529s
-- Tag Processing Time: 0.002s
+- Upload Time: 0.012s
+- Tag Processing Time: 0.519s
 - Idle Time: 4.225s
 - Report Creation Time: 0.002s
 - Response Time: 0.010s
@@ -418,7 +418,7 @@ Reader Start to Send Data:
 12:05:33.158
 
 Notification Received by ALE:
-12:05:33,689
+12:05:33.164
 
 Finished the Tag Process by ALE:
 12:05:33,690
@@ -439,8 +439,8 @@ Client Receive Report:
 12:05:37.944
 
 - RTT: 4.786s
-- Upload Time: 0.531s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.006s
+- Tag Processing Time: 0.526s
 - Idle Time: 4.219s
 - Report Creation Time: 0.002s
 - Response Time: 0.006s
@@ -486,7 +486,7 @@ Reader Start to Send Data:
 12:05:43.157
 
 Notification Received by ALE:
-12:05:43,685
+12:05:43.162
 
 Finished the Tag Process by ALE:
 12:05:43,685
@@ -507,8 +507,8 @@ Client Receive Report:
 12:05:47.951
 
 - RTT: 4.794s
-- Upload Time: 0.528s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.005s
+- Tag Processing Time: 0.523s
 - Idle Time: 0.532s
 - Report Creation Time: 0.003s
 - Response Time: 0.007s
@@ -554,7 +554,7 @@ Reader Start to Send Data:
 12:05:53.154
 
 Notification Received by ALE:
-12:05:53,683
+12:05:53,157
 
 Finished the Tag Process by ALE:
 12:05:53,684
@@ -575,8 +575,8 @@ Client Receive Report:
 12:05:57.968
 
 - RTT: 4.814s
-- Upload Time: 0.001s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.003s
+- Tag Processing Time: 0.527s
 - Idle Time: 1.078s
 - Report Creation Time: 0.003s
 - Response Time: 0.015s
@@ -618,20 +618,11 @@ Client Receive Report:
 - Report 10
 ----------------
 
-Reader Start to Send Data [Network Time]: 12:06:03.155495
-Notification Received by ALE [Processing Time]: 12:06:03.158
-Create Report and Delivery to the Client [Processing Time]: 12:06:07.948
-Client Receive Report [Network Time]: 12:06:07.962478
-
-RTT: 4.807s
-Connection Time: 0.003s + 0.014s = 0.017s
-Data Processing Time: 4.790s
-
 Reader Start to Send Data:
-12:06:03.155495
+12:06:03.155
 
 Notification Received by ALE:
-12:06:03,687
+12:06:03,157
 
 Finished the Tag Process by ALE:
 12:06:03,688
@@ -652,8 +643,8 @@ Client Receive Report:
 12:06:07.962
 
 - RTT: 4.807s
-- Upload Time: 0.532s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.002s
+- Tag Processing Time: 0.531s
 - Idle Time: 2.674s
 - Report Creation Time: 0.002s
 - Response Time: 0.014s

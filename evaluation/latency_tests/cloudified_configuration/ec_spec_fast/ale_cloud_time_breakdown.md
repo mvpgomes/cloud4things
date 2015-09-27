@@ -442,7 +442,7 @@ Client Receive Report:
 - Tag Processing Time: 0.003s
 - Idle Time: 3.157s
 - Report Creation Time: 0.002s
-- Response Time: 0.163s
+- Response Time: 0.063s
 
 - Report 2
 ----------------

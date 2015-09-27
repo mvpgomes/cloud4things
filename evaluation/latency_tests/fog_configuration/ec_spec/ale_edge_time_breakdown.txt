@@ -281,7 +281,7 @@ Reader Start to Send Data:
 11:44:07.168
 
 Notification Received by ALE:
-11:44:07,697
+11:44:07,173
 
 Finished the Tag Process by ALE:
 11:44:07,698
@@ -302,8 +302,8 @@ Client Receive Report:
 11:44:16.718
 
 - RTT: 9.550s
-- Upload Time: 0.529s
-- Tag Processing Time: 0.001s
+- Upload Time: 0.005s
+- Tag Processing Time: 0.525s
 - Idle Time: 7.428s
 - Report Creation Time: 0.001s
 - Response Time: 0.005s

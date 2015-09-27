@@ -639,6 +639,7 @@ INFO  2015-08-12 15:24:43,792 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 DEBUG 2015-08-12 15:24:43,793 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.ReportsGenerator:367: reports size: 0
 INFO  2015-08-12 15:24:43,798 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 18).
 DEBUG 2015-08-12 15:24:43,860 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-12 15:24:43,860 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-12 15:24:43,861 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-12 15:24:43,861 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
@@ -890,6 +891,7 @@ DEBUG 2015-08-12 15:24:53,796 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 
 INFO  2015-08-12 15:24:53,809 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 20).
 DEBUG 2015-08-12 15:24:53,856 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-12 15:24:53,856 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-12 15:24:53,857 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-12 15:24:53,857 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
@@ -1179,6 +1181,7 @@ DEBUG 2015-08-12 15:25:03,797 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 
 INFO  2015-08-12 15:25:03,803 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 22).
 DEBUG 2015-08-12 15:25:03,865 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-12 15:25:03,865 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-12 15:25:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-12 15:25:03,866 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
@@ -1442,6 +1445,7 @@ DEBUG 2015-08-12 15:25:23,800 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 
 INFO  2015-08-12 15:25:23,807 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 26).
 DEBUG 2015-08-12 15:25:23,877 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-12 15:25:23,877 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-12 15:25:23,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-12 15:25:23,885 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
@@ -1693,6 +1697,7 @@ DEBUG 2015-08-12 15:25:33,802 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.
 
 INFO  2015-08-12 15:25:33,808 [EventCyclespecCURRENT_0] org.fosstrak.ale.server.impl.EventCycleImpl:543: EventCycle specCURRENT_0: EventCycle finished (Round 28).
 DEBUG 2015-08-12 15:25:33,862 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPManager:260: placeholder. NEVER IMPLEMENTED.
+
 DEBUG 2015-08-12 15:25:33,862 [Thread-6] org.fosstrak.ale.server.readers.llrp.LLRPAdaptor:312: notify
 DEBUG 2015-08-12 15:25:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:349: EventCycle specCURRENT_0: Update notification received.
 DEBUG 2015-08-12 15:25:33,863 [Thread-6] org.fosstrak.ale.server.impl.EventCycleImpl:357: processing a list of tags
