@@ -2,4 +2,60 @@
 
 \chapter{Conclusion}
 \label{chapter:conclusion}
-Conclusion here...
+
+\section{Outline}
+\label{sec:outline}
+The \acrfull{IoT} is a paradigm where ordinary objects are continuously connected to the virtual
+world and interacting with the surrounding environment. In order to make this environment more efficient,
+\gls{IoT} applications need to understand the context where they are inserted and also to adapt to this
+environment. Thus, \gls{IoT} applications usually need to provisioning its infrastructure
+in the physical place. This requirement makes that \gls{IoT} applications presents scalability
+problems and also make them cost ineffective. The Utility Computing in the cloud helps to solve this
+problems by leveraging part of the infrastructure of \gls{IoT} applications to the cloud. However,
+\gls{IoT} applications are latency sensitive and the cloud must be able to meet this requirement.\\
+
+Our solution is to determine if a cloud-based approach is suitable to deploy an \gls{IoT} application
+for a smart warehouse that is based on the \gls{RFID} technology. To achieve our goals, we will
+compare two approaches to determine which one is able to meet the \gls{IoT} applications requirements.
+The fog-based approach, which brings the cloud to the edge of the network and a traditional cloud-based
+approach, where the application is fully deployed in the cloud. In the implementation phase, we chose
+the Fosstrak platform as the \gls{RFID} middleware for our application. The deployment of the
+application middleware was performed in a different manner according the approaches. In the cloud-based
+approach the application middleware is in the cloud, while in the fog-based approach the middleware
+is distributed between the fog and the cloud.\\
+
+To evaluate our solution, we focused in two points where \gls{IoT} applications are sensitive. First,
+we evaluated the latency interaction for the proposed approaches. We also evaluated the data storage
+performance of the Fosstrak middleware. Regarding the latency interaction performance, the obtained
+results confirmed our initial hypothesis and shows that a fog-based approach presents a better
+performance for the network latency when compared with the cloud-based approach. Regarding the data
+storage performance, the obtained results shows that the Fosstrak middleware can handle the amount
+of data that is typically generated in a smart warehouse, but it can present some performance issues
+if several users concurrently overflow the data repository with events.
+
+\section{Limitations and Future Work}
+\label{sec:limitations_and_future_work}
+Although we accomplish the initial goals for our work, our solution still presents some aspects that
+need to be improved and other aspects that we are not able to concretize.\\
+
+First, our solution proposes that the \gls{RFID} application in deployed following a fog-based approach.
+This means that we need to have a cloud close to the edge of the network and this cloud must meet
+the same requirements of a remote cloud such as high scalability, security and multi-tenancy.
+Unfortunately, we are not able to accomplish a fog that meet these requirements and in the solution
+evaluation our fog was built on top of a traditional Virtual Machine. Other aspect in the evaluation
+process that can be improved regards with the \textit{ECspecs} that were used to evaluate our solution.
+For the future work, we want to evaluate the latency performance for our solution with \textit{ECspecs}
+that presents smaller periods.\\
+
+Another limitation regards with our evaluation process where virtual \gls{RFID} reader was used
+instead of a physical reader. This means that we are not able to reproduce the environment conditions
+of a real smart warehouse such as interferences in the \gls{RFID} tags antennas, network bandwidth
+variations, etc. Reproducing a real smart warehouse with physical \gls{RFID} readers and antennas
+will improve our evaluation process in order to obtain more accurate results.\\
+
+Finally, in our solution we used to Docker containers to provisioning the Fosstrak software stack.
+In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
+different mechanisms of virtualization. Although we still are able to take advantage of some benefits
+from the containers such as the portability, other benefits such as the low I/O and disk space are
+hidden by the \gls{VM} hypervisor. A future improvement that can be made is to deploy the containers
+on top of the bare-metal in order to improve the overall performance of the solution.
