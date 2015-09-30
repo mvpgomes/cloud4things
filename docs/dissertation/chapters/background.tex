@@ -240,8 +240,8 @@ The Fosstrak platform is composed of three modules that implements the correspon
   engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
   Unfortunately, the rules are static and ones defined they can not be updated in runtime if needed.
   % EPCIS Repository
-  \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository. This means that
-  all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. The module
+  \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository, which means that
+  all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. This module
   provides persistence for \gls{EPCIS} events. To store new events the module provides the
   \textit{capture interface} and to retrieve historical events is provided the \textit{query interface}.
   Furthermore, the module provides two EPC Network-conformant interfaces to a relational database
@@ -274,13 +274,13 @@ a public repository that stores Docker images that are used to create the contai
 \label{sub:cm_tools}
 \gls{CM} tools are software management tools that allows to automate and specify the deployment of an
 application. Usually, users describes the system resources and their desired state and the \gls{CM}
-tool is responsible to enforce that state. For instance, \gls{CM} tools allows to automate the
+tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows to automate the
 provisioning of physical and virtual machines, perform dependency management of software components
 and to perform the automation of management tasks.\\
 
 Currently, there are several solutions to perform configuration management of software, where the
 most relevant are Chef\footnote{https://www.chef.io/}, Puppet\footnote{https://puppetlabs.com/},
 Ansible\footnote{http://www.ansible.com/} and Salt\footnote{http://saltstack.com/}. The main difference
-between these tools is that some of the them are oriented to developers, which is the case of Chef and
-Puppet that requires some programming experience to be used, while others are oriented to system
+between these tools is that some of the them are more oriented to developers, which is the case of Chef and
+Puppet that requires some programming experience to be used, while others are more oriented to system
 administrators, which is the case of Ansible and Salt.
