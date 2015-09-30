@@ -2,13 +2,16 @@
 
 \chapter{Conclusion}
 \label{chapter:conclusion}
+At the end, we accomplish our initial goals for this work. However, our solution presents some pain
+points that can be enhanced in the future. This chapter outlines the main conclusions of our work,
+point out the limitations of the developed work and discuss some improvements for future work.
 
 \section{Outline}
 \label{sec:outline}
 The \acrfull{IoT} is a paradigm where ordinary objects are continuously connected to the virtual
-world and interacting with the surrounding environment. In order to make this environment more efficient,
-\gls{IoT} applications need to understand the context where they are inserted and also to adapt to this
-environment. Thus, \gls{IoT} applications usually need to provisioning its infrastructure
+world and interacting with the surrounding environment. In order to make this environment more comfortable and
+efficient, \gls{IoT} applications need to understand the context where they are inserted and also to
+adapt to this environment. Thus, \gls{IoT} applications usually need to provisioning its infrastructure
 in the physical place. This requirement makes that \gls{IoT} applications presents scalability
 problems and also make them cost ineffective. The Utility Computing in the cloud helps to solve this
 problems by leveraging part of the infrastructure of \gls{IoT} applications to the cloud. However,
@@ -27,35 +30,42 @@ is distributed between the fog and the cloud.\\
 To evaluate our solution, we focused in two points where \gls{IoT} applications are sensitive. First,
 we evaluated the latency interaction for the proposed approaches. We also evaluated the data storage
 performance of the Fosstrak middleware. Regarding the latency interaction performance, the obtained
-results confirmed our initial hypothesis and shows that a fog-based approach presents a better
+results confirmed our initial hypothesis, showing that a fog-based approach presents a better
 performance for the network latency when compared with the cloud-based approach. Regarding the data
-storage performance, the obtained results shows that the Fosstrak middleware can handle the amount
+storage performance, the obtained results show that the Fosstrak middleware can handle the amount
 of data that is typically generated in a smart warehouse, but it can present some performance issues
 if several users concurrently overflow the data repository with events.
 
 \section{Limitations and Future Work}
 \label{sec:limitations_and_future_work}
-Although we accomplish the initial goals for our work, our solution still presents some aspects that
+Although we achieved the initial goals for our work, our solution still presents some aspects that
 need to be improved and other aspects that we are not able to concretize.\\
 
-First, our solution proposes that the \gls{RFID} application in deployed following a fog-based approach.
+First, our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
 This means that we need to have a cloud close to the edge of the network and this cloud must meet
 the same requirements of a remote cloud such as high scalability, security and multi-tenancy.
-Unfortunately, we are not able to accomplish a fog that meet these requirements and in the solution
-evaluation our fog was built on top of a traditional Virtual Machine. Other aspect in the evaluation
-process that can be improved regards with the \textit{ECspecs} that were used to evaluate our solution.
-For the future work, we want to evaluate the latency performance for our solution with \textit{ECspecs}
-that presents smaller periods.\\
+Unfortunately, we are not able to accomplish a fog that meet these requirements and in our implementation
+the fog was built on top of a traditional Virtual Machine.\\
 
-Another limitation regards with our evaluation process where virtual \gls{RFID} reader was used
-instead of a physical reader. This means that we are not able to reproduce the environment conditions
+Regarding the evaluation performed. The evaluation was performed only in \gls{AWS} \gls{EC2} instances.
+For the future is important to evaluate our solution in other cloud providers to compare which offers
+the best relation cost/performance.\\
+
+To evaluate the latency interaction, we defined only two different \textit{ECspecs}. For the future work,
+we want to evaluate the latency performance for our solution with \textit{ECspecs} that presents smaller
+periods in order to determine which specification is more suitable for our solution.\\
+
+Another limitation of our evaluation process regards with the scenario. Since that a virtual \gls{RFID}
+reader was used instead of a physical one, we are not able to reproduce the environment conditions
 of a real smart warehouse such as interferences in the \gls{RFID} tags antennas, network bandwidth
 variations, etc. Reproducing a real smart warehouse with physical \gls{RFID} readers and antennas
 will improve our evaluation process in order to obtain more accurate results.\\
 
-Finally, in our solution we used to Docker containers to provisioning the Fosstrak software stack.
+Finally, in our solution we used Docker containers to provisioning the Fosstrak software stack.
 In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
 different mechanisms of virtualization. Although we still are able to take advantage of some benefits
 from the containers such as the portability, other benefits such as the low I/O and disk space are
-hidden by the \gls{VM} hypervisor. A future improvement that can be made is to deploy the containers
-on top of the bare-metal in order to improve the overall performance of the solution.
+hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
+of the containers on top of the bare-metal or a cloud-based container service - e.g. Google Kubernetes
+\footnote{http://kubernetes.io/}, \gls{AWS} \gls{EC2} Container Service\footnote{https://aws.amazon.com/ecs/} -
+in order to improve the overall performance of the solution.
