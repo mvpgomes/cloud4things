@@ -3,9 +3,9 @@
 \chapter{Implementation}
 \label{chapter:implementation}
 Chapter~\ref{chapter:implementation} describes the implementation details for the solution that was
-presented in Chapter~\ref{chapter:solution}. Here we described the technological components of our
-smart warehouse for the proposed approaches, as well we describe the implementation details and
-technological details for the provisioning mechanism.
+presented in the previous chapter. Here we described the technological components of our smart
+warehouse for the proposed solution, as well we describe the implementation and technological details
+for the provisioning mechanism.
 
 % Smart Warehouse Deployment
 \section{Smart Warehouse Deployment}
@@ -23,15 +23,16 @@ as illustrated in Figure~\ref{fig:rfidapp_setup}.\\
 
 The warehouse is composed of a tagged robot that is identified by \gls{RFID} readers that are deployed
 in the physical space. To monitoring the robot inside the warehouse, we decide to use the Fosstrak
-\gls{RFID} middleware. The communication between the middleware and the \gls{RFID} readers is performed
-through the \gls{LLRP} protocol.
+platform as our \gls{RFID} middleware. In our implementation, the \gls{RFID} readers are emulated
+through the Rifidi Emulator, which uses the \gls{LLRP} protocol to communicate with the Fosstrak
+platform.
 
 % Cloud approach
 \subsection{Cloud Deployment}
 \label{sub:imp_smart_warehouse_cloud}
 
 % Cloud approach
-\begin{figure}[ht!]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/implementation_cloud_architecture}
   \caption{Cloud-approach: smart warehouse technological architecture.}
@@ -53,7 +54,7 @@ warehouse.
 \label{sub:imp_smart_warehouse_fog}
 
 % Fog approach
-\begin{figure}[ht!]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/implementation_fog_architecture}
   \caption{Fog-approach: smart warehouse technological architecture.}
@@ -61,28 +62,29 @@ warehouse.
 \end{figure}
 
 Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for the fog
-approach. The \gls{RFID} middleware is provisioned in the across the fog and the cloud in separated
-virtual machines. In the cloud, the \gls{EPCIS} repository is deployed and running on top of an Apache
-Tomcat servlet instance, and the repository is connected to a MySQL database. In the fog, the \gls{FCServer}
-module and the Capture application are deployed and running on top of a single Tomcat servlet instance.
-The Capture application sent the events collected by the \gls{FCServer} module to the \gls{EPCIS} repository
-through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.\\
+approach. The \gls{RFID} middleware is provisioned across the fog and the cloud. At the cloud,
+all the software components are provisioned in a single \gls{VM}. The \gls{EPCIS} repository is deployed
+and running on top of an Apache Tomcat servlet instance. The repository is connected to a MySQL
+database, which stores the event data. In the current implementation the fog was built with a traditional
+\gls{VM}. The \gls{FCServer} and the Capture application are deployed and running on top of a single
+Tomcat servlet instance. The Capture application sent the events collected by the \gls{FCServer} to
+the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.\\
 
 The connection between the smart warehouse and the fog is performed through a Wi-Fi connection, as
 well the connection between the fog and the cloud.
 
 \section{Provisioning}
 \label{sec:provisioning}
-The implementation of provisioning mechanism relies on the Chef tool. The recipes that describe our
-infrastructure are based on cookbooks that are available on the Chef Supermarket. These recipes
-describe how our software stack - are provisioned in the cloud instances. In the developed prototype,
-we used Docker containers to provisioning the smart warehouse software in the cloud providers.
-To provisioning the resources in the cloud instances instances we will use \textit{knife}, a command-line
-tool developed by Chef that provides an interface between a local Chef repository and the Chef server.
-The provisioning workflow is illustrated in Figure~\ref{fig:provisioning_tech_architecture}.\\ ￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼
+The implementation of the provisioning mechanism relies on the Chef tool. The recipes that describe our
+infrastructure are based on cookbooks available at the Chef Supermarket\footnote{https://supermarket.chef.io/}.
+These recipes describe how the Fosstrak software stack is provisioned in the cloud. In the current implementation,
+we used Docker containers to provisioning the smart warehouse software at the cloud providers. To provisioning
+the resources in the cloud instances we will use \textit{knife}, a command-line tool developed by
+Chef that provides an interface between the local Chef repository and the Chef server. The provisioning
+workflow is illustrated in Figure~\ref{fig:provisioning_tech_architecture}.\\
 
 % Automatic provisioning diagram
-\begin{figure}[!ht]
+\begin{figure}
   \centering
   \makebox[\textwidth][c]{\includegraphics[width=.8\textwidth]{./images/c4t-tech-architecture}}%
   \caption{Automatic provisioning workflow.}
@@ -96,49 +98,42 @@ describe the image type, the instance type and the policies that need to be appl
 Then the Chef client runs the configuration recipes that are pulled from the Chef server (4). In our
 solution these configuration recipes describe that our nodes must have a set of Docker containers
 running on it. The Chef client pulls the Docker images from the remote repository, build the containers
-based on those images and finally applies the configuration that is associated to each container.
-
-% Chef
-\subsection{Chef}
-\label{sub:impl_chef}
-Chef is a configuration management tool that allows to describe the infrastructure as code.
-In that way it is possible to automate how the infrastructure is built, deployed and managed.
-Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
-data - and the Chef Client - that is installed in each server, \gls{VM} or container, i.e, the nodes that
-are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
-network, and if anything on the node is out of date, the client update its state in order to be
-consistent with the latest policy.\\
-
-The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
-dynamically provision and deprovision the application infrastructure on demand to keep up with
-peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
-across several cloud providers - \gls{AWS}\footnote{https://aws.amazon.com/}, Google Compute
-Engine\footnote{https://cloud.google.com/compute/} and Openstack\footnote{https://www.openstack.org/}.\\
+based on those images and finally applies the configuration that is associated to each container.\\
 
 We decide to chose Chef instead of its strongest competitors - i.e. Puppet and Ansible - for several
-reasons, where the main one is \textit{knife}. \textit{knife} is very powerful and allow us to
+reasons, where the main one is \textit{knife}. \textit{Knife} is very powerful and allow us to
 interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
 apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
-possible to execute a command on a certain any number of nodes in our environment.
+possible to execute a command on a certain number of nodes in our environment.
 
 % Docker containers
-\subsection{Docker Platform}
+\subsection{Docker Containers}
 \label{sub:impl_docker}
 Docker containers are used to provisioning the software stack of the Fosstrak platform. A complete
 installation of Fosstrak requires a compatible Java \gls{SDK}, a full MySQL database and a Apache Tomcat
-server. In order to improve the application scalability we are provisioning a single container for each
+server.\\
+
+As illustrated in Figure~\ref{fig:impl_containers}, we are provisioning a single container for each
 component of the Fosstrak platform, the \gls{EPCIS} repository, the Capture application, the \gls{FCServer},
 and also for the MySQL database. In our implementation, the container images of the Fosstrak stack
 are published in the Docker Hub repository to later be used to create the containers.\\
 
+% Container stack
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=.3\textwidth]{./images/docker-stack}
+  \caption{Fosstrak containers stack.}
+  \label{fig:impl_containers}
+\end{figure}
+
 By default each container runs a process that is isolated from the other processes that are executed
 in the same environment. In order to connect the different modules of the Fosstrak, our containers are
 linked through the \textit{linking system} provided by Docker. This mechanism creates a secure tunnel
-between the containers, allowing the recipient container to access select data about the source container.
-For instance, if we have a web server container linked to a database container, the web server container
-is able to access information about the database container.\\
+between the containers, allowing the recipient container to access selected data about the source container.
+For instance, our \gls{EPCIS} container - which is linked to the MySQL database container - is able to
+access information about the MySQL container.\\
 
-The reasons to chose Docker containers instead of traditional \glspl{VM} is that containers are a
+The reasons that we chose Docker containers instead of traditional \glspl{VM} is that containers are a
 virtualization platform which its images requires less disk space and I/O when compared with traditional
 \gls{VM} images \cite{merkel2014docker}. Furthermore, Docker containers are portable, which means that
 they can be moved across different infrastructures depending on how the application scales.
