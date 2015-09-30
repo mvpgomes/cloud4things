@@ -260,6 +260,8 @@ operating systems on the same physical machine. However, \gls{OS} level virtuali
 benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
 \gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
 
+\subsubsection{Docker Platform}
+\label{subs:docker_platform}
 Docker\footnote{https://www.docker.com/} is an open source project to pack, ship and run any application as
 a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
 meaning that these containers can run anywhere\footnote{Initially, Docker required that the physical
@@ -284,3 +286,20 @@ Ansible\footnote{http://www.ansible.com/} and Salt\footnote{http://saltstack.com
 between these tools is that some of the them are more oriented to developers, which is the case of Chef and
 Puppet that requires some programming experience to be used, while others are more oriented to system
 administrators, which is the case of Ansible and Salt.
+
+% Chef
+\subsubsection{Chef}
+\label{subs:chef}
+Chef is a configuration management tool that allows to describe the infrastructure as code.
+In that way it is possible to automate how the infrastructure is built, deployed and managed.
+Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
+data - and the Chef Client - that is installed in each server, \gls{VM} or container, i.e, the nodes that
+are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
+network, and if anything on the node is out of date, the client update its state in order to be
+consistent with the latest policy.\\
+
+The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
+dynamically provision and deprovision the application infrastructure on demand to keep up with
+peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
+across several cloud providers - \gls{AWS}\footnote{https://aws.amazon.com/}, Google Compute
+Engine\footnote{https://cloud.google.com/compute/} and Openstack\footnote{https://www.openstack.org/}.\\
