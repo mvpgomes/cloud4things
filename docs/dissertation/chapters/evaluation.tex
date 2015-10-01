@@ -37,9 +37,9 @@ The \gls{ALE} module is responsible for collecting and processing the reader eve
 correct decisions based on those events. In the Fosstrak implementation the collection and processing
 of reader events is performed according to an \textit{Event Cycle} specification. The \textit{Event Cycle}
 is a set of periodical cycles where the \gls{ALE} module collect the events from the readers. The data
-about the \textit{Event Cycle} is delivered to the client through a report. The information in the report
-can be used to notify the client regarding an event in the smart warehouse or even to trigger a new event
-in the warehouse such as open or close a door.\\
+about the \textit{Event Cycle} is delivered to the client application through a report. The information
+in the report can be used to notify the client regarding an event in the smart warehouse or even to
+trigger a new event in the warehouse such as open or close a door.\\
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
 connections. The Fosstrak \gls{ALE} module can be configured to generate information to register
@@ -48,30 +48,9 @@ information provided by the monitoring system and the \gls{ALE} module it is pos
 the latency request for an event that occurs in the warehouse.\\
 
 With this methodology we intend to obtain information regarding how the communication time is spent
-when a event is triggered in the warehouse for the approaches described in \ref{sec:smart_place_architecture}.
+when an event is triggered in the warehouse for the approaches described in \ref{chapter:solution}.
 In order to determine which approach is more adequate to deploy the application, we proposed the
 following metrics:
-
-% Evaluation Methodologies : Data Storage
-\subsection{Data Storage Performance}
-\label{sub:eval_methodology_data}
-To evaluate the data storage performance for a \gls{RFID} application based on Fosstrak, the proposed
-methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
-concurrently sending events - through \gls{HTTP} requests - to the repository that is
-running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}. The cloud server is
-running a monitoring system that periodically stores data related to a set of system metrics,
-such as \textit{CPU Utilization} and \textit{Network In}.\\
-
-% Data Storage Evaluation Methodology Figure
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
-  \caption{Data scalability evaluation methodology.}
-  \label{fig:eval_data_methodology}
-\end{figure}
-
-The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
-module is affected regarding the amount of events that are being processed.
 
 % Metrics
 \begin{itemize}
@@ -91,9 +70,30 @@ module is affected regarding the amount of events that are being processed.
   \textit{Event Cycle} report until the client receives it.
 \end{itemize}
 
-The analysis of these metrics will allow us to compare the performance of the approaches presented
-in Chapter \ref{chapter:solution} and help to determine which one is more adequate to deploy the
-application in the warehouse.
+The analysis of these metrics will allow us to compare the performance of the fog-based and cloud-based
+approaches and help to determine which one is more adequate to deploy the application in the warehouse.
+
+% Evaluation Methodologies : Data Storage
+\subsection{Data Storage Performance}
+\label{sub:eval_methodology_data}
+To evaluate the data storage performance for a \gls{RFID} application based on Fosstrak, the proposed
+methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
+concurrently sending events - through \gls{HTTP} requests - to the repository that is
+running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
+
+% Data Storage Evaluation Methodology Figure
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
+  \caption{Data scalability evaluation methodology.}
+  \label{fig:eval_data_methodology}
+\end{figure}
+
+The cloud server is running a monitoring system that periodically stores data related to a set of
+system metrics, such as \textit{CPU Utilization} and \textit{Network In}.\\
+
+The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
+module is affected regarding the amount of events that are generated in the smart warehouse.
 
 % Evaluation Setup
 \section{Evaluation Setup}
@@ -101,23 +101,21 @@ application in the warehouse.
 To perform the evaluation experiments we chose \gls{AWS} as cloud provider. All the experiments were
 conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux AMI operating system. The \glspl{VM}
 presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1 \textit{\gls{GB}} of
-\gls{RAM}. In the fog-aprroach configuration, where the \gls{ALE} module is provisioned in the smart place,
-the experiments were conducted in a virtual machine with a 2.6 \textit{\gls{GHz}} dual-core processor
-with 2 \textit{\gls{GB}} of \gls{RAM} and running the \textit{Linux Ubuntu 14.04.1 LTS} operating system.
-Regarding the smart warehouse infrastructure, the evaluation was performed through a \gls{ADSL} connection
-The Rifidi Emulator\footnote{\url{http://rifidi.org}} used to emulate the \gls{RFID} readers is in
-version \textit{1.6.0}.\\
+\gls{RAM}. In the fog-approach configuration, the experiments were conducted in a \gls{VM} with
+a 2.6 \textit{\gls{GHz}} dual-core processor with 2 \textit{\gls{GB}} of \gls{RAM} and running
+the \textit{Linux Ubuntu 14.04.2 LTS} operating system. Regarding the smart warehouse infrastructure,
+the evaluation was performed through a \gls{ADSL} connection The Rifidi Emulator\footnote{\url{http://rifidi.org}}
+used to emulate the \gls{RFID} readers is in version \textit{1.6.0}.\\
 
-Regarding software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{\url{http://tomcat.apache.org/}}
+Regarding the software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{\url{http://tomcat.apache.org/}}
 with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} middleware used was the Fosstrak
 described in section \ref{sub:fosstrak}. The middleware stack is available at the Fosstrak's\footnote{\url{http://fosstrak.github.io/}}
 source control system, and the versions were: a) \textit{\gls{FCServer}} version \textit{1.2.0}; b) \textit{Capture Application}
 version \textit{0.1.1}; and c) \textit{\gls{EPCIS} Repository} version \textit{0.5.0}. Furthermore,
-the \gls{EPCIS} Repository was connected to a \textit{MySQL server} version \textit{5.5} that stores
-all the \gls{EPCIS} events.\\
+the \gls{EPCIS} Repository was connected to a \textit{MySQL server} version \textit{5.5}.\\
 
-To monitoring the \gls{VM} that are in the cloud and collect the system metrics from the instances,
-we use the CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service provided by Amazon.
+To monitoring the \glspl{VM} in the cloud and collect the system metrics from the instances, we use the
+CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service provided by Amazon.
 
 % Performed Experiments
 \section{Experiments Performed}
