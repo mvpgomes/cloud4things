@@ -6,6 +6,7 @@ At the end, we accomplish our initial goals for this work. However, our solution
 points that can be enhanced in the future. This chapter outlines the main conclusions of our work,
 point out the limitations of the developed work and discuss some improvements for future work.
 
+% Outline
 \section{Outline}
 \label{sec:outline}
 The \acrfull{IoT} is a paradigm where ordinary objects are continuously connected to the virtual
@@ -36,20 +37,36 @@ storage performance, the obtained results show that the Fosstrak middleware can 
 of data that is typically generated in a smart warehouse, but it can present some performance issues
 if several users concurrently overflow the data repository with events.
 
+% Limitations and Future Work
 \section{Limitations and Future Work}
 \label{sec:limitations_and_future_work}
 Although we achieved the initial goals for our work, our solution still presents some aspects that
-need to be improved and other aspects that we are not able to concretize.\\
+need to be improved and other aspects that we are not able to concretize.
 
-First, our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
+% Implementation
+\subsubsection{Implementation}
+\label{subs:conclusion_impl}
+Our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
 This means that we need to have a cloud close to the edge of the network and this cloud must meet
 the same requirements of a remote cloud such as high scalability, security and multi-tenancy.
 Unfortunately, we are not able to accomplish a fog that meet these requirements and in our implementation
 the fog was built on top of a traditional Virtual Machine.\\
 
-Regarding the evaluation performed. The evaluation was performed only in \gls{AWS} \gls{EC2} instances.
-For the future is important to evaluate our solution in other cloud providers to compare which offers
-the best relation cost/performance.\\
+In the current implementation we used Docker containers to provisioning the Fosstrak software stack.
+In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
+different mechanisms of virtualization. Although we still are able to take advantage of some benefits
+from the containers such as the portability, other benefits such as the low I/O and disk space are
+hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
+of the containers on top of the bare-metal or a cloud-based container service - e.g. Google Kubernetes
+\footnote{\url{http://kubernetes.io/}}, \gls{AWS} \gls{EC2} Container Service\footnote{\url{https://aws.amazon.com/ecs/}} -
+in order to improve the overall performance of the solution.
+
+% Evaluation
+\subsubsection{Evaluation}
+\label{subs:conclusion_eval}
+The evaluation was performed only in \gls{AWS} \gls{EC2} instances. For the future is important to
+evaluate our solution in other cloud providers to compare which offers the best relation
+cost/performance.\\
 
 To evaluate the latency interaction, we defined only two different \textit{ECspecs}. For the future work,
 we want to evaluate the latency performance for our solution with \textit{ECspecs} that presents smaller
@@ -59,13 +76,4 @@ Another limitation of our evaluation process regards with the scenario. Since th
 reader was used instead of a physical one, we are not able to reproduce the environment conditions
 of a real smart warehouse such as interferences in the \gls{RFID} tags antennas, network bandwidth
 variations, etc. Reproducing a real smart warehouse with physical \gls{RFID} readers and antennas
-will improve our evaluation process in order to obtain more accurate results.\\
-
-Finally, in our solution we used Docker containers to provisioning the Fosstrak software stack.
-In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
-different mechanisms of virtualization. Although we still are able to take advantage of some benefits
-from the containers such as the portability, other benefits such as the low I/O and disk space are
-hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
-of the containers on top of the bare-metal or a cloud-based container service - e.g. Google Kubernetes
-\footnote{http://kubernetes.io/}, \gls{AWS} \gls{EC2} Container Service\footnote{https://aws.amazon.com/ecs/} -
-in order to improve the overall performance of the solution.
+will improve our evaluation process in order to obtain more accurate results.

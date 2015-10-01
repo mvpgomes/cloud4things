@@ -2,48 +2,28 @@
 
 \chapter{Evaluation}
 \label{chapter:evaluation}
-% 1. Present an overview of the evaluation, what we want to evaluate, what we want to conclude.
-The present chapter describes the evaluation methodology as also the experiments performed to determine
-if a fog-based or a cloud-based approach is more adequate to deploy \gls{RFID} applications based on
-Fosstrak in a smart warehouse. The evaluation process will focus on establish if the approaches are
-able to met the low-latency and scalable data storage requirements for those applications.\\
+The present chapter describes the evaluation methodology as well as the experiments performed to determine
+if a fog-based or a cloud-based approach is more adequate to deploy \gls{RFID} applications in a
+smart warehouse. The evaluation process will focus on establish if the approaches are
+able to met the low-latency and data storage performance requirements described in \ref{table:eval_requirements}.\\
 
-Our main goal is to obtain statistical values that allow us to assert what approach is more suitable
-to fulfill the expected requirements. Furthermore, with these results we intend to specify what
-approach is more adequate for the application domains described in Section~\ref{sec:applications}.
+Our main goal is to obtain basic statistical values - e.g. average - that allow us to decide which
+approach is more suitable to fulfill the expected requirements. Furthermore, according to the obtained
+results we intend to specify which approach is more adequate to deploy an \gls{IoT} application regarding
+its domain.
 
 % 2. Present the evaluation methodology for both cases
 \section{Evaluation Methodology}
 \label{sec:eval_methodology}
-In order to determine which approach is more adequate to met the latency and data storage scalability
+In order to determine which approach is more adequate to meet the latency and data storage scalability
 requirements, we propose the following methodologies to perform the evaluation:
-
-% Evaluation Methodologies : Data Storage
-\subsection{Data Storage Scalability}
-\label{sub:eval_methodology_data}
-To evaluate the data storage scalability for a \gls{RFID} application based on Fosstrak, the proposed
-methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
-concurrently sending events - through \gls{HTTP} requests - to the repository that is
-running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}. The cloud server is
-running a monitoring system that periodically stores data related to a set of system metrics,
-such as \textit{CPU Utilization} and \textit{Network In}.\\
-
-% Data Storage Evaluation Methodology Figure
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
-  \caption{Data scalability evaluation methodology.}
-  \label{fig:eval_data_methodology}
-\end{figure}
-
-The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
-module is affected regarding the amount of events that are being processed.
 
 % Evaluation Methodologies : Latency
 \subsection{Latency Interaction}
 \label{sub:eval_methodology_latency}
 The response time between an event that occurs in the smart warehouse and the corresponding action
-that is triggered in the physical space will be evaluated according the proposed methodology in Figure~\ref{fig:eval_latency_methodology}.\\
+that is triggered in the physical space will be evaluated according the methodology proposed in
+Figure~\ref{fig:eval_latency_methodology}.\\
 
 % Latency Interaction Evaluation Methodology Figure
 \begin{figure}[ht!]
@@ -53,7 +33,7 @@ that is triggered in the physical space will be evaluated according the proposed
   \label{fig:eval_latency_methodology}
 \end{figure}
 
-The \gls{ALE} module is responsible to collect and process the reader events and take the
+The \gls{ALE} module is responsible for collecting and processing the reader events and take the
 correct decisions based on those events. In the Fosstrak implementation the collection and processing
 of reader events is performed according to an \textit{Event Cycle} specification. The \textit{Event Cycle}
 is a set of periodical cycles where the \gls{ALE} module collect the events from the readers. The data
@@ -72,41 +52,72 @@ when a event is triggered in the warehouse for the approaches described in \ref{
 In order to determine which approach is more adequate to deploy the application, we proposed the
 following metrics:
 
+% Evaluation Methodologies : Data Storage
+\subsection{Data Storage Performance}
+\label{sub:eval_methodology_data}
+To evaluate the data storage performance for a \gls{RFID} application based on Fosstrak, the proposed
+methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
+concurrently sending events - through \gls{HTTP} requests - to the repository that is
+running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}. The cloud server is
+running a monitoring system that periodically stores data related to a set of system metrics,
+such as \textit{CPU Utilization} and \textit{Network In}.\\
+
+% Data Storage Evaluation Methodology Figure
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
+  \caption{Data scalability evaluation methodology.}
+  \label{fig:eval_data_methodology}
+\end{figure}
+
+The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
+module is affected regarding the amount of events that are being processed.
+
 % Metrics
 \begin{itemize}
-  \item \textit{Event Latency}: the time spent from the moment that an event is triggered in the
-  warehouse to the moment when the client application receives the notification of the event.
-  \item \textit{Upload Latency}: the time spent from the moment that an event is triggered in the
-  warehouse to the moment when the \gls{ALE} module receives the event.
-  \item \textit{Processing Latency}: the time spent from the moment that the \gls{ALE} module
-  receives an event to the moment that the \textit{Event Cycle} report is created.
-  \item \textit{Response Latency}: the time spent from the moment that the \gls{ALE} module delivers
-  the \textit{Event Cycle} report to the moment that the client receives it.
+  \item \textit{Event Latency}: the time spent since an event is triggered in the warehouse until
+  the client application receives the notification of the event.
+  \item \textit{Upload Latency}: the time spent since that an event is triggered in the warehouse until
+  the \gls{ALE} module receives the event.
+  \item \textit{Tag Processing Latency}: the time spent since that the \gls{ALE} module receives an event
+  notification until the \gls{RFID} tag is processed.
+  \item \textit{Idle Processing Latency}: the time spent for the \gls{ALE} module where the collected
+  tags already exists and no further action is required.
+  \item \textit{Filtering \& Aggregation Latency}: the time spent for the \gls{ALE} where the
+  collected tags are filtered and aggregated.
+  \item \textit{Report Creation Latency}: the time spent for the \gls{ALE} module to create the
+  \textit{Event Cycle} report for the current \textit{EventCycle}.
+  \item \textit{Response Latency}: the time spent since that the \gls{ALE} module delivers the
+  \textit{Event Cycle} report until the client receives it.
 \end{itemize}
 
-The analysis of those metrics will allow us to compare the performance of both approaches and help to
-determine which one is more adequate to deploy the application in the warehouse.
+The analysis of these metrics will allow us to compare the performance of the approaches presented
+in Chapter \ref{chapter:solution} and help to determine which one is more adequate to deploy the
+application in the warehouse.
 
 % Evaluation Setup
 \section{Evaluation Setup}
 \label{sec:eval_setup}
-To perform the evaluation experiments we choose \gls{AWS} as cloud provider. All the experiments were
-conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux AMI operating system. The virtual
-machines presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1\textit{\gls{GB}} of
+To perform the evaluation experiments we chose \gls{AWS} as cloud provider. All the experiments were
+conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux AMI operating system. The \glspl{VM}
+presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1 \textit{\gls{GB}} of
 \gls{RAM}. In the fog-aprroach configuration, where the \gls{ALE} module is provisioned in the smart place,
 the experiments were conducted in a virtual machine with a 2.6 \textit{\gls{GHz}} dual-core processor
 with 2 \textit{\gls{GB}} of \gls{RAM} and running the \textit{Linux Ubuntu 14.04.1 LTS} operating system.
 Regarding the smart warehouse infrastructure, the evaluation was performed through a \gls{ADSL} connection
-The Rifidi Emulator\footnote{http://rifidi.org} was used to emulate the physical readers that are
-in the warehouse.\\
+The Rifidi Emulator\footnote{\url{http://rifidi.org}} used to emulate the \gls{RFID} readers is in
+version \textit{1.6.0}.\\
 
-Regarding software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{http://tomcat.apache.org/}
+Regarding software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{\url{http://tomcat.apache.org/}}
 with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} middleware used was the Fosstrak
-described in section \ref{sub:fosstrak}. The middleware stack is available at the Fosstrak's\footnote{http://fosstrak.github.io/}
-source control system, and the versions were: a) \textit{FCServer} version \textit{1.2.0}; b) \textit{Capture Application}
+described in section \ref{sub:fosstrak}. The middleware stack is available at the Fosstrak's\footnote{\url{http://fosstrak.github.io/}}
+source control system, and the versions were: a) \textit{\gls{FCServer}} version \textit{1.2.0}; b) \textit{Capture Application}
 version \textit{0.1.1}; and c) \textit{\gls{EPCIS} Repository} version \textit{0.5.0}. Furthermore,
 the \gls{EPCIS} Repository was connected to a \textit{MySQL server} version \textit{5.5} that stores
-all the \gls{EPCIS} events.
+all the \gls{EPCIS} events.\\
+
+To monitoring the \gls{VM} that are in the cloud and collect the system metrics from the instances,
+we use the CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service provided by Amazon.
 
 % Performed Experiments
 \section{Experiments Performed}
@@ -114,15 +125,260 @@ all the \gls{EPCIS} events.
 The experiments performed in our evaluation were based on the scenario and data from the RFIDToys\cite{Correia:Thesis:2014}
 Master Thesis.
 
-\subsection{Data Scalability}
+\subsection{Latency Interaction}
+\label{sub:eval_exp_latency}
+To evaluate the latency interaction according the methodology proposed in Section~\ref{sub:eval_methodology_latency},
+we use a scenario where a tagged robot was programmed to execute a given number of laps in the
+warehouse plant where \gls{RFID} readers are placed to detect when the robot is approaching.
+During the lap the robot stops during 5 seconds near to a reader and then continues its lap.\\
+
+The warehouse network connection was monitored with the \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}},
+a command-line tool that allows that allows to monitoring the packets that are being transmitted or
+received over a network. Through the logs produced by this tool, we are able to determine how the
+connection time is spent for the cloud-based approach and the fog-based approach.\\
+
+The simulation was performed according two different specifications for the \textit{ECspecs} of the
+\gls{ALE} module, \textit{Baseline Event Cycle} and \textit{Half-period Event Cycle}. The configuration
+parameters for the \textit{ECspecs} are presented in Table~\ref{table:ecspec_parameters}.
+
+% ECspec parameters
+\begin{table}[ht!]
+ \begin{tabular}{|l|c|c|}
+  \hline
+  Event Cycle Specification & Period  & Duration \\ \hline
+  Baseline Event Cycle      &  10s    & 9.5s     \\ \hline
+  Half-period Event Cycle   &   5s    & 4.75s    \\ \hline
+ \end{tabular}
+ \caption{Baseline ECspec parameters.}
+ \label{table:ecspec_parameters}
+\end{table}
+
+The evaluation of the event latency for the proposed approaches was performed in two steps. First,
+we want to determine during a \textit{Event Cycle} how much time the \gls{ALE} is processing an event
+and how much time the module is in an idle state. Furthermore, we want to determine how much time
+takes each stage of the event processing pipeline. The event processing pipeline is divided in the
+following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event data is processed};
+\textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
+and finally \textit{(v) the event cycle report is delivered to the client application}.
+
+% Fog-based warehouse latency
+\subsubsection{Fog-based warehouse latency}
+\label{subs:eval_exp_latency_ecspec}
+Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
+smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
+\gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
+when the \gls{ALE} is configured with the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec event time breakdown
+\begin{figure}[ht!]
+ % ECSpec local breakdown figure
+ \centering
+ \begin{subfigure}{.5\textwidth}
+   \centering
+   \includegraphics[height=\linewidth]{./images/edge_ecspec_breakdown}
+   \caption{Fog-based approach: base\\Event Cycle latency breakdown.}
+   \label{fig:ecspec_base}
+ \end{subfigure}%
+ % ECSpec cloud breakdown figure
+ \begin{subfigure}{.5\textwidth}
+   \centering
+   \includegraphics[height=\linewidth]{./images/edge_ecspecf_breakdown}
+   \caption{Fog-based approach: half-period\\Event Cycle latency breakdown.}
+   \label{fig:ecspec_half}
+ \end{subfigure}
+ \caption{Baseline Event Cycle latency breakdown.}
+ \label{fig:ecspec_breakdown}
+\end{figure}
+
+Comparing the graphs for both \textit{ECspecs} is possible to conclude that during most of the time of
+an \textit{Event Cycle} period the \gls{ALE} module is in an idle state (\textit{Idle Time}) - close to $\approx68\%$
+in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
+collected. Considering the duration of the \textit{ECspecs} it means that in average when the \gls{ALE}
+is configured with the \textit{Baseline ECspec} the module can be in an idle state during 7s while
+with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
+
+Figure~\ref{fig:ecspec_effective_breakdown} summarizes how the time is spent during the stages of the
+event processing pipeline. Figure~\ref{fig:ecspec_effective_base} presents the time breakdown for
+each stage of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
+Figure~\ref{fig:ecspec_effective_half} when the \gls{ALE} is configured with the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec effective time breakdown
+\begin{figure}[ht!]
+  % ECSpec local breakdown figure
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/edge_ecspec_effective_breakdown}
+    \caption{Fog-based approach: baseline\\Event Cycle effective breakdown.}
+    \label{fig:ecspec_effective_base}
+  \end{subfigure}%
+  % ECSpec cloud breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/edge_ecspecf_effective_breakdown}
+    \caption{Fog-based approach: half-period\\Event Cycle effective breakdown.}
+    \label{fig:ecspec_effective_half}
+  \end{subfigure}
+  \caption{Fog-based approach: Event Cycle latency breakdown.}
+  \label{fig:ecspec_effective_breakdown}
+\end{figure}
+
+It is possible to observe that the \textit{Fltering \& Aggregation} stage is the most time consuming
+for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
+close to $\approx95\%$ of the time spent to process an event, while with the \textit{Half-period ECspec}
+this value is close to $\approx75\%$. The reason for this difference is in the \textit{Processing Time} stage.
+With the \textit{Baseline ECspec} the time to processing the event data represents close to $\approx2.5\%$
+of the total amount of time while with the \textit{Half-period ECspec} this value represents $\approx18\%$
+of the time. The \textit{Upload} and \textit{Response} latency together represents a small percentage of
+the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
+of time to create the reports represents less than $\approx1\%$ of the total amount of time.\\
+
+The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
+is that the event latency presents a better overall performance. According the values presented in
+Table~\ref{table:fog_metrics} it is possible to observe that the event latency improves in a significant
+way - from 7.450s to 4.250s. This result is achieved thanks to the improvement in the latency
+of $\approx52\%$ in the \textit{Filtering \& Processing} stage - from 2.530s to 1.230s - and the
+amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regarding the network
+latency, the values for the \textit{Upload Time} and \textit{Response Time} improved 1ms for both
+metrics.\\
+
+% Metrics Result
+\begin{table}[ht!]
+  \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Metric                            & Base Event Cycle & Half-period Event Cycle \\ \hline
+    Upload Time                       & 0.005s           & 0.004s                  \\ \hline
+    Event Data Processing Time        & 0.049s           & 0.279s                  \\ \hline
+    Idle Time                         & 4.944s           & 2.747s                  \\ \hline
+    Filter \& Aggregation Time        & 2.530s           & 1.203s                  \\ \hline
+    Report Creation Time              & 0.001s           & 0.003s                  \\ \hline
+    Response Time                     & 0.010s           & 0.009s                  \\ \hline
+    Event Latency                     & 7.540s           & 4.245s                  \\ \hline
+    \end{tabular}
+  \caption{Fog-based approach: performance metrics results.}
+  \label{table:fog_metrics}
+\end{table}
+
+However, when configured with a faster \textit{Event Cycle} specification the tag processing time
+presented an inferior performance, where time to process the event data increases $\approx470\%$
+- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
+
+\subsubsection{Cloud-based warehouse latency}
+\label{subs:eval_exp_latency_ecspec_fast}
+Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
+smart warehouse. As in the previous experiment the \gls{ALE} module was configured with the
+\textit{Baseline ECspec} and the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec event time breakdown
+\begin{figure}[ht!]
+  \centering
+  % ECSpec Fast local breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/cloud_ecspec_breakdown}
+    \caption{Cloud-based approach: baseline Event Cycle\\latency breakdown.}
+    \label{fig:ecspecf_base}
+  \end{subfigure}%
+  % ECSpec fast cloud breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/cloud_ecspecf_breakdown}
+    \caption{Cloud-based approach: half-period Event Cycle\\latency breakdown.}
+    \label{fig:ecspecf_half}
+  \end{subfigure}
+  \caption{Cloud-based approach: Event Cycle latency breakdown.}
+  \label{fig:ecspecf_breakdown}
+\end{figure}
+
+The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} shows that
+as in the previous experiment, during the \textit{Event Cycle} the \gls{ALE} module is in an idle state.
+However, in the current experiment the \textit{ECspecs} affected how much time the \gls{ALE} is in an
+idle state and how much time is processing the events. With the \textit{Baseline ECspec} the \gls{ALE}
+remains $\approx89\%$ of the \textit{Event Cycle} period in an idle state while when configured with
+the \textit{Half-period ECspec} this value decreases to $\approx62\%$. This means that during the \textit{Event Cycle}
+period the \gls{ALE} module can be in an idle state during 9 seconds when configured with the
+\textit{Baseline ECspec} while with the \textit{Half-period ECspec} this value decreases to 3 seconds.\\
+
+% TODO: Maybe this can be removed???
+\pagebreak
+
+Figure~\ref{fig:ecspecf_effective_breakdown} presents the time breakdown for the stages of the
+event processing pipeline. Figure~\ref{fig:ecspecf_effective_base} presents the how much time is spent
+in each phase of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
+Figure~\ref{fig:ecspecf_effective_half} when the \gls{ALE} is configured with the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec effective time breakdown
+\begin{figure}[ht!]
+  \centering
+  % ECSpec Fast local breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/cloud_ecspec_effective_breakdown}
+    \caption{Cloud-based approach: baseline Event Cycle\\ latency breakdown.}
+    \label{fig:ecspecf_effective_base}
+  \end{subfigure}%
+  % ECSpec fast cloud breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/cloud_ecspecf_effective_breakdown}
+    \caption{Cloud-based approach: half-period Event Cycle\\ latency breakdown.}
+    \label{fig:ecspecf_effective_half}
+  \end{subfigure}
+  \caption{Half-period Event Cycle latency breakdown.}
+  \label{fig:ecspecf_effective_breakdown}
+\end{figure}
+
+Comparing the obtained results, it is possible to observe that time breakdown is evenly distributed
+between the \textit{Upload} ($\approx35\%$), \textit{Filtering \& Aggregation} ($\approx30\%$) and
+\textit{Response} ($\approx34\%$) stages when the \gls{ALE} module is configured with the \textit{Baseline ECspec},
+while the \textit{Porcessing} and \textit{Report Creation} stages represents a small percentage of the
+total time, less than $\approx1\%$. When the \gls{ALE} is configured with the \textit{Half-period ECspec},
+the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 74\%$
+of the total time. As when configured with the \textit{Baseline ECspec}, the \textit{Upload} and
+\textit{Reponse} stages presents similar results, close to $\approx12\%$. Regarding the \textit{Processing}
+stage, as in the fog-based approach the time required to process the event data increased in a significant
+way, from less than $\approx0.3\%$ to $\approx2.7\%$. The \textit{Report Creation} stage presented the
+same values from the previous configuration ($\approx0.3\%$).\\
+
+As in the previous experiment the event latency presented a better overall performance for the faster \textit{ECspec}.
+According the values presented in Table~\ref{table:cloud_metrics} it is possible to observe that the event
+latency decrease from 8.244s to 3.898s. The values for the network latency improved when the \gls{ALE} is
+configured with the faster \textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload}
+latency metric and $\approx40\%$ for the \textit{Response} latency metric. The values for the time where
+the \gls{ALE} remains in an idle state also presented a significant improvement, from 7.346s to 2.371s.\\
+
+\begin{table}[ht!]
+  \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Metric                     & Base Event Cycle & Half-period Event Cycle \\ \hline
+    Upload Time                & 0.294s           & 0.101s                  \\ \hline
+    Tag Processing Time        & 0.002s           & 0.021s                  \\ \hline
+    Idle Time                  & 7.346s           & 2.371s                  \\ \hline
+    Filter \& Aggregation Time & 0.370s           & 1.326s                  \\ \hline
+    Report Creation Time       & 0.003s           & 0.003s                  \\ \hline
+    Response Time              & 0.228s           & 0.138s                  \\ \hline
+    Event Latency              & 8.244s           & 3.898s                  \\ \hline
+    \end{tabular}
+  \caption{Cloud-based approach: performance metrics result.}
+  \label{table:cloud_metrics}
+\end{table}
+
+As in the fog-based approach the value for the \textit{Processing Time} increased $\approx1000\%$ when
+the \gls{ALE} is configured with \textit{Half-period ECspec} - from 0.002s to 0.021s. Unlike in the
+previous experiment, the value for the \textit{Filtering \& Aggregation} metric increased $\approx300\%$
+- from 0.370s to 1.326s.
+
+\subsection{Data Storage Performance}
 \label{sub:eval_exp_data}
-To evaluate the data scalability for the Fosstrak middleware we use the data recorded with the Rec\&Play
+To evaluate the data storage performance for the Fosstrak middleware we use the data recorded with the Rec\&Play
 module - which is able to record \gls{RFID} sessions that stores the events occurred in the warehouse
 maintaining the order and time from the beginning of the session - were used as base to execute
 the tests.\\
 
 As described in Section \ref{sub:eval_methodology_data}, the methodology consists in simulate a given
-number of readers that are sending events in the warehouse. This simulation was performed through JMeter\footnote{http://jmeter.apache.org/},
+number of readers that are sending events in the warehouse. This simulation was performed through JMeter\footnote{\url{http://jmeter.apache.org/}},
 a Java application designed to perform load testing and measure the application performance.
 In order to reproduce some situations that can occur in a real smart warehouse, we perform the following
 variations in the tests:
@@ -139,8 +395,8 @@ variations in the tests:
 The evaluation was executed in two scenarios, \textbf{Baseline} and \textbf{Track 3 Laps}, where we
 simulate up to 5 readers sending events concurrently.
 
-\subparagraph{Baseline.}
-\label{subp:eval_exp_data_baseline}
+\subsubsection{Baseline}
+\label{subs:eval_exp_data_baseline}
 In this scenario the session contains the data recorded based in the events generated during a 1 lap
 in the track. The parameters used to execute the tests for this scenario are described in Table~\ref{tab:baseline_parameters}.
 
@@ -188,8 +444,8 @@ the values are similar and the behavior tend to take a linear pattern. It is pos
 conclusions for the \textit{Half of Interval} variation, where the values are always higher - maximum
 close to 3 \gls{MB} - and the behavior tends to take a sinusoidal pattern.
 
-\subparagraph{Track 3 Laps.}
-\label{subp:eval_exp_data_3laps}
+\subsubsection{Track 3 Laps}
+\label{subs:eval_exp_data_3laps}
 In this scenario the session contains the data recorded based in the events generated during 3 laps
 in the track. The parameters used to execute the test for this scenario are described in
 Table~\ref{tab:3laps_parameters}.\\
@@ -236,181 +492,6 @@ variation still presents the highest values - maximum close to 3.5 \gls{MB} - bu
 threads increase, it is possible to observe that the values of the \textit{Double of Requests}
 variation tend to be close to the \textit{Half of Interval}.
 
-
-\subsection{Latency Interaction}
-\label{sub:eval_exp_latency}
-To evaluate the latency interaction according the methodology proposed in Section~\ref{sub:eval_methodology_latency},
-we use a scenario where a tagged robot was programmed to execute a given number of laps in the
-warehouse plant where \gls{RFID} readers are placed to detect when the robot is approaching.
-During the lap the robot stops during 5 seconds near to a reader and then continues its lap.\\
-
-The warehouse network connection was monitored with the \textit{tcpdump}\footnote{http://www.tcpdump.org/},
-a command-line tool that allows that allows to monitoring the packets that are being transmitted or
-received over a network. Through the logs produced by this tool, we are able to determine how the
-connection time is spent for the cloud-based approach and the fog-based approach.\\
-
-The simulation was performed according two different specifications for the \gls{ALE} module,
-\textit{Base Event Cycle} and \textit{Half-period Event Cycle} .
-
-% Standard Event Cycle
-\subparagraph{Baseline Event Cycle.}
-\label{subp:eval_exp_latency_ecspec}
- In this scenario, we define the \textit{Baseline ECspec} to configure the \gls{ALE} module. The
- configuration parameters are described in Table~\ref{table:ecspec_base}.
-
-% Base ECspec parameters
- \begin{table}[ht!]
-   \begin{tabular}{|c|c|}
-     \hline
-     Period & Duration \\ \hline
-     10s    & 9.5s     \\ \hline
-  \end{tabular}
-  \caption{Baseline ECspec parameters.}
-  \label{table:ecspec_base}
- \end{table}
-
-\begin{figure}[ht!]
-  % ECSpec local breakdown figure
-  \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.365\linewidth]{./images/ecspec_local_breakdown}
-    \caption{Fog-based approach: baseline\\Event Cycle latency breakdown.}
-    \label{fig:ecspec_local}
-  \end{subfigure}%
-  % ECSpec cloud breakdown figure
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{./images/ecspec_cloud_breakdown}
-    \caption{Cloud-based approach: baseline\\Event Cycle latency breakdown.}
-    \label{fig:ecspec_cloud}
-  \end{subfigure}
-  \caption{Baseline Event Cycle latency breakdown.}
-  \label{fig:ecspec_breakdown}
-\end{figure}
-
-Figure~\ref{fig:ecspec_breakdown} presents the event latency breakdown for the current experiment.
-Comparing the latency breakdown for the fog-based approach, presented in Figure~\ref{fig:ecspec_local},
-with the cloud-based approach, presented in Figure~\ref{fig:ecspec_cloud}, it is possible to observe
-that the value of the \textit{Upload Latency} and \textit{Response Latency} metrics for the cloud-approach
-- close to 9$\%$ of the \textit{Event Latency} - are considerable higher when compared with the fog-approach,
-where those values represent less then 0.5$\%$ of the \textit{Event Latency} metric. Is important to
-point that the behavior for the \textit{Upload Latency} and \textit{Response Latency} metrics are
-different for both approaches, in the fog-based approach the value of the \textit{Upload Latency}
-metric is almost 50$\%$ higher then the \textit{Response Latency} metric, while in the cloud-based
-approach those metrics presents the opposite behavior.\\
-
-% % ECSpec local breakdown table
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|c|c|c|}
-  \hline
-  ~                & Upload Time & Processing Time & Response Time & Event Latency \\ \hline
-  Average Time (s) & 0.006       & 7.525           & 0.011         & 7.542         \\ \hline
-  \end{tabular}
-  \caption{Fog-based approach: baseline Event Cycle latency time.}
-  \label{table:ecspec_local}
-\end{table}
-
-% % ECSpec cloud breakdown table
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|c|c|c|}
-  \hline
-  ~                & Upload Time & Processing Time & Response Time & Event Latency \\ \hline
-  Average Time (s) & 0.310       & 7.763           & 0.228         &  8.301        \\ \hline
-  \end{tabular}
-  \caption{Cloud-based approach: baseline Event Cycle latency time.}
-  \label{table:ecspec_cloud}
-\end{table}
-
-Table~\ref{table:ecspec_local} and Table~\ref{table:ecspec_cloud} presents the latency values for the
-current experiment. The metric values for the fog-based approach were obtained through the average
-of 11 events that were generated during the experiment, while the values for the cloud-based were
-obtained through the average of 9 events. Comparing the latency values for both approaches,
-immediately is possible to observe that there is a huge difference between the values of the
-\textit{Upload Latency} and \textit{Response Latency} metrics between both approaches. That
-difference reflects in the value of the \textit{Event Latency} metric, where the fog-based approach
-is almost 1s faster then the cloud-based approach.
-
-\subparagraph{Half-Period Event Cycle.}
-\label{subp:eval_exp_latency_ecspec_fast}
-In this scenario, we define the \textit{Half-period ECspec} to configure the \gls{ALE} module.
-The configuration parameters are described in Table~\ref{table:ecspec_fast}.
-
-% Half-period ECspec parameters
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|}
-    \hline
-    Period & Duration \\ \hline
-    5s    & 4.75s     \\ \hline
-  \end{tabular}
-  \caption{Half-period ECspec parameters.}
-  \label{table:ecspec_fast}
-\end{table}
-
-\begin{figure}[ht!]
-  \centering
-  % ECSpec Fast local breakdown figure
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{./images/ecspec_fast_local_breakdown}
-    \caption{Fog-based approach: half-period Event Cycle\\ latency breakdown.}
-    \label{fig:ecspec_fast_local}
-  \end{subfigure}%
-  % ECSpec fast cloud breakdown figure
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{./images/ecspec_fast_cloud_breakdown}
-    \caption{Cloud-based approach: half-period Event Cycle\\ latency breakdown.}
-    \label{fig:ecspec_fast_cloud}
-  \end{subfigure}
-  \caption{Half-period Event Cycle latency breakdown.}
-  \label{fig:ecspec_fast_breakdown}
-\end{figure}
-
-Figure~\ref{fig:ecspec_fast_breakdown} presents the event latency breakdown for the current experiment.
-Comparing the latency breakdown for the fog-based approach, presented in Figure~\ref{fig:ecspec_fast_local},
-with the cloud-based approach, presented in Figure~\ref{fig:ecspec_fast_cloud}, as in the previous experiment
-it is possible to observe that the values of the \textit{Upload Latency} and \textit{Response Latency}
-metrics for the cloud-approach - close to 14$\%$ of the \textit{Event Latency} metric - are considerable
-higher than the the values obtained for the fog-based approach - close to 0.5$\%$. When compared with
-the values obtained in the previous experiment those values are similar, although the percentage in
-the event breakdown is higher than in the \textit{Baseline} experiment. Regarding the behavior for
-those metrics, it is possible to observe that the pattern identified in the previous experiment was
-maintained.
-
-% % ECSpec fast local breakdown table
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|c|c|c|}
-  \hline
-  ~                & Upload Time & Processing Time & Response Time & Event Latency \\ \hline
-  Average Time (s) & 0.006       & 4.216           & 0.010         & 4.232         \\ \hline
-  \end{tabular}
-  \caption{Fog-based approach: half-period Event Cycle latency time.}
-  \label{table:ecspec_fast_local}
-\end{table}
-
-% % ECSpec fast cloud breakdown table
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|c|c|c|}
-  \hline
-  ~                & Upload Time & Processing Time & Response Time & Event Latency \\ \hline
-  Average Time (s) & 0.313       & 3.578           &  0.177        & 4.068         \\ \hline
-  \end{tabular}
-  \caption{Cloud-based approach: half-period Event Cycle latency time.}
-  \label{table:ecspec_fast_cloud}
-\end{table}
-
-Table~\ref{table:ecspec_fast_local} and Table~\ref{table:ecspec_fast_cloud} present the latency values for the
-current experiment. The metric values for the fog-based approach were obtained through the average
-of 20 events that were generated during the experiment, while the values for the cloud-based were
-obtained through the average of 23 events. As in the \textit{Baseline} experiment, the latency values
-of the \textit{Upload Latency} and \textit{Response Latency} metrics presents a significant difference
-between both approaches, where the values for the cloud-based approach continues to be higher.
-However, in this experiment the fog-based approach presented higher values for the \textit{Event Latency}
-metric. Comparing the values presented in Table~\ref{table:ecspec_fast_local} and Table~\ref{table:ecspec_fast_cloud},
-is possible to observe that the cause for that was the result of the \textit{Processing Time}
-metric, where the fog-based approach presented a better performance than the cloud-based approach.
-
 % Evaluation Analysis
 \section{Results Analysis and Discussion}
 \label{sec:eval_analysis}
@@ -418,12 +499,42 @@ Based on the results obtained and in the requirements of application domains, it
 which is the most adequate approach to deploy a smart warehouse application that relies on \gls{RFID}
 technology and in the Fosstrak middleware.
 
-% Data scalability
-\subparagraph{Data Scalability.}
-\label{subp:eval_results_data}
-Regarding the data scalability for the Fosstrak middleware, is possible to conclude that the metrics
+% Latency Interaction
+\subsubsection{Latency Interaction}
+\label{subs:eval_results_latency}
+Regarding the latency interaction, it is clear that the fog-approach presented a better overall
+performance than the cloud-based approach. The most relevant results are in network latency values
+for the proposed approaches. As presented in Tables~\ref{table:cloud_metrics} and \ref{table:fog_metrics},
+the values for the \textit{Upload} and \textit{Reponse} metrics presents a huge difference, where
+the fog-based approach is the best one.\\
+
+However, it is important to point that there some aspects that can improve the overall performance
+of the cloud-based approach. For instance, the network connection is a possible bottleneck for the
+performance of such approach. We believe that if the experiments were conducted through a faster
+network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-approach
+will be better, but far from the fog-based approach.\\
+
+Another aspect that is important concerns with the performance of the Fosstrak platform.
+In the experiments performed for both fog-based and cloud-based approaches we observe that when
+the \gls{ALE} module is configured with a \textit{ECspec} with a smaller period, the \gls{ALE} takes
+more time to process the data from the \gls{RFID} tags. The reason for this performance decrease
+could be in storage mechanism used by the \gls{ALE} to store the data. Since that the \gls{ALE}
+connects to the readers through a \gls{TCP} connection, is reasonable to assume that a buffer is
+used to store the data that is collected. Thus, if the buffer size is not sufficiently large to store
+a reasonable amount of data, the \gls{ALE} module needs to perform more iterations until that all the
+data is read from the buffer.\\
+
+Finally, another important concern regards with the \textit{ECspec} configuration. In the experiments
+performed for both approaches, we notice that the time where the \gls{ALE} module remains in an idle
+state decreased significantly when the defined \textit{ECspec} was configured with a smaller period,
+which results in a better performance for the event latency.
+
+% Data Performance
+\subsubsection{Data Storage Performance}
+\label{subs:eval_results_data}
+Regarding the data storage performance for the Fosstrak middleware, is possible to conclude that the metrics
 of \textit{CPU Utilization} and \textit{Network In} increase as the threads and requests are growing.
-These results are concise with the ones obtained by Gomes et al. \cite{gomes2014future}, which
+These results are consistent with the ones obtained by Gomes et al. \cite{gomes2014future}, which
 proposes a new \gls{IoT} infrastructure for \gls{EPC}Global middleware. Furthermore, in the experiments
 performed Gomes detected that when the \textit{CPU Utilization} crosses the value of 95$\%$, the
 outbound traffic started to decrease. After analyzing the stored data, the conclusion was that the
@@ -431,34 +542,14 @@ outbound traffic started to decrease. After analyzing the stored data, the concl
 executed in the same machine - resulting in a delay of data storage in the \gls{EPCIS} repository,
 which explains the observed behavior.\\
 
-With these results, is reasonable to assume that the scalability of the data storage mechanism of
+With these results, is reasonable to assume that the performance of the data storage mechanism of
 the Fosstrak implementation can be a bottleneck. However, in the general case the overall
 performance will met the requirements of \gls{RFID} applications.
 
-% Latency Interaction
-\subparagraph{Latency Interaction.}
-\label{subp:eval_results_latency}
-Regarding the latency interaction, it is clear that the fog-approach presented a better performance
-than the cloud-based approach. However, there is a clear trade-off when choosing one of the proposed
-approaches. In one side, the fog-based approach guarantees a better overall performance for the smart
-place when compared with the cloud-based approach.\\
-
-However, it is important to point that there some aspects that can improve the overall performance
-of the cloud-based approach. For instance, the network connection is a possible bottleneck for the
-performance of such approach. We believe that if the experiments were conducted through a faster
-network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-approach
-will be better, but not as the fog-based approach.\\
-
-In the other side, the fog-based approach requires an infrastructure burden that a cloud-based approach
-is able to suppress. This is an important aspect to take in consideration when choosing one of the
-approaches, since that a fog-based approach requires a large investment in infrastructure and the
-performance gain offered by such approach could not be so substantial when compared with a cloud-based
-approach.\\
-
-\subparagraph{Fog or Cloud?}
-\label{subp:eval_conclusion}
-The obtained results shows that a fog-based approach offers better performance to deploy a smart
-warehouse application based in \gls{RFID} technology that requires low latency interaction.
+\subsubsection{Fog or Cloud?}
+\label{subs:eval_conclusion}
+The obtained results shows that a fog-based approach offers better overall performance to deploy a
+smart warehouse application based in \gls{RFID} technology that requires low latency interaction.
 But it will be this approach the best choice for all application domains?\\
 
 Table \ref{table:smart_places_requirements} presents the requirements of \gls{IoT} applications

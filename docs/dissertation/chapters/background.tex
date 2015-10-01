@@ -29,7 +29,7 @@ application over the Internet.
 % Soldatos
 \subparagraph{Soldatos} et al. \cite{soldatos2012convergence} presented the idea of converging the IoT
 and the utility computing in the cloud. The proposed architecture is the core concept of the OpenIoT
-Project\footnote{http://openiot.eu}, and is based on CoAP \cite{shelby2014constrained} and linked data.
+Project\footnote{\url{http://openiot.eu}}, and is based on CoAP \cite{shelby2014constrained} and linked data.
 The cloud is used at infrastructure level, which allows to measure the utility of the services provided
 by inter-connected objects.
 % Distefano
@@ -159,9 +159,9 @@ middleware platform that implements the GS1 \gls{EPC} Network standards.
 % GS1 EPC Network
 \subparagraph{GS1 EPCglobal Architecture}
 \label{subp:epc_network}
-GS1\footnote{http://www.gs1.org} is an organization that is responsible for the development and maintenance of standards for
+GS1\footnote{\url{http://www.gs1.org}} is an organization that is responsible for the development and maintenance of standards for
 supply chain. One of the standards developed by GS1 is the \gls{EPC}, which is an unique serial identifier
-for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{http://www.gs1.org/epcglobal} created
+for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{\url{http://www.gs1.org/epcglobal}} created
 the EPCglobal Architecture Framework, that currently is the standard for \gls{RFID} platforms.
 Figure~\ref{fig:epc_architecture} presents a high-level architecture of the EPCglobal framework
 that shows its main interfaces and roles.\\
@@ -175,7 +175,7 @@ that shows its main interfaces and roles.\\
 \end{figure}
 
 The framework\footnote{For more information about the standards of the EPCglobal Framework, the
-full documentation is available at \href{http://www.gs1.org/gs1-architecture}{GS1 standards}} has a
+full documentation is available at \url{http://www.gs1.org/gs1-architecture}} has a
 set of standardized interfaces that enables the interchange of information between entities. In the
 context of our work, the most relevant components of the framework architecture are:
 
@@ -236,7 +236,7 @@ The Fosstrak platform is composed of three modules that implements the correspon
   % Capturing Application
   \item \textit{Capturing Application} is part of the EPCIS module. This module is responsible to
   transform the uninterpreted events received on the \textit{ECReports} into meaningful business events.
-  Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{http://www.drools.org/}
+  Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{\url{http://www.drools.org/}}
   engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
   Unfortunately, the rules are static and ones defined they can not be updated in runtime if needed.
   % EPCIS Repository
@@ -262,13 +262,13 @@ benefits when compared to hypervisor-based solutions. Containers are small, they
 
 \subsubsection{Docker Platform}
 \label{subs:docker_platform}
-Docker\footnote{https://www.docker.com/} is an open source project to pack, ship and run any application as
+Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
 a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
 meaning that these containers can run anywhere\footnote{Initially, Docker required that the physical
 machine where the containers will be created is running a Linux kernel. Currently, Microsoft
 launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
 perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
-benefit that Docker platform provides is the Docker Hub\footnote{https://hub.docker.com/} service,
+benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
 a public repository that stores Docker images that are used to create the containers.
 
 % Configuration Management Tools
@@ -281,8 +281,8 @@ provisioning of physical and virtual machines, perform dependency management of 
 and to perform the automation of management tasks.\\
 
 Currently, there are several solutions to perform configuration management of software, where the
-most relevant are Chef\footnote{https://www.chef.io/}, Puppet\footnote{https://puppetlabs.com/},
-Ansible\footnote{http://www.ansible.com/} and Salt\footnote{http://saltstack.com/}. The main difference
+most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\url{https://puppetlabs.com/}},
+Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
 between these tools is that some of the them are more oriented to developers, which is the case of Chef and
 Puppet that requires some programming experience to be used, while others are more oriented to system
 administrators, which is the case of Ansible and Salt.
@@ -301,5 +301,5 @@ consistent with the latest policy.\\
 The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
 dynamically provision and deprovision the application infrastructure on demand to keep up with
 peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
-across several cloud providers - \gls{AWS}\footnote{https://aws.amazon.com/}, Google Compute
-Engine\footnote{https://cloud.google.com/compute/} and Openstack\footnote{https://www.openstack.org/}.\\
+across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google Compute
+Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
