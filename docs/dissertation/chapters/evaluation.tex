@@ -29,7 +29,7 @@ Figure~\ref{fig:eval_latency_methodology}.\\
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=.9\textwidth]{./images/eval_latency_methodology}
-  \caption{Latency interaction evaluation methodology.}
+  \caption[Latency evaluation methodology.]{Latency interaction evaluation methodology.}
   \label{fig:eval_latency_methodology}
 \end{figure}
 
@@ -85,7 +85,7 @@ running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
-  \caption{Data scalability evaluation methodology.}
+  \caption[Data storage evaluation methodology.]{Data storage performance evaluation methodology.}
   \label{fig:eval_data_methodology}
 \end{figure}
 
@@ -150,7 +150,7 @@ in Table~\ref{table:ecspec_parameters}.
   Baseline Event Cycle      &  10s    & 9.5s     \\ \hline
   Half-period Event Cycle   &   5s    & 4.75s    \\ \hline
  \end{tabular}
- \caption{Baseline ECspec parameters.}
+ \caption[Event Cycle parameters.]{Event Cycle parameters.}
  \label{table:ecspec_parameters}
 \end{table}
 
@@ -177,17 +177,17 @@ when it is configured with the \textit{Half-period ECspec}.\\
  \begin{subfigure}{.5\textwidth}
    \centering
    \includegraphics[height=\linewidth]{./images/edge_ecspec_breakdown}
-   \caption{Fog-based approach: base\\Event Cycle latency breakdown.}
+   \caption{Baseline Event Cycle: latency breakdown.}
    \label{fig:ecspec_base}
  \end{subfigure}%
  % ECSpec cloud breakdown figure
  \begin{subfigure}{.5\textwidth}
    \centering
    \includegraphics[height=\linewidth]{./images/edge_ecspecf_breakdown}
-   \caption{Fog-based approach: half-period\\Event Cycle latency breakdown.}
+   \caption{Half-period Event Cycle: latency breakdown.}
    \label{fig:ecspec_half}
  \end{subfigure}
- \caption{Baseline Event Cycle latency breakdown.}
+ \caption[Fog-based approach: event latency breakdown.]{Fog-based approach: Event Cycle latency breakdown.}
  \label{fig:ecspec_breakdown}
 \end{figure}
 
@@ -210,17 +210,17 @@ Figure~\ref{fig:ecspec_effective_half} when it is configured with the \textit{Ha
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/edge_ecspec_effective_breakdown}
-    \caption{Fog-based approach: baseline\\Event Cycle effective breakdown.}
+    \caption{Baseline Event Cycle: event pipeline breakdown.}
     \label{fig:ecspec_effective_base}
   \end{subfigure}%
   % ECSpec cloud breakdown figure
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/edge_ecspecf_effective_breakdown}
-    \caption{Fog-based approach: half-period\\Event Cycle effective breakdown.}
+    \caption{Half-period Event Cycle: event pipeline breakdown.}
     \label{fig:ecspec_effective_half}
   \end{subfigure}
-  \caption{Fog-based approach: Event Cycle latency breakdown.}
+  \caption[Fog-based approach: event processing breakdown.]{Fog-based approach: event processing pipeline breakdown.}
   \label{fig:ecspec_effective_breakdown}
 \end{figure}
 
@@ -257,7 +257,7 @@ metrics.\\
     Response Time                     & 0.010s           & 0.009s                  \\ \hline
     Event Latency                     & 7.540s           & 4.245s                  \\ \hline
     \end{tabular}
-  \caption{Fog-based approach: performance metrics results.}
+  \caption[Fog-based approach: performance results.]{Fog-based approach: performance metrics results.}
   \label{table:fog_metrics}
 \end{table}
 
@@ -278,17 +278,17 @@ smart warehouse. As in the previous experiment the \gls{ALE} module was configur
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/cloud_ecspec_breakdown}
-    \caption{Cloud-based approach: baseline Event Cycle\\latency breakdown.}
+    \caption{Baseline Event Cycle: latency breakdown.}
     \label{fig:ecspecf_base}
   \end{subfigure}%
   % ECSpec fast cloud breakdown figure
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/cloud_ecspecf_breakdown}
-    \caption{Cloud-based approach: half-period Event Cycle\\latency breakdown.}
+    \caption{Half-period Event Cycle: latency breakdown.}
     \label{fig:ecspecf_half}
   \end{subfigure}
-  \caption{Cloud-based approach: Event Cycle latency breakdown.}
+  \caption[Cloud-based approach: event latency breakdown.]{Cloud-based approach: Event Cycle latency breakdown.}
   \label{fig:ecspecf_breakdown}
 \end{figure}
 
@@ -316,17 +316,17 @@ Figure~\ref{fig:ecspecf_effective_half} when it is configured with the \textit{H
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/cloud_ecspec_effective_breakdown}
-    \caption{Cloud-based approach: baseline Event Cycle\\ latency breakdown.}
+    \caption{Baseline Event Cycle: event pipeline breakdown.}
     \label{fig:ecspecf_effective_base}
   \end{subfigure}%
   % ECSpec fast cloud breakdown figure
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[height=\linewidth]{./images/cloud_ecspecf_effective_breakdown}
-    \caption{Cloud-based approach: half-period Event Cycle\\ latency breakdown.}
+    \caption{Half-period Event Cycle: event pipeline breakdown.}
     \label{fig:ecspecf_effective_half}
   \end{subfigure}
-  \caption{Half-period Event Cycle latency breakdown.}
+  \caption[Cloud-based approach: event processing breakdown.]{Cloud-based approach: event processing pipeline breakdown.}
   \label{fig:ecspecf_effective_breakdown}
 \end{figure}
 
@@ -363,7 +363,7 @@ a significant improvement, from 7.346s to 2.569s.\\
     Response Time              & 0.228s           & 0.149s                  \\ \hline
     Event Latency              & 8.244s           & 4.266s                  \\ \hline
     \end{tabular}
-  \caption{Cloud-based approach: performance metrics result.}
+  \caption[Cloud-based approach: performance results.]{Cloud-based approach: performance metrics results.}
   \label{table:cloud_metrics}
 \end{table}
 
@@ -409,7 +409,7 @@ in the track. The parameters used to execute the tests for this scenario are des
     Number of Events & Period \\ \hline
     1593             & 82ms   \\ \hline
   \end{tabular}
-  \caption{Baseline evaluation parameters.}
+  \caption[Data storage: Baseline evaluation parameters.]{Data storage performance: Baseline evaluation parameters.}
   \label{tab:baseline_parameters}
 \end{table}
 
@@ -419,16 +419,16 @@ in the track. The parameters used to execute the tests for this scenario are des
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./images/cpu_1_lap}
-  \caption{Baseline CPU Utilization.}
+  \caption{CPU Utilization performance results.}
   \label{fig:eval_baseline_cpu}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./images/network_1_lap}
-  \caption{Baseline Network traffic.}
+  \caption{Network traffic performance.}
   \label{fig:eval_baseline_network}
 \end{subfigure}
-\caption{Baseline performance results.}
+\caption[Data storage: Baseline results.]{Data storage performance: Baseline evaluation results.}
 \label{fig:eval_baseline_results}
 \end{figure}
 
@@ -460,7 +460,7 @@ Table~\ref{tab:3laps_parameters}.\\
     Number of Events & Period \\ \hline
     8895             & 57ms   \\ \hline
   \end{tabular}
-  \caption{3 Lap evaluation parameters.}
+  \caption[Data storage: 3 Lap evaluation parameters.]{Data storage performance: 3 Lap evaluation parameters.}
   \label{tab:3laps_parameters}
 \end{table}
 
@@ -470,16 +470,16 @@ Table~\ref{tab:3laps_parameters}.\\
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./images/cpu_3_lap}
-  \caption{Track 3 Laps CPU Utilization.}
+  \caption{CPU Utilization performance results.}
   \label{fig:eval_3laps_cpu}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./images/network_3_lap}
-  \caption{Track 3 Laps Network traffic.}
+  \caption{Network traffic performance results.}
   \label{fig:eval_3laps_network}
 \end{subfigure}
-\caption{Track 3 Lap performance results.}
+\caption[Data storage: 3 Lap performance results.]{Data storage performance: 3 Lap performance results.}
 \label{fig:eval_3laps_results}
 \end{figure}
 
