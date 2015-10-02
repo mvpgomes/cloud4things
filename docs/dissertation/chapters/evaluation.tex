@@ -194,9 +194,9 @@ when it is configured with the \textit{Half-period ECspec}.\\
 Comparing the graphs for both \textit{ECspecs} is possible to conclude that during most of the time of
 an \textit{Event Cycle} the \gls{ALE} module is in an idle state (\textit{Idle Time}) - close to $\approx68\%$
 in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
-collected. Considering the duration of the \textit{ECspecs} it means that in average when the \gls{ALE}
-is configured with the \textit{Baseline ECspec} the module can be in an idle state during 7s while
-with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
+collected (\textit{Effective Time}). Considering the duration of the \textit{ECspecs} it means that in
+average when the \gls{ALE} is configured with the \textit{Baseline ECspec} the module can be in an idle
+state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
 
 Figure~\ref{fig:ecspec_effective_breakdown} summarizes how the time is spent during the stages of the
 event processing pipeline. Figure~\ref{fig:ecspec_effective_base} presents the time breakdown for
@@ -295,11 +295,12 @@ smart warehouse. As in the previous experiment the \gls{ALE} module was configur
 The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} shows that
 as in the previous experiment, during most of time of an \textit{Event Cycle} the \gls{ALE} module is
 in an idle state. However, unlike in the previous experiment the \textit{ECspecs} affected the percentage of time
-where \gls{ALE} is processing the events and where is in an idle state. With the \textit{Baseline ECspec}
-the \gls{ALE} remains $\approx89\%$ of the \textit{Event Cycle} period in an idle state while when configured with
-the \textit{Half-period ECspec} this value decreases to $\approx62\%$. This means that during the \textit{Event Cycle}
-period the \gls{ALE} module can be in an idle state during 9 seconds when configured with the
-\textit{Baseline ECspec} while with the \textit{Half-period ECspec} this value can last for 3 seconds.\\
+where \gls{ALE} is processing the events (\textit{Effective Time}) and where is in an idle state (\textit{Idle Time}).
+With the \textit{Baseline ECspec} the \gls{ALE} remains $\approx89\%$ of the \textit{Event Cycle} period
+in an idle state while when configured with the \textit{Half-period ECspec} this value decreases to
+$\approx62\%$. This means that during the \textit{Event Cycle} period the \gls{ALE} module can be in
+an idle state during 9 seconds when configured with the \textit{Baseline ECspec} while with the
+\textit{Half-period ECspec} this value can last for 3 seconds.\\
 
 % TODO: Maybe this can be removed???
 \pagebreak
@@ -335,12 +336,12 @@ between the \textit{Upload} ($\approx35\%$), \textit{Filtering \& Aggregation} (
 \textit{Response} ($\approx34\%$) stages when the \gls{ALE} module is configured with the \textit{Baseline ECspec},
 while the \textit{Porcessing} and \textit{Report Creation} stages represents a small percentage of the
 total time, less than $\approx1\%$. When the \gls{ALE} is configured with the \textit{Half-period ECspec},
-the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 74\%$
+the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 75\%$
 of the total time. As when configured with the \textit{Baseline ECspec}, the \textit{Upload} and
-\textit{Reponse} stages presents similar results, close to $\approx12\%$. Regarding the \textit{Processing}
-stage, as in the fog-based approach the time required to process the event data increased in a significant
-way, from less than $\approx0.3\%$ to $\approx2.7\%$. The \textit{Report Creation} stage presented the
-same values from the previous configuration ($\approx0.3\%$).\\
+\textit{Reponse} stages presents similar results, respectively close to $\approx10\%$ and $\approx11\%$.
+Regarding the \textit{Processing} stage, as in the fog-based approach the time required to process the
+event data increased in a significant way, from less than $\approx0.3\%$ to $\approx3\%$. The
+\textit{Report Creation} stage presented the same values from the previous configuration ($\approx0.3\%$).\\
 
 As in the previous experiment the event latency presented a better overall performance for the faster \textit{ECspec}.
 According the metric values presented in Table~\ref{table:cloud_metrics} it is possible to observe that the event
