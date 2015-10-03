@@ -144,11 +144,11 @@ in Table~\ref{table:ecspec_parameters}.
 
 % ECspec parameters
 \begin{table}[ht!]
- \begin{tabular}{|l|c|c|}
+ \begin{tabular}{|l|c|c|c|}
   \hline
-  Event Cycle Specification & Period  & Duration \\ \hline
-  Baseline Event Cycle      &  10s    & 9.5s     \\ \hline
-  Half-period Event Cycle   &   5s    & 4.75s    \\ \hline
+  Event Cycle Specification & Period  & Duration & Repetitions \\ \hline
+  Baseline Event Cycle      &  10s    & 9.5s     & 10          \\ \hline
+  Half-period Event Cycle   &   5s    & 4.75s    & 20          \\ \hline
  \end{tabular}
  \caption[Event Cycle parameters.]{Event Cycle parameters.}
  \label{table:ecspec_parameters}
@@ -227,7 +227,7 @@ Figure~\ref{fig:ecspec_effective_half} when it is configured with the \textit{Ha
 It is possible to observe that the \textit{Fltering \& Aggregation} stage is the most time consuming
 for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
 close to $\approx95\%$ of the total time, while with the \textit{Half-period ECspec} this value is
-close to $\approx75\%$. The reason for this difference is in the \textit{Processing Time} stage.
+close to $\approx75\%$. The reason for this difference is in the \textit{tag Processing Latency} stage.
 With the \textit{Baseline ECspec} the time to processing the event data represents close to $\approx2.5\%$
 of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
 The \textit{Upload} and \textit{Response} latency together represents a small percentage of
@@ -238,9 +238,9 @@ The behavior expected when the \gls{ALE} is configured with a faster \textit{Eve
 is that the event latency presents a better overall performance. According the metric values presented in
 Table~\ref{table:fog_metrics} it is possible to observe that the event latency improves in a significant
 way - from 7.450s to 4.250s. This result is achieved thanks to the improvement in the latency
-of at the \textit{Filtering \& Processing} stage by $\approx52\%$ - from 2.530s to 1.230s - and the
+of at the \textit{Filtering \& Aggregation Latency} by $\approx52\%$ - from 2.530s to 1.230s - and the
 amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regarding the network
-latency, the values for the \textit{Upload Time} and \textit{Response Time} improved 1ms for both
+latency, the values for the \textit{Upload Latency} and \textit{Response Latency} improved 1ms for both
 metrics.\\
 
 % Metrics Result
@@ -249,12 +249,12 @@ metrics.\\
     \begin{tabular}{|l|c|c|}
     \hline
     Metric                            & Base Event Cycle & Half-period Event Cycle \\ \hline
-    Upload Time                       & 0.005s           & 0.004s                  \\ \hline
-    Event Data Processing Time        & 0.049s           & 0.279s                  \\ \hline
-    Idle Time                         & 4.944s           & 2.747s                  \\ \hline
-    Filter \& Aggregation Time        & 2.530s           & 1.203s                  \\ \hline
-    Report Creation Time              & 0.001s           & 0.003s                  \\ \hline
-    Response Time                     & 0.010s           & 0.009s                  \\ \hline
+    Upload Latency                    & 0.005s           & 0.004s                  \\ \hline
+    Tag Processing Latency            & 0.049s           & 0.279s                  \\ \hline
+    Idle Processing Latency           & 4.944s           & 2.747s                  \\ \hline
+    Filter \& Aggregation Latency     & 2.530s           & 1.203s                  \\ \hline
+    Report Creation Latency           & 0.001s           & 0.003s                  \\ \hline
+    Response Latency                  & 0.010s           & 0.009s                  \\ \hline
     Event Latency                     & 7.540s           & 4.245s                  \\ \hline
     \end{tabular}
   \caption[Fog-based approach: performance results.]{Fog-based approach: performance metrics results.}
@@ -334,7 +334,7 @@ Figure~\ref{fig:ecspecf_effective_half} when it is configured with the \textit{H
 Comparing the obtained results, it is possible to observe that time breakdown is evenly distributed
 between the \textit{Upload} ($\approx35\%$), \textit{Filtering \& Aggregation} ($\approx30\%$) and
 \textit{Response} ($\approx34\%$) stages when the \gls{ALE} module is configured with the \textit{Baseline ECspec},
-while the \textit{Porcessing} and \textit{Report Creation} stages represents a small percentage of the
+while the \textit{Tag Porcessing} and \textit{Report Creation} stages represents a small percentage of the
 total time, less than $\approx1\%$. When the \gls{ALE} is configured with the \textit{Half-period ECspec},
 the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 75\%$
 of the total time. As when configured with the \textit{Baseline ECspec}, the \textit{Upload} and
@@ -346,8 +346,8 @@ event data increased in a significant way, from less than $\approx0.3\%$ to $\ap
 As in the previous experiment the event latency presented a better overall performance for the faster \textit{ECspec}.
 According the metric values presented in Table~\ref{table:cloud_metrics} it is possible to observe that the event
 latency decrease from 8.244s to 4.266s. The values for the network latency improved when the \gls{ALE} is
-configured with the faster \textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload}
-latency metric - from 0.294s to 0.101s - and $\approx40\%$ for the \textit{Response} latency metric -
+configured with the faster \textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Latency}
+metric - from 0.294s to 0.101s - and $\approx40\%$ for the \textit{Response Latency} metric -
 from 0.228s to 0.138s. The values for the time where the \gls{ALE} remains in an idle state also presented
 a significant improvement, from 7.346s to 2.569s.\\
 
@@ -355,22 +355,22 @@ a significant improvement, from 7.346s to 2.569s.\\
   \centering
     \begin{tabular}{|l|c|c|}
     \hline
-    Metric                     & Base Event Cycle & Half-period Event Cycle \\ \hline
-    Upload Time                & 0.294s           & 0.103s                  \\ \hline
-    Tag Processing Time        & 0.002s           & 0.024s                  \\ \hline
-    Idle Time                  & 7.346s           & 2.569s                  \\ \hline
-    Filter \& Aggregation Time & 0.370s           & 1.490s                  \\ \hline
-    Report Creation Time       & 0.003s           & 0.003s                  \\ \hline
-    Response Time              & 0.228s           & 0.149s                  \\ \hline
-    Event Latency              & 8.244s           & 4.266s                  \\ \hline
+    Metric                        & Base Event Cycle & Half-period Event Cycle \\ \hline
+    Upload Latency                & 0.294s           & 0.103s                  \\ \hline
+    Tag Processing Latency        & 0.002s           & 0.024s                  \\ \hline
+    Idle Processing Latency       & 7.346s           & 2.569s                  \\ \hline
+    Filter \& Aggregation Latency & 0.370s           & 1.490s                  \\ \hline
+    Report Creation Latency       & 0.003s           & 0.003s                  \\ \hline
+    Response Latncy               & 0.228s           & 0.149s                  \\ \hline
+    Event Latency                 & 8.244s           & 4.266s                  \\ \hline
     \end{tabular}
   \caption[Cloud-based approach: performance results.]{Cloud-based approach: performance metrics results.}
   \label{table:cloud_metrics}
 \end{table}
 
-As in the fog-based approach the value for the \textit{Processing Time} increased $\approx1000\%$ when
+As in the fog-based approach the value for the \textit{Tag Processing Latency} increased $\approx1000\%$ when
 the \gls{ALE} is configured with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the
-previous experiment, the value for the \textit{Filtering \& Aggregation} metric increased $\approx300\%$
+previous experiment, the value for the \textit{Filtering \& Aggregation Latency} metric increased $\approx300\%$
 - from 0.370s to 1.490s.
 
 \subsection{Data Storage Performance}
