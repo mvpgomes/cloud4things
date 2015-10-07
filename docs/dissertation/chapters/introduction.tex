@@ -17,16 +17,23 @@ inserted and also to adapt to the changes that occur in this environment. Anothe
 about the infrastructure burden of the ubiquitous systems. Many times these systems requires low-latency
 interaction with users and environments, which implies that at least part of an \gls{ubicomp} application
 needs to be tightly bounded to the local infrastructure of the interacting environment. This requirement
-for local infrastructure can be a barrier in the adoption of ubiquitous systems in a large-scale perspective.\\
+for local infrastructure can be a barrier in the adoption of ubiquitous systems in a large-scale
+perspective. The \gls{IoT} and the Utility Computing in the cloud paradigms can help to solve those
+issues.\\
 
 In one hand, the Utility Computing in the cloud provides the illusion of infinite computing resources
 available on demand to the public users \cite{armbrust2010view}. This paradigm can help to reduce the
 infrastructure burden of ubiquitous systems, while providing important features such as high availability
-and high scalability. In the other hand, the \gls{IoT} aims to solve a key problem in wider adoption
-of ubiquitous systems, the tight coupling with a particular embedded infrastructure. With the \gls{IoT}
-a variety of \textit{objects} or \textit{things} - such as \gls{RFID} tags, sensors, actuators, etc.
-- will be able to interact with each other and cooperate with the surrounding \textit{things} to reach
-common goals \cite{atzori2010internet}.\\
+and high scalability. The Utility computing provides ubiquitous data centralization, allowing users
+to store this data during long periods of time and to define the access policies for this data.
+%
+In the other hand, the \gls{IoT} aims to solve a key problem in wider adoption of ubiquitous systems,
+the tight coupling with a particular embedded infrastructure. With the \gls{IoT} a variety of
+\textit{objects} or \textit{things} - such as \gls{RFID} tags, sensors, actuators, etc. - will be
+able to interact with each other and cooperate with the surrounding \textit{things} to reach common
+goals \cite{atzori2010internet}. Furthermore, \gls{IoT} middleware solutions are able to processing
+the raw data collected from these \textit{things} in order to understand the context where they
+are inserted.\\
 
 % Application Domains
 \section{Application Domains}
@@ -58,8 +65,10 @@ hospital staff and also to control the inventory of materials. Sensors can be us
 patient conditions, hospital environment conditions - temperature, air quality, etc.\\
 
 Beyond of the presented examples, the \gls{IoT} field covers many other domains. To give a more unified
-view over those domains, we propose the term \textit{smart places}, that can be defined as the
-\ldots smart place definition.
+view over those domains, we propose the term \textit{smart places}, that can be defined as an environment
+composed of sensors - e.g. RFID - actuators - e.g. automatic doors - and computational infrastructure
+- e.g. servers - that are able to acquire data about the surrounding environment and use that data to
+improve the experience of the people interacting with the place.
 
 % Smart Places Challenges
 \section{Smart Places Challenges}
@@ -97,7 +106,6 @@ the integration of the Internet of Things in the utility computing:
   who will pay for this services and who will control this services?
 \end{itemize}
 
-
 % Objectives
 \section{Objectives}
 \label{section:objectives}
@@ -109,22 +117,23 @@ cloud-based solution is suitable for a smart place that relies on the RFID techn
 
 \subsection{Example Domain}
 \label{sub:domain}
-Our smart place is an automated warehouse where products - which are transported through automated
-guided vehicles - are tagged with \gls{RFID} tags that can be identified by \gls{RFID} readers.
-Through the data collected by these readers is possible to gather knowledge about the smart place.
-For instance, is possible to determine which products enters or leaves the warehouse. A complete example
-of a platform that allows the transformation of that data into information is Fosstrak\footnote{\url{http://fosstrak.github.io/}},
-an open source \gls{RFID} software that implements the \gls{EPC} Network standards.\\
+Our smart place example domain is an automated warehouse. In the warehouse, products are transported
+through automated guided vehicles. These products are tagged with \gls{RFID} tags that can be identified
+by \gls{RFID} readers.  Through the data collected by these readers is possible to gather information
+about the smart place. For instance, is possible to determine which products enters or leaves the
+warehouse. A complete example of a platform that allows the transformation of that data into
+information is Fosstrak\footnote{\url{http://fosstrak.github.io/}}, an open source \gls{RFID}
+software that implements the \gls{EPC} Network standards.\\
 
 To accomplish our objectives, in this work we will follow two approaches and determine which of them
-is more adequate to deploy a \gls{RFID} application. The first is a more traditional approach, where
-all the application middleware is provisioned in the cloud. The second, is an approach based on the
-Fog Computing platform \cite{bonomi2012fog}, which extends the cloud paradigm to the edge of the
-network.\\
+is more adequate to deploy a \gls{RFID} application. The first, is an approach based on the Fog Computing
+platform \cite{bonomi2012fog}, which extends the cloud paradigm to the edge of the network. The second
+is a more traditional approach, where all the application middleware is provisioned in the cloud.\\
 
 Based in the proposal of the Fog Computing platform, our initial hypothesis is that a fog-based approach
 will present a best overall performance and as consequence will be more adequate to deploy the \gls{RFID}
-application in the smart warehouse.
+application in the smart warehouse. However the data storage capabilities of fog is inferior. It will
+have to be validated if it is enough.
 
 % Dissertation Outline
 \section{Dissertation Outline}
