@@ -116,11 +116,13 @@ operating systems on the same physical machine. However, \gls{OS} level virtuali
 benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
 \gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
 
+\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment that relies on Linux Kernel. \gls{LXC} are hardware-agnostic
+and platform-agnostic, and also provides features such as application isolation and multi-tenancy.\\
+
 \subsubsection{Docker Platform}
 \label{subs:docker_platform}
 Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
-a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
-meaning that these containers can run anywhere\footnote{Initially, Docker required that the physical
+a lightweight container. Since Docker containers are based on \gls{LXC}, it can run anywhere\footnote{Initially, Docker required that the physical
 machine where the containers will be created is running a Linux kernel. Currently, Microsoft
 launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
 perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
