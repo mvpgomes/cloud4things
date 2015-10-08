@@ -71,41 +71,57 @@ delivery models will be the basis for the service delivery models of \gls{IoT} s
 % Data Storage Performance
 \subsection{Data Storage Performace}
 \label{sub:data_storage}
-Since that data storage and retrieval in the cloud had specific requirements, cloud providers started
-to implement their own solutions.
+Smart places generate a large amount of data. The cloud must be able to store and process that data
+in a efficient manner. Currently, there are several alternatives to perform data storage in the cloud,
+from key-value stores to \gls{RDBMS} clusters. In the next sections, we will summarize the most
+relevant work regarding these alternatives.
 
-\subparagraph{Google Big Table, Facebook Cassandra and  Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
+% Key-value Stores
+\subsubsection{Key-value Stores}
+\label{subs:kv-stores}
+Since that data storage and retrieval in the cloud had specific requirements, cloud providers started
+to implement their own solutions.\\
+
+\textit{Google Big Table}, \textit{Facebook Cassandra} and \textit{Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
 \cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that have the ability to horizontally scale - i.e,
 distribute both data and load of simple operations through many servers - but it has a weaker consistency
-model than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
+model than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.\\
 
-\subparagraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
+\textit{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
 performance predictable key-value stores, that provides many of the benefits of using a traditional
 \gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic data
 parallelism, physical data independence and automatic index selection and maintenance, all while
 maintaining the low latency guarantees on application performance that come from the underlying
-key-value store.\\
+key-value store.
 
-Recently, some progress has been reached as regards scalable storage for \gls{RDBMS} systems. Although most
-of the works are still in development, it is possible to highlight some solutions that are in a more
-mature state.
+% RDBMS Clusters
+\subsubsection{Relational Database Clusters}
+\label{subs:rdbms_clusters}
+\glsdesc{RDBMS} are database management systems that store data in form of related tables. Unlike
+the key-value stores, \gls{RDBMS} have a complete pre-defined schema, a SQL interface and ACID
+transactions. Recently, some progress has been reached as regards the performance and scalability of
+those systems. Although most of the works still are in development, it is possible to highlight some
+solutions that are in a more mature state.\\
 
-\subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
-Compared with the basic MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
-distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
-features such as failover, node recovery, synchronous data replication and no single point of failure.
-MySQL Cluster seesm to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
-However, it was reported that after scaling up to a few dozen nodes it starts to running into
-bottlenecks \cite{bunch2010evaluation}.
+\textit{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
+Compared with the basic MySQL implementation it works by replacing the InnoDB engine with the NDB - a
+proprietary distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing
+\footnote{Shared-nothing architecture share neither data on disk or data in memory between the nodes in the cluster.}
+architecture and includes features such as failover, node recovery, synchronous data replication and
+no single point of failure. MySQL Cluster seems to be the solution that scales to more nodes than
+other \gls{RDBMS} - 48 is the limit. However, it was reported that after scaling up to a few dozen
+nodes it starts to run with stability problems \cite{bunch2010evaluation}.\\
 
-\subparagraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
-VoltDB assumes a multi-node cluster architecture where the tables are partitioned over multiple servers.
-Tables can be replicated over servers - e.g. for fast access to data - shards are always replicated -
-to recovery the data in case of a node crash - and database snapshots are supported. Currently some
-features still are missing - online schema changes are limited and asynchronous \gls{WAN} replication and
-recovery are not yet implemented - but in its current implementation VoltDB already presents some
-features that improves the performance of SQL execution. As result, the number of nodes that are
-needed to support a given application load can be reduced in a significant way.
+\textit{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
+VoltDB assumes a multi-node cluster architecture where the database tables are partitioned over
+multiple servers. To allow fast-acess of data tables can be replicated over servers. Data recovery is
+supported through the replication of table rows (shards) across the cluster. The current implementation also
+supports database snapshots. Currently some features still are missing, but in its current implementation
+VoltDB already presents some features that improves the performance of SQL execution. As result, the
+number of nodes that are needed to support a given application load can be reduced in a significant way.\\
+
+As shown there several solution to perform data storage in the cloud. Choose what is the best solution
+will depend of the application domain and its requirements.
 
 % Containers
 \subsection{Containers}
@@ -227,7 +243,7 @@ that shows its main interfaces and roles.\\
 % EPC Architecture
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.8\textwidth]{./images/EPCGlobal_architecture}
+  \includegraphics[width=.75\textwidth]{./images/EPCGlobal_architecture}
   \caption[EPCGlobal Architecture Framework.]{GS1 EPCGlobal Architecture Framework.}
   \label{fig:epc_architecture}
 \end{figure}
