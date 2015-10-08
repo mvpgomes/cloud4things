@@ -145,6 +145,11 @@ between these tools is that some of the them are more oriented to developers, wh
 Puppet that requires some programming experience to be used, while others are more oriented to system
 administrators, which is the case of Ansible and Salt.
 
+In the present work, the provisioning of the smart place software stack will be automated through
+a \gls{CM} tool. Based in the previous experience with some of these tools - namely Chef and Puppet -
+we chose Chef as provisioning automation tool because it more easy to use for those with programming
+background and also provides some powerful features such as the command \textit{knife}.
+
 % Chef
 \subsubsection{Chef}
 \label{subs:chef}
@@ -176,7 +181,7 @@ traditional data centers in the cloud.\\
 % Fog Computing Infrastructure
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.9\textwidth]{./images/fog_architecture}
+  \includegraphics[width=.8\textwidth]{./images/fog_architecture}
   \caption[IoT and Fog Computing.]{The Internet of Things and Fog Computing (Bonomi et. al (2012)).}
   \label{fig:fog_architecture}
 \end{figure}
