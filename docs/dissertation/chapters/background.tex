@@ -7,16 +7,9 @@ First section reviews the relevant related work to solve the challenges of conve
 of Things and the Utility Computing. The following sections presents a description of the concepts
 that composes the basis of our work.
 
-% Related Work
-\section{Related Work}
-\label{section:related_work}
-Recently a lot of research and effort has been dedicated to solve these existing problems. In this
-section we will present a summary of the most relevant work that relates to the comvergence of the
-Internet of Things with the Utility Computing in the cloud:
-
-% Service Delivery
-\subsection{Service Delivery}
-\label{sub:service_delivery}
+% Cloud computing concepts and tools
+\section{Cloud computing concepts and tools}
+\label{sub:cloud_concepts_tools}
 As referred in Section~\ref{section:motivation}, current \gls{IoT} solutions are delivered in a physical
 and isolated manner, which makes its service delivery model an inefficient and unscalable process.
 In order to turn the service delivery of \gls{IoT} solutions more efficient and scalable, cloud service
@@ -104,18 +97,65 @@ Finding a general solution for the low-latency requirement of \gls{IoT} systems 
 Since there are several application domains, it is natural that each domain requires that different
 values for network latency and data transmission latency are guaranteed.
 
-% Concepts
-\section{Concepts}
-\label{sec:Concepts}
-This section presents the basics concepts that composes the basis of the developed work. First, we
-start by introducing the Fog Computing platform. In the next section, we presents the standard architecture
-for platforms that supports the \gls{RFID} technology. It is followed by the description of the
-Fosstrak platform. To end, we conclude with a brief presentation of the \glspl{LXC} technology and
-the configuration management tools.
+% Containers
+\subsection{Containers}
+\label{sub:containers}
+Containers are a virtualization technique that is performed at the \gls{OS} level, different of
+hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at the hardware-level.
+In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
+Although the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
+an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
+operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
+benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
+\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
+
+\subsubsection{Docker Platform}
+\label{subs:docker_platform}
+Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
+a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
+meaning that these containers can run anywhere\footnote{Initially, Docker required that the physical
+machine where the containers will be created is running a Linux kernel. Currently, Microsoft
+launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
+perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
+benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
+a public repository that stores Docker images that are used to create the containers.
+
+% Configuration Management Tools
+\subsection{Configuration Management Tools}
+\label{sub:cm_tools}
+\gls{CM} tools are software management tools that allows to automate and specify the deployment of an
+application. Usually, users describes the system resources and their desired state and the \gls{CM}
+tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows to automate the
+provisioning of physical and virtual machines, perform dependency management of software components
+and to perform the automation of management tasks.\\
+
+Currently, there are several solutions to perform configuration management of software, where the
+most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\url{https://puppetlabs.com/}},
+Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
+between these tools is that some of the them are more oriented to developers, which is the case of Chef and
+Puppet that requires some programming experience to be used, while others are more oriented to system
+administrators, which is the case of Ansible and Salt.
+
+% Chef
+\subsubsection{Chef}
+\label{subs:chef}
+Chef is a configuration management tool that allows to describe the infrastructure as code.
+In that way it is possible to automate how the infrastructure is built, deployed and managed.
+Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
+data - and the Chef Client - that is installed in each server, \gls{VM} or container, i.e, the nodes that
+are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
+network, and if anything on the node is out of date, the client update its state in order to be
+consistent with the latest policy.\\
+
+The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
+dynamically provision and deprovision the application infrastructure on demand to keep up with
+peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
+across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google Compute
+Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
 
 % Fog Computing
-\subsection{Fog Computing}
-\label{sub:fog_computing}
+\section{Fog computing for low latency responses}
+\label{sec:fog_computing}
 The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``Edge
 of the Network''. By extending the cloud close to the ground, the Fog will be able to meet the requirements
 of several applications that the traditional cloud is not able to accomplish. The most notable case
@@ -148,8 +188,8 @@ that the higher is the tier, the geographical coverage is wider and the time sca
 The global coverage is given by the Cloud, which acts as a central repository for the persistent data
 and that is used to perform business analytics.
 
-\subsection{RFID Middleware}
-\label{sub:rfid_middleware}
+\section{Internet of Things stack example: EPC Framework}
+\label{sec:iot_stack}
 The \gls{RFID} middleware is the component of a \gls{RFID} system that sits between the low level
 components - e.g. readers and tags - and the business client application - e.g. \gls{ERP} systems.
 The next paragraphs describes the EPCglobal, a framework that provides standardized interfaces that
@@ -157,8 +197,8 @@ isolates hardware vendors from business applications, and Fosstrak, a open-sourc
 middleware platform that implements the GS1 \gls{EPC} Network standards.
 
 % GS1 EPC Network
-\subparagraph{GS1 EPCglobal Architecture}
-\label{subp:epc_network}
+\subsection{GS1 EPCglobal Architecture}
+\label{subs:epc_network}
 GS1\footnote{\url{http://www.gs1.org}} is an organization that is responsible for the development and maintenance of standards for
 supply chain. One of the standards developed by GS1 is the \gls{EPC}, which is an unique serial identifier
 for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{\url{http://www.gs1.org/epcglobal}} created
@@ -247,59 +287,3 @@ The Fosstrak platform is composed of three modules that implements the correspon
   Furthermore, the module provides two EPC Network-conformant interfaces to a relational database
   (currently MySQL).
 \end{itemize}
-
-% Containers
-\subsection{Containers}
-\label{sub:containers}
-Containers are a virtualization technique that is performed at the \gls{OS} level, different of
-hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at the hardware-level.
-In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
-Although the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
-an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
-operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
-benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
-\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
-
-\subsubsection{Docker Platform}
-\label{subs:docker_platform}
-Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
-a lightweight container. Docker is based on \gls{LXC}, which are hardware-agnostic and platform-agnostic,
-meaning that these containers can run anywhere\footnote{Initially, Docker required that the physical
-machine where the containers will be created is running a Linux kernel. Currently, Microsoft
-launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
-perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
-benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
-a public repository that stores Docker images that are used to create the containers.
-
-% Configuration Management Tools
-\subsection{Configuration Management Tools}
-\label{sub:cm_tools}
-\gls{CM} tools are software management tools that allows to automate and specify the deployment of an
-application. Usually, users describes the system resources and their desired state and the \gls{CM}
-tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows to automate the
-provisioning of physical and virtual machines, perform dependency management of software components
-and to perform the automation of management tasks.\\
-
-Currently, there are several solutions to perform configuration management of software, where the
-most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\url{https://puppetlabs.com/}},
-Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
-between these tools is that some of the them are more oriented to developers, which is the case of Chef and
-Puppet that requires some programming experience to be used, while others are more oriented to system
-administrators, which is the case of Ansible and Salt.
-
-% Chef
-\subsubsection{Chef}
-\label{subs:chef}
-Chef is a configuration management tool that allows to describe the infrastructure as code.
-In that way it is possible to automate how the infrastructure is built, deployed and managed.
-Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
-data - and the Chef Client - that is installed in each server, \gls{VM} or container, i.e, the nodes that
-are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
-network, and if anything on the node is out of date, the client update its state in order to be
-consistent with the latest policy.\\
-
-The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
-dynamically provision and deprovision the application infrastructure on demand to keep up with
-peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
-across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google Compute
-Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
