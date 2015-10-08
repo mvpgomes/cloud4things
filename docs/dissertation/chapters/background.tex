@@ -4,7 +4,7 @@
 \label{chapter:background}
 This chapter presents the background necessary to understand the area of the problem to be solved.
 First section reviews the relevant related work to solve the challenges of converging the Internet
-of Things and the Utility Computing. The following sections presents a description of the concepts
+of Things and Utility Computing. The following sections present a description of the concepts
 that composes the basis of our work.
 
 % Cloud computing concepts and tools
@@ -73,9 +73,9 @@ Since that data storage and retrieval in the cloud had specific requirements, cl
 to implement their own solutions.
 
 \subparagraph{Google Big Table, Facebook Cassandra and  Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
-\cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that has the ability to horizontally scale - i.e,
-distribute both data and load of simple operations through many servers - but it has a weaker concurrency model
-than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
+\cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that have the ability to horizontally scale - i.e,
+distribute both data and load of simple operations through many servers - but it has a weaker consistency
+model than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
 
 \subparagraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
 performance predictable key-value stores, that provides many of the benefits of using a traditional
@@ -85,11 +85,11 @@ maintaining the low latency guarantees on application performance that come from
 key-value store.\\
 
 Recently, some progress has been reached as regards scalable storage for \gls{RDBMS} systems. Although most
-of the works still are in development, it is possible to highlight some solutions that are in a more
+of the works are still in development, it is possible to highlight some solutions that are in a more
 mature state.
 
 \subparagraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
-Compared with the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
+Compared with the basic MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
 distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
 features such as failover, node recovery, synchronous data replication and no single point of failure.
 MySQL Cluster seesm to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
@@ -132,10 +132,10 @@ a public repository that stores Docker images that are used to create the contai
 \subsection{Configuration Management Tools}
 \label{sub:cm_tools}
 \gls{CM} tools are software management tools that allows to automate and specify the deployment of an
-application. Usually, users describes the system resources and their desired state and the \gls{CM}
-tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows to automate the
-provisioning of physical and virtual machines, perform dependency management of software components
-and to perform the automation of management tasks.\\
+application. Usually, users describe the system resources and their desired state and the \gls{CM}
+tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows the automation
+of the provisioning of physical and virtual machines, perform dependency management of software
+components and to perform the automation of management tasks.\\
 
 Currently, there are several solutions to perform configuration management of software, where the
 most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\url{https://puppetlabs.com/}},
@@ -155,21 +155,22 @@ are managed with Chef. The Chef client periodically pulls Chef server latest pol
 network, and if anything on the node is out of date, the client update its state in order to be
 consistent with the latest policy.\\
 
-The tool was built from the ground with the cloud infrastructure in mind. With Chef, is possible to
-dynamically provision and deprovision the application infrastructure on demand to keep up with
-peaks in usage and track. For instance, \textit{knife} has a plugin for provisioning cloud resources
-across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google Compute
-Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
+The tool was built from the ground with up the cloud infrastructure in mind. With Chef, it is possible
+to dynamically provision and deprovision the application infrastructure on demand to keep up with
+peaks in usage and track. For instance, the \textit{knife} command has a plugin for provisioning cloud
+resources across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google
+Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
 
 % Fog Computing
 \section{Fog computing for low latency responses}
 \label{sec:fog_computing}
-The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``Edge
-of the Network''. By extending the cloud close to the ground, the Fog will be able to meet the requirements
-of several applications that the traditional cloud is not able to accomplish. The most notable case
-is the Internet of Things, that requires mobility support, geo-distribution in addition to location
-awareness and low latency. The Fog achieves that by virtualizing the computing, storage and network
-services between end devices and the traditional data centers in the cloud.\\
+The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``edge
+of the Network''. By bringing the cloud close to the ground - hence the fog analogy - the Fog will be
+able to meet the requirements of several applications that the traditional clouds are not able to
+accomplish. The most notable case is the Internet of Things, that requires mobility support,
+geo-distribution in addition to location awareness and low latency. The Fog aims to achieve that by
+virtualizing the computing, storage and network services between end devices and the
+traditional data centers in the cloud.\\
 
 % Fog Computing Infrastructure
 \begin{figure}[ht!]
@@ -179,17 +180,17 @@ services between end devices and the traditional data centers in the cloud.\\
   \label{fig:fog_architecture}
 \end{figure}
 
-Figure~\ref{fig:fog_architecture} presents the architecture of the Fog Computing platform.
-The distributed infrastructure of the Fog is composed of heterogeneous resources that must be managed
-in a distributed way. The infrastructure comprising of several players, covering from data centers,
-core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors} is
-the lowest layer of the Fog and it is responsible to perform \gls{M2M} interaction. It collects and
-process the data from the sensors, issues controls to the actuators and also filters the data that
-is locally consumed and send the rest to the higher layers. The \textit{Multi-Service Edge} and
-\textit{Core} layers are responsible to perform visualization and reporting - e.g. \gls{H2M} interaction -
+Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
+in Figure~\cite{bonomi2012fog} the distributed infrastructure of the Fog is composed of heterogeneous
+resources that must be managed in a distributed way: the infrastructure comprising of several players,
+covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
+is the lowest layer of the Fog and it is responsible to perform \gls{M2M} interaction. It collects and
+process the data from the sensors, issues commands to the actuators and also filters the data that
+is locally consumed and sent to the higher layers. The \textit{Multi-Service Edge} and \textit{Core}
+layers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
 as well to deal with systems and processes (\gls{M2M}).\\
 
-Since that interaction between the different layers can range from seconds - e.g. low-latency real-time
+Since the interaction time between the different layers can range from seconds - e.g. low-latency real-time
 analytics - to days - transactional analytics - the Fog must support several types of storage, from
 ephemeral storage at the lowest layers to semi-permanent at the highest layer. It is important to point
 that the higher is the tier, the geographical coverage is wider and the time scale is larger \cite{bonomi2014fog}.
@@ -231,13 +232,13 @@ context of our work, the most relevant components of the framework architecture 
 \begin{itemize}
   % Reader Interface
   \item \textit{Reader Interface} provides the interfaces that must be implemented by the \gls{RFID} readers.
-  The \gls{LLRP} standard provides interfaces that allows to control all the aspects of \gls{RFID}
+  The \gls{LLRP} standard provides interfaces that allows the control of all the aspects of \gls{RFID}
   reader operation.
   % Filtering & Collection
   \item \textit{Filtering \& Collection} is the module that coordinates the \gls{RFID} readers that are in the
-  same physical space and also abstracts the readers from the upper layers. It allows to execute read
-  and write operations on tags. Furthermore, it is responsible to filter, aggregate and grouping the
-  raw tag data when requested.
+  same physical space and also abstracts the readers from the upper layers. It allows the execution of
+  read and write operations on tags. Furthermore, it is responsible for filtering, aggregating and
+  grouping the raw tag data when requested.
   % Filtering & Collection Interface
   \item \textit{\gls{ALE} Interface} defines the control and delivery of filtered and collected data from the
   Filtering \&  Collection module to the \gls{EPCIS} Capturing Application. The \glspl{ALE} are a selection of
@@ -286,12 +287,12 @@ The Fosstrak platform is composed of three modules that implements the correspon
   transform the uninterpreted events received on the \textit{ECReports} into meaningful business events.
   Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{\url{http://www.drools.org/}}
   engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
-  Unfortunately, the rules are static and ones defined they can not be updated in runtime if needed.
+  Unfortunately, the rules are static and once defined they can not be updated in runtime.
   % EPCIS Repository
   \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository, which means that
   all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. This module
   provides persistence for \gls{EPCIS} events. To store new events the module provides the
-  \textit{capture interface} and to retrieve historical events is provided the \textit{query interface}.
+  \textit{capture interface} and the \textit{query interface} to retrieve historical events is provided.
   Furthermore, the module provides two EPC Network-conformant interfaces to a relational database
   (currently MySQL).
 \end{itemize}
