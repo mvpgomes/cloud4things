@@ -19,10 +19,10 @@ smart warehouse based on the fog and cloud deployment approaches.
 % Provisioning
 \section{Smart Place Provisioning}
 \label{sec:sol_provisioning}
-In this section we propose a mechanism that automates the provisioning of software for \gls{IoT} applications
-in the cloud. Our solution relies on configuration management tools that leverage existing software
-stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture for the proposed
-mechanism.\\
+In this section we propose a mechanism that automates the provisioning of software for smart place
+applications in the cloud. Our solution relies on configuration management tools that leverage
+existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture
+for the proposed mechanism.\\
 
 % Provisioning mechanism conceptual architecture
 \begin{figure}[ht!]
@@ -32,8 +32,13 @@ mechanism.\\
   \label{fig:provisioning_generic_architecture}
 \end{figure}
 
-In the proposed architecture, the provisioning policies and software images of a smart place are
-defined and configured in a development environment and then the orchestrator uploads them to its respective
+In the proposed architecture, the provisioning of a smart place is based on provisioning policies and
+software images that are defined and configured in a development environment. The provisioning policies
+allow to define which components of software must be provisioned in a given instance, configure
+management tasks such as to trigger a notification when a resource state changes. The software images
+contains all the software components required to deploy the application.\\
+
+After defined and configured the provisioning policies the orchestrator uploads them to its respective
 remote repositories (CM Server and VM Image Repository). When the provisioning request is performed -
 through a configuration management interface provided by the Orchestrator - the configuration management
 client (\gls{CM} Client) in the cloud server pulls the polices from the configuration management server
@@ -43,20 +48,23 @@ images from a central repository and then performs the provisioning and configur
 After provisioning the infrastructure, the CM client periodically polls the CM server in order to
 determine if its current state is consistent with the most recent policy.
 
-
 % Smart Warehouse Deployment
 \section{Smart Warehouse Deployment}
 \label{sec:sol_smart_warehouse_deployment}
-As described in Section \ref{sub:domain}, our smart warehouse is a system composed of smart objects
-that can be identified by readers and sensors that are deployed in the place. In traditional solutions,
-the application is provisioned in a local infrastructure. Although such approach guarantees that
-the low-latency requirements are meet, this solution comes with several downsides - such as the
-low scalability, infrastructure and maintenance costs - that can be a barrier for these applications.\\
+Our smart place is an automated warehouse where automated vehicles transport tagged objects that can
+be identified by readers and sensors that are deployed in the place, as described in Section~\ref{sub:domain}.
+In traditional solutions, the application is provisioned in a local infrastructure. Although such
+approach guarantees that the low-latency requirements are meet, this solution comes with several
+downsides - such as the low scalability, infrastructure and maintenance costs - that can be a barrier
+for these applications.\\
 
-Leveraging the infrastructure required to provisioning the \gls{IoT} applications to the cloud
-guarantees that the bottlenecks of traditional solutions are solved. However, we also need
-to guarantee that the latency requirements of these applications are fulfilled. The following sections
-describes the approaches to deploy the application in the cloud and to automate their provisioning.
+Leveraging the infrastructure required to provisioning the smart place applications to the cloud
+guarantees that the bottlenecks of traditional solutions are solved. However, we also need to
+guarantee that the latency requirements of these applications are fulfilled. The cloud and fog concepts
+give us more flexibility to perform the deployment of smart place applications, which allow us to
+provisioning the application modules in a more distributed way. The following sections describes
+the deployment approaches based in the cloud and fog.
+
 
 % Cloud approach
 \subsection{Cloud Deployment}
