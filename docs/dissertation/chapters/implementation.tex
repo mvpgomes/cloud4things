@@ -39,11 +39,11 @@ platform.
   \label{fig:implementation_cloud_architecture}
 \end{figure}
 
-Figure~\ref{fig:implementation_cloud_architecture} presents the technological architecture for the cloud
-approach. The \gls{RFID} middleware is provisioned in the cloud in a single virtual machine. In the
+The \gls{RFID} middleware is provisioned in the cloud in a single virtual machine. In the
 Fosstrak implementation the \gls{FCServer}, \gls{EPCIS} repository and the Capture application
 requires an Apache servlet container to deploy and run the web applications. The \gls{EPCIS}
-repository is connected to a MySQL database that stores the event data.\\
+repository is connected to a MySQL database that stores the event data. The technological architecture
+for the cloud approach is presented in Figure~\ref{fig:implementation_cloud_architecture}.\\
 
 The smart warehouse is connected to the Fosstrak middleware through a Wi-Fi connection. The \gls{FCServer}
 module periodically connect the readers to collect and process the events that were generated in the
@@ -61,14 +61,15 @@ warehouse.
   \label{fig:implementation_fog_architecture}
 \end{figure}
 
-Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for the fog
-approach. The \gls{RFID} middleware is provisioned across the fog and the cloud. At the cloud,
+The \gls{RFID} middleware is provisioned across the fog and the cloud. At the cloud,
 all the software components are provisioned in a single \gls{VM}. The \gls{EPCIS} repository is deployed
 and running on top of an Apache Tomcat servlet instance. The repository is connected to a MySQL
 database, which stores the event data. In the current implementation the fog was built with a traditional
 \gls{VM}. The \gls{FCServer} and the Capture application are deployed and running on top of a single
 Tomcat servlet instance. The Capture application sent the events collected by the \gls{FCServer} to
-the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.\\
+the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.
+Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for the fog
+approach.\\
 
 The connection between the smart warehouse and the fog is performed through a Wi-Fi connection, as
 well the connection between the fog and the cloud.
