@@ -45,9 +45,8 @@ requires an Apache servlet container to deploy and run the web applications. The
 repository is connected to a MySQL database that stores the event data. The technological architecture
 for the cloud approach is presented in Figure~\ref{fig:implementation_cloud_architecture}.\\
 
-The smart warehouse is connected to the Fosstrak middleware through a Wi-Fi connection. The \gls{FCServer}
-module periodically connect the readers to collect and process the events that were generated in the
-warehouse.
+The smart warehouse can be connected to the cloud through a physical (e.g. \gls{ADSL} or Fiber-optic)
+to a wireless connection (e.g. Wi-Fi, 3G or \gls{LTE}).
 
 % Fog approach
 \subsection{Fog Deployment}
@@ -71,8 +70,9 @@ the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - 
 Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for the fog
 approach.\\
 
-The connection between the smart warehouse and the fog is performed through a Wi-Fi connection, as
-well the connection between the fog and the cloud.
+Both the smart warehouse as the fog can be connected respectively to the fog and cloud through several
+types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic) to a wireless connection
+(e.g. Wi-Fi, 3G or \gls{LTE}).
 
 \section{Provisioning}
 \label{sec:provisioning}
@@ -101,7 +101,7 @@ solution these configuration recipes describe that our nodes must have a set of 
 running on it. The Chef client pulls the Docker images from the remote repository, build the containers
 based on those images and finally applies the configuration that is associated to each container.\\
 
-We decide to chose Chef instead of its strongest competitors - i.e. Puppet and Ansible - for several
+We decide to chose Chef instead of its competitors - i.e. Puppet and Ansible - for several
 reasons, where the main one is \textit{knife}. \textit{Knife} is very powerful and allow us to
 interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
 apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
