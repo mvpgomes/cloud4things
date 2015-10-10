@@ -16,6 +16,7 @@
 \usepackage[acronym, toc]{glossaries}
 \usepackage{subcaption, floatrow}
 \usepackage{adjustbox, pdflscape, booktabs}
+\usepackage{minted}
 
 % Built the glossary when the main file is built.
 \makeglossaries
@@ -31,6 +32,8 @@
 \newcommand {\abstractEnglishPageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractEnglishPage}}
 % Abstract-pt page numbering
 \newcommand {\abstractPortuguesePageNumber} {\thispagestyle{plain}\setcounter{page}{\abstractPortuguesePage}}
+% List of Source Codes
+\renewcommand \listoflistingscaption{List of source codes}
 % Section numbering depth
 \setcounter{secnumdepth}{3}
 % Table of contents depth
@@ -86,6 +89,11 @@
 % List of figures
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+\NewPage
+
+% List of source code
+\addcontentsline{toc}{chapter}{\listoflistingscaption}
+\listoflistings
 \NewPage
 
 % List of acronyms

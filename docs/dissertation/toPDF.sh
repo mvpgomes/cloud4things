@@ -1,7 +1,7 @@
 BASENAME=dissertation
 NAME=dissertation.tex
-pdflatex $NAME
+pdflatex -shell-escape $NAME
 bibtex $BASENAME
 makeglossaries $BASENAME
-pdflatex $NAME
-pdflatex $NAME
+pdflatex -shell-escape $NAME
+pdflatex -shell-escape $NAME
