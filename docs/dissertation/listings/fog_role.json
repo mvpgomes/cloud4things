@@ -1,0 +1,8 @@
+{
+  "name" : "fog-server",
+  "run_list" : [
+    "recipe[docker]",
+    "recipe[docker::fosstrak-capture]",
+    "recipe[docker::fosstrak-ale]"
+  ]
+}

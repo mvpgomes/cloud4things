@@ -1,0 +1,10 @@
+{
+  "name" : "fosstrak-server",
+  "run_list" : [
+    "recipe[docker]",
+    "recipe[docker::fosstrak-db]",
+    "recipe[docker::fosstrak-epcis]"
+    "recipe[docker::fosstrak-capture]",
+    "recipe[docker::fosstrak-ale]",
+  ]
+}
