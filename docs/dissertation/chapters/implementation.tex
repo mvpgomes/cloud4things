@@ -127,9 +127,9 @@ to define what are the nodes that includes the database, web server, etc. The ro
 the smart place application topology.\\
 
 The roles that describe the smart warehouse application topology were defined based in the
-technological architecture of smart places presented in Section~\ref{sec:impl_smart_place} for the
-cloud and fog concepts. In the next sections, we describe with more detail the roles that were
-defined to provisioning the smart place infrastructure.
+technological architecture of smart places presented for the cloud and fog concepts, in Section~\ref{sec:impl_smart_place}.
+In the next sections, we describe with more detail the roles that were defined to provisioning the
+smart place infrastructure.
 
 % Cloud Provisioning Roles
 \subsubsection{Cloud}
@@ -244,8 +244,12 @@ are published in the Docker Hub repository to later be used to create the contai
   \label{fig:impl_containers}
 \end{figure}
 
-By default each container runs a process that is isolated from the other processes that are executed
-in the same environment. In order to connect the different modules of the Fosstrak, our containers are
+By default each container runs a process that is isolated from the other processes that shares the same
+environment (kernel). Compared with the isolation provided by traditional \glspl{VM} which are fully
+isolated, the isolation provided by Docker containers is less secure, since that if a container has
+its security broken, it is possible that the other containers and the host may be compromised.\\
+
+In order to connect the different modules of the Fosstrak, our containers are
 linked through the \textit{linking system} provided by Docker. This mechanism creates a secure tunnel
 between the containers, allowing the recipient container to access selected data about the source container.
 For instance, our \gls{EPCIS} container - which is linked to the MySQL database container - is able to
