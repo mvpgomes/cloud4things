@@ -252,6 +252,9 @@ For instance, our \gls{EPCIS} container - which is linked to the MySQL database 
 access information about the MySQL container.\\
 
 The reasons that we chose Docker containers instead of traditional \glspl{VM} is that containers
-require less disk space and I/O when compared with traditional \gls{VM} images \cite{merkel2014docker}.
-Furthermore, Docker containers are portable, which means that they can be moved across different
-infrastructures depending on how the application scales.
+require less disk space and read/write (I/O) operations in the disk when compared with traditional
+\gls{VM} images \cite{merkel2014docker}. Furthermore, Docker containers are easier to port to another
+infrastructure when compared with traditional \glspl{VM} because when a container requires that the
+application and all of its dependencies are ported together while the \glspl{VM} require that the
+entire application, the guest operating system, the binaries and libraries are ported, which can be
+several \glspl{GB} in size.
