@@ -5,48 +5,14 @@
 In the present work our main goal is to determine if a cloud-based solution can meet the
 requirements of RFID-based smart place applications, as mentioned in Section~\ref{section:objectives}.
 To achieve our goals we will follow two approaches to deploy the smart warehouse application based
-in the cloud and fog concepts.\\
+in the cloud and fog concepts. In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a
+conceptual architecture of the smart warehouse based on the fog and cloud deployment approaches.\\
 
 Usually, provisioning the components of a smart place application is a operation that is manually executed and
 requires expertise since that the software components must be correctly installed and configured.
 Furthermore, every time that a new smart place is deployed these operations must be repeated. With
 that in mind, in order to make the deployment of smart places more efficient in Section~\ref{sec:sol_provisioning}
 we propose a mechanism that automates the provision of smart places application in the cloud.\\
-
-In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a conceptual architecture of the
-smart warehouse based on the fog and cloud deployment approaches.
-
-% Provisioning
-\section{Smart Place Provisioning}
-\label{sec:sol_provisioning}
-In this section we propose a mechanism that automates the provisioning of software for smart place
-applications in the cloud. Our solution relies on configuration management tools that leverage
-existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture
-for the proposed mechanism.\\
-
-% Provisioning mechanism conceptual architecture
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[width=.7\textwidth]{images/c4t-generic-solution.pdf}
-  \caption[Provisioning mechanism conceptual architecture.]{Provisioning mechanism conceptual architecture.}
-  \label{fig:provisioning_generic_architecture}
-\end{figure}
-
-In the proposed architecture, the provisioning of a smart place is based on provisioning policies and
-software images that are defined and configured in a development environment. The provisioning policies
-allow to define which components of software must be provisioned in a given instance, configure
-management tasks such as to trigger a notification when a resource state changes. The software images
-contains all the software components required to deploy the application.\\
-
-After defined and configured the provisioning policies the orchestrator uploads them to its respective
-remote repositories (CM Server and VM Image Repository). When the provisioning request is performed -
-through a configuration management interface provided by the Orchestrator - the configuration management
-client (\gls{CM} Client) in the cloud server pulls the polices from the configuration management server
-(\gls{CM} Server), a centralized server that is responsible to maintain a consistent state of the
-provisioned nodes in the cloud. In order to enforce the polices, the \gls{CM} Client pulls the software
-images from a central repository and then performs the provisioning and configuration of the software.
-After provisioning the infrastructure, the CM client periodically polls the CM server in order to
-determine if its current state is consistent with the most recent policy.
 
 % Smart Warehouse Deployment
 \section{Smart Warehouse Deployment}
@@ -64,7 +30,6 @@ guarantee that the latency requirements of these applications are fulfilled. The
 give us more flexibility to perform the deployment of smart place applications, which allow us to
 provisioning the application modules in a more distributed way. The following sections describes
 the deployment approaches based in the cloud and fog.
-
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -112,6 +77,38 @@ the cloud are provisioned in the fog.\\
 
 Both the smart warehouse as the fog can be connected respectively to the fog and cloud through
 several types of connection, from a physical connection to a wireless connection.
+
+% Provisioning
+\section{Smart Place Provisioning}
+\label{sec:sol_provisioning}
+In this section we propose a mechanism that automates the provisioning of software for smart place
+applications in the cloud. Our solution relies on configuration management tools that leverage
+existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture
+for the proposed mechanism.\\
+
+% Provisioning mechanism conceptual architecture
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=.7\textwidth]{images/c4t-generic-solution.pdf}
+  \caption[Provisioning mechanism conceptual architecture.]{Provisioning mechanism conceptual architecture.}
+  \label{fig:provisioning_generic_architecture}
+\end{figure}
+
+In the proposed architecture, the provisioning of a smart place is based on provisioning policies and
+software images that are defined and configured in a development environment. The provisioning policies
+allow to define which components of software must be provisioned in a given instance, configure
+management tasks such as to trigger a notification when a resource state changes. The software images
+contains all the software components required to deploy the application.\\
+
+After defined and configured the provisioning policies the orchestrator uploads them to its respective
+remote repositories (CM Server and VM Image Repository). When the provisioning request is performed -
+through a configuration management interface provided by the Orchestrator - the configuration management
+client (\gls{CM} Client) in the cloud server pulls the polices from the configuration management server
+(\gls{CM} Server), a centralized server that is responsible to maintain a consistent state of the
+provisioned nodes in the cloud. In order to enforce the polices, the \gls{CM} Client pulls the software
+images from a central repository and then performs the provisioning and configuration of the software.
+After provisioning the infrastructure, the CM client periodically polls the CM server in order to
+determine if its current state is consistent with the most recent policy.
 
 % Summary
 \section{Summary}
