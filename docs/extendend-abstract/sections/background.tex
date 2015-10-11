@@ -1,104 +1,201 @@
-%!TEX root = ../dissertation.tex
+%!TEX root = ../article.tex
 
-% Background
 \section{Background}
-\label{sec:background}
+\label{sub:background}
+This chapter presents the background necessary to understand the area of the problem to be solved.
+First section reviews the relevant related work to solve the challenges of converging the Internet
+of Things and Utility Computing. The following sections present a description of the concepts
+that composes the basis of our work.
 
-% Service Delivery
-\subsection{Related Work}
-\label{sub:related work}
-As referred in Section~\ref{section:motivation}, current \gls{IoT} solutions are delivered in a physical
-and isolated manner, which makes its service delivery model an inefficient and unscalable process.
-In order to turn the service delivery of \gls{IoT} solutions more efficient and scalable, cloud service
-delivery models are being developed based on the existing layers of the cloud architecture \cite{zhang2010cloud}:
-\textit{a) \gls{IaaS}} refers to the provisioning of infrastructure resources on-demand - e.g. \glspl{VM},
-storage and network. \textit{b) \gls{PaaS}} refers to providing platform layer resources such as operating
-system support and software development frameworks. \textit{c) \gls{SaaS}} refers to providing on demand
-application over the Internet.
+% Cloud computing concepts and tools
+\subsection{Cloud computing concepts and tools}
+\label{subs:cloud_concepts_tools}
+As mentioned in Section~\ref{section:challenges}, the leverage of part of the smart place infrastructure
+to the cloud brought some challenges that must addressed. In the next sections, we present the most
+relevant work regarding to solve the smart place deployment in the cloud and data storage performance.
+Furthermore, we present a brief description of Docker, a lightweight virtualization platform in
+alternative to traditional Virtual Machines. Finally we describe Chef, an configuration management tool
+that automates the provision of smart applications in the cloud.
+
+% Smart Place Deployment
+\subsection{Smart Place Deployment}
+\label{sub:smart_place_deployment}
+Deployment of smart places usually was performed in a physical and isolated manner. By leveraging the
+infrastructure of smart places to the cloud, new provisioning approaches have to be adopted. Currently,
+cloud service delivery models are being developed based on the existing layers of the cloud
+architecture \cite{zhang2010cloud}:
+
+% Cloud architecture layers
+\begin{itemize}
+  % IaaS
+  \item\textit{\gls{IaaS}} refers to the provisioning of infrastructure resources on-demand - e.g.
+  \glspl{VM}, storage and network.
+  % PaaS
+  \item\textit{\gls{PaaS}} refers to providing platform layer resources such as operating system support
+  and software development frameworks.
+  % SaaS
+  \item\textit{\gls{SaaS}} refers to providing on demand application over the Internet.
+\end{itemize}
 
 % Soldatos
-\paragraph{Soldatos} et al. \cite{soldatos2012convergence} presented the idea of converging the IoT
+Soldatos et al. \cite{soldatos2012convergence} presented the idea of converging the IoT
 and the utility computing in the cloud. The proposed architecture is the core concept of the OpenIoT
-Project\footnote{\url{http://openiot.eu}}, and is based on CoAP \cite{shelby2014constrained} and linked data.
-The cloud is used at infrastructure level, which allows to measure the utility of the services provided
-by inter-connected objects.
-
+Project\footnote{\url{http://openiot.eu}}. The cloud is used at \gls{IaaS} level, which allows
+to measure the utility of the services provided by inter-connected objects.
 % Distefano
-\paragraph{Distefano} et al. \cite{distefano2012enabling} proposed a conceptual architecture by
+Distefano et al. \cite{distefano2012enabling} proposed a conceptual architecture by
 mapping various elements in both cloud and IoT to the three layers of the cloud architecture (\gls{IaaS},
 \gls{PaaS} and \gls{SaaS}). In this proposal IoT resources are provided voluntarily by their owners,
 while management functions - such as node management and policy enforcement - are viewed as peer
 functions of cloud infrastructure management. A \gls{PaaS} module is responsible to mashup IoT and
 cloud infrastructure (\gls{IaaS}) resources for applications, which are delivered to the clients
 through \gls{SaaS}.
-
 % CloudThings
-\paragraph{CloudThings} \cite{zhou2013cloudthings} is an architecture that uses a common
-approach to integrate Internet of Things and Cloud Computing. The proposed architecture is an online
-platform which accommodates \gls{IaaS}, \gls{PaaS}, \gls{SaaS} and allows system integrators and
-solution providers to leverage the complete application infrastructure for developing, operating
-and composing applications and services.
-
+CloudThings \cite{zhou2013cloudthings} is an architecture that uses the cloud platform layers to
+integrate Internet of Things and Cloud Computing. The proposed architecture is an online platform
+which accommodates \gls{IaaS}, \gls{PaaS}, \gls{SaaS} and allows system integrators and solution
+providers to leverage the complete application infrastructure for developing, operating and composing
+applications and services.
 % IoT PaaS
-\paragraph{Li} et. al \cite{li2013efficient} proposed IoT PaaS, a cloud platform that supports
+Li et. al \cite{li2013efficient} proposed IoT PaaS, a cloud platform that supports
 scalable IoT service delivery. Solution providers are able to deliver new solutions by leveraging
 computing resources and platform services - domain mediation, application context management, etc.
 - to the cloud. The proposed architecture aims to enable virtual vertical service delivery, for that
 it has a multi-tenant nature which is designed to help at the isolation of the environments of
 different solutions.\\
 
-Although great progress was achieved regarding the improvement of service delivery for \gls{IoT}
+Although great progress was achieved regarding the improvement for the deployment of \gls{IoT}
 solutions, most of the work still are in a conceptual stage. What is certain is that cloud service
 delivery models will be the basis for the service delivery models of \gls{IoT} solutions.
 
 % Data Storage Performance
 \subsection{Data Storage Performace}
 \label{sub:data_storage}
+Smart places generate a large amount of data. The cloud must be able to store and process that data
+in a efficient manner. Currently, there are several alternatives to perform data storage in the cloud,
+from key-value stores to \gls{RDBMS} clusters. In the next sections, we will summarize the most
+relevant work regarding these alternatives.
+
+% Key-value Stores
+\subsubsection{Key-value Stores}
+\label{subs:kv-stores}
 Since that data storage and retrieval in the cloud had specific requirements, cloud providers started
-to implement their own solutions.
+to implement their own solutions.\\
 
-\paragraph{Google Big Table, Facebook Cassandra and  Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
-\cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that has the ability to horizontally scale - i.e,
-distribute both data and load of simple operations through many servers - but it has a weaker concurrency model
-than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.
+\textit{Google Big Table}, \textit{Facebook Cassandra} and \textit{Amazon Dynamo} \cite{chang2008bigtable} \cite{lakshman2010cassandra}
+\cite{decandia2007dynamo} are key-value stores - \gls{NoSQL} databases - that have the ability to horizontally scale - i.e,
+distribute both data and load of simple operations through many servers - but it has a weaker consistency
+model than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011scalable}.\\
 
-\paragraph{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
+\textit{\gls{PIQL}} \cite{armbrust2010piql} is a SQL-like API built to run on top of existing
 performance predictable key-value stores, that provides many of the benefits of using a traditional
 \gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic data
 parallelism, physical data independence and automatic index selection and maintenance, all while
 maintaining the low latency guarantees on application performance that come from the underlying
-key-value store.\\
+key-value store.
 
-Recently, some progress has been reached as regards scalable storage for \gls{RDBMS} systems. Although most
-of the works still are in development, it is possible to highlight some solutions that are in a more
-mature state.
+% RDBMS Clusters
+\subsubsection{Relational Database Clusters}
+\label{subs:rdbms_clusters}
+\glsdesc{RDBMS} are database management systems that store data in form of related tables. Unlike
+the key-value stores, \gls{RDBMS} have a complete pre-defined schema, a SQL interface and ACID
+transactions. Recently, some progress has been reached as regards the performance and scalability of
+those systems. Although most of the works still are in development, it is possible to highlight some
+solutions that are in a more mature state.\\
 
-\paragraph{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
-Compared with the MySQL implementation it works by replacing the InnoDB engine with the NDB - a proprietary
-distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing architecture and includes
-features such as failover, node recovery, synchronous data replication and no single point of failure.
-MySQL Cluster seesm to be the solution that scales to more nodes than other \gls{RDBMS} - 48 is the limit.
-However, it was reported that after scaling up to a few dozen nodes it starts to running into
-bottlenecks \cite{bunch2010evaluation}.
+\textit{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
+Compared with the basic MySQL implementation it works by replacing the InnoDB engine with the NDB - a
+proprietary distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing
+\footnote{Shared-nothing architecture share neither data on disk or data in memory between the nodes in the cluster.}
+architecture and includes features such as failover, node recovery, synchronous data replication and
+no single point of failure. MySQL Cluster seems to be the solution that scales to more nodes than
+other \gls{RDBMS} - 48 is the limit. However, it was reported that after scaling up to a few dozen
+nodes it starts to run with stability problems \cite{bunch2010evaluation}.\\
 
-\paragraph{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
-VoltDB assumes a multi-node cluster architecture where the tables are partitioned over multiple servers.
-Tables can be replicated over servers - e.g. for fast access to data - shards are always replicated -
-to recovery the data in case of a node crash - and database snapshots are supported. Currently some
-features still are missing - online schema changes are limited and asynchronous \gls{WAN} replication and
-recovery are not yet implemented - but in its current implementation VoltDB already presents some
-features that improves the performance of SQL execution. As result, the number of nodes that are
-needed to support a given application load can be reduced in a significant way.
+\textit{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
+VoltDB assumes a multi-node cluster architecture where the database tables are partitioned over
+multiple servers. To allow fast-acess of data tables can be replicated over servers. Data recovery is
+supported through the replication of table rows (shards) across the cluster. The current implementation also
+supports database snapshots. Currently some features still are missing, but in its current implementation
+VoltDB already presents some features that improves the performance of SQL execution. As result, the
+number of nodes that are needed to support a given application load can be reduced in a significant way.\\
+
+As shown there several solution to perform data storage in the cloud. Choose what is the best solution
+will depend of the application domain and its requirements.
+
+% Containers
+\subsection{Containers}
+\label{sub:containers}
+Containers are a virtualization technique that is performed at the \gls{OS} level, different of
+hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at the hardware-level.
+In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
+Although the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
+an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
+operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
+benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
+\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
+
+\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment that relies on Linux Kernel. \gls{LXC} are hardware-agnostic
+and platform-agnostic, and also provides features such as application isolation and multi-tenancy.\\
+
+\subsubsection{Docker Platform}
+\label{subs:docker_platform}
+Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
+a lightweight container. Since Docker containers are based on \gls{LXC}, it can run anywhere\footnote{Initially, Docker required that the physical
+machine where the containers will be created is running a Linux kernel. Currently, Microsoft
+launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
+perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
+benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
+a public repository that stores Docker images that are used to create the containers.
+
+% Configuration Management Tools
+\subsection{Configuration Management Tools}
+\label{sub:cm_tools}
+\gls{CM} tools are software management tools that allows to automate and specify the deployment of an
+application. Usually, users describe the system resources and their desired state and the \gls{CM}
+tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows the automation
+of the provisioning of physical and virtual machines, perform dependency management of software
+components and to perform the automation of management tasks.\\
+
+Currently, there are several solutions to perform configuration management of software, where the
+most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\url{https://puppetlabs.com/}},
+Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
+between these tools is that some of the them are more oriented to developers, which is the case of Chef and
+Puppet that requires some programming experience to be used, while others are more oriented to system
+administrators, which is the case of Ansible and Salt.
+
+In the present work, the provisioning of the smart place software stack will be automated through
+a \gls{CM} tool. Based in the previous experience with some of these tools - namely Chef and Puppet -
+we chose Chef as provisioning automation tool because it more easy to use for those with programming
+background and also provides some powerful features such as the command \textit{knife}.
+
+% Chef
+\subsubsection{Chef}
+\label{subs:chef}
+Chef is a configuration management tool that allows to describe the infrastructure as code.
+In that way it is possible to automate how the infrastructure is built, deployed and managed.
+Chef architecture is composed of the Chef Server - that stores the recipes and other configuration
+data - and the Chef Client - that is installed in each server, \gls{VM} or container, i.e, the nodes that
+are managed with Chef. The Chef client periodically pulls Chef server latest policy and state of the
+network, and if anything on the node is out of date, the client update its state in order to be
+consistent with the latest policy.\\
+
+The tool was built from the ground with up the cloud infrastructure in mind. With Chef, it is possible
+to dynamically provision and deprovision the application infrastructure on demand to keep up with
+peaks in usage and track. For instance, the \textit{knife} command has a plugin for provisioning cloud
+resources across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google
+Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
 
 % Fog Computing
-\subsection{Fog Computing}
-\label{sub:fog_computing}
-The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``Edge
-of the Network''. By extending the cloud close to the ground, the Fog will be able to meet the requirements
-of several applications that the traditional cloud is not able to accomplish. The most notable case
-is the Internet of Things, that requires mobility support, geo-distribution in addition to location
-awareness and low latency. The Fog achieves that by virtualizing the computing, storage and network
-services between end devices and the traditional data centers in the cloud.\\
+\section{Fog computing for low latency responses}
+\label{sec:fog_computing}
+The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``edge
+of the Network''. By bringing the cloud close to the ground - hence the fog analogy - the Fog will be
+able to meet the requirements of several applications that the traditional clouds are not able to
+accomplish. The most notable case is the Internet of Things, that requires mobility support,
+geo-distribution in addition to location awareness and low latency. The Fog aims to achieve that by
+virtualizing the computing, storage and network services between end devices and the
+traditional data centers in the cloud.\\
 
 % Fog Computing Infrastructure
 \begin{figure}[ht!]
@@ -108,39 +205,42 @@ services between end devices and the traditional data centers in the cloud.\\
   \label{fig:fog_architecture}
 \end{figure}
 
-Figure~\ref{fig:fog_architecture} presents the architecture of the Fog Computing platform.
-The distributed infrastructure of the Fog is composed of heterogeneous resources that must be managed
-in a distributed way. The infrastructure comprising of several players, covering from data centers,
-core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors} is
-the lowest layer of the Fog and it is responsible to perform \gls{M2M} interaction. It collects and
-process the data from the sensors, issues controls to the actuators and also filters the data that
-is locally consumed and send the rest to the higher layers. The \textit{Multi-Service Edge} and
-\textit{Core} layers are responsible to perform visualization and reporting - e.g. \gls{H2M} interaction -
+Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
+in Figure~\cite{bonomi2012fog} the distributed infrastructure of the Fog is composed of heterogeneous
+resources that must be managed in a distributed way: the infrastructure comprising of several players,
+covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
+is the lowest layer of the Fog and it is responsible to perform \gls{M2M} interaction. It collects and
+process the data from the sensors, issues commands to the actuators and also filters the data that
+is locally consumed and sent to the higher layers. The \textit{Multi-Service Edge} and \textit{Core}
+layers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
 as well to deal with systems and processes (\gls{M2M}).\\
 
-Since that interaction between the different layers can range from seconds - e.g. low-latency real-time
+Since the interaction time between the different layers can range from seconds - e.g. low-latency real-time
 analytics - to days - transactional analytics - the Fog must support several types of storage, from
 ephemeral storage at the lowest layers to semi-permanent at the highest layer. It is important to point
 that the higher is the tier, the geographical coverage is wider and the time scale is larger \cite{bonomi2014fog}.
 The global coverage is given by the Cloud, which acts as a central repository for the persistent data
 and that is used to perform business analytics.
 
-\subsection{RFID Middleware}
-\label{sub:rfid_middleware}
+\section{Internet of Things stack example: EPC Framework}
+\label{sec:iot_stack}
 The \gls{RFID} middleware is the component of a \gls{RFID} system that sits between the low level
-components - e.g. readers and tags - and the business client application - e.g. \gls{ERP} systems.\\
+components - e.g. readers and tags - and the business client application - e.g. \gls{ERP} systems.
+The next paragraphs describes the EPCglobal, a framework that provides standardized interfaces that
+isolates hardware vendors from business applications, and Fosstrak, a open-source \gls{RFID}
+middleware platform that implements the GS1 \gls{EPC} Network standards.
 
 % Fosstrak
-\subsubsection{Fosstrak Platform}
-\label{subs:fosstrak}
+\subsection{Fosstrak Platform}
+\label{sub:fosstrak}
 The Free and Open Source Software for Track and Trace (Fosstrak) is an EPCglobal Network compliant
 \gls{RFID} software platform that was developed by Floerkemeier et. al \cite{floerkemeier2007rfid}.
-Figure~\ref{fig:fosstrak_architecture} presents the architecture of the Fosstrak platform.
+Figure~\ref{fig:fosstrak_architecture} presents the architecture of the Fosstrak platform.\\
 
 % Fosstrak Architecture
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.4\textwidth]{./figures/fosstrak_architecture}
+  \includegraphics[width=.5\textwidth]{./figures/fosstrak_architecture}
   \caption[Fosstrak architecture.]{Fosstrak architecture.}
   \label{fig:fosstrak_architecture}
 \end{figure}
@@ -148,11 +248,28 @@ Figure~\ref{fig:fosstrak_architecture} presents the architecture of the Fosstrak
 The Fosstrak platform is composed of three modules that implements the corresponding roles in the
 \gls{EPC} Network: \textit{Reader Module}, \textit{Filtering and Collection Middleware Module} and
 \textit{EPCIS Module}. For our work the relevant modules of the platform are:
-% FCServer
-\textit{a) Filtering \& Collection Server} is the module responsible to filter and collect data
-from \gls{RFID} readers.
-% Capturing Application
-\textit{b) Capturing Application} is the module responsible to transform the uninterpreted events
-into meaningful business events.
-% EPCIS Repository
-\textit{c) EPCIS Repository} is the module that provides persistence for events.
+
+% Fosstrak Modules
+\begin{itemize}
+  % FCServer
+  \item \textit{Filtering \& Collection Server} is the module responsible to filter and collect data
+  from \gls{RFID} readers. To communicate with the readers, the module uses the \gls{LLRP} standard
+  for \gls{LLRP} compliant readers and uses the Fosstrak \gls{HAL} for unsupported readers. The
+  module internally abstracts the readers as LogicalReaders instances that are defined and configured
+  through a \textit{LRSpec} document, as defined by EPCglobal. Fosstrak also implements the
+  \textit{Event Cycle}, that is an interval of time during which tags are collected. The output of
+  an \textit{Event Cycle} is the \textit{ECReport} document that is sent to the Capturing Application.
+  % Capturing Application
+  \item \textit{Capturing Application} is part of the EPCIS module. This module is responsible to
+  transform the uninterpreted events received on the \textit{ECReports} into meaningful business events.
+  Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{\url{http://www.drools.org/}}
+  engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
+  Unfortunately, the rules are static and once defined they can not be updated in runtime.
+  % EPCIS Repository
+  \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository, which means that
+  all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. This module
+  provides persistence for \gls{EPCIS} events. To store new events the module provides the
+  \textit{capture interface} and the \textit{query interface} to retrieve historical events is provided.
+  Furthermore, the module provides two EPC Network-conformant interfaces to a relational database
+  (currently MySQL).
+\end{itemize}
