@@ -5,10 +5,10 @@
 In the present work our main goal is to determine if a cloud-based solution can meet the
 requirements of RFID-based smart place applications, as mentioned in Section~\ref{section:objectives}.
 To achieve our goals we will follow two approaches to deploy the smart warehouse application based
-in the cloud and fog concepts. In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a
-conceptual architecture of the smart warehouse based on the fog and cloud deployment approaches.\\
+in the cloud and fog. In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a
+conceptual architecture of the smart warehouse based on the fog and cloud concepts.\\
 
-Usually, provisioning the components of a smart place application is a operation that is manually executed and
+Usually, provisioning the components of a smart place application is an operation that is manually executed and
 requires expertise since that the software components must be correctly installed and configured.
 Furthermore, every time that a new smart place is deployed these operations must be repeated. With
 that in mind, in order to make the deployment of smart places more efficient in Section~\ref{sec:sol_provisioning}
@@ -28,8 +28,8 @@ Leveraging the infrastructure required to provisioning the smart place applicati
 guarantees that the bottlenecks of traditional solutions are solved. However, we also need to
 guarantee that the latency requirements of these applications are fulfilled. The cloud and fog concepts
 give us more flexibility to perform the deployment of smart place applications, which allow us to
-provisioning the application modules in a more distributed way. The following sections describes
-the deployment approaches based in the cloud and fog.
+provisioning the application modules in a more distributed way. The following sections describe
+the deployment approaches of smart place applications based in the cloud and fog.
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -100,7 +100,7 @@ allow to define which components of software must be provisioned in a given inst
 management tasks such as to trigger a notification when a resource state changes. The software images
 contains all the software components required to deploy the application.\\
 
-After defined and configured the provisioning policies the orchestrator uploads them to its respective
+After the provisioning policies were defined and configured, the Orchestrator uploads them to its respective
 remote repositories (CM Server and VM Image Repository). When the provisioning request is performed -
 through a configuration management interface provided by the Orchestrator - the configuration management
 client (\gls{CM} Client) in the cloud server pulls the polices from the configuration management server
@@ -115,10 +115,10 @@ determine if its current state is consistent with the most recent policy.
 \label{sec:sol_summary}
 In this chapter we proposed a solution to automate the deployment of smart place applications in the
 cloud. Our solution relies in configuration management tools that automate the provisioning of
-smart place applications software stack in the cloud instances. The provisioning is performed
-according policies that describe which software images must be installed in a given server. The cloud
-servers run a configuration management client that is responsible for pulling the software images that
-are located in a central  repository and enforce the provisioning policies. Furthermore, we proposed
-two deployment for smart place applications based in the cloud and fog concepts. These approaches will
-allow us to have more flexibility in the provisioning of smart place applications. That flexibility
-will allow to later compare the performance of both approaches.
+smart place software stack in the cloud instances. The provisioning is performed according policies
+that describe which software images must be installed in a given server. The cloud servers run a
+configuration management client that is responsible for pulling the software images that are located
+in a central repository and to enforce the provisioning policies. Furthermore, we proposed two deployment 
+for smart place applications based in the cloud and fog concepts. These approaches will allow us to
+have more flexibility in the provisioning of smart place applications. That flexibility will allow to
+later compare the performance of both approaches.
