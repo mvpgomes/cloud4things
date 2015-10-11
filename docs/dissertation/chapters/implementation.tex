@@ -2,8 +2,8 @@
 
 \chapter{Implementation}
 \label{chapter:implementation}
-This chapter describes the implementation details for the solution that was presented in the previous
-chapter. Here we describe the implementation and technological details for the provisioning mechanism.
+This chapter describes the implementation details for the solution that was presented in Chapter~\ref{chapter:solution}.
+Here we describe the implementation and technological details for the provisioning mechanism.
 Also, we describe the technological components of our smart warehouse for the deployment approaches
 based in the cloud and fog concepts.
 
@@ -21,11 +21,10 @@ as illustrated in Figure~\ref{fig:rfidapp_setup}.\\
   \label{fig:rfidapp_setup}
 \end{figure}
 
-The warehouse is composed of a robot transporting tagged products that is identified by \gls{RFID} readers
-that are deployed in the physical space. To monitoring the robot inside the warehouse, we decide to
-use Fosstrak as our \gls{RFID} middleware. In our implementation, the \gls{RFID} readers are emulated
-through the Rifidi Emulator, which uses the \gls{LLRP} protocol to communicate with the Fosstrak
-platform.
+The warehouse is composed of a robot transporting tagged products that are identified by \gls{RFID} readers
+deployed in the physical space. To monitoring the robot inside the warehouse, we decide to use Fosstrak
+as our \gls{RFID} middleware. In our implementation, the \gls{RFID} readers are emulated through the
+Rifidi Emulator, which uses the \gls{LLRP} protocol to communicate with the Fosstrak platform.
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -80,14 +79,14 @@ types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic)
 The implementation of the provisioning mechanism relies on the Chef\footnote{The tool uses culinary
 analogy in most of its concepts} tool. Chef provides several features that allows to describe our
 infrastructure as code. In the implementation of the provisioning mechanism, the main features used
-were the Chef \textit{recipes}, \textit{roles} and the \textit{Knife} tool.
+were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool.
 
 % Provisioning Recipes
 \subsection{Provisioning Recipes}
 \label{sub:recipes}
 The \textit{recipes} that describe our infrastructure are based on \textit{cookbooks} available at the
 Chef Supermarket\footnote{\url{https://supermarket.chef.io/}} and also in custom recipes that
-were defined for specifically for this work. These recipes describe how the Fosstrak software
+were defined specifically for this work. These recipes describe how the Fosstrak software
 stack is provisioned in the cloud. In the current implementation, we used Docker containers to provisioning
 the smart warehouse software at the cloud providers. Therefore, we defined a set of recipes
 based on the official Docker cookbook that describe how the containers with Fosstrak software
@@ -105,14 +104,14 @@ recipe for the Docker container that runs the \gls{EPCIS} Repository:
   \label{listing:epcis_recipe}
 \end{listing}
 
-This recipe specify that first the Docker image \textit{cloud4things$/$fosstrak-epcis} must be pulled
-from the central repository. In particular, this image contains the software required to deploy the
-EPCIS repository web application, namely an Apache Tomcat web-server and the EPCIS repository
-source code. Finally, the recipe specify that the image \textit{cloud4things$/$fosstrak-epcis} must
-be used to create a container named \textit{fosstrak-epcis} and expose the port \textit{8080}.
-Furthermore this container must be linked to the container \textit{fosstrak-db} that internally is
-represented by the alias \textit{db}. The \textit{detach} parameter specify if the container must
-run in the background or not.\\
+The recipe specification describes that first the Docker image \textit{cloud4things$/$fosstrak-epcis}
+must be pulled from the central repository. In particular, this image contains the software required
+to deploy the \gls{EPCIS} repository web application, namely an Apache Tomcat web-server and the \gls{EPCIS}
+repository source code. Finally, the recipe describes that the image \textit{cloud4things$/$fosstrak-epcis}
+must be used to create a container named \textit{fosstrak-epcis} and the port \textit{8080} need to
+be exposed. Furthermore this container must be linked to the container \textit{fosstrak-db} that
+internally is represented by the alias \textit{db}. The \textit{detach} parameter describes if the
+container must run in the background or not.\\
 
 We also defined the recipes that provision Docker containers for the remaining Fosstrak
 stack, namely the \textit{Filtering \& Collection Server}, \textit{Capturing Application} and
@@ -124,10 +123,10 @@ stack, namely the \textit{Filtering \& Collection Server}, \textit{Capturing App
 A \textit{role} is a categorization that describes what are the responsibilities of a specific
 node, what settings and software components should be given to it. For instance, it is possible
 to define what are the nodes that includes the database, web server, etc. The roles allows to describe
-the smart place application topology.\\
+the smart place application topology in the cloud.\\
 
 The roles that describe the smart warehouse application topology were defined based in the
-technological architecture of smart places presented for the cloud and fog concepts, in Section~\ref{sec:impl_smart_place}.
+technological architecture of the smart warehouse for the cloud and fog concepts, presented in Section~\ref{sec:impl_smart_place}.
 In the next sections, we describe with more detail the roles that were defined to provisioning the
 smart place infrastructure.
 
@@ -150,7 +149,7 @@ to describe the responsibilities of the node provisioned in the cloud.\\
 \end{listing}
 
 The fosstrak role describes that the nodes must have installed all the modules of Fosstrak
-that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db} and
+that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db},
 \textit{fosstrak-epcis}, \textit{fosstrak-capture} and \textit{fosstrak-ale} recipes. The nodes
 that have assigned this role are identified as \textit{fosstrak-server}.
 
@@ -158,9 +157,9 @@ that have assigned this role are identified as \textit{fosstrak-server}.
 % Fog Provisioning Roles
 \subsubsection{Fog}
 \label{subs:fog_provisioning}
-In a fog deployment approach the Fosstrak software stack is distributed across the fog and the cloud,
+In a fog deployment approach the Fosstrak software stack is distributed across the fog and cloud,
 as illustrated on Figure~\ref{fig:implementation_fog_architecture}. Therefore, we defined two different
-roles that describe the responsibilities of the nodes provisioned in the fog and cloud.
+roles that describe the responsibilities of the provisioned nodes.
 
 % Fog role
 \begin{listing}[ht!]
@@ -173,8 +172,8 @@ roles that describe the responsibilities of the nodes provisioned in the fog and
   \label{listing:fog_fog_recipe}
 \end{listing}
 
-The fog role describes that nodes must have installed the resources specified in the
-recipes from the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-capture} and
+The fog role describes that nodes must have installed the following resources specified in the
+recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-capture} and
 \textit{fosstrak-ale}. The nodes that have assigned this role are identified as \textit{fog-server}.
 
 % Cloud role
@@ -188,7 +187,7 @@ recipes from the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-cap
   \label{listing:fog_cloud_recipe}
 \end{listing}
 
-The cloud role describes that the nodes must have installed the remaining modules of the Fosstrak
+The cloud role describes that the nodes must have installed the remaining modules of Fosstrak
 that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db} and
 \textit{fosstrak-epcis} recipes. The nodes that have assigned this role are identified as
 \textit{cloud-server}.
@@ -211,8 +210,8 @@ The provisioning workflow is illustrated in Figure~\ref{fig:provisioning_tech_ar
 In a development environment the Docker images are built and then uploaded to the Docker Registry
 repository (1). The provisioning of the cloud resources is described in the cookbooks that are uploaded
 to the Chef server (2). The provisioning request (3) is performed using \textit{knife}, that allows to
-describe the image type, the instance type and the policies - e.g. the \textit{role} or \textit{recipe} -
-that need to be applied on each provisioned node. Then the Chef client runs the configuration recipes
+describe the image type, the instance type and the policies - e.g. the \textit{role(s)} and/or \textit{recipe(s)} -
+that need to be applied on each provisioned node. Then the Chef client runs the configuration policies
 that are pulled from the Chef server (4). In our solution the Chef client apply the configuration recipes
 that are described in the role assigned to the node. The Chef client pulls the Docker images from the
 remote repository, build the containers based on those images and finally applies the configuration
@@ -227,14 +226,14 @@ possible to execute a command on a certain number of nodes in our environment.\\
 % Docker containers
 \subsection{Docker Containers}
 \label{sub:impl_docker}
-Docker containers are used to provisioning the software stack of the Fosstrak platform. A complete
+Docker containers are used to provisioning the software stack of Fosstrak platform. A complete
 installation of Fosstrak requires a compatible Java \gls{SDK}, a full MySQL database and a Apache Tomcat
 server.\\
 
-As illustrated in Figure~\ref{fig:impl_containers}, we are provisioning a single container for each
-component of the Fosstrak platform, the \gls{EPCIS} repository, the Capture application, the \gls{FCServer},
-and also for the MySQL database. In our implementation, the container images of the Fosstrak stack
-are published in the Docker Hub repository to later be used to create the containers.\\
+We are provisioning a single container for each component of Fosstrak, the \gls{EPCIS} repository,
+the Capture application, the \gls{FCServer} and also for the MySQL database, As illustrated in Figure~\ref{fig:impl_containers}.
+In our implementation, the container images of Fosstrak are published in the Docker Hub repository
+to later be used to create the containers.\\
 
 % Container stack
 \begin{figure}[!ht]
@@ -245,9 +244,9 @@ are published in the Docker Hub repository to later be used to create the contai
 \end{figure}
 
 By default each container runs a process that is isolated from the other processes that shares the same
-environment (kernel). Compared with the isolation provided by traditional \glspl{VM} which are fully
-isolated, the isolation provided by Docker containers is less secure, since that if a container has
-its security broken, it is possible that the other containers and the host may be compromised.\\
+environment (kernel). Compared with the isolation provided by traditional \glspl{VM} - which are fully
+isolated - the isolation provided by Docker containers is less secure, since that if a container has
+its security broken, it is possible that other containers and host may be compromised.\\
 
 In order to connect the different modules of the Fosstrak, our containers are
 linked through the \textit{linking system} provided by Docker. This mechanism creates a secure tunnel
@@ -272,9 +271,9 @@ solution and also discuss about the technological components used in our impleme
 
 Our provisioning mechanism is based on the Chef tool. To provisioning Fosstrak's software stack we are
 using Docker containers in alternative to the traditional \glspl{VM}. The provisioning mechanism relies
-on the \textit{recipes}, \textit{roles} and the \textit{Knife} command, which are provided by Chef.
+on the \textit{recipes}, \textit{roles} and the \textit{knife} command, which are provided by Chef.
 The recipes allow to describe which software components and settings should be installed in a node,
-while the roles allow to attribute responsibilities to a specific node. The Knife command is used
+while the roles allow to attribute responsibilities to a specific node. The knife command is used
 to execute the provisioning request and to interact with the provisioned infrastructure.\\
 
 The provisioning mechanism implemented in this work allows to perform the deployment of a smart place
