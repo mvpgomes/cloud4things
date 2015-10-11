@@ -222,7 +222,7 @@ We decide to chose Chef instead of its competitors - i.e. Puppet and Ansible - f
 reasons, where the main one is \textit{knife}. \textit{Knife} tool is very powerful and allow us to
 interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
 apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
-possible to execute a command on a certain number of nodes in our environment.
+possible to execute a command on a certain number of nodes in our environment.\\
 
 % Docker containers
 \subsection{Docker Containers}
@@ -262,3 +262,23 @@ infrastructure when compared with traditional \glspl{VM} because when a containe
 application and all of its dependencies are ported together while the \glspl{VM} require that the
 entire application, the guest operating system, the binaries and libraries are ported, which can be
 several \glspl{GB} in size.
+
+% Summary
+\section{Summary}
+\label{sec:impl_summary}
+In Chapter~\ref{chapter:solution} we proposed a solution to automate the provisioning of smart place
+applications in the cloud. In this chapter, we presented the implementation details for the proposed
+solution and also discuss about the technological components used in our implementation.\\
+
+Our provisioning mechanism is based on the Chef tool. To provisioning Fosstrak's software stack we are
+using Docker containers in alternative to the traditional \glspl{VM}. The provisioning mechanism relies
+on the \textit{recipes}, \textit{roles} and the \textit{Knife} command, which are provided by Chef.
+The recipes allow to describe which software components and settings should be installed in a node,
+while the roles allow to attribute responsibilities to a specific node. The Knife command is used
+to execute the provisioning request and to interact with the provisioned infrastructure.\\
+
+The provisioning mechanism implemented in this work allows to perform the deployment of a smart place
+application based in Fosstrak across the cloud and fog, although it can be extended to support other
+\gls{RFID} middleware platforms. The flexibility in the deployment provided by the cloud and fog
+concepts will allow us to evaluate the approaches and chose which one is more adequate to support smart
+place applications based on the \gls{RFID} technology.
