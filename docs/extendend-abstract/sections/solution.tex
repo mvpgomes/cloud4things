@@ -5,9 +5,9 @@
 \label{sec:solution}
 
 In the present work our main goal is to determine if a cloud-based solution can meet the
-requirements of RFID-based smart place applications, as mentioned in Section~\ref{section:objectives}.
+requirements of RFID-based smart place applications, as mentioned in Section~\ref{sub:objectives}.
 To achieve our goals we will follow two approaches to deploy the smart warehouse application based
-in the cloud and fog. In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a
+in the cloud and fog. In Section~\ref{sub:sol_smart_warehouse_deployment}, we present a
 conceptual architecture of the smart warehouse based on the fog and cloud concepts.\\
 
 Usually, provisioning the components of a smart place application is an operation that is manually executed and
@@ -19,50 +19,41 @@ we propose a mechanism that automates the provision of smart places application 
 % Smart Warehouse Deployment
 \subsection{Smart Warehouse Deployment}
 \label{sub:sol_smart_warehouse_deployment}
-Our smart place is an automated warehouse where automated vehicles transport tagged objects that can
-be identified by readers and sensors that are deployed in the place, as described in Section~\ref{sub:domain}.
 In traditional solutions, the application is provisioned in a local infrastructure. Although such
 approach guarantees that the low-latency requirements are meet, this solution comes with several
-downsides - such as the low scalability, infrastructure and maintenance costs - that can be a barrier
-for these applications.\\
+downsides - such as the low scalability, infrastructure and maintenance costs - that can be a
+barrier for these applications.\\
 
 Leveraging the infrastructure required to provisioning the smart place applications to the cloud
 guarantees that the bottlenecks of traditional solutions are solved. However, we also need to
 guarantee that the latency requirements of these applications are fulfilled. The cloud and fog concepts
 give us more flexibility to perform the deployment of smart place applications, which allow us to
 provisioning the application modules in a more distributed way. The following sections describe
-the deployment approaches of smart place applications based in the cloud and fog.
+the deployment approaches of smart place applications based in the cloud and fog.\\
 
 % Cloud approach
 \subsubsection{Cloud Deployment}
 \label{subs:sol_cloud}
-
-Figure~\ref{fig:solution_cloud_architecture} presents the architecture of a cloud-based smart warehouse.
 The warehouse is composed of smart objects, sensors and readers that capture the events that occurs
 in the warehouse. The application middleware is provisioned in the cloud, which virtualizes the computing,
-storage and network resources needed to support the application.\\
-
-The smart warehouse can be connected to the cloud through a physical or wireless connection.
+storage and network resources needed to support the application. The smart warehouse can be connected
+to the cloud through a physical or wireless connection.\\
 
 % Fog approach
 \subsubsection{Fog Deployment}
 \label{subs:sol_fog}
-
-Figure~\ref{fig:solution_fog_architecture} presents the architecture of a fog-based smart warehouse.
 As in the cloud-based approach the warehouse is composed of smart objects, sensors and readers.
-The proposed approach aims to extend the cloud paradigm to the edge of the network. The fog achieves
-that by virtualizing computing, storage and network resources. Unlike the cloud infrastructure, that
-usually is provisioned thousands of kilometers from the smart warehouse, the fog infrastructure
-usually is provisioned closest to the smart warehouse network.\\
+The proposed approach aims to extend the cloud paradigm to the edge of the network. Unlike the
+cloud infrastructure, that usually is provisioned thousands of kilometers from the smart warehouse,
+the fog infrastructure usually is provisioned closest to the smart warehouse network.\\
 
 Regarding the application middleware, the application components are distributed across the cloud and
-the fog. The components responsible for storing the data during a long period of time are provisioned in
+fog. The components responsible for storing the data during a long period of time are provisioned in
 the cloud. The components responsible for performing real-time processing of the data generated in the
 warehouse, and the components that filter the data that is consumed locally and must be delivered to
-the cloud are provisioned in the fog.\\
-
-Both the smart warehouse as the fog can be connected respectively to the fog and cloud through
-several types of connection, from a physical connection to a wireless connection.
+the cloud are provisioned in the fog. Both the smart warehouse as the fog can be connected respectively
+to the fog and cloud through several types of connection, from a physical connection to a wireless
+connection.
 
 % Provisioning
 \subsection{Smart Place Provisioning}
