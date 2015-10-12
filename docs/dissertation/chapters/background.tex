@@ -135,8 +135,9 @@ operating systems on the same physical machine. However, \gls{OS} level virtuali
 benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
 \gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
 
-\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment that relies on Linux Kernel. \gls{LXC} are hardware-agnostic
-and platform-agnostic, and also provides features such as application isolation and multi-tenancy.\\
+\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment
+that relies on Linux Kernel. \gls{LXC} are hardware-agnostic and platform-agnostic, and also provides
+features such as application isolation and multi-tenancy.\\
 
 \subsubsection{Docker Platform}
 \label{subs:docker_platform}
@@ -162,7 +163,7 @@ most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\ur
 Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
 between these tools is that some of the them are more oriented to developers, which is the case of Chef and
 Puppet that requires some programming experience to be used, while others are more oriented to system
-administrators, which is the case of Ansible and Salt.
+administrators, which is the case of Ansible and Salt.\\
 
 In the present work, the provisioning of the smart place software stack will be automated through
 a \gls{CM} tool. Based in the previous experience with some of these tools - namely Chef and Puppet -
@@ -209,15 +210,15 @@ Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing 
 in Figure~\cite{bonomi2012fog} the distributed infrastructure of Fog is composed of heterogeneous
 resources that must be managed in a distributed way: the infrastructure comprising of several players,
 covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
-is the lowest layer of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
+is the lowest tier of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
 process the data from the sensors, issues commands to the actuators and also filters the data that
-is locally consumed and sent to the higher layers. The \textit{Multi-Service Edge} and \textit{Core}
-layers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
-as well to deal with systems and processes (\gls{M2M}).\\
+is locally consumed and sent to the higher tiers. The \textit{Multi-Service Edge} and \textit{Core}
+tiers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
+as well for dealing with systems and processes (\gls{M2M}).\\
 
-Since the interaction time between the different layers can range from seconds - e.g. low-latency real-time
+Since the interaction time between the different tiers can range from seconds - e.g. low-latency real-time
 analytics - to days - transactional analytics - the Fog must support several types of storage, from
-ephemeral storage at the lowest layers to semi-permanent at the highest layer. It is important to point
+ephemeral storage at the lowest tiers to semi-permanent at the highest tier. It is important to point
 that the higher is the tier, the geographical coverage is wider and the time scale is larger \cite{bonomi2014fog}.
 The global coverage is given by the Cloud, which acts as a central repository for the persistent data
 and that is used to perform business analytics.
