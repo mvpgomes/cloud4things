@@ -47,8 +47,8 @@ Distefano et al. \cite{distefano2012enabling} proposed a conceptual architecture
 mapping various elements in both cloud and IoT to the three layers of the cloud architecture (\gls{IaaS},
 \gls{PaaS} and \gls{SaaS}). In this proposal IoT resources are provided voluntarily by their owners,
 while management functions - such as node management and policy enforcement - are viewed as peer
-functions of cloud infrastructure management. A \gls{PaaS} module is responsible to mashup IoT and
-cloud infrastructure (\gls{IaaS}) resources for applications, which are delivered to the clients
+functions of cloud infrastructure management. A \gls{PaaS} module is responsible for mashup IoT and
+cloud infrastructure (\gls{IaaS}) resources to applications, which are delivered to the clients
 through \gls{SaaS}.
 % CloudThings
 CloudThings \cite{zhou2013cloudthings} is an architecture that uses the cloud platform layers to
@@ -153,7 +153,7 @@ a public repository that stores Docker images that are used to create the contai
 \label{sub:cm_tools}
 \gls{CM} tools are software management tools that allows to automate and specify the deployment of an
 application. Usually, users describe the system resources and their desired state and the \gls{CM}
-tool is responsible to enforce the desired state. For instance, \gls{CM} tools allows the automation
+tool is responsible for enforcing the desired state. For instance, \gls{CM} tools allows the automation
 of the provisioning of physical and virtual machines, perform dependency management of software
 components and to perform the automation of management tasks.\\
 
@@ -206,10 +206,10 @@ traditional data centers in the cloud.\\
 \end{figure}
 
 Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
-in Figure~\cite{bonomi2012fog} the distributed infrastructure of the Fog is composed of heterogeneous
+in Figure~\cite{bonomi2012fog} the distributed infrastructure of Fog is composed of heterogeneous
 resources that must be managed in a distributed way: the infrastructure comprising of several players,
 covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
-is the lowest layer of the Fog and it is responsible to perform \gls{M2M} interaction. It collects and
+is the lowest layer of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
 process the data from the sensors, issues commands to the actuators and also filters the data that
 is locally consumed and sent to the higher layers. The \textit{Multi-Service Edge} and \textit{Core}
 layers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
@@ -233,9 +233,9 @@ middleware platform that implements the GS1 \gls{EPC} Network standards.
 % GS1 EPC Network
 \subsection{GS1 EPCglobal Architecture}
 \label{subs:epc_network}
-GS1\footnote{\url{http://www.gs1.org}} is an organization that is responsible for the development and maintenance of standards for
-supply chain. One of the standards developed by GS1 is the \gls{EPC}, which is an unique serial identifier
-for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{\url{http://www.gs1.org/epcglobal}} created
+GS1\footnote{\url{http://www.gs1.org}} is an organization that is responsible for the development and
+maintenance of standards for supply chain. One of the standards developed by GS1 is the \gls{EPC},
+which is an unique serial identifier for \gls{RFID} tags. GS1's subsidiary EPCglobal Inc.\footnote{\url{http://www.gs1.org/epcglobal}} created
 the EPCglobal Architecture Framework, that currently is the standard for \gls{RFID} platforms.
 Figure~\ref{fig:epc_architecture} presents a high-level architecture of the EPCglobal framework
 that shows its main interfaces and roles.\\
@@ -300,24 +300,24 @@ The Fosstrak platform is composed of three modules that implements the correspon
 % Fosstrak Modules
 \begin{itemize}
   % FCServer
-  \item \textit{Filtering \& Collection Server} is the module responsible to filter and collect data
-  from \gls{RFID} readers. To communicate with the readers, the module uses the \gls{LLRP} standard
+  \item \textit{Filtering \& Collection Server} is the module responsible for filtering and collecting
+  data from \gls{RFID} readers. To communicate with the readers, the module uses the \gls{LLRP} standard
   for \gls{LLRP} compliant readers and uses the Fosstrak \gls{HAL} for unsupported readers. The
   module internally abstracts the readers as LogicalReaders instances that are defined and configured
   through a \textit{LRSpec} document, as defined by EPCglobal. Fosstrak also implements the
   \textit{Event Cycle}, that is an interval of time during which tags are collected. The output of
   an \textit{Event Cycle} is the \textit{ECReport} document that is sent to the Capturing Application.
   % Capturing Application
-  \item \textit{Capturing Application} is part of the EPCIS module. This module is responsible to
-  transform the uninterpreted events received on the \textit{ECReports} into meaningful business events.
+  \item \textit{Capturing Application} is part of the EPCIS module. This module is responsible for
+  transforming uninterpreted events received on the \textit{ECReports} into meaningful business events.
   Regarding its implementation, the Capturing Application is built on top of the Drools\footnote{\url{http://www.drools.org/}}
   engine where rules can be specified in the form of: ``when'' something happens, ``then'' do ``this''.
   Unfortunately, the rules are static and once defined they can not be updated in runtime.
   % EPCIS Repository
   \item \textit{EPCIS Repository} provides an EPCglobal-certified EPCIS Repository, which means that
   all Fosstrak EPCIS modules and interfaces are compliant with the EPCglobal standard. This module
-  provides persistence for \gls{EPCIS} events. To store new events the module provides the
-  \textit{capture interface} and the \textit{query interface} to retrieve historical events is provided.
+  provides persistence for \gls{EPCIS} events. For storing new events the module provides the
+  \textit{capture interface} and the \textit{query interface} for retrieving historical events is provided.
   Furthermore, the module provides two EPC Network-conformant interfaces to a relational database
   (currently MySQL).
 \end{itemize}
