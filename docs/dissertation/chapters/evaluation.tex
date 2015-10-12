@@ -398,18 +398,8 @@ simulate up to 5 readers sending events concurrently.
 \subsubsection{Baseline}
 \label{subs:eval_exp_data_baseline}
 In this scenario the session contains the data recorded based in the events generated during a 1 lap
-in the track. The parameters used to execute the tests for this scenario are described in Table~\ref{tab:baseline_parameters}.
-
-% Baseline parameters
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|}
-    \hline
-    Number of Events & Period \\ \hline
-    1593             & 82ms   \\ \hline
-  \end{tabular}
-  \caption[Data storage: Baseline evaluation parameters.]{Data storage performance: Baseline evaluation parameters.}
-  \label{tab:baseline_parameters}
-\end{table}
+in the track. In the current experiment each thread executed 1593 events with a time period of 82$ms$
+between each event.\\
 
 % Baseline CPU results
 \begin{figure}[ht!]
@@ -445,19 +435,8 @@ a sinusoidal pattern.
 \subsubsection{Track 3 Laps}
 \label{subs:eval_exp_data_3laps}
 In this scenario the session contains the data recorded based in the events generated during 3 laps
-in the track. The parameters used to execute the test for this scenario are described in
-Table~\ref{tab:3laps_parameters}.\\
-
-% 3 Lap parameters
-\begin{table}[ht!]
-  \begin{tabular}{|c|c|}
-    \hline
-    Number of Events & Period \\ \hline
-    8895             & 57ms   \\ \hline
-  \end{tabular}
-  \caption[Data storage: 3 Lap evaluation parameters.]{Data storage performance: 3 Lap evaluation parameters.}
-  \label{tab:3laps_parameters}
-\end{table}
+in the track. In the current experiment each thread executed 8895 events with a time period of 57$ms$
+between each event.\\
 
 % 3 Lap results CPU results
 \begin{figure}[ht!]
