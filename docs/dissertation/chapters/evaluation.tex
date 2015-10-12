@@ -199,9 +199,6 @@ $\approx62\%$. This means that during the \textit{Event Cycle} period the \gls{A
 an idle state during 9 seconds when configured with the \textit{Baseline ECspec} while with the
 \textit{Half-period ECspec} this value can last for 3 seconds.\\
 
-% TODO: Maybe this can be removed???
-\pagebreak
-
 Figure~\ref{fig:ecspecf_effective_breakdown} presents the time breakdown for the stages of the
 event processing pipeline. Figure~\ref{fig:ecspecf_effective_base} presents the how much time is spent
 in each phase of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
@@ -414,23 +411,20 @@ in the track. The parameters used to execute the tests for this scenario are des
   \label{tab:baseline_parameters}
 \end{table}
 
-% Baseline results
+% Baseline CPU results
 \begin{figure}[ht!]
-\centering
-\begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{./images/cpu_1_lap}
+  \includegraphics[width=.7\textwidth]{./images/cpu_1_lap}
   \caption{CPU Utilization performance results.}
   \label{fig:eval_baseline_cpu}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\end{figure}
+
+% Baseline Network results
+\begin{figure}[ht!]
   \centering
-  \includegraphics[width=\linewidth]{./images/network_1_lap}
-  \caption{Network traffic performance.}
+  \includegraphics[width=.7\textwidth]{./images/network_1_lap}
+  \caption{Network traffic performance results.}
   \label{fig:eval_baseline_network}
-\end{subfigure}
-\caption[Data storage: Baseline results.]{Data storage performance: Baseline evaluation results.}
-\label{fig:eval_baseline_results}
 \end{figure}
 
 Figure~\ref{fig:eval_baseline_cpu} presents the system metric \textit{CPU Utilization} for the current
@@ -465,23 +459,20 @@ Table~\ref{tab:3laps_parameters}.\\
   \label{tab:3laps_parameters}
 \end{table}
 
-% 3 Lap results
+% 3 Lap results CPU results
 \begin{figure}[ht!]
-\centering
-\begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{./images/cpu_3_lap}
+  \includegraphics[width=.75\textwidth]{./images/cpu_3_lap}
   \caption{CPU Utilization performance results.}
   \label{fig:eval_3laps_cpu}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\end{figure}
+
+% 3 Lap results Network results
+\begin{figure}[ht!]
   \centering
-  \includegraphics[width=\linewidth]{./images/network_3_lap}
+  \includegraphics[width=.75\textwidth]{./images/network_3_lap}
   \caption{Network traffic performance results.}
   \label{fig:eval_3laps_network}
-\end{subfigure}
-\caption[Data storage: 3 Lap performance results.]{Data storage performance: 3 Lap performance results.}
-\label{fig:eval_3laps_results}
 \end{figure}
 
 Figure~\ref{fig:eval_3laps_cpu} presents the system metric \textit{CPU Utilization} for the current
