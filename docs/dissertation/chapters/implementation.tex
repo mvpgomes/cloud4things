@@ -131,10 +131,10 @@ In the next sections, we describe with more detail the roles that were defined t
 smart place infrastructure.
 
 % Cloud Provisioning Roles
-\subsubsection{Cloud}
-\label{sub:cloud_provisioning}
+\subsubsection{Cloud Provisioning Roles}
+\label{sub:cloud_roles}
 In a cloud deployment approach the Fosstrak software stack is provisioned in a single instance, as
-illutrated in Figure~\ref{fig:implementation_cloud_architecture}. Thus, we defined a single role
+illustrated in Figure~\ref{fig:implementation_cloud_architecture}. Thus, we defined a single role
 to describe the responsibilities of the node provisioned in the cloud.\\
 
 % Fosstrak role
@@ -148,15 +148,15 @@ to describe the responsibilities of the node provisioned in the cloud.\\
   \label{listing:cloud_recipe}
 \end{listing}
 
-The fosstrak role describes that the nodes must have installed all the modules of Fosstrak
+The \textit{fosstrak} role describes that the nodes must have installed all the modules of Fosstrak
 that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db},
 \textit{fosstrak-epcis}, \textit{fosstrak-capture} and \textit{fosstrak-ale} recipes. The nodes
 that have assigned this role are identified as \textit{fosstrak-server}.
 
 
 % Fog Provisioning Roles
-\subsubsection{Fog}
-\label{subs:fog_provisioning}
+\subsubsection{Fog Provisioning Roles}
+\label{subs:fog_roles}
 In a fog deployment approach the Fosstrak software stack is distributed across the fog and cloud,
 as illustrated on Figure~\ref{fig:implementation_fog_architecture}. Therefore, we defined two different
 roles that describe the responsibilities of the provisioned nodes.
@@ -172,7 +172,7 @@ roles that describe the responsibilities of the provisioned nodes.
   \label{listing:fog_fog_recipe}
 \end{listing}
 
-The fog role describes that nodes must have installed the following resources specified in the
+The \textit{fog} role describes that nodes must have installed the following resources specified in the
 recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-capture} and
 \textit{fosstrak-ale}. The nodes that have assigned this role are identified as \textit{fog-server}.
 
@@ -187,7 +187,7 @@ recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-captu
   \label{listing:fog_cloud_recipe}
 \end{listing}
 
-The cloud role describes that the nodes must have installed the remaining modules of Fosstrak
+The \textit{cloud} role describes that the nodes must have installed the remaining modules of Fosstrak
 that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db} and
 \textit{fosstrak-epcis} recipes. The nodes that have assigned this role are identified as
 \textit{cloud-server}.
