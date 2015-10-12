@@ -3,7 +3,7 @@
 \chapter{Evaluation}
 \label{chapter:evaluation}
 The present chapter describes the evaluation methodology as well as the experiments performed to determine
-if a fog-based or a cloud-based approach is more adequate to deploy \gls{RFID} applications in a
+if a cloud-based or a fog-based approach is more adequate to deploy \gls{RFID} applications in a
 smart warehouse. The evaluation process will focus on establish if the approaches are
 able to met the low-latency and data storage performance requirements described in \ref{table:eval_requirements}.\\
 
@@ -162,109 +162,6 @@ following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event da
 \textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
 and finally \textit{(v) the event cycle report is delivered to the client application}.
 
-% Fog-based warehouse latency
-\subsubsection{Fog-based warehouse latency}
-\label{subs:eval_exp_latency_ecspec}
-Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
-smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
-\gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
-when it is configured with the \textit{Half-period ECspec}.\\
-
-% Baseline ECspec event time breakdown
-\begin{figure}[ht!]
- % ECSpec local breakdown figure
- \centering
- \begin{subfigure}{.5\textwidth}
-   \centering
-   \includegraphics[height=\linewidth]{./images/edge_ecspec_breakdown}
-   \caption{Baseline Event Cycle: latency breakdown.}
-   \label{fig:ecspec_base}
- \end{subfigure}%
- % ECSpec cloud breakdown figure
- \begin{subfigure}{.5\textwidth}
-   \centering
-   \includegraphics[height=\linewidth]{./images/edge_ecspecf_breakdown}
-   \caption{Half-period Event Cycle: latency breakdown.}
-   \label{fig:ecspec_half}
- \end{subfigure}
- \caption[Fog-based approach: event latency breakdown.]{Fog-based approach: Event Cycle latency breakdown.}
- \label{fig:ecspec_breakdown}
-\end{figure}
-
-Comparing the graphs for both \textit{ECspecs} is possible to conclude that during most of the time of
-an \textit{Event Cycle} the \gls{ALE} module is in an idle state (\textit{Idle Time}) - close to $\approx68\%$
-in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
-collected (\textit{Effective Time}). Considering the duration of the \textit{ECspecs} it means that in
-average when the \gls{ALE} is configured with the \textit{Baseline ECspec} the module can be in an idle
-state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
-
-Figure~\ref{fig:ecspec_effective_breakdown} summarizes how the time is spent during the stages of the
-event processing pipeline. Figure~\ref{fig:ecspec_effective_base} presents the time breakdown for
-each stage of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
-Figure~\ref{fig:ecspec_effective_half} when it is configured with the \textit{Half-period ECspec}.\\
-
-% Baseline ECspec effective time breakdown
-\begin{figure}[ht!]
-  % ECSpec local breakdown figure
-  \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[height=\linewidth]{./images/edge_ecspec_effective_breakdown}
-    \caption{Baseline Event Cycle: event pipeline breakdown.}
-    \label{fig:ecspec_effective_base}
-  \end{subfigure}%
-  % ECSpec cloud breakdown figure
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[height=\linewidth]{./images/edge_ecspecf_effective_breakdown}
-    \caption{Half-period Event Cycle: event pipeline breakdown.}
-    \label{fig:ecspec_effective_half}
-  \end{subfigure}
-  \caption[Fog-based approach: event processing breakdown.]{Fog-based approach: event processing pipeline breakdown.}
-  \label{fig:ecspec_effective_breakdown}
-\end{figure}
-
-It is possible to observe that the \textit{Fltering \& Aggregation} stage is the most time consuming
-for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
-close to $\approx95\%$ of the total time, while with the \textit{Half-period ECspec} this value is
-close to $\approx75\%$. The reason for this difference is in the \textit{tag Processing Latency} stage.
-With the \textit{Baseline ECspec} the time to processing the event data represents close to $\approx2.5\%$
-of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
-The \textit{Upload} and \textit{Response} latency together represents a small percentage of
-the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
-of time to create the reports represents less than $\approx1\%$ of the total time.\\
-
-The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
-is that the event latency presents a better overall performance. According the metric values presented in
-Table~\ref{table:fog_metrics} it is possible to observe that the event latency improves in a significant
-way - from 7.450s to 4.250s. This result is achieved thanks to the improvement in the latency
-of at the \textit{Filtering \& Aggregation Latency} by $\approx52\%$ - from 2.530s to 1.230s - and the
-amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regarding the network
-latency, the values for the \textit{Upload Latency} and \textit{Response Latency} improved 1ms for both
-metrics.\\
-
-% Metrics Result
-\begin{table}[ht!]
-  \centering
-    \begin{tabular}{|l|c|c|}
-    \hline
-    Metric                            & Base Event Cycle & Half-period Event Cycle \\ \hline
-    Upload Latency                    & 0.005s           & 0.004s                  \\ \hline
-    Tag Processing Latency            & 0.049s           & 0.279s                  \\ \hline
-    Idle Processing Latency           & 4.944s           & 2.747s                  \\ \hline
-    Filter \& Aggregation Latency     & 2.530s           & 1.203s                  \\ \hline
-    Report Creation Latency           & 0.001s           & 0.003s                  \\ \hline
-    Response Latency                  & 0.010s           & 0.009s                  \\ \hline
-    Event Latency                     & 7.540s           & 4.245s                  \\ \hline
-    \end{tabular}
-  \caption[Fog-based approach: performance results.]{Fog-based approach: performance metrics results.}
-  \label{table:fog_metrics}
-\end{table}
-
-However, when configured with a faster \textit{Event Cycle} specification the tag processing time
-presented an inferior performance, where time to process the event data increases $\approx470\%$
-- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
-
 \subsubsection{Cloud-based warehouse latency}
 \label{subs:eval_exp_latency_ecspec_fast}
 Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
@@ -372,6 +269,109 @@ As in the fog-based approach the value for the \textit{Tag Processing Latency} i
 the \gls{ALE} is configured with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the
 previous experiment, the value for the \textit{Filtering \& Aggregation Latency} metric increased $\approx300\%$
 - from 0.370s to 1.490s.
+
+% Fog-based warehouse latency
+\subsubsection{Fog-based warehouse latency}
+\label{subs:eval_exp_latency_ecspec}
+Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
+smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
+\gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
+when it is configured with the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec event time breakdown
+\begin{figure}[ht!]
+ % ECSpec local breakdown figure
+ \centering
+ \begin{subfigure}{.5\textwidth}
+   \centering
+   \includegraphics[height=\linewidth]{./images/edge_ecspec_breakdown}
+   \caption{Baseline Event Cycle: latency breakdown.}
+   \label{fig:ecspec_base}
+ \end{subfigure}%
+ % ECSpec cloud breakdown figure
+ \begin{subfigure}{.5\textwidth}
+   \centering
+   \includegraphics[height=\linewidth]{./images/edge_ecspecf_breakdown}
+   \caption{Half-period Event Cycle: latency breakdown.}
+   \label{fig:ecspec_half}
+ \end{subfigure}
+ \caption[Fog-based approach: event latency breakdown.]{Fog-based approach: Event Cycle latency breakdown.}
+ \label{fig:ecspec_breakdown}
+\end{figure}
+
+Comparing the graphs for both \textit{ECspecs} is possible to conclude that during most of the time of
+an \textit{Event Cycle} the \gls{ALE} module is in an idle state (\textit{Idle Time}) - close to $\approx68\%$
+in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
+collected (\textit{Effective Time}). Considering the duration of the \textit{ECspecs} it means that in
+average when the \gls{ALE} is configured with the \textit{Baseline ECspec} the module can be in an idle
+state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
+
+Figure~\ref{fig:ecspec_effective_breakdown} summarizes how the time is spent during the stages of the
+event processing pipeline. Figure~\ref{fig:ecspec_effective_base} presents the time breakdown for
+each stage of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
+Figure~\ref{fig:ecspec_effective_half} when it is configured with the \textit{Half-period ECspec}.\\
+
+% Baseline ECspec effective time breakdown
+\begin{figure}[ht!]
+  % ECSpec local breakdown figure
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/edge_ecspec_effective_breakdown}
+    \caption{Baseline Event Cycle: event pipeline breakdown.}
+    \label{fig:ecspec_effective_base}
+  \end{subfigure}%
+  % ECSpec cloud breakdown figure
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[height=\linewidth]{./images/edge_ecspecf_effective_breakdown}
+    \caption{Half-period Event Cycle: event pipeline breakdown.}
+    \label{fig:ecspec_effective_half}
+  \end{subfigure}
+  \caption[Fog-based approach: event processing breakdown.]{Fog-based approach: event processing pipeline breakdown.}
+  \label{fig:ecspec_effective_breakdown}
+\end{figure}
+
+It is possible to observe that the \textit{Fltering \& Aggregation} stage is the most time consuming
+for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
+close to $\approx95\%$ of the total time, while with the \textit{Half-period ECspec} this value is
+close to $\approx75\%$. The reason for this difference is in the \textit{tag Processing Latency} stage.
+With the \textit{Baseline ECspec} the time to processing the event data represents close to $\approx2.5\%$
+of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
+The \textit{Upload} and \textit{Response} latency together represents a small percentage of
+the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
+of time to create the reports represents less than $\approx1\%$ of the total time.\\
+
+The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
+is that the event latency presents a better overall performance. According the metric values presented in
+Table~\ref{table:fog_metrics} it is possible to observe that the event latency improves in a significant
+way - from 7.450s to 4.250s. This result is achieved thanks to the improvement in the latency
+of at the \textit{Filtering \& Aggregation Latency} by $\approx52\%$ - from 2.530s to 1.230s - and the
+amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regarding the network
+latency, the values for the \textit{Upload Latency} and \textit{Response Latency} improved 1ms for both
+metrics.\\
+
+% Metrics Result
+\begin{table}[ht!]
+  \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+    Metric                            & Base Event Cycle & Half-period Event Cycle \\ \hline
+    Upload Latency                    & 0.005s           & 0.004s                  \\ \hline
+    Tag Processing Latency            & 0.049s           & 0.279s                  \\ \hline
+    Idle Processing Latency           & 4.944s           & 2.747s                  \\ \hline
+    Filter \& Aggregation Latency     & 2.530s           & 1.203s                  \\ \hline
+    Report Creation Latency           & 0.001s           & 0.003s                  \\ \hline
+    Response Latency                  & 0.010s           & 0.009s                  \\ \hline
+    Event Latency                     & 7.540s           & 4.245s                  \\ \hline
+    \end{tabular}
+  \caption[Fog-based approach: performance results.]{Fog-based approach: performance metrics results.}
+  \label{table:fog_metrics}
+\end{table}
+
+However, when configured with a faster \textit{Event Cycle} specification the tag processing time
+presented an inferior performance, where time to process the event data increases $\approx470\%$
+- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
 
 \subsection{Data Storage Performance}
 \label{sub:eval_exp_data}
@@ -563,7 +563,7 @@ According these results, is reasonable to assume that the performance of the dat
 the Fosstrak implementation can be a bottleneck. However, in the general case the overall performance
 is able to meet the requirements defined for our scenario (\textit{R4}).
 
-\subsubsection{Fog or Cloud?}
+\subsubsection{Cloud or Fog?}
 \label{subs:eval_conclusion}
 The obtained results show that a fog-based approach offers better overall performance to deploy a
 smart warehouse application based in \gls{RFID} technology that requires low latency interaction.
