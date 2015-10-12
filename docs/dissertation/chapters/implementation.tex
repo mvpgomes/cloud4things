@@ -79,7 +79,9 @@ types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic)
 The implementation of the provisioning mechanism relies on the Chef\footnote{The tool uses culinary
 analogy in most of its concepts} tool. Chef provides several features that allows to describe our
 infrastructure as code. In the implementation of the provisioning mechanism, the main features used
-were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool.
+were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool. In the current
+implementation, we used Docker containers to provisioning the smart warehouse software at the
+cloud providers in alternative to traditional \glspl{VM}.
 
 % Provisioning Recipes
 \subsection{Provisioning Recipes}
@@ -87,11 +89,10 @@ were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-li
 The \textit{recipes} that describe our infrastructure are based on \textit{cookbooks} available at the
 Chef Supermarket\footnote{\url{https://supermarket.chef.io/}} and also in custom recipes that
 were defined specifically for this work. These recipes describe how the Fosstrak software
-stack is provisioned in the cloud. In the current implementation, we used Docker containers to provisioning
-the smart warehouse software at the cloud providers. Therefore, we defined a set of recipes
-based on the official Docker cookbook that describe how the containers with Fosstrak software
-stack must be provisioned. For instance, Listing~\ref{listing:epcis_recipe} present the provisioning
-recipe for the Docker container that runs the \gls{EPCIS} Repository:
+stack is provisioned in the cloud. Since we are using Docker containers for provisioning Fosstrak stack,
+a set of recipes were defined based on the official Docker cookbook for describing how the containers
+must be provisioned. For instance, Listing~\ref{listing:epcis_recipe} present the provisioning recipe
+for the Docker container that runs the \gls{EPCIS} Repository:
 
 % EPCIS container recipe
 \begin{listing}
