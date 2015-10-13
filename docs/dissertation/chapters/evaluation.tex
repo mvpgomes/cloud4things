@@ -105,16 +105,16 @@ conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux \gls{AMI} op
 presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1 \textit{\gls{GB}} of
 \gls{RAM}. In the fog-approach configuration, the experiments were conducted in a \gls{VM} with
 a 2.6 \textit{\gls{GHz}} dual-core processor with 2 \textit{\gls{GB}} of \gls{RAM} and running
-the \textit{Linux Ubuntu 14.04.2 LTS} operating system. Regarding the smart warehouse infrastructure,
-the evaluation was performed through a \gls{ADSL} connection The Rifidi Emulator\footnote{\url{http://rifidi.org}}
-used to emulate the \gls{RFID} readers is in version \textit{1.6.0}.\\
+the \textit{Linux Ubuntu 14.04.2 LTS} operating system. The smart warehouse was connected to the cloud
+and fog through a \gls{ADSL} connection with a bandwidth \ldots.\\
 
 Regarding the software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{\url{http://tomcat.apache.org/}}
 with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} middleware used was the Fosstrak
-described in section \ref{sub:fosstrak}. The middleware stack is available at the Fosstrak's\footnote{\url{http://fosstrak.github.io/}}
-source control system, and the versions were: a) \textit{\gls{FCServer}} version \textit{1.2.0}; b) \textit{Capture Application}
-version \textit{0.1.1}; and c) \textit{\gls{EPCIS} Repository} version \textit{0.5.0}. Furthermore,
-the \gls{EPCIS} Repository was connected to a \textit{MySQL server} version \textit{5.5}.\\
+(described in section \ref{sub:fosstrak}) and the versions were: \textit{a) \gls{FCServer}} version
+\textit{1.2.0}; \textit{b) Capture Application} version \textit{0.1.1}; and \textit{c) \gls{EPCIS} Repository}
+version \textit{0.5.0}. Furthermore, the \gls{EPCIS} Repository was connected to a \textit{MySQL server}
+version \textit{5.5}. The Rifidi Emulator\footnote{\url{http://rifidi.org}} used to emulate the \gls{RFID}
+readers is in version \textit{1.6.0}.\\
 
 To monitoring the \glspl{VM} in the cloud and collect the system metrics from the instances, we use the
 CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service provided by Amazon.
@@ -123,18 +123,23 @@ CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service 
 \section{Experiments Performed}
 \label{sec:eval_experiments}
 The experiments performed in our evaluation were based on the scenario and data from the RFIDToys \cite{Correia:Thesis:2014}
-Master Thesis.\\
+Master Thesis. In short, the RFIDToys is a warehouse demonstrator consisting of a robot transporting
+tagged products that are identified by RFID readers deployed in the physical space, as detailed in
+Section~\ref{sec:impl_smart_place}. In the performed experiments, we use a scenario where a tagged
+robot was programmed to execute  a given number of laps in the warehouse plant where exists an automatic
+door that opens when one of the RFID readers that are placed in the plant detects that the robot is
+approaching.\\
 
-Table~\ref{table:eval_requirements} presents the requirements that our solution must accomplish.
-These requirements were defined according our application domain and evaluation scenario.
+Based on this scenario and application domain we defined a set of non-functional requirements that
+our solution must accomplish. The evaluation requirements are presented in Table~\ref{table:eval_requirements}.
 
 \begin{table}[ht!]
   \begin{tabular}{|c|l|}
     \hline
     Name          & Description                                                                                            \\ \hline
-    \textit{R1}   & The event latency must be $<$ than the robot wait time.                                               \\ \hline
+    \textit{R1}   & The event latency must be $<$ than the robot wait time.                                                \\ \hline
     \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the sub-second scale ($< 100ms$) \\ \hline
-    \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                  \\ \hline
+    \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                   \\ \hline
     \textit{R4}   & The EPCIS must support at least 5 users sending simultaneously a large amount of data.                 \\ \hline
   \end{tabular}
   \caption{Evaluation requirements.}
@@ -144,11 +149,8 @@ These requirements were defined according our application domain and evaluation 
 \subsection{Latency Interaction}
 \label{sub:eval_exp_latency}
 To evaluate the latency interaction according the methodology proposed in Section~\ref{sub:eval_methodology_latency},
-we use a scenario where a tagged robot was programmed to execute a given number of laps in the
-warehouse plant where exists an automatic door that opens when one of the \gls{RFID} readers
-that are placed in the plant detects that the robot is approaching. During the lap the robot stops during 5 seconds
-in front of the door and then continues its lap. The door must be opened before the robot starts
-to moving again.\\
+During the lap the robot stops during 5 seconds in front of the door and then continues its lap.
+The door must be opened before the robot starts to moving again.\\
 
 The warehouse network connection was monitored with the \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}},
 a command-line tool that allows to monitoring the packets that are being transmitted or received over
