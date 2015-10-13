@@ -4,13 +4,12 @@
 \label{chapter:evaluation}
 The present chapter describes the evaluation methodology as well as the experiments performed to determine
 if a cloud-based or a fog-based approach is more adequate to deploy \gls{RFID} applications in a
-smart warehouse. The evaluation process will focus on establish if the approaches are
-able to met the low-latency and data storage performance requirements described in \ref{table:eval_requirements}.\\
+smart warehouse. The evaluation process will compare the approaches in regard to low-latency and data
+storage performance.\\
 
-Our main goal is to obtain basic statistical values - e.g. average - that allow us to decide which
-approach is more suitable to fulfill the expected requirements. Furthermore, according to the obtained
-results we intend to specify which approach is more adequate to deploy an \gls{IoT} application regarding
-its domain.
+Our main goal is to obtain basic statistical values that allow us to decide which approach is more
+suitable to fulfill the expected requirements. Furthermore, we present a discussion regarding which
+approach is more adequate to deploy an \gls{IoT} application according its domain.
 
 % 2. Present the evaluation methodology for both cases
 \section{Evaluation Methodology}
@@ -121,7 +120,23 @@ CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service 
 \section{Experiments Performed}
 \label{sec:eval_experiments}
 The experiments performed in our evaluation were based on the scenario and data from the RFIDToys \cite{Correia:Thesis:2014}
-Master Thesis.
+Master Thesis.\\
+
+Table~\ref{table:eval_requirements} presents the requirements that our solution must accomplish.
+These requirements were defined according our application domain and evaluation scenario.
+
+\begin{table}[ht!]
+  \begin{tabular}{|c|l|}
+    \hline
+    Name          & Description                                                                                            \\ \hline
+    \textit{R1}   & The event latency must be $<$ than the robot wait time.                                               \\ \hline
+    \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the sub-second scale ($< 100ms$) \\ \hline
+    \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                  \\ \hline
+    \textit{R4}   & The EPCIS must support at least 5 users sending simultaneously a large amount of data.                 \\ \hline
+  \end{tabular}
+  \caption{Evaluation requirements.}
+  \label{table:eval_requirements}
+\end{table}
 
 \subsection{Latency Interaction}
 \label{sub:eval_exp_latency}
