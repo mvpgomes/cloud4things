@@ -153,9 +153,9 @@ During the lap the robot stops during 5 seconds in front of the door and then co
 The door must be opened before the robot starts to moving again.\\
 
 The warehouse network connection was monitored with the \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}},
-a command-line tool that allows to monitoring the packets that are being transmitted or received over
-a network. Through the logs produced by this tool, we are able to determine how the connection time
-is spent for the cloud-based approach and the fog-based approach.\\
+a command-line tool that allows the monitoring of the packets that are being transmitted or received
+over a network. Through the logs produced by this tool, we are able to determine how the connection time
+is spent.\\
 
 Tho perform the simulation we defined two different specifications (\textit{ECspec}) for the
 \textit{Event Cycles} of the \gls{ALE} module, \textit{Baseline Event Cycle} and
@@ -177,7 +177,7 @@ in Table~\ref{table:ecspec_parameters}.
 The evaluation of the event latency for the proposed approaches was performed in two steps. First,
 we want to determine during a \textit{Event Cycle} how much time the \gls{ALE} is processing an event
 and how much time the module is in an idle state. Furthermore, we want to determine how much time
-takes each stage of the event processing pipeline. The event processing pipeline is divided in the
+each stage of the event processing pipeline takes. The event processing pipeline is divided in the
 following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event data is processed};
 \textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
 and finally \textit{(v) the event cycle report is delivered to the client application}.
@@ -209,7 +209,7 @@ smart warehouse. As in the previous experiment the \gls{ALE} module was configur
   \label{fig:ecspecf_breakdown}
 \end{figure}
 
-The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} shows that
+The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} show that
 as in the previous experiment, during most of time of an \textit{Event Cycle} the \gls{ALE} module is
 in an idle state. However, unlike in the previous experiment the \textit{ECspecs} affected the percentage of time
 where \gls{ALE} is processing the events (\textit{Effective Time}) and where is in an idle state (\textit{Idle Time}).
@@ -248,14 +248,14 @@ Figure~\ref{fig:ecspecf_effective_half} when it is configured with the \textit{H
 Comparing the obtained results, it is possible to observe that time breakdown is evenly distributed
 between the \textit{Upload} ($\approx35\%$), \textit{Filtering \& Aggregation} ($\approx30\%$) and
 \textit{Response} ($\approx34\%$) stages when the \gls{ALE} module is configured with the \textit{Baseline ECspec},
-while the \textit{Tag Porcessing} and \textit{Report Creation} stages represents a small percentage of the
+while the \textit{Tag Processing} and \textit{Report Creation} stages represents a small percentage of the
 total time, less than $\approx1\%$. When the \gls{ALE} is configured with the \textit{Half-period ECspec},
 the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 75\%$
 of the total time. As when configured with the \textit{Baseline ECspec}, the \textit{Upload} and
-\textit{Reponse} stages presents similar results, respectively close to $\approx10\%$ and $\approx11\%$.
-Regarding the \textit{Processing} stage, as in the fog-based approach the time required to process the
-event data increased in a significant way, from less than $\approx0.3\%$ to $\approx3\%$. The
-\textit{Report Creation} stage presented the same values from the previous configuration ($\approx0.3\%$).\\
+\textit{Response} stages presents similar results, respectively close to $\approx10\%$ and $\approx11\%$.
+Regarding the \textit{Processing} stage, the time required to process the event data increased in a significant
+way, from less than $\approx0.3\%$ to $\approx3\%$. The \textit{Report Creation} stage presented the same
+values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).\\
 
 As in the previous experiment the event latency presented a better overall performance for the faster \textit{ECspec}.
 According the metric values presented in Table~\ref{table:cloud_metrics} it is possible to observe that the event
@@ -265,22 +265,8 @@ metric - from 0.294s to 0.101s - and $\approx40\%$ for the \textit{Response Late
 from 0.228s to 0.138s. The values for the time where the \gls{ALE} remains in an idle state also presented
 a significant improvement, from 7.346s to 2.569s.\\
 
-\begin{table}[ht!]
-  \centering
-    \begin{tabular}{|l|c|c|}
-    \hline
-    Metric                        & Base Event Cycle & Half-period Event Cycle \\ \hline
-    Upload Latency                & 0.294s           & 0.103s                  \\ \hline
-    Tag Processing Latency        & 0.002s           & 0.024s                  \\ \hline
-    Idle Processing Latency       & 7.346s           & 2.569s                  \\ \hline
-    Filter \& Aggregation Latency & 0.370s           & 1.490s                  \\ \hline
-    Report Creation Latency       & 0.003s           & 0.003s                  \\ \hline
-    Response Latncy               & 0.228s           & 0.149s                  \\ \hline
-    Event Latency                 & 8.244s           & 4.266s                  \\ \hline
-    \end{tabular}
-  \caption[Cloud-based approach: performance results.]{Cloud-based approach: performance metrics results.}
-  \label{table:cloud_metrics}
-\end{table}
+% Cloud metrics result
+\input{./tables/cloud_metrics.tex}
 
 As in the fog-based approach the value for the \textit{Tag Processing Latency} increased $\approx1000\%$ when
 the \gls{ALE} is configured with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the
@@ -353,7 +339,7 @@ It is possible to observe that the \textit{Fltering \& Aggregation} stage is the
 for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
 close to $\approx95\%$ of the total time, while with the \textit{Half-period ECspec} this value is
 close to $\approx75\%$. The reason for this difference is in the \textit{tag Processing Latency} stage.
-With the \textit{Baseline ECspec} the time to processing the event data represents close to $\approx2.5\%$
+With the \textit{Baseline ECspec} the time for processing the event data represents close to $\approx2.5\%$
 of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
 The \textit{Upload} and \textit{Response} latency together represents a small percentage of
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
@@ -368,23 +354,8 @@ amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regar
 latency, the values for the \textit{Upload Latency} and \textit{Response Latency} improved 1ms for both
 metrics.\\
 
-% Metrics Result
-\begin{table}[ht!]
-  \centering
-    \begin{tabular}{|l|c|c|}
-    \hline
-    Metric                            & Base Event Cycle & Half-period Event Cycle \\ \hline
-    Upload Latency                    & 0.005s           & 0.004s                  \\ \hline
-    Tag Processing Latency            & 0.049s           & 0.279s                  \\ \hline
-    Idle Processing Latency           & 4.944s           & 2.747s                  \\ \hline
-    Filter \& Aggregation Latency     & 2.530s           & 1.203s                  \\ \hline
-    Report Creation Latency           & 0.001s           & 0.003s                  \\ \hline
-    Response Latency                  & 0.010s           & 0.009s                  \\ \hline
-    Event Latency                     & 7.540s           & 4.245s                  \\ \hline
-    \end{tabular}
-  \caption[Fog-based approach: performance results.]{Fog-based approach: performance metrics results.}
-  \label{table:fog_metrics}
-\end{table}
+% Fog Metrics Result
+\input{./tables/fog_metrics.tex}
 
 However, when configured with a faster \textit{Event Cycle} specification the tag processing time
 presented an inferior performance, where time to process the event data increases $\approx470\%$
@@ -559,12 +530,11 @@ The obtained results show that a fog-based approach offers better overall perfor
 smart warehouse application based in \gls{RFID} technology that requires low latency interaction.
 But it will be this approach the best choice for all application domains?\\
 
-Table \ref{table:smart_places_characteristics} summarizes the main characteristics of several
-\gls{IoT} application domains. For instance, for application domains with a small network size, low network
-bandwidth requirements, low scalability and that does not require low latency interaction - such as Ambient
-Intelligence and Retail - a cloud-based approach is suitable, but probably the more adequate
-solution it will be to provisioning the infrastructure in local, since that in most cases a local
-server is able to host such applications.\\
+For instance, for application domains with a small network size, low network bandwidth requirements,
+low scalability and that does not require low latency interaction - such as Ambient Intelligence and
+Retail - a cloud-based approach is suitable, but probably the more adequate solution it will be to
+provisioning the infrastructure in local, since that in most cases a local server is able to host
+such applications.\\
 
 For domains with a medium/large network size and network bandwidth requirements, that does not require
 low latency interaction, but presents high scalability - such as Smart Agriculture and Smart Water
