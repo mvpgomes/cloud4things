@@ -21,8 +21,10 @@ requirements, we propose the following methodologies to perform the evaluation:
 \subsection{Latency Interaction}
 \label{sub:eval_methodology_latency}
 The response time between an event that occurs in the smart warehouse and the corresponding action
-that is triggered in the physical space will be evaluated according the methodology proposed in
-Figure~\ref{fig:eval_latency_methodology}.\\
+that is triggered in the physical space, the proposed methodology consists in perform the monitoring
+of the smart warehouse network and determine how much time is spent between the \gls{ALE} collect the
+event triggered and client application receive the notification report, as illustrated in
+Figure~\ref{fig:eval_latency_methodology}.
 
 % Latency Interaction Evaluation Methodology Figure
 \begin{figure}[ht!]
@@ -41,14 +43,14 @@ in the report can be used to notify the client regarding an event in the smart w
 trigger a new event in the warehouse such as open or close a door.\\
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
-connections. The Fosstrak \gls{ALE} module can be configured to generate information to register
-when a new event is processed and also when a new report is delivered to the client. Thus, with the
-information provided by the monitoring system and the \gls{ALE} module it is possible to calculate
-the latency request for an event that occurs in the warehouse.\\
+packets in the smart warehouse network. The Fosstrak \gls{ALE} module can be configured to generate
+information to register when a new event is processed and also when a new report is delivered to the
+client. Thus, with the information provided by the monitoring system and the \gls{ALE} module it is
+possible to calculate the latency request for an event that occurs in the warehouse.\\
 
 With this methodology we intend to obtain information regarding how the communication time is spent
-when an event is triggered in the warehouse for the approaches described in \ref{chapter:solution}.
-In order to determine which approach is more adequate to deploy the application, we proposed the
+when an event is triggered in the warehouse for the approaches described in Chapter~\ref{chapter:solution}.
+In order to determine which approach is more adequate to deploy the application, we propose the
 following metrics:
 
 % Metrics
@@ -89,7 +91,8 @@ running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
 \end{figure}
 
 The cloud server is running a monitoring system that periodically stores data related to a set of
-system metrics, such as \textit{CPU Utilization} and \textit{Network In}.\\
+system metrics, such as \textit{CPU Utilization} and the volume of incoming network traffic
+by the instances (\textit{Network In}).\\
 
 The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
 module is affected regarding the amount of events that are generated in the smart warehouse.
@@ -98,7 +101,7 @@ module is affected regarding the amount of events that are generated in the smar
 \section{Evaluation Setup}
 \label{sec:eval_setup}
 To perform the evaluation experiments we chose \gls{AWS} as cloud provider. All the experiments were
-conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux AMI operating system. The \glspl{VM}
+conducted in \gls{AWS} \gls{EC2} instances running the Amazon Linux \gls{AMI} operating system. The \glspl{VM}
 presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor with 1 \textit{\gls{GB}} of
 \gls{RAM}. In the fog-approach configuration, the experiments were conducted in a \gls{VM} with
 a 2.6 \textit{\gls{GHz}} dual-core processor with 2 \textit{\gls{GB}} of \gls{RAM} and running
