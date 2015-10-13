@@ -184,6 +184,22 @@ and finally \textit{(v) the event cycle report is delivered to the client applic
 
 \subsubsection{Cloud-based warehouse latency}
 \label{subs:eval_exp_latency_ecspec_fast}
+The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
+is that the event latency presents a better overall performance. According the metric values presented
+in Table~\ref{table:cloud_metrics} it is possible to observe that the event latency decrease from 8.244s
+to 4.266s. The values for the network latency improved when the \gls{ALE} is configured with the faster
+\textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Latency} metric - from 0.294s
+to 0.103s - and $\approx40\%$ for the \textit{Response Latency} metric - from 0.228s to 0.138s. The
+values for the time where the \gls{ALE} remains in an idle state also presented a significant
+improvement, from 7.346s to 2.569s.\\
+
+% Cloud metrics result
+\input{./tables/cloud_metrics.tex}
+
+The value for the \textit{Tag Processing Latency} increased $\approx1000\%$ when the \gls{ALE} is configured
+with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the previous experiment, the value
+for the \textit{Filtering \& Aggregation Latency} metric increased $\approx300\%$ - from 0.370s to 1.490s.\\
+
 Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
 smart warehouse. As in the previous experiment the \gls{ALE} module was configured with the
 \textit{Baseline ECspec} and the \textit{Half-period ECspec}.\\
@@ -250,32 +266,31 @@ between the \textit{Upload} ($\approx35\%$), \textit{Filtering \& Aggregation} (
 \textit{Response} ($\approx34\%$) stages when the \gls{ALE} module is configured with the \textit{Baseline ECspec},
 while the \textit{Tag Processing} and \textit{Report Creation} stages represents a small percentage of the
 total time, less than $\approx1\%$. When the \gls{ALE} is configured with the \textit{Half-period ECspec},
-the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 75\%$
+the \textit{Filtering \& Aggregation} stage is the most time consuming, representing close to $\approx 73\%$
 of the total time. As when configured with the \textit{Baseline ECspec}, the \textit{Upload} and
-\textit{Response} stages presents similar results, respectively close to $\approx10\%$ and $\approx11\%$.
+\textit{Response} stages presents similar results, respectively close to $\approx11\%$ and $\approx12\%$.
 Regarding the \textit{Processing} stage, the time required to process the event data increased in a significant
 way, from less than $\approx0.3\%$ to $\approx3\%$. The \textit{Report Creation} stage presented the same
 values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).\\
 
-As in the previous experiment the event latency presented a better overall performance for the faster \textit{ECspec}.
-According the metric values presented in Table~\ref{table:cloud_metrics} it is possible to observe that the event
-latency decrease from 8.244s to 4.266s. The values for the network latency improved when the \gls{ALE} is
-configured with the faster \textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Latency}
-metric - from 0.294s to 0.101s - and $\approx40\%$ for the \textit{Response Latency} metric -
-from 0.228s to 0.138s. The values for the time where the \gls{ALE} remains in an idle state also presented
-a significant improvement, from 7.346s to 2.569s.\\
-
-% Cloud metrics result
-\input{./tables/cloud_metrics.tex}
-
-As in the fog-based approach the value for the \textit{Tag Processing Latency} increased $\approx1000\%$ when
-the \gls{ALE} is configured with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the
-previous experiment, the value for the \textit{Filtering \& Aggregation Latency} metric increased $\approx300\%$
-- from 0.370s to 1.490s.
-
 % Fog-based warehouse latency
 \subsubsection{Fog-based warehouse latency}
 \label{subs:eval_exp_latency_ecspec}
+As in the previous experiment the event latency presented a better overall performance for the
+faster \textit{ECspec}. According the metric values presented in Table~\ref{table:fog_metrics} it is
+possible to observe that the event latency improves in a significant way - from 7.450s to 4.250s. This
+result is achieved thanks to the improvement in the latency of at the \textit{Filtering \& Aggregation Latency}
+by $\approx52\%$ - from 2.530s to 1.230s - and the amount of time that \gls{ALE} is in an idle state -
+from 4.944s to 2.747s. Regarding the network latency, the values for the \textit{Upload Latency}
+and \textit{Response Latency} improved 1ms for both metrics.\\
+
+% Fog Metrics Result
+\input{./tables/fog_metrics.tex}
+
+However, when configured with a faster \textit{Event Cycle} specification the tag processing time
+presented an inferior performance, where time to process the event data increases $\approx470\%$
+- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
+
 Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
 smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
 \gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
@@ -345,22 +360,6 @@ The \textit{Upload} and \textit{Response} latency together represents a small pe
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
 of time to create the reports represents less than $\approx1\%$ of the total time.\\
 
-The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
-is that the event latency presents a better overall performance. According the metric values presented in
-Table~\ref{table:fog_metrics} it is possible to observe that the event latency improves in a significant
-way - from 7.450s to 4.250s. This result is achieved thanks to the improvement in the latency
-of at the \textit{Filtering \& Aggregation Latency} by $\approx52\%$ - from 2.530s to 1.230s - and the
-amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747s. Regarding the network
-latency, the values for the \textit{Upload Latency} and \textit{Response Latency} improved 1ms for both
-metrics.\\
-
-% Fog Metrics Result
-\input{./tables/fog_metrics.tex}
-
-However, when configured with a faster \textit{Event Cycle} specification the tag processing time
-presented an inferior performance, where time to process the event data increases $\approx470\%$
-- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
-
 \subsection{Data Storage Performance}
 \label{sub:eval_exp_data}
 To evaluate the data storage performance for the Fosstrak middleware we use the data recorded with the Rec\&Play
@@ -411,8 +410,8 @@ between each event.\\
 Figure~\ref{fig:eval_baseline_cpu} presents the system metric \textit{CPU Utilization} for the current
 experiment. Comparing the values obtained in the experiment for the proposed variations, the
 \textit{Standard} and \textit{Double of Requests} variations the presents similar results -
-maximum close to $\approx14\%$ - and its behavior tend to assume a linear pattern. For the \textit{Half of Interval}
-variation, it is possible to observe that the metric value is always higher - maximum close to $\approx16\%$ -
+maximum \gls{CPU} close to $14\%$ - and its behavior tend to assume a linear pattern. For the \textit{Half of Interval}
+variation, it is possible to observe that the metric value is always higher - maximum close to $16\%$ -
 when compared with the other variations. The metric behavior changes according the number of threads
 that are sending events and tend to take a sinusoidal pattern.\\
 
@@ -448,8 +447,8 @@ between each event.\\
 Figure~\ref{fig:eval_3laps_cpu} presents the system metric \textit{CPU Utilization} for the current
 experiment. Comparing the results obtained in the experiment, it is possible to conclude that
 they are very similar for all variations. The \textit{Half of Interval} continues to present
-the highest values - maximum close to $\approx18\%$ - while the other variations presents almost identical
-results - maximum close to $\approx16\%$. Regarding the metric behavior, all variations tends to assume
+the highest values - maximum close to $18\%$ - while the other variations presents almost identical
+results - maximum close to $16\%$. Regarding the metric behavior, all variations tends to assume
 a linear pattern.\\
 
 As in the previous experiment, the system metric \textit{Network In}, presented in Figure~\ref{fig:eval_3laps_network},
