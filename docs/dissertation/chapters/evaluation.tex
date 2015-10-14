@@ -80,7 +80,7 @@ approaches and help to determine which one is more adequate to deploy the applic
 Smart place applications usually generates a large amount of data that must be stored and processed in
 a efficient way, as described in Section~\ref{section:challenges}. To evaluate the data storage
 performance for a \gls{RFID} application based on Fosstrak, the proposed methodology consists in
-stress the \gls{EPCIS} Repository by simulating several users that are concurrently sending events -
+stress the \gls{EPCIS} Repository by simulating several readers that are concurrently triggering events -
 through \gls{HTTP} requests - to the repository that is running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
 
 % Data Storage Evaluation Methodology Figure
@@ -181,8 +181,18 @@ and how much time the module is in an idle state. Furthermore, we want to determ
 each stage of the event processing pipeline takes. The event processing pipeline is divided in the
 following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event data is processed};
 \textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
-and finally \textit{(v) the event cycle report is delivered to the client application}.
+and finally \textit{(v) the event cycle report is delivered to the client application}, as
+illustrated in Figure~\ref{fig:latency_seq_diagram}. 
 
+% Event Cycle sequence diagram
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\textwidth]{./images/latency_interaction_seq_diagram}
+  \caption[Latency Interaction sequence diagram.]{Latency Interaction sequence diagram.}
+  \label{fig:latency_seq_diagram}
+\end{figure}
+
+% Cloud-based warehouse latency
 \subsubsection{Cloud-based warehouse latency}
 \label{subs:eval_exp_latency_ecspec_fast}
 The behavior expected when the \gls{ALE} is configured with a faster \textit{Event Cycle} specification
