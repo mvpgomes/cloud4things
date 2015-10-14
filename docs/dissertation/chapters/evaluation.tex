@@ -57,17 +57,17 @@ following metrics:
 \begin{itemize}
   \item \textit{Event Latency}: the time spent since an event is triggered in the warehouse until
   the client application receives the notification of the event.
-  \item \textit{Upload Latency}: the time spent since that an event is triggered in the warehouse until
+  \item \textit{Upload Time}: the time spent since that an event is triggered in the warehouse until
   the \gls{ALE} module receives the event.
-  \item \textit{Tag Processing Latency}: the time spent since that the \gls{ALE} module receives an event
+  \item \textit{Tag Processing Time}: the time spent since that the \gls{ALE} module receives an event
   notification until the \gls{RFID} tag is processed.
-  \item \textit{Idle Processing Latency}: the time spent for the \gls{ALE} module where the collected
+  \item \textit{Idle Processing Time}: the time spent for the \gls{ALE} module where the collected
   tags already exists and no further action is required.
-  \item \textit{Filtering \& Aggregation Latency}: the time spent for the \gls{ALE} where the
+  \item \textit{Filtering \& Aggregation Time}: the time spent for the \gls{ALE} where the
   collected tags are filtered and aggregated.
-  \item \textit{Report Creation Latency}: the time spent for the \gls{ALE} module to create the
+  \item \textit{Report Creation Time}: the time spent for the \gls{ALE} module to create the
   \textit{Event Cycle} report for the current \textit{EventCycle}.
-  \item \textit{Response Latency}: the time spent since that the \gls{ALE} module delivers the
+  \item \textit{Response Time}: the time spent since that the \gls{ALE} module delivers the
   \textit{Event Cycle} report until the client receives it.
 \end{itemize}
 
@@ -182,7 +182,7 @@ each stage of the event processing pipeline takes. The event processing pipeline
 following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event data is processed};
 \textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
 and finally \textit{(v) the event cycle report is delivered to the client application}, as
-illustrated in Figure~\ref{fig:latency_seq_diagram}. 
+illustrated in Figure~\ref{fig:latency_seq_diagram}.
 
 % Event Cycle sequence diagram
 \begin{figure}[ht!]
@@ -199,21 +199,21 @@ The behavior expected when the \gls{ALE} is configured with a faster \textit{Eve
 is that the event latency presents a better overall performance. According the metric values presented
 in Table~\ref{table:cloud_metrics} it is possible to observe that the event latency decrease from 8.244s
 to 4.266s. The values for the network latency improved when the \gls{ALE} is configured with the faster
-\textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Latency} metric - from 0.294s
-to 0.103s - and $\approx40\%$ for the \textit{Response Latency} metric - from 0.228s to 0.138s. The
+\textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Time} metric - from 0.294s
+to 0.103s - and $\approx40\%$ for the \textit{Response Time} metric - from 0.228s to 0.149s. The
 values for the time where the \gls{ALE} remains in an idle state also presented a significant
-improvement, from 7.346s to 2.569s.\\
+improvement, from 7.346s to 2.569s.
 
 % Cloud metrics result
 \input{./tables/cloud_metrics.tex}
 
-The value for the \textit{Tag Processing Latency} increased $\approx1000\%$ when the \gls{ALE} is configured
-with \textit{Half-period ECspec} - from 0.002s to 0.024s. Unlike in the previous experiment, the value
-for the \textit{Filtering \& Aggregation Latency} metric increased $\approx300\%$ - from 0.370s to 1.490s.\\
+The value for the \textit{Tag Processing Time} increased $\approx1000\%$ when the \gls{ALE} is configured
+with \textit{Half-period ECspec} - from 0.002s to 0.024s. The value for the \textit{Filtering \& Aggregation Time}
+metric increased $\approx300\%$ - from 0.370s to 1.490s.\\
 
 Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
-smart warehouse. As in the previous experiment the \gls{ALE} module was configured with the
-\textit{Baseline ECspec} and the \textit{Half-period ECspec}.\\
+smart warehouse. In the current experiment the \gls{ALE} module was configured with the
+\textit{Baseline ECspec} and the \textit{Half-period ECspec}.
 
 % Baseline ECspec event time breakdown
 \begin{figure}[ht!]
@@ -236,10 +236,10 @@ smart warehouse. As in the previous experiment the \gls{ALE} module was configur
   \label{fig:ecspecf_breakdown}
 \end{figure}
 
-The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} show that
-as in the previous experiment, during most of time of an \textit{Event Cycle} the \gls{ALE} module is
-in an idle state. However, unlike in the previous experiment the \textit{ECspecs} affected the percentage of time
-where \gls{ALE} is processing the events (\textit{Effective Time}) and where is in an idle state (\textit{Idle Time}).
+The graphs presented in Figure~\ref{fig:ecspecf_base} and Figure~\ref{fig:ecspecf_half} show that,
+during most of time of an \textit{Event Cycle} the \gls{ALE} module is in an idle state.
+Also, it is possible to observe that the \textit{ECspecs} affected the percentage of time where
+\gls{ALE} is processing the events (\textit{Effective Time}) and where is in an idle state (\textit{Idle Time}).
 With the \textit{Baseline ECspec} the \gls{ALE} remains $\approx89\%$ of the \textit{Event Cycle} period
 in an idle state while when configured with the \textit{Half-period ECspec} this value decreases to
 $\approx62\%$. This means that during the \textit{Event Cycle} period the \gls{ALE} module can be in
@@ -282,7 +282,7 @@ of the total time. As when configured with the \textit{Baseline ECspec}, the \te
 \textit{Response} stages presents similar results, respectively close to $\approx11\%$ and $\approx12\%$.
 Regarding the \textit{Processing} stage, the time required to process the event data increased in a significant
 way, from less than $\approx0.3\%$ to $\approx3\%$. The \textit{Report Creation} stage presented the same
-values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).\\
+values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).
 
 % Fog-based warehouse latency
 \subsubsection{Fog-based warehouse latency}
@@ -290,10 +290,10 @@ values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).\\
 As in the previous experiment the event latency presented a better overall performance for the
 faster \textit{ECspec}. According the metric values presented in Table~\ref{table:fog_metrics} it is
 possible to observe that the event latency improves in a significant way - from 7.450s to 4.250s. This
-result is achieved thanks to the improvement in the latency of at the \textit{Filtering \& Aggregation Latency}
+result is achieved thanks to the improvement in the latency of at the \textit{Filtering \& Aggregation Time}
 by $\approx52\%$ - from 2.530s to 1.230s - and the amount of time that \gls{ALE} is in an idle state -
-from 4.944s to 2.747s. Regarding the network latency, the values for the \textit{Upload Latency}
-and \textit{Response Latency} improved 1ms for both metrics.\\
+from 4.944s to 2.747s. Regarding the network latency, the values for the \textit{Upload Time}
+and \textit{Response Time} improved 1ms for both metrics.
 
 % Fog Metrics Result
 \input{./tables/fog_metrics.tex}
@@ -364,10 +364,10 @@ Figure~\ref{fig:ecspec_effective_half} when it is configured with the \textit{Ha
 It is possible to observe that the \textit{Fltering \& Aggregation} stage is the most time consuming
 for both \textit{Event Cycle} specifications. With the \textit{Baseline ECspec} this stage occupies
 close to $\approx95\%$ of the total time, while with the \textit{Half-period ECspec} this value is
-close to $\approx75\%$. The reason for this difference is in the \textit{tag Processing Latency} stage.
+close to $\approx75\%$. The reason for this difference is in the \textit{Tag Processing} stage.
 With the \textit{Baseline ECspec} the time for processing the event data represents close to $\approx2.5\%$
 of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
-The \textit{Upload} and \textit{Response} latency together represents a small percentage of
+The \textit{Upload} and \textit{Response} stages together represents a small percentage of
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
 of time to create the reports represents less than $\approx1\%$ of the total time.\\
 
@@ -509,7 +509,7 @@ However, it is important to point that there some aspects that can improve the n
 of the cloud-based approach. For instance, the network connection is a possible bottleneck for the
 performance of such approach. We believe that if the experiments were conducted through a faster
 network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-approach
-will be better, but far from the fog-based approach.
+will be better, but not as good as in the fog-based approach.
 
 \subparagraph{Idle Time}
 \label{subp:eval_idle_time}
