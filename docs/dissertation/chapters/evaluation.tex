@@ -209,11 +209,20 @@ improvement, from 7.346s to 2.569s.
 
 The value for the \textit{Tag Processing Time} increased $\approx1000\%$ when the \gls{ALE} is configured
 with \textit{Half-period ECspec} - from 0.002s to 0.024s. The value for the \textit{Filtering \& Aggregation Time}
-metric increased $\approx300\%$ - from 0.370s to 1.490s.\\
+metric increased $\approx300\%$ - from 0.370s to 1.490s.
 
+% Experiment Result
+\subparagraph{Experiment Result.}
+\label{subp:cloud_experiment_result}
+In our scenario, that means the warehouse door only will open if the \gls{ALE} module was configured
+with the \textit{Half-period ECspec}, otherwise the robot will crash with the door.
+
+% Event Time Breakdown
+\subparagraph{Event Time Breakdown.}
+\label{subp:cloud_event_breakdown}
 Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
 smart warehouse. In the current experiment the \gls{ALE} module was configured with the
-\textit{Baseline ECspec} and the \textit{Half-period ECspec}.
+\textit{Baseline ECspec} and the \textit{Half-period ECspec}.\\
 
 % Baseline ECspec event time breakdown
 \begin{figure}[ht!]
@@ -244,8 +253,11 @@ With the \textit{Baseline ECspec} the \gls{ALE} remains $\approx89\%$ of the \te
 in an idle state while when configured with the \textit{Half-period ECspec} this value decreases to
 $\approx62\%$. This means that during the \textit{Event Cycle} period the \gls{ALE} module can be in
 an idle state during 9 seconds when configured with the \textit{Baseline ECspec} while with the
-\textit{Half-period ECspec} this value can last for 3 seconds.\\
+\textit{Half-period ECspec} this value can last for 3 seconds.
 
+% Event Effective Time Breakdown
+\subparagraph{Event Effective Time Breakdown.}
+\label{subp:cloud_event_effective_breakdown}
 Figure~\ref{fig:ecspecf_effective_breakdown} presents the time breakdown for the stages of the
 event processing pipeline. Figure~\ref{fig:ecspecf_effective_base} presents the how much time is spent
 in each phase of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
@@ -300,8 +312,17 @@ and \textit{Response Time} improved 1ms for both metrics.
 
 However, when configured with a faster \textit{Event Cycle} specification the tag processing time
 presented an inferior performance, where time to process the event data increases $\approx470\%$
-- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
+- from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.
 
+\subparagraph{Experiment Result.}
+\label{subp:fog_experiment_result}
+As in the previous experiment, in our scenario the warehouse door only will open if the \gls{ALE}
+module was configured with the \textit{Half-period ECspec}, otherwise the robot will crash with
+the door.
+
+% Event Time Breakdown
+\subparagraph{Event Time Breakdown.}
+\label{subp:fog_event_breakdown}
 Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
 smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
 \gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
@@ -333,8 +354,11 @@ an \textit{Event Cycle} the \gls{ALE} module is in an idle state (\textit{Idle T
 in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
 collected (\textit{Effective Time}). Considering the duration of the \textit{ECspecs} it means that in
 average when the \gls{ALE} is configured with the \textit{Baseline ECspec} the module can be in an idle
-state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
+state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.
 
+% Event Effective Time Breakdown
+\subparagraph{Event Effective Time Breakdown.}
+\label{subp:fog_event_effective_breakdown}
 Figure~\ref{fig:ecspec_effective_breakdown} summarizes how the time is spent during the stages of the
 event processing pipeline. Figure~\ref{fig:ecspec_effective_base} presents the time breakdown for
 each stage of the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
@@ -369,7 +393,7 @@ With the \textit{Baseline ECspec} the time for processing the event data represe
 of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
 The \textit{Upload} and \textit{Response} stages together represents a small percentage of
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
-of time to create the reports represents less than $\approx1\%$ of the total time.\\
+of time to create the reports represents less than $\approx1\%$ of the total time.
 
 % Data Storage Performance
 \subsection{Data Storage Performance}
@@ -377,7 +401,17 @@ of time to create the reports represents less than $\approx1\%$ of the total tim
 To evaluate the data storage performance for the Fosstrak middleware we use the data recorded with the Rec\&Play
 module - which is able to record \gls{RFID} sessions that stores the events occurred in the warehouse
 maintaining the order and time from the beginning of the session - were used as base to execute
-the tests.\\
+the tests. The sessions were recorded in a scenario developed by Correia et. al \cite{Correia:Thesis:2014}.
+In this scenario tagged a robot is moving in a closed circuit where two \gls{RFID} antennas were used
+facing each other, as illustrated in Figure~\ref{fig:robotic_warehouse}.\\
+
+% Correia Robotic warehouse
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\textwidth]{./images/robotic_warehouse}
+  \caption[Robotic Warehouse demonstrator.]{Robotic Warehouse demonstrator.}
+  \label{fig:robotic_warehouse}
+\end{figure}
 
 As described in Section \ref{sub:eval_methodology_data}, the methodology consists in simulating a given
 number of readers that are sending events in the warehouse. This simulation was performed through
