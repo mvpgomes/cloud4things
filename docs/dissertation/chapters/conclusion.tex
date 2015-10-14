@@ -82,7 +82,7 @@ warehouse.
 
 \subparagraph{RFID Smart Place Architecture.}
 \label{subp:rfid_smart_place_architecture}
-A deployment architecture based on the Fog Computing platform for EPCGlobal compliant \gls{RFID}
+A deployment architecture based on the Cloud Computing platform for EPCGlobal compliant \gls{RFID}
 middleware platforms. We propose an architecture that focuses to improve the network latency
 performance of \gls{RFID} applications by distributing the middleware components across the fog and
 the cloud.
@@ -91,20 +91,27 @@ the cloud.
 \label{subp:provisioning_mechanism}
 A mechanism that automates the provisioning of \gls{RFID} application middleware in the cloud.
 The provisioning mechanism allows to provisioning the Fosstrak modules in several cloud
-providers. Furthermore, how it is based on Docker container images to provisioning the application
+providers. Furthermore, it is based on Docker container images to provisioning the application
 stack, it is not specific for the Fosstrak middleware and can be extended for every EPCGlobal
 compliant \gls{RFID} platform.
 
-\subparagraph{Event Cycle Metrics.}
-\label{subp:event_latency_metrics}
-A set of metrics to measuring the performance of the \textit{Event Cycle} that is executed by the
-FCServer. The metrics allows to determine how much time the FCServer spent processing each stage of
-the current \textit{Event Cycle}.
+\subparagraph{Docker Images.}
+\label{subp:docker_images}
+To provisioning the Fosstrak software stack, we developed a set of Docker images that used to
+create the Docker containers with the Fosstrak modules, namely \gls{ALE}, Capture Application,
+\gls{EPCIS} Repository and MySQL database. The images are open-source and available at
+Docker Hub.
 
-\subparagraph{Latency Interaction Performance Evaluation.}
+\subparagraph{RFID Software Deployment.}
+\label{subp:RFID Software Deployment}
+Our provisioning mechanism was implemented through the Chef configuration management tool. Since the
+resources for provisioning the stack using Chef does not exists, we defined a set of \textit{recipes}
+and \textit{roles} that allow to deploy and configure the Fosstrak software stack.
+
+\subparagraph{Interaction Latency Evaluation.}
 \label{subp:event_latency_performance_eval}
-Experiments were performed in order to find the best clud-based deployment approach that meet the
-low-latency requirements of \gls{RFID} applications. Moreover, we compared both fog-based and cloud-based
+Experiments were performed in order to find the best cloud-based deployment approach that meets the
+low-latency requirements of \gls{RFID} applications. Moreover, we compared both cloud-based and fog-based
 approaches based on the \textit{Event Cycle} metrics in order to determine how the deployment
 approach affects the performance of the \textit{Event Cycle} stages.
 
@@ -121,7 +128,7 @@ Our solution proposes that the \gls{RFID} application is deployed following a fo
 This means that we need to have a cloud close to the edge of the network and this cloud must meet
 the same requirements of a remote cloud such as high scalability, security and multi-tenancy.
 Unfortunately, we were not able to accomplish a fog that meet these requirements and in our implementation
-the fog was built on top of a traditional Virtual Machine.\\
+the fog was built on top of a traditional Virtual Machine.
 
 % Containers Deployment
 \subparagraph{Containers Deployment.}
@@ -131,7 +138,7 @@ In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{V
 different mechanisms of virtualization. Although we still are able to take advantage of some benefits
 from the containers such as the portability, other benefits such as the low I/O and disk space are
 hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
-of the containers on top of the bare-metal or a cloud-based container service - e.g. Google Kubernetes
+of the containers on top of the bare-metal or in a cloud-based container service - e.g. Google Kubernetes
 \footnote{\url{http://kubernetes.io/}}, \gls{AWS} \gls{EC2} Container Service\footnote{\url{https://aws.amazon.com/ecs/}} -
 in order to improve the overall performance of the solution.
 
@@ -139,15 +146,15 @@ in order to improve the overall performance of the solution.
 \subparagraph{Cloud Providers Evaluation.}
 \label{subp:cloud_eval}
 The evaluation was performed only in \gls{AWS} \gls{EC2} instances. For the future is important to
-evaluate our solution in other cloud providers to compare which offers the best relation
-cost/performance.\\
+evaluate our solution in other cloud providers to compare which offers the best cost/performance
+relation.
 
 % Latency Interaction Evaluation
 \subparagraph{Latency Interaction Evaluation.}
 \label{subp:latency_eval}
 To evaluate the latency interaction, we defined only two different \textit{ECspecs}. For the future work,
 we want to evaluate the latency performance for our solution with \textit{ECspecs} that presents smaller
-periods in order to determine which specification is more suitable for our solution.\\
+periods in order to determine which specification is more suitable for our solution.
 
 % Latency Interaction Evaluation
 \subparagraph{Evaluation Scenario.}
