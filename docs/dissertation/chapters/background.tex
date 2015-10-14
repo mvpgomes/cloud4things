@@ -123,6 +123,20 @@ number of nodes that are needed to support a given application load can be reduc
 As shown there several solution to perform data storage in the cloud. Choose what is the best solution
 will depend of the application domain and its requirements.
 
+% RFID Middleware Platforms
+\subsubsection{RFID Middleware Platforms}
+\label{subs:rdbms_clusters}
+Gomes et. al \cite{gomes2014future} proposed a new infrastructure for EPCGlobal compliant middleware
+platforms in order to improve the performance of those middleware platforms. The Fosstrak platform
+was evaluated and the results show that Fosstrak is not the best option when executing the modules
+responsible for collecting the data (ALE) from RFID readers and storing the event data
+(EPCIS) in the same  machine. In order to improve the performance of the EPCGlobal compliant middleware platforms,
+the new infrastructure adopt a decentralized architecture where the EPCIS is deployed in the
+cloud and it is connected to a NoSQL database instead of MySQL. The ALE module adopts a
+multi-threading architecture in order to support a high parallel demand of RFID readers.
+Currently, a prototype of the proposed infrastructure is being developed using OpenNebula, pthreads
+and \gls{SOA}.
+
 % Containers
 \subsection{Containers}
 \label{sub:containers}
@@ -233,7 +247,7 @@ according several aspects, including application network size, categorization of
 bandwidth requirements and \gls{IoT} devices.\\
 
 In the present work, our application domain characteristics are similar to the Smart Office/Home and
-is based on the \gls{RFID} technology and the \gls{EPC} Framework. 
+is based on the \gls{RFID} technology and the \gls{EPC} Framework.
 
 % Internet of Things stack example: EPC Framework
 \section{Internet of Things stack example: EPC Framework}
