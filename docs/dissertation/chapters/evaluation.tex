@@ -77,10 +77,11 @@ approaches and help to determine which one is more adequate to deploy the applic
 % Evaluation Methodologies : Data Storage
 \subsection{Data Storage Performance}
 \label{sub:eval_methodology_data}
-To evaluate the data storage performance for a \gls{RFID} application based on Fosstrak, the proposed
-methodology consists in stress the \gls{EPCIS} Repository by simulating several users that are
-concurrently sending events - through \gls{HTTP} requests - to the repository that is
-running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
+Smart place applications usually generates a large amount of data that must be stored and processed in
+a efficient way, as described in Section~\ref{section:challenges}. To evaluate the data storage
+performance for a \gls{RFID} application based on Fosstrak, the proposed methodology consists in
+stress the \gls{EPCIS} Repository by simulating several users that are concurrently sending events -
+through \gls{HTTP} requests - to the repository that is running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
 
 % Data Storage Evaluation Methodology Figure
 \begin{figure}[ht!]
@@ -484,9 +485,9 @@ the cloud-based approach.
 \subparagraph{Event Latency}
 \label{subp:eval_event_latency}
 Regarding the results for the \textit{Event Latency} metric, the fog-based approach presented the
-best results. In order to meet the requirement \textit{R1}, the event latency must be less than
-5s. According the results it is possible to conclude that both approaches meet \textit{R1}, but only
-when the \gls{ALE} is configured with the \textit{Half-period ECspec}.
+best results. In order to meet the requirement \textit{R1} (presented in \ref{sec:eval_experiments}),
+the event latency must be less than 5s. According the results it is possible to conclude that both
+approaches meet \textit{R1}, but only when the \gls{ALE} is configured with the \textit{Half-period ECspec}.
 
 \subparagraph{Network Latency}
 \label{subp:eval_network_latency}
