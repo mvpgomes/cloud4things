@@ -360,6 +360,7 @@ The \textit{Upload} and \textit{Response} latency together represents a small pe
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
 of time to create the reports represents less than $\approx1\%$ of the total time.\\
 
+% Data Storage Performance
 \subsection{Data Storage Performance}
 \label{sub:eval_exp_data}
 To evaluate the data storage performance for the Fosstrak middleware we use the data recorded with the Rec\&Play
@@ -367,25 +368,34 @@ module - which is able to record \gls{RFID} sessions that stores the events occu
 maintaining the order and time from the beginning of the session - were used as base to execute
 the tests.\\
 
-As described in Section \ref{sub:eval_methodology_data}, the methodology consists in simulate a given
-number of readers that are sending events in the warehouse. This simulation was performed through JMeter\footnote{\url{http://jmeter.apache.org/}},
-a Java application designed to perform load testing and measure the application performance.
-In order to reproduce some situations that can occur in a real smart warehouse, we perform the following
-variations in the tests:
+As described in Section \ref{sub:eval_methodology_data}, the methodology consists in simulating a given
+number of readers that are sending events in the warehouse. This simulation was performed through
+JMeter\footnote{\url{http://jmeter.apache.org/}}, a Java application designed to perform load testing
+and measure application performance. In order to reproduce some situations that can occur in a real
+smart warehouse, we perform the following variations in the tests corresponding to the robot movements:
 
 % Test variations
 \begin{itemize}
-  \item\textbf{Standard} The test is executed with the amount of events and period from the recorded session.
-  \item\textbf{Double of Requests} The test is executed with the period and twice of events from the recorded
-  session.
+  % Standard
+  \item\textbf{Standard} The test is executed with the amount of events and period from the recorded
+  session, corresponding to the robot moving at standard speed inside the warehouse.
+  % Double of Requests
+  \item\textbf{Double of Requests} The test is executed with twice of events from the recorded session,
+  corresponding to two robots moving at standard speed inside the warehouse.
+  % Half of period
   \item\textbf{Half of Interval} The test is executed with the amount of events and half of the period from
-  the recorded session.
+  the recorded session, corresponding to the robot moving at twice the speed inside the warehouse.
 \end{itemize}
 
-The evaluation was executed in two scenarios, \textbf{Baseline} and \textbf{Track 3 Laps}, where we
-simulate up to 5 readers sending events concurrently.
+The evaluation was executed in two scenarios, \textbf{Product pick up run} and \textbf{3 product pick up run}.
+In the \textbf{Product pick up run} the robot picks the product, transport it to the destination
+and then returns to its original position. In the \textbf{3 Product pick up run} the robot executes
+the same operation of the \textbf{Product pick up run} scenario, but in this the operation is repeated
+for 3 consecutive products. In both scenarios, we are simulating up to 5 readers sending events
+concurrently.
 
-\subsubsection{Baseline}
+% Product pick up run
+\subsubsection{Product pick up run}
 \label{subs:eval_exp_data_baseline}
 In this scenario the session contains the data recorded based in the events generated during a 1 lap
 in the track. In the current experiment each thread executed 1593 events with a time period of 82$ms$
@@ -422,7 +432,8 @@ pattern. It is possible to take the same conclusions for the \textit{Half of Int
 where the results are always higher - maximum close to $\approx3$ \gls{MB} - and the behavior tends to assume
 a sinusoidal pattern.
 
-\subsubsection{Track 3 Laps}
+% 3 product pick up run
+\subsubsection{3 product pick up run}
 \label{subs:eval_exp_data_3laps}
 In this scenario the session contains the data recorded based in the events generated during 3 laps
 in the track. In the current experiment each thread executed 8895 events with a time period of 57$ms$
