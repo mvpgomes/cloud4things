@@ -43,10 +43,15 @@ in the report can be used to notify the client regarding an event in the smart w
 trigger a new event in the warehouse such as open or close a door.\\
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
-packets in the smart warehouse network. The Fosstrak \gls{ALE} module can be configured to generate
-information to register when a new event is processed and also when a new report is delivered to the
-client. Thus, with the information provided by the monitoring system and the \gls{ALE} module it is
-possible to calculate the latency request for an event that occurs in the warehouse.\\
+packets in the smart warehouse network. In particular, we will perform the network monitoring through
+\textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}}, a command-line tool that allows the monitoring
+of the packets that are being transmitted or received over a network. Through the logs produced by this tool,
+we are able to determine how the connection time is spent.\\
+
+The Fosstrak \gls{ALE} module can be configured to generate information to register when a new event
+is processed and also when a new report is delivered to the client. Thus, with the information provided
+by the monitoring system and the \gls{ALE} module it is possible to calculate the latency request for
+an event that occurs in the warehouse.\\
 
 With this methodology we intend to obtain information regarding how the communication time is spent
 when an event is triggered in the warehouse for the approaches described in Chapter~\ref{chapter:solution}.
@@ -86,14 +91,16 @@ through \gls{HTTP} requests - to the repository that is running in the cloud, as
 % Data Storage Evaluation Methodology Figure
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.7\textwidth]{./images/eval_data_methodology}
+  \includegraphics[width=.9\textwidth]{./images/eval_data_methodology}
   \caption[Data storage evaluation methodology.]{Data storage performance evaluation methodology.}
   \label{fig:eval_data_methodology}
 \end{figure}
 
 The cloud server is running a monitoring system that periodically stores data related to a set of
 system metrics, such as \textit{CPU Utilization} and the volume of incoming network traffic
-by the instances (\textit{Network In}).\\
+by the instances (\textit{Network In}). In the present work, the monitoring of the \glspl{VM} in the
+cloud and for collecting the system metrics from the instances, we will use \gls{AWS}
+CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}}, a monitoring service provided by Amazon.\\
 
 The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
 module is affected regarding the amount of events that are generated in the smart warehouse.
@@ -115,10 +122,7 @@ with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} mid
 \textit{1.2.0}; \textit{b) Capture Application} version \textit{0.1.1}; and \textit{c) \gls{EPCIS} Repository}
 version \textit{0.5.0}. Furthermore, the \gls{EPCIS} Repository was connected to a \textit{MySQL server}
 version \textit{5.5}. The Rifidi Emulator\footnote{\url{http://rifidi.org}} used to emulate the \gls{RFID}
-readers is in version \textit{1.6.0}.\\
-
-To monitoring the \glspl{VM} in the cloud and collect the system metrics from the instances, we use the
-CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}} monitoring service provided by Amazon.
+readers is in version \textit{1.6.0}.
 
 % Performed Experiments
 \section{Experiments Performed}
@@ -127,8 +131,8 @@ The experiments performed in our evaluation were based on the scenario and data 
 Master Thesis. In short, the RFIDToys is a warehouse demonstrator consisting of a robot transporting
 tagged products that are identified by RFID readers deployed in the physical space, as detailed in
 Section~\ref{sec:impl_smart_place}. In the performed experiments, we use a scenario where a tagged
-robot was programmed to execute  a given number of laps in the warehouse plant where exists an automatic
-door that opens when one of the RFID readers that are placed in the plant detects that the robot is
+robot was programmed to execute  a given number of laps in the warehouse plant where an automatic
+door opens when one of the RFID readers that are placed in the plant detects that the robot is
 approaching.\\
 
 Based on this scenario and application domain we defined a set of non-functional requirements that
@@ -139,7 +143,7 @@ our solution must accomplish. The evaluation requirements are presented in Table
     \hline
     Name          & Description                                                                                            \\ \hline
     \textit{R1}   & The event latency must be $<$ than the robot wait time.                                                \\ \hline
-    \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the sub-second scale ($< 100ms$) \\ \hline
+    \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the $< 100ms$.                    \\ \hline
     \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                   \\ \hline
     \textit{R4}   & The EPCIS must support at least 5 users sending simultaneously a large amount of data.                 \\ \hline
   \end{tabular}
@@ -147,18 +151,14 @@ our solution must accomplish. The evaluation requirements are presented in Table
   \label{table:eval_requirements}
 \end{table}
 
+% Latency Interaction
 \subsection{Latency Interaction}
 \label{sub:eval_exp_latency}
 To evaluate the latency interaction according the methodology proposed in Section~\ref{sub:eval_methodology_latency},
 During the lap the robot stops during 5 seconds in front of the door and then continues its lap.
 The door must be opened before the robot starts to moving again.\\
 
-The warehouse network connection was monitored with the \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}},
-a command-line tool that allows the monitoring of the packets that are being transmitted or received
-over a network. Through the logs produced by this tool, we are able to determine how the connection time
-is spent.\\
-
-Tho perform the simulation we defined two different specifications (\textit{ECspec}) for the
+To perform the simulation we defined two different specifications (\textit{ECspec}) for the
 \textit{Event Cycles} of the \gls{ALE} module, \textit{Baseline Event Cycle} and
 \textit{Half-period Event Cycle}. The configuration parameters for the \textit{ECspecs} are presented
 in Table~\ref{table:ecspec_parameters}.
@@ -179,10 +179,9 @@ The evaluation of the event latency for the proposed approaches was performed in
 we want to determine during a \textit{Event Cycle} how much time the \gls{ALE} is processing an event
 and how much time the module is in an idle state. Furthermore, we want to determine how much time
 each stage of the event processing pipeline takes. The event processing pipeline is divided in the
-following stages: \textit{(i) the event data is uploaded}; \textit{(ii) event data is processed};
-\textit{(iii) event data is filtered and aggregated}; \textit{(iv) the event cycle report is created};
-and finally \textit{(v) the event cycle report is delivered to the client application}, as
-illustrated in Figure~\ref{fig:latency_seq_diagram}.
+following stages: (i) the event data is uploaded; (ii) event data is processed; (iii) event data is
+filtered and aggregated; (iv) the event cycle report is created; and finally (v) the event cycle report
+is delivered to the client application, as illustrated in Figure~\ref{fig:latency_seq_diagram}.
 
 % Event Cycle sequence diagram
 \begin{figure}[ht!]
@@ -210,12 +209,6 @@ improvement, from 7.346s to 2.569s.
 The value for the \textit{Tag Processing Time} increased $\approx1000\%$ when the \gls{ALE} is configured
 with \textit{Half-period ECspec} - from 0.002s to 0.024s. The value for the \textit{Filtering \& Aggregation Time}
 metric increased $\approx300\%$ - from 0.370s to 1.490s.
-
-% Experiment Result
-\subparagraph{Experiment Result.}
-\label{subp:cloud_experiment_result}
-In our scenario, that means the warehouse door only will open if the \gls{ALE} module was configured
-with the \textit{Half-period ECspec}, otherwise the robot will crash with the door.
 
 % Event Time Breakdown
 \subparagraph{Event Time Breakdown.}
@@ -296,6 +289,12 @@ Regarding the \textit{Processing} stage, the time required to process the event 
 way, from less than $\approx0.3\%$ to $\approx3\%$. The \textit{Report Creation} stage presented the same
 values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).
 
+% Experiment Results
+\subparagraph{Experiment Results.}
+\label{subp:cloud_experiment_result}
+In our scenario, that means the warehouse door only will open if the \gls{ALE} module was configured
+with the \textit{Half-period ECspec}, otherwise the robot will crash with the door.
+
 % Fog-based warehouse latency
 \subsubsection{Fog-based warehouse latency}
 \label{subs:eval_exp_latency_ecspec}
@@ -313,12 +312,6 @@ and \textit{Response Time} improved 1ms for both metrics.
 However, when configured with a faster \textit{Event Cycle} specification the tag processing time
 presented an inferior performance, where time to process the event data increases $\approx470\%$
 - from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.
-
-\subparagraph{Experiment Result.}
-\label{subp:fog_experiment_result}
-As in the previous experiment, in our scenario the warehouse door only will open if the \gls{ALE}
-module was configured with the \textit{Half-period ECspec}, otherwise the robot will crash with
-the door.
 
 % Event Time Breakdown
 \subparagraph{Event Time Breakdown.}
@@ -395,6 +388,13 @@ The \textit{Upload} and \textit{Response} stages together represents a small per
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
 of time to create the reports represents less than $\approx1\%$ of the total time.
 
+% Experiment Results
+\subparagraph{Experiment Results.}
+\label{subp:fog_experiment_result}
+As in the previous experiment, in our scenario the warehouse door only will open if the \gls{ALE}
+module was configured with the \textit{Half-period ECspec}, otherwise the robot will crash with
+the door.
+
 % Data Storage Performance
 \subsection{Data Storage Performance}
 \label{sub:eval_exp_data}
@@ -409,7 +409,7 @@ facing each other, as illustrated in Figure~\ref{fig:robotic_warehouse}.\\
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=\textwidth]{./images/robotic_warehouse}
-  \caption[Robotic Warehouse demonstrator.]{Robotic Warehouse demonstrator.}
+  \caption[Robotic Warehouse demonstrator.]{Robotic Warehouse demonstrator developed by Correia et. al \cite{Correia:Thesis:2014}.}
   \label{fig:robotic_warehouse}
 \end{figure}
 
@@ -434,7 +434,7 @@ smart warehouse, we perform the following variations in the tests corresponding 
 
 The evaluation was executed in two scenarios, \textbf{Product pick up run} and \textbf{3 product pick up run}.
 In the \textbf{Product pick up run} the robot picks the product, transport it to the destination
-and then returns to its original position. In the \textbf{3 Product pick up run} the robot executes
+and then returns to its original position. In the \textbf{Triple Product pick up run} the robot executes
 the same operation of the \textbf{Product pick up run} scenario, but in this the operation is repeated
 for 3 consecutive products. In both scenarios, we are simulating up to 5 readers sending events
 concurrently.
@@ -477,8 +477,8 @@ pattern. It is possible to take the same conclusions for the \textit{Half of Int
 where the results are always higher - maximum close to $\approx3$ \gls{MB} - and the behavior tends to assume
 a sinusoidal pattern.
 
-% 3 product pick up run
-\subsubsection{3 product pick up runs}
+% Triple product pick up run
+\subsubsection{Triple product pick up runs}
 \label{subs:eval_exp_data_3laps}
 In this scenario the session contains the data recorded based in the events generated during 3 products
 pick up runs. In the current experiment each reader triggered 8895 events with a time period of 57$ms$
@@ -519,21 +519,21 @@ variation tend to be close to the \textit{Half of Interval}.
 Here we present the result analysis and discussion based on the results obtained in the performed
 experiments.
 
-% Latency Interaction
-\subsection{Latency Interaction}
+% Interaction Latency
+\subsection{Interaction Latency}
 \label{subs:eval_results_latency}
 Regarding the latency interaction, the results presented in Tables~\ref{table:fog_metrics} and
 \ref{table:cloud_metrics} show that the fog-approach presented a better overall performance than
 the cloud-based approach.
 
-\subparagraph{Event Latency}
+\subparagraph{Event Latency.}
 \label{subp:eval_event_latency}
 Regarding the results for the \textit{Event Latency} metric, the fog-based approach presented the
 best results. In order to meet the requirement \textit{R1} (presented in \ref{sec:eval_experiments}),
 the event latency must be less than 5s. According the results it is possible to conclude that both
 approaches meet \textit{R1}, but only when the \gls{ALE} is configured with the \textit{Half-period ECspec}.
 
-\subparagraph{Network Latency}
+\subparagraph{Network Latency.}
 \label{subp:eval_network_latency}
 The most relevant results are in network latency values for both approaches. The values for the \textit{Upload}
 and \textit{Reponse} metrics presented a substantial difference, where the fog-based approach is the
@@ -545,7 +545,7 @@ performance of such approach. We believe that if the experiments were conducted 
 network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-approach
 will be better, but not as good as in the fog-based approach.
 
-\subparagraph{Idle Time}
+\subparagraph{Idle Time.}
 \label{subp:eval_idle_time}
 Another important concern regards with the \textit{ECspec} configuration. In the experiments
 performed for both approaches, we notice that the time where the \gls{ALE} module remains in an idle
@@ -554,13 +554,23 @@ However, in all experiments performed the \gls{ALE} spent more time in the idle 
 processing the events. Based on these results we are able to conclude that none of the approaches
 meet the requirement \textit{R3}.
 
-\subparagraph{Tag Data Processing}
+\subparagraph{Tag Data Processing.}
 \label{subp:eval_tag_processing}
-During the evaluation process we noticed a behavior at the performance of the Fosstrak platform.
+During the evaluation process we noticed a behavior in the performance of the Fosstrak platform.
 In the experiments performed for both fog-based and cloud-based approaches we observe that when
-the \gls{ALE} module is configured with a \textit{Half-period ECspec}, it takes more time to
+the \gls{ALE} module was configured with the \textit{Half-period ECspec}, it takes more time to
 process the data from the \gls{RFID} tags. The reason for this performance behavior is unknown and
-need more tests and further investigation in order to determine what causes that performance issue.
+needs further investigation in order to determine what causes that performance issue.
+
+\subparagraph{Data Filtering and Aggregation.}
+\label{subp:data_filtering_aggregation}
+Another point observed at the performance of the Fosstrak platform regards about the performance
+of the \textit{Filtering and Aggregation Time} metric. In the experiments performed for the
+fog-approach the value of the metric improved when the \gls{ALE} was configured with the
+\textit{Half-period ECspec}. However, in the experiments performed for the cloud-approach, the
+metric performance decrease. To determine what is the reason for this performance issue we need
+to perform more tests and verify if for faster \textit{ECspecs} the performance of the
+\textit{Filtering and Aggregation Time} continues to decrease.
 
 % Data Performance
 \subsection{Data Storage Performance}
@@ -578,23 +588,3 @@ which explains the observed behavior.\\
 According these results, is reasonable to assume that the performance of the data storage mechanism of
 the Fosstrak implementation can be a bottleneck. However, in the general case the overall performance
 is able to meet the requirements defined for our scenario (\textit{R4}).
-
-\subsection{Cloud or Fog?}
-\label{subs:eval_conclusion}
-The obtained results show that a fog-based approach offers better overall performance to deploy a
-smart warehouse application based in \gls{RFID} technology that requires low latency interaction.
-But it will be this approach the best choice for all application domains?\\
-
-For instance, for application domains with a small network size, low network bandwidth requirements,
-low scalability and that does not require low latency interaction - such as Ambient Intelligence and
-Retail - a cloud-based approach is suitable, but probably the more adequate solution it will be to
-provisioning the infrastructure in local, since that in most cases a local server is able to host
-such applications.\\
-
-For domains with a medium/large network size and network bandwidth requirements, that does not require
-low latency interaction, but presents high scalability - such as Smart Agriculture and Smart Water
-scenarios - a cloud-based approach is the most reasonable choice.\\
-
-Finally, for domains with a medium/large network size and network bandwidth requirements, that requires
-low latency interaction and presents high scalability - such as Smart Cities, Smart Transportation and
-Healthcare - the fog-based approach is the best solution.
