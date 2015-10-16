@@ -7,26 +7,25 @@
 
 \textit{Smart places} s\~ao um ecosistema composto de sensores, actuadores e infra-estrutura computacional
 que adiquirem dados do ambiente circundante e usam estes dados para melhorar a experi\^encia
-das pessoas que interagem com este lugar. O \textit{smart place} possui uma aplica\c{c}\~ao para a Internet das
+das pessoas que interagem com este ambiente. O \textit{smart place} possui uma aplica\c{c}\~ao para a Internet das
 Coisas (IoT) que \'e capaz de transformar estes dados em informa\c{c}\~ao. Por exemplo, leitores RFID podem
 detectar um objecto que est\'a a aproximar-se e uma porta autom\'atica \'e aberta ap\'os o evento ser
 processado.\\
 
-Geralmente, estas aplica\c{c}\~oes s\~ao \textit{latency-sensitive} visto que as ac\c{c}\~oes
+Geralmente, aplica\c{c}\~oes IoT s\~ao \textit{latency-sensitive} visto que as ac\c{c}\~oes
 tem de ser rapidamente executadas, o que faz com que a infra-estrutura necess\'aria para
 aprovisionar a aplica\c{c}\~ao tem de ser local, o que muitas vezes \'e ineficiente e dispendioso.
-A \textit{Utility Computing} na nuvem pode ajudar a resolver este problema. Entretanto, os
-requisitos de lat\^encia devem ser cuidadosamente avaliados. A Computa\c{c}\~ao em Nevoeiro \'e
-um conceito recente que aproxima a nuvem, fornecendo comunica\c{c}\~ao de baixa lat\^encia para
-aplica\c{c}\~oes e servi\c{c}os.\\
+A \textit{Utility Computing} na nuvem pode resolver este problema. Entretanto, os requisitos de
+lat\^encia devem ser cuidadosamente avaliados. A Computa\c{c}\~ao em Nevoeiro \'e um conceito recente
+que aproxima a nuvem e os dispositivos que encontram-se na periferia da rede, fornecendo comunica\c{c}\~ao
+de baixa lat\^encia para aplica\c{c}\~oes e servi\c{c}os.\\
 
-Neste trabalho foram implementadas duas abordagens para o \textit{deployment} de aplica\c{c}\~oes IoT
-basedas na nuvem e no nevoeiro. Nosso cen\'ario \'e um armaz\'em automatizado que utiliza a plataforma
-Fosstrak - uma implementa\c{c}\~ao \textit{open-source} de \textit{software} para o processamento de
-eventos RFID - para rastrear os objectos do armaz\'em. N\'os comparamos a performance da lat\^encia
-dos eventos para ambas as abordagens e tamb\'em a performance do armazenamento de dados.\\
+Neste trabalho foi implementado um mecanismo para automatizar o \textit{deployment} de aplica\c{c}\~oes IoT
+basedas na nuvem e no nevoeiro. Nosso cen\'ario \'e um armaz\'em automatizado que utiliza um \textit{software}
+para o processamento de eventos RFID para rastrear objectos nas instala\c{c}\~oes. N\'os comparamos a performance
+da lat\^encia dos eventos para ambas as abordagens e a performance do armazenamento de dados.\\
 
-Os resultados obtidos mostraram que a abordagem baseada em nevoeiro \'e mais adequada para
+Os resultados obtidos confirmam que a abordagem baseada em nevoeiro \'e mais adequada para
 aplica\c{c}\~oes \textit{latency-sensitive}, apresentando uma melhor performance quando comparada
 com a abordagem em nuvem.\\
 
