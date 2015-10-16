@@ -4,9 +4,9 @@
 \label{chapter:solution}
 In the present work our main goal is to determine if a cloud-based solution can meet the
 requirements of RFID-based smart place applications, as mentioned in Section~\ref{section:objectives}.
-To achieve our goals we will follow two approaches to deploy the smart warehouse application based
-in the cloud and fog. In Section~\ref{sec:sol_smart_warehouse_deployment}, we present a
-conceptual architecture of the smart warehouse based on the fog and cloud concepts.\\
+To achieve our goals we will follow two approaches to deploy the smart warehouse application: cloud
+and fog. In Section~\ref{sec:sol_smart_warehouse_deployment}, we describe the alternative
+architectures of the smart warehouse deployment.\\
 
 Usually, provisioning the components of a smart place application is an operation that is manually executed and
 requires expertise since that the software components must be correctly installed and configured.
@@ -82,7 +82,7 @@ several types of connection, from a physical connection to a wireless connection
 \section{Smart Place Provisioning}
 \label{sec:sol_provisioning}
 In this section we propose a mechanism that automates the provisioning of software for smart place
-applications in the cloud. Our solution relies on configuration management tools that leverage
+applications in the cloud. Our solution relies on \acrfull{CM} tools that leverage
 existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture
 for the proposed mechanism.\\
 
@@ -119,6 +119,6 @@ smart place software stack in the cloud instances. The provisioning is performed
 that describe which software images must be installed in a given server. The cloud servers run a
 configuration management client that is responsible for pulling the software images that are located
 in a central repository and to enforce the provisioning policies. Furthermore, we proposed two deployment
-for smart place applications based in the cloud and fog concepts. These approaches will allow us to
-have more flexibility in the provisioning of smart place applications. That flexibility will allow to
-later compare the performance of both approaches.
+approaches for smart place applications based in the cloud and fog concepts. These approaches will allow
+us to have more flexibility in the provisioning of smart place applications to later compare the
+performance of both approaches.
