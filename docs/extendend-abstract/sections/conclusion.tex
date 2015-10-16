@@ -4,7 +4,7 @@
 % Conclusion
 \section{Conclusion and Future Work}
 \label{sec:conclusion}
-The present work explores the deployment of \gls{IoT} applications in the cloud and proposes
+This dissertation explores the deployment of \gls{IoT} applications in the cloud and proposes
 two different approaches to deploy an \gls{IoT} application for smart warehouses based on the
 \gls{RFID} technology: one based in a traditional cloud deployment approach (cloud-based) and other
 according the Fog Computing platform (fog-based). More specifically, the present work focuses to
@@ -20,77 +20,29 @@ importance, since that allowed us to perform the application provisioning in the
 a very efficient way. Although our experiments were conducted in a single cloud provider, the developed
 mechanism give us the flexibility to chose between several cloud providers to provisioning the \gls{RFID} middleware.\\
 
-Regarding the system evaluation, we defined two methodologies for evaluate the latency of an event that
-occurs in the physical space and the data storage performance for the Fosstrak platform. With the
-methodologies proposed, we were able to compare the event latency performance for both cloud-based
+Regarding the system evaluation, we defined a methodology for evaluate the latency of an event that
+occurs in the physical space that allow us to compare the event latency performance for both cloud-based
 and fog-based approaches. We defined two experiments to evaluate the latency performance of the
 deployment approaches. The obtained results shows that the event latency performance presented better
 results when the application was deployed according the fog-based approach. However, we identified
 some issues regarding the behavior of a Fosstrak module (\gls{ALE}) that affected the performance
-of the event latency for both deployment approaches. Regarding the data storage performance of the
-RFID middleware, the results show that the Fosstrak platform is able to process with an acceptable
-performance the amount of data that is generated in a smart warehouse.
-
-% Contributions
-\section{Contributions Summary}
-\label{sec:contributions}
-
-\subparagraph{RFID Smart Place Architecture.}
-\label{subp:rfid_smart_place_architecture}
-A deployment architecture based on the Cloud Computing platform for EPCGlobal compliant \gls{RFID}
-middleware platforms. We propose an architecture that focuses to improve the network latency
-performance of \gls{RFID} applications by distributing the middleware components across the fog and
-the cloud.
-
-\subparagraph{Provisioning Mechanism.}
-\label{subp:provisioning_mechanism}
-A mechanism that automates the provisioning of \gls{RFID} application middleware in the cloud.
-The provisioning mechanism allows to provisioning the Fosstrak modules in several cloud
-providers. Furthermore, it is based on Docker container images to provisioning the application
-stack, it is not specific for the Fosstrak middleware and can be extended for every EPCGlobal
-compliant \gls{RFID} platform.
-
-\subparagraph{Docker Images.}
-\label{subp:docker_images}
-To provisioning the Fosstrak software stack, we developed a set of Docker images that used to
-create the Docker containers with the Fosstrak modules, namely \gls{ALE}, Capture Application,
-\gls{EPCIS} Repository and MySQL database. The images are open-source and available at
-Docker Hub.
-
-\subparagraph{RFID Software Deployment.}
-\label{subp:RFID Software Deployment}
-Our provisioning mechanism was implemented through the Chef configuration management tool. Since the
-resources for provisioning the stack using Chef does not exists, we defined a set of \textit{recipes}
-and \textit{roles} that allow to deploy and configure the Fosstrak software stack.
-
-\subparagraph{Interaction Latency Evaluation.}
-\label{subp:event_latency_performance_eval}
-Experiments were performed in order to find the best cloud-based deployment approach that meets the
-low-latency requirements of \gls{RFID} applications. Moreover, we compared both cloud-based and fog-based
-approaches based on the \textit{Event Cycle} metrics in order to determine how the deployment
-approach affects the performance of the \textit{Event Cycle} stages.
+of the event latency for both deployment approaches.
 
 % Future Work
-\section{Future Work}
-\label{sec:future_work}
+\subsection{Future Work}
+\label{sub:future_work}
 In the present work, we achieved our initial goals and determine that a fog-based approach is more
 adequate to deploy a smart place application based in \gls{RFID} technology. However, our solution
-is not perfect and there some aspects that can be improved in the future.
+is not perfect and there some aspects that can be improved in the future.\\
 
-% Fog Implementation
-\subparagraph{Fog Implementation.}
-\label{subp:fog_impl}
 Our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
 This means that we need to have a cloud close to the ground and this cloud must meet the same
 requirements of a remote cloud such as high scalability, security and multi-tenancy. Unfortunately,
 we were not able to accomplish a fog that meet these requirements and in our implementation the fog
 was built on top of a traditional Virtual Machine. In the future, the fog need be correctly
 implemented providing all the features of the remote cloud and in addition features such as
-location-awareness, mobility support and geo-distribution.
+location-awareness, mobility support and geo-distribution.\\
 
-% Containers Deployment
-\subparagraph{Containers Deployment.}
-\label{subp:containers_impl}
 In the current implementation we used Docker containers to provisioning the Fosstrak software stack.
 In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
 different mechanisms of virtualization. Although we still are able to take advantage of some benefits
@@ -98,36 +50,11 @@ from the containers such as the portability, other benefits such as the low I/O 
 hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
 of the containers on top of the bare-metal or in a cloud-based container service - e.g. Google Kubernetes
 \footnote{\url{http://kubernetes.io/}}, \gls{AWS} \gls{EC2} Container Service\footnote{\url{https://aws.amazon.com/ecs/}} -
-in order to improve the overall performance of the solution.
+in order to improve the overall performance of the solution.\\
 
-% Cloud Providers Evaluation
-\subparagraph{Cloud Providers Evaluation.}
-\label{subp:cloud_eval}
-The evaluation was performed only in \gls{AWS} \gls{EC2} instances. For the future is important to
-evaluate our solution in other cloud providers to compare which offers the best cost/performance
-relation.
-
-% Latency Interaction Evaluation
-\subparagraph{Latency Interaction Evaluation.}
-\label{subp:latency_eval}
-To evaluate the latency interaction, we defined only two different \textit{ECspecs}. For the future work,
-we want to evaluate the latency performance for our solution with \textit{ECspecs} that presents smaller
-periods in order to determine which specification is more suitable for our solution.
-
-% Latency Interaction Evaluation
-\subparagraph{Evaluation Scenario.}
-\label{subp:scenario_eval}
-In the evaluation scenario we used a virtual \gls{RFID} reader instead of a physical one.
-Thus, we are not able to reproduce the environment conditions of a real smart warehouse such as
-interferences in the \gls{RFID} tags antennas, network bandwidth variations, etc. However, in the
-evaluation experiments we used traces from the work developed by Correia et. al \cite{Correia:Thesis:2014},
-which have the problems mentioned above.
-
-% Summary
-\section{Summary}
-\label{sec:conclusion_summary}
-We believe that using the cloud infrastructure to support smart place applications will be the
-most adopted approach, even for applications that have strict requirements such for low-latency
-and context-awareness. The flexibility provided by the cloud paradigm will allow that
-\gls{IoT} applications from several domains may be deployed in a cloud infrastructure and take
-advantage of the benefits offered by this paradigm.
+Regarding the system evaluation, it was performed only in \gls{AWS} \gls{EC2} instances. For the future
+is important to evaluate our solution in other cloud providers to compare which offers the best cost/performance
+relation. Also, in experiments performed to evaluate the latency interaction, we defined only two
+different \textit{ECspecs}. For the future work, we want to evaluate the latency performance for
+our solution with \textit{ECspecs} that presents smaller periods in order to determine which
+specification is more suitable for our solution.
