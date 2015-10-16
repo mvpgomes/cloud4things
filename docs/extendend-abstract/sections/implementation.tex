@@ -50,36 +50,12 @@ analogy in most of its concepts} tool. Chef provides several features that allow
 infrastructure as code. In the implementation of the provisioning mechanism, the main features used
 were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool.\\
 
-Describe that we defined recipes and roles for the current implementation.\\
-
-% Cloud Provisioning Roles
-\subsubsection{Cloud}
-\label{sub:cloud_provisioning}
-In a cloud deployment approach the Fosstrak software stack is provisioned in a single instance, as
-illutrated in Figure~\ref{fig:implementation_cloud_architecture}. Thus, we defined a single role
-to describe the responsibilities of the node provisioned in the cloud.\\
-
-The fosstrak role describes that the nodes must have installed all the modules of Fosstrak
-that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db},
-\textit{fosstrak-epcis}, \textit{fosstrak-capture} and \textit{fosstrak-ale} recipes. The nodes
-that have assigned this role are identified as \textit{fosstrak-server}.
-
-
-% Fog Provisioning Roles
-\subsubsection{Fog}
-\label{subs:fog_provisioning}
-In a fog deployment approach the Fosstrak software stack is distributed across the fog and cloud,
-as illustrated on Figure~\ref{fig:implementation_fog_architecture}. Therefore, we defined two different
-roles that describe the responsibilities of the provisioned nodes.
-
-The fog role describes that nodes must have installed the following resources specified in the
-recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-capture} and
-\textit{fosstrak-ale}. The nodes that have assigned this role are identified as \textit{fog-server}.
-
-The cloud role describes that the nodes must have installed the remaining modules of Fosstrak
-that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db} and
-\textit{fosstrak-epcis} recipes. The nodes that have assigned this role are identified as
-\textit{cloud-server}.
+In order to provisioning the smart place software stack, we defined a set of recipes and roles that
+are used by Chef to provisioning the application infrastructure. These recipes describe how the
+Fosstrak software stack is provisioned in the cloud - since we are using Docker containers to
+provisioning Fosstrak stack, the recipes describe how to provisioning the Docker containers -
+and the roles allow to specify which recipes must be applied to a given node as well to
+attribute responsibilities to a specific node in the provisioned infrastructure.
 
 % Provisioning Mechanism
 \subsection{Provisioning Mechanism}
