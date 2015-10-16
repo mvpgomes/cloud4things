@@ -22,9 +22,9 @@ as illustrated in Figure~\ref{fig:rfidapp_setup}.\\
 \end{figure}
 
 The warehouse is composed of a robot transporting tagged products that are identified by \gls{RFID} readers
-deployed in the physical space. To monitoring the robot inside the warehouse, we decide to use Fosstrak
-as our \gls{RFID} middleware. In our implementation, the \gls{RFID} readers are emulated through the
-Rifidi Emulator, which uses the \gls{LLRP} protocol to communicate with the Fosstrak platform.
+deployed in the physical space. To monitor the robot inside the warehouse, the Fosstrak \gls{RFID} middleware
+is used. In our implementation, the \gls{RFID} readers are emulated through the Rifidi Emulator, which uses
+the \gls{LLRP} protocol to communicate with the Fosstrak platform.
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -76,23 +76,22 @@ types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic)
 % Smart Place Provisioning
 \section{Smart Place Provisioning}
 \label{sec:impl_provisioning}
-The implementation of the provisioning mechanism relies on the Chef\footnote{The tool uses culinary
-analogy in most of its concepts} tool. Chef provides several features that allows to describe our
-infrastructure as code. In the implementation of the provisioning mechanism, the main features used
-were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool. In the current
-implementation, we used Docker containers to provisioning the smart warehouse software at the
-cloud providers in alternative to traditional \glspl{VM}.
+The implementation of the provisioning mechanism relies on the Chef tool. Chef provides several features
+that allow to describe our infrastructure as code. In the implementation of the provisioning mechanism,
+the main features used were the Chef \textit{recipes}, \textit{roles} and \textit{knife} command-line
+tool\footnote{The tool uses culinary analogy in most of its concepts}. In the current implementation,
+we used Docker containers to provisioning the smart warehouse software at the cloud providers in
+alternative to traditional \glspl{VM}.
 
 % Provisioning Recipes
 \subsection{Provisioning Recipes}
 \label{sub:recipes}
 The \textit{recipes} that describe our infrastructure are based on \textit{cookbooks} available at the
 Chef Supermarket\footnote{\url{https://supermarket.chef.io/}} and also in custom recipes that
-were defined specifically for this work. These recipes describe how the Fosstrak software
-stack is provisioned in the cloud. Since we are using Docker containers for provisioning Fosstrak stack,
-a set of recipes were defined based on the official Docker cookbook for describing how the containers
-must be provisioned. For instance, Listing~\ref{listing:epcis_recipe} present the provisioning recipe
-for the Docker container that runs the \gls{EPCIS} Repository:
+were defined specifically for this work to describe how the Fosstrak software stack is provisioned
+in the cloud. Since we are using Docker containers the recipes were defined based on the official
+Docker cookbook for describing how the containers must be provisioned. For instance, Listing~\ref{listing:epcis_recipe}
+present the provisioning recipe for the Docker container that runs the \gls{EPCIS} Repository:
 
 % EPCIS container recipe
 \begin{listing}
@@ -154,7 +153,6 @@ that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fos
 \textit{fosstrak-epcis}, \textit{fosstrak-capture} and \textit{fosstrak-ale} recipes. The nodes
 that have assigned this role are identified as \textit{fosstrak-server}.
 
-
 % Fog Provisioning Roles
 \subsubsection{Fog Provisioning Roles}
 \label{subs:fog_roles}
@@ -173,9 +171,10 @@ roles that describe the responsibilities of the provisioned nodes.
   \label{listing:fog_fog_recipe}
 \end{listing}
 
-The \textit{fog} role describes that nodes must have installed the following resources specified in the
+The \textit{fog} role describes that fog nodes must have installed the following resources specified in the
 recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-capture} and
-\textit{fosstrak-ale}. The nodes that have assigned this role are identified as \textit{fog-server}.
+\textit{fosstrak-ale}. The nodes that have assigned this role are identified as \textit{fog-server},
+as illustrated in Listing~\ref{listing:fog_fog_recipe}.\\
 
 % Cloud role
 \begin{listing}[ht!]
@@ -188,15 +187,15 @@ recipes of the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-captu
   \label{listing:fog_cloud_recipe}
 \end{listing}
 
-The \textit{cloud} role describes that the nodes must have installed the remaining modules of Fosstrak
+The \textit{cloud} role describes that cloud nodes must have installed the remaining modules of Fosstrak
 that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fosstrak-db} and
 \textit{fosstrak-epcis} recipes. The nodes that have assigned this role are identified as
-\textit{cloud-server}.
+\textit{cloud-server}, as illustrated in Listing~\ref{listing:fog_cloud_recipe}.
 
 % Provisioning Mechanism
 \subsection{Provisioning Mechanism}
 \label{sub:provisioning_mechanism}
-To provisioning the resources in the cloud instances we will use \textit{knife}, a command-line tool
+To provisioning the resources in the cloud instances we used \textit{knife}, a command-line tool
 developed by Chef that provides an interface between the local Chef repository and the Chef server.
 The provisioning workflow is illustrated in Figure~\ref{fig:provisioning_tech_architecture}.\\
 
@@ -219,10 +218,17 @@ remote repository, build the containers based on those images and finally applie
 that is associated to each container.\\
 
 We decide to chose Chef instead of its competitors - i.e. Puppet and Ansible - for several
-reasons, where the main one is \textit{knife}. \textit{Knife} tool is very powerful and allow us to
+reasons, where the main one is \textit{knife}. Knife tool is very powerful and allow us to
 interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
-apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
-possible to execute a command on a certain number of nodes in our environment.\\
+apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is possible
+to execute a command on a certain number of nodes in our environment. For instance, if we change
+the role configuration that is assigned to a set of nodes in our infrastructure, knife allows to
+update all these nodes with the most recent policy with a single command.\\
+
+Also, knife provides plugins for several cloud providers, such as \gls{AWS}\footnote{\url{https://aws.amazon.com/}},
+and Google Compute Engine\footnote{\url{https://cloud.google.com/compute/}}. These plugins allow
+the provisioning of the application in the cloud providers infrastructure using the same resources - e.g.
+roles, recipes, etc - for all available providers.
 
 % Docker containers
 \subsection{Docker Containers}
@@ -273,9 +279,9 @@ solution and also discuss about the technological components used in our impleme
 Our provisioning mechanism is based on the Chef tool. To provisioning Fosstrak's software stack we are
 using Docker containers in alternative to the traditional \glspl{VM}. The provisioning mechanism relies
 on the \textit{recipes}, \textit{roles} and the \textit{knife} command, which are provided by Chef.
-The recipes allow to describe which software components and settings should be installed in a node,
-while the roles allow to attribute responsibilities to a specific node. The knife command is used
-to execute the provisioning request and to interact with the provisioned infrastructure.\\
+We defined a set of recipes that allow to describing how the Fosstrak software stack should be installed
+in a node while the roles allow to attributing responsibilities to a specific node. The knife command
+is used to execute the provisioning request and to interact with the provisioned infrastructure.\\
 
 The provisioning mechanism implemented in this work allows to perform the deployment of a smart place
 application based in Fosstrak across the cloud and fog, although it can be extended to support other
