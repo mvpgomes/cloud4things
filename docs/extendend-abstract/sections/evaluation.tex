@@ -120,9 +120,9 @@ The evaluation of the event latency for the proposed approaches was performed in
 we want to determine during a \textit{Event Cycle} how much time the \gls{ALE} is processing an event
 and how much time the module is in an idle state. Furthermore, we want to determine how much time
 each stage of the event processing pipeline takes. To achieve that we proposed the following metrics
-based on the event processing pipeline stages: \textit{(i) Upload Time}; \textit{(ii) Tag Processing Time};
-\textit{(iii) Filtering \& Aggregation Time}; \textit{(iv) Report Creation Time};
-and finally \textit{(v) Response Time}.\\
+based on the event processing pipeline stages: (i) \textit{Upload Time}; (ii) \textit{Tag Processing Time};
+(iii) \textit{Filtering \& Aggregation Time}; (iv) \textit{Report Creation Time}; and finally (v)
+\textit{Response Time}.\\
 
 % Cloud-based warehouse latency
 \subsubsection{Cloud-based warehouse latency}
@@ -146,7 +146,7 @@ the \textit{Half-period ECspec}.\\
 % Baseline ECspec event time breakdown
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.6\linewidth]{./figures/cloud_ecspec_breakdown}
+  \includegraphics[width=.55\linewidth]{./figures/cloud_ecspec_breakdown}
   \caption{Baseline Event Cycle: latency breakdown.}
   \label{fig:ecspecf_base}
 \end{figure}
@@ -154,7 +154,7 @@ the \textit{Half-period ECspec}.\\
 % ECSpec fast cloud breakdown figure
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=.6\linewidth]{./figures/cloud_ecspecf_breakdown}
+  \includegraphics[width=.55\linewidth]{./figures/cloud_ecspecf_breakdown}
   \caption{Half-period Event Cycle: latency breakdown.}
   \label{fig:ecspecf_half}
 \end{figure}
@@ -230,7 +230,7 @@ with the \textit{Half-period ECspec}.
 % ECSpec breakdown figure
 \begin{figure}[ht!]
  \centering
- \includegraphics[width=.6\linewidth]{./figures/edge_ecspec_breakdown}
+ \includegraphics[width=.55\linewidth]{./figures/edge_ecspec_breakdown}
  \caption{Baseline Event Cycle: latency breakdown.}
  \label{fig:ecspec_base}
 \end{figure}
@@ -238,7 +238,7 @@ with the \textit{Half-period ECspec}.
 % ECSpec fast breakdown figure
 \begin{figure}[ht!]
  \centering
- \includegraphics[width=.6\linewidth]{./figures/edge_ecspecf_breakdown}
+ \includegraphics[width=.55\linewidth]{./figures/edge_ecspecf_breakdown}
  \caption{Half-period Event Cycle: latency breakdown.}
  \label{fig:ecspec_half}
 \end{figure}
@@ -311,8 +311,5 @@ The obtained results show that a fog-based approach offers better overall perfor
 smart warehouse application based in RFID technology that requires low latency interaction. However
 we detected some performance issues in the behavior of the \gls{ALE} module. In particular, in the
 performed experiments we detected that in most of the time the module remains in an idle state.
-The cause of this performance issue is the configuration of the \textit{ECspec}, where the period seems to
-be higher than necessary.\\
-
 Regarding the data storage performance the obtained results show that Fosstrak is adequate
 to process the amount of data generated in a smart warehouse.

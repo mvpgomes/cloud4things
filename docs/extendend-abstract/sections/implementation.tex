@@ -13,9 +13,9 @@ the cloud and fog concepts.
 \label{sub:impl_smart_place}
 The smart warehouse setup was based in a demonstration scenario described by Correia et al. \cite{correiaalpharfid}.
 The warehouse is composed of a robot transporting tagged products that are identified by \gls{RFID} readers
-deployed in the physical space. To monitoring the robot inside the warehouse, we decide to use Fosstrak
-as our \gls{RFID} middleware. In our implementation, the \gls{RFID} readers are emulated through the
-Rifidi Emulator, which uses the \gls{LLRP} protocol to communicate with the Fosstrak platform.
+deployed in the physical space. To monitor the robot inside the warehouse, the Fosstrak \gls{RFID} middleware
+was used. In our implementation, the \gls{RFID} readers are emulated through the Rifidi Emulator, which
+uses the \gls{LLRP} protocol to communicate with the Fosstrak platform.
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -45,15 +45,15 @@ types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic)
 % Smart Place Provisioning
 \subsection{Smart Place Provisioning}
 \label{sec:impl_provisioning}
-The implementation of the provisioning mechanism relies on the Chef\footnote{The tool uses culinary
-analogy in most of its concepts} tool. Chef provides several features that allows to describe our
-infrastructure as code. In the implementation of the provisioning mechanism, the main features used
-were the Chef \textit{recipes}, \textit{roles} and the \textit{knife} command-line tool.\\
+The implementation of the provisioning mechanism relies on the Chef tool. Chef provides several
+features that allows to describe our infrastructure as code. In the implementation of the provisioning
+mechanism, the main features used were the Chef \textit{recipes}, \textit{roles} and the \textit{knife}
+command-line tool\footnote{The tool uses culinary analogy in most of its concepts} .\\
 
 In order to provisioning the smart place software stack, we defined a set of recipes and roles that
-are used by Chef to provisioning the application infrastructure. These recipes describe how the
+are used by Chef to provisioning the application infrastructure. The recipes describe how the
 Fosstrak software stack is provisioned in the cloud - since we are using Docker containers to
-provisioning Fosstrak stack, the recipes describe how to provisioning the Docker containers -
+provisioning Fosstrak stack, the recipes describe how the containers must be provisioned -
 and the roles allow to specify which recipes must be applied to a given node as well to
 attribute responsibilities to a specific node in the provisioned infrastructure.
 
@@ -83,7 +83,8 @@ remote repository, build the containers based on those images and finally applie
 that is associated to each container.\\
 
 We decide to chose Chef instead of its competitors - i.e. Puppet and Ansible - for several
-reasons, where the main one is \textit{knife}. \textit{Knife} tool is very powerful and allow us to
-interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
-apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is
-possible to execute a command on a certain number of nodes in our environment.\\
+reasons, where the main one is \textit{knife}. Knife tool is very powerful and allow us to
+interact with our entire infrastructure. Furthermore, with \textit{knife ssh} it is possible
+to execute a command on a certain number of nodes in our environment. For instance, if we change
+the role configuration that is assigned to a set of nodes in our infrastructure, knife allows to
+update all these nodes with the most recent policy with a single command.
