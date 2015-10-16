@@ -68,8 +68,8 @@ Although great progress was achieved regarding the improvement for the deploymen
 solutions, most of the work still are in a conceptual stage. What is certain is that cloud service
 delivery models will be the basis for the service delivery models of \gls{IoT} solutions.
 
-% Data Storage Performance
-\subsection{Data Storage Performace}
+% Data Storage
+\subsection{Data Storage}
 \label{sub:data_storage}
 Smart places generate a large amount of data. The cloud must be able to store and process that data
 in a efficient manner. Currently, there are several alternatives to perform data storage in the cloud,
@@ -131,7 +131,7 @@ platforms in order to improve the performance of those middleware platforms. The
 was evaluated and the results show that Fosstrak is not the best option when executing the modules
 responsible for collecting the data (ALE) from RFID readers and storing the event data
 (EPCIS) in the same  machine. In order to improve the performance of the EPCGlobal compliant middleware platforms,
-the new infrastructure adopt a decentralized architecture where the EPCIS is deployed in the
+the new infrastructure adopts a decentralized architecture where the EPCIS is deployed in the
 cloud and it is connected to a NoSQL database instead of MySQL. The ALE module adopts a
 multi-threading architecture in order to support a high parallel demand of RFID readers.
 Currently, a prototype of the proposed infrastructure is being developed using OpenNebula, pthreads
@@ -151,7 +151,9 @@ benefits when compared to hypervisor-based solutions. Containers are small, they
 
 \glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment
 that relies on Linux Kernel. \gls{LXC} are hardware-agnostic and platform-agnostic, and also provides
-features such as application isolation and multi-tenancy.\\
+features such as application isolation and multi-tenancy. The present work will use containers to
+provisioning the \gls{RFID} application software stack. Thus, we chose to use Docker as our container-based
+virtualization platform.
 
 \subsubsection{Docker Platform}
 \label{subs:docker_platform}
@@ -199,7 +201,7 @@ The tool was built from the ground with up the cloud infrastructure in mind. Wit
 to dynamically provision and deprovision the application infrastructure on demand to keep up with
 peaks in usage and track. For instance, the \textit{knife} command has a plugin for provisioning cloud
 resources across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google
-Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.\\
+Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.
 
 % Fog Computing
 \section{Fog computing for low latency responses}
@@ -237,8 +239,8 @@ that the higher is the tier, the geographical coverage is wider and the time sca
 The global coverage is given by the Cloud, which acts as a central repository for the persistent data
 and that is used to perform business analytics.
 
-% Internet of Things Application Domains
-\section{Internet of Things application domains characteristics}
+% Internet of Things Applications
+\section{Internet of Things applications}
 \label{sec:iot_domains}
 Smart places cover several application domains, as mentioned in Section~\ref{sec:application_domains}.
 Gubbi et. al [2] presented the technological characteristics for several domains of IoT applications,
@@ -250,8 +252,8 @@ In the present work, our application domain characteristics are similar to the S
 is based on the \gls{RFID} technology and the \gls{EPC} Framework.
 
 % Internet of Things stack example: EPC Framework
-\section{Internet of Things stack example: EPC Framework}
-\label{sec:iot_stack}
+\subsection{Internet of Things stack example: EPC Framework}
+\label{subs:iot_stack}
 The \gls{RFID} middleware is the component of a \gls{RFID} system that sits between the low level
 components - e.g. readers and tags - and the business client application - e.g. \gls{ERP} systems.
 The next paragraphs describes the EPCglobal, a framework that provides standardized interfaces that
@@ -259,7 +261,7 @@ isolates hardware vendors from business applications, and Fosstrak, a open-sourc
 middleware platform that implements the GS1 \gls{EPC} Network standards.
 
 % GS1 EPC Network
-\subsection{GS1 EPCglobal Architecture}
+\subsubsection{GS1 EPCglobal Architecture}
 \label{subs:epc_network}
 GS1\footnote{\url{http://www.gs1.org}} is an organization that is responsible for the development and
 maintenance of standards for supply chain. One of the standards developed by GS1 is the \gls{EPC},
@@ -307,8 +309,8 @@ context of our work, the most relevant components of the framework architecture 
 \end{itemize}
 
 % Fosstrak
-\subsection{Fosstrak Platform}
-\label{sub:fosstrak}
+\subsubsection{Fosstrak Platform}
+\label{subs:fosstrak}
 The Free and Open Source Software for Track and Trace (Fosstrak) is an EPCglobal Network compliant
 \gls{RFID} software platform that was developed by Floerkemeier et. al \cite{floerkemeier2007rfid}.
 Figure~\ref{fig:fosstrak_architecture} presents the architecture of the Fosstrak platform.\\
