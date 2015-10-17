@@ -130,7 +130,7 @@ Client Receive Report:
 23:43:53.548
 
 - RTT: 4.978s
-- Upload Time: 0.091s
+- Upload Time: 0.096s
 - Tag Processing Time: 0.002s
 - Idle Time: 2.120s
 - Report Creation Time: 0.003s
@@ -223,10 +223,10 @@ Start to create the ECReport:
 23:44:08.327
 
 Finished the ECReport creation:
-23:44:03.330
+23:44:08.330
 
 Create Post request to the Client
-23:44:05.330
+23:44:08.330
 
 Client Receive Report:
 23:44:08.360
@@ -474,7 +474,7 @@ Client Receive Report:
 - RTT: 4.591s
 - Upload Time: 0.069s
 - Tag Processing Time: 0.002s
-- Idle Time: 3.157s
+- Idle Time: 2.100s
 - Report Creation Time: 0.003s
 - Response Time: 0.343s
 

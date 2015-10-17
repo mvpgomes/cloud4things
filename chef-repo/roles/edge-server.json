@@ -1,0 +1,9 @@
+{
+  "name" : "edge-server",
+  "default_attributes" : {},
+  "run_list" : [
+    "recipe[docker]",
+    "recipe[docker::fosstrak_capture]",
+    "recipe[docker::fosstrak_ale]"
+  ]
+}
