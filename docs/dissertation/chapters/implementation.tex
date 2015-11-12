@@ -114,8 +114,42 @@ internally is represented by the alias \textit{db}. The \textit{detach} paramete
 container must run in the background or not.\\
 
 We also defined the recipes that provision Docker containers for the remaining Fosstrak
-stack, namely the \textit{Filtering \& Collection Server}, \textit{Capturing Application} and
-\textit{MySQL} database.
+stack, namely the \textit{Filtering \& Collection Server} (Listing~\ref{listing:ale_recipe}),
+\textit{Capturing Application} (Listing~\ref{listing:capture_recipe}) and \textit{MySQL}
+database (Listing~\ref{listing:db_recipe}).
+
+% ALE container recipe
+\begin{listing}
+  \inputminted[frame=lines,
+                 framesep=3mm,
+                 linenos=true,
+                 xleftmargin=21pt,
+                 tabsize=4]{ruby}{./listings/ale_recipe.rb}
+  \caption{ALE Docker container provisioning recipe.}
+  \label{listing:ale_recipe}
+\end{listing}
+
+% Capturing app container recipe
+\begin{listing}
+  \inputminted[frame=lines,
+                 framesep=3mm,
+                 linenos=true,
+                 xleftmargin=21pt,
+                 tabsize=4]{ruby}{./listings/capture_recipe.rb}
+  \caption{Capturing application Docker container provisioning recipe.}
+  \label{listing:capture_recipe}
+\end{listing}
+
+% Database container recipe
+\begin{listing}
+  \inputminted[frame=lines,
+                 framesep=3mm,
+                 linenos=true,
+                 xleftmargin=21pt,
+                 tabsize=4]{ruby}{./listings/db_recipe.rb}
+  \caption{MySQL Docker container provisioning recipe.}
+  \label{listing:db_recipe}
+\end{listing}
 
 % Provisioning Roles
 \subsection{Provisioning Roles}
