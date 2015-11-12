@@ -197,7 +197,7 @@ are managed with Chef. The Chef client periodically pulls Chef server latest pol
 network, and if anything on the node is out of date, the client update its state in order to be
 consistent with the latest policy.\\
 
-The tool was built from the ground with up the cloud infrastructure in mind. With Chef, it is possible
+The tool was built from the ground up with the cloud infrastructure in mind. With Chef, it is possible
 to dynamically provision and deprovision the application infrastructure on demand to keep up with
 peaks in usage and track. For instance, the \textit{knife} command has a plugin for provisioning cloud
 resources across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google
@@ -223,7 +223,7 @@ traditional data centers in the cloud.\\
 \end{figure}
 
 Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
-in Figure~\cite{bonomi2012fog} the distributed infrastructure of Fog is composed of heterogeneous
+in Figure~\ref{fig:fog_architecture} the distributed infrastructure of Fog is composed of heterogeneous
 resources that must be managed in a distributed way: the infrastructure comprising of several players,
 covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
 is the lowest tier of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
