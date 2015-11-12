@@ -17,9 +17,9 @@ Furthermore, we present a brief description of Docker, a lightweight virtualizat
 alternative to traditional Virtual Machines. Finally we describe Chef, an configuration management tool
 that automates the provision of smart applications in the cloud.
 
-% Smart Place Deployment
-\subsection{Smart Place Deployment}
-\label{sub:smart_place_deployment}
+% Smart Place Computing
+\subsection{Smart Place Computing}
+\label{sub:smart_place_computing}
 Deployment of smart places usually was performed in a physical and isolated manner. By leveraging the
 infrastructure of smart places to the cloud, new provisioning approaches have to be adopted. Currently,
 cloud service delivery models are being developed based on the existing layers of the cloud
@@ -67,6 +67,34 @@ different solutions.\\
 Although a significant progress was achieved regarding the improvement for the deployment of \gls{IoT}
 solutions, most of the work still are in a conceptual stage. What is certain is that cloud service
 delivery models will be the basis for the service delivery models of \gls{IoT} solutions.
+
+% Containers
+\subsubsection{Containers}
+\label{subs:containers}
+Containers are a virtualization technique that is performed at the \gls{OS} level, different of
+hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at the hardware-level.
+In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
+Although the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
+an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
+operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
+benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
+\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
+
+\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment
+that relies on Linux Kernel. \gls{LXC} are hardware-agnostic and platform-agnostic, and also provides
+features such as application isolation and multi-tenancy. The present work will use containers to
+provisioning the \gls{RFID} application software stack. Thus, we chose to use Docker as our container-based
+virtualization platform.
+
+\subparagraph{Docker Platform.}
+\label{subp:docker_platform}
+Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
+a lightweight container. Since Docker containers are based on \gls{LXC}, it can run anywhere\footnote{Initially, Docker required that the physical
+machine where the containers will be created is running a Linux kernel. Currently, Microsoft
+launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
+perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
+benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
+a public repository that stores Docker images that are used to create the containers.
 
 % Data Storage
 \subsection{Data Storage}
@@ -136,34 +164,6 @@ cloud and it is connected to a NoSQL database instead of MySQL. The ALE module a
 multi-threading architecture in order to support a high parallel demand of RFID readers.
 Currently, a prototype of the proposed infrastructure is being developed using OpenNebula, pthreads
 and \gls{SOA}.
-
-% Containers
-\subsection{Containers}
-\label{sub:containers}
-Containers are a virtualization technique that is performed at the \gls{OS} level, different of
-hypervisor-based solutions - e.g. \glspl{VM} - where the virtualization is performed at the hardware-level.
-In a \gls{OS} level virtualization, all guests share the same operating system as the base machine \cite{matthews2007quantifying}.
-Although the effect of both types of virtualization are similar, unlike the hypervisor-based virtualization
-an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
-operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
-benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
-\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
-
-\glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment
-that relies on Linux Kernel. \gls{LXC} are hardware-agnostic and platform-agnostic, and also provides
-features such as application isolation and multi-tenancy. The present work will use containers to
-provisioning the \gls{RFID} application software stack. Thus, we chose to use Docker as our container-based
-virtualization platform.
-
-\subsubsection{Docker Platform}
-\label{subs:docker_platform}
-Docker\footnote{\url{https://www.docker.com/}} is an open source project to pack, ship and run any application as
-a lightweight container. Since Docker containers are based on \gls{LXC}, it can run anywhere\footnote{Initially, Docker required that the physical
-machine where the containers will be created is running a Linux kernel. Currently, Microsoft
-launched Windows Server Containers, an \gls{OS} level virtualization mechanism where it is possible to
-perform the management of containers through Docker.}, from a laptop to a cloud instance. Another
-benefit that Docker platform provides is the Docker Hub\footnote{\url{https://hub.docker.com/}} service,
-a public repository that stores Docker images that are used to create the containers.
 
 % Configuration Management Tools
 \subsection{Configuration Management Tools}
