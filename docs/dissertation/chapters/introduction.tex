@@ -109,11 +109,12 @@ part of the smart place infrastructure to the cloud:\\
 % Objectives
 \section{Objectives}
 \label{section:objectives}
-The objective of this work is to determine if a cloud-based solution is able fulfill the fundamental
-requirements of smart place applications. In this work we focused to determining if such as approach
-can meet the low-latency interaction and data storage performance requirements. Since smart places
-presents different requirements according its domain, our efforts will be engaged in determine if a
-cloud-based solution is suitable for a smart warehouse that relies on the RFID technology \cite{want2006introduction}.\\
+The objective of this work is to determine if the cloud platform is able fulfill the fundamental
+requirements of smart place applications. In this work we focused to determining if a cloud-based
+deployment can meet the low-latency interaction and data storage performance requirements. Since
+smart places presents different requirements according its domain, our efforts will be engaged in
+determine if the cloud platform is suitable to support a smart warehouse that relies on the RFID
+technology \cite{want2006introduction}.\\
 
 \subsection{Example Domain}
 \label{sub:domain}
@@ -132,6 +133,11 @@ Computing\cite{bonomi2012fog}, a virtualized platform that is located close to t
 provides network, computing and storage resources between the embedded devices in the physical place
 and the traditional cloud.\\
 
+Since the cloud platform offers flexibility to deploy the applications, we propose a solution that
+automates the deployment of \gls{RFID} applications in the cloud regarding the chosen approach:
+cloud or fog. Our solution consists in a provisoning mechanism that automates the application
+deployment according pre-defined provisoning policies and software images.\\
+
 Our initial hypothesis is that a fog-based approach will present a best overall performance and as
 consequence will be more adequate to deploy the \gls{RFID} application in the smart warehouse. However
 the data storage capabilities of fog are inferior and they will have to be validated whether they are
@@ -149,15 +155,14 @@ The remainder of this document is organized as follows:
   the EPCGlobal Network and Fosstrak platform.
   % Solution
   \item \textbf{Chapter \ref{chapter:solution}. Solution} presents the approaches adopted to deploy
-  and provision smart places software stack, namely the Fosstrak platform.
-  % Implementation
-  \item \textbf{Chapter \ref{chapter:implementation}. Implementation} details the implementation
-  for the proposed solution, the deployment approaches, the provisioning strategies and the virtualization
-  technologies.
+  and provision smart places software stack, namely the Fosstrak platform. We also details the implementation
+  for the proposed solution: the provisioning strategies, the virtualization technologies and the
+  deployment approaches.
   % Evaluation
   \item \textbf{Chapter \ref{chapter:evaluation}. Evaluation} describes the experiments made to meet
   the defined objectives and presents an analysis of the obtained results.
   % Conclusion
   \item \textbf{Chapter \ref{chapter:conclusion}. Conclusion} summarizes the presented work,
-  presents the main conclusion and some important research points for future work.
+  presents the main conclusions, some important research points for future work and the main contributions
+  that resulted from this dissertation.
 \end{itemize}
