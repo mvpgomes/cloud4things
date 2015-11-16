@@ -181,11 +181,6 @@ between these tools is that some of the them are more oriented to developers, wh
 Puppet that requires some programming experience to be used, while others are more oriented to system
 administrators, which is the case of Ansible and Salt.\\
 
-In the present work, the provisioning of the smart place software stack will be automated through
-a \gls{CM} tool. Based in the previous experience with some of these tools - namely Chef and Puppet -
-we chose Chef as provisioning automation tool because it more easy to use for those with programming
-background and also provides some powerful features such as the command \textit{knife}.
-
 % Chef
 \subsubsection{Chef}
 \label{subs:chef}
@@ -206,7 +201,7 @@ Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\f
 % Fog Computing
 \section{Fog computing for low latency responses}
 \label{sec:fog_computing}
-The Fog Computing \cite{bonomi2012fog} is a platform that aims to bring the cloud close to the ``edge
+The Fog Computing \cite{bonomi2012fog} is a paradigm that aims to bring the cloud close to the ``edge
 of the Network''. By bringing the cloud close to the ground - hence the fog analogy - the Fog will be
 able to meet the requirements of several applications that the traditional clouds are not able to
 accomplish. The most notable case is the Internet of Things, that requires mobility support,
@@ -224,7 +219,7 @@ traditional data centers in the cloud.\\
 
 Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
 in Figure~\ref{fig:fog_architecture} the distributed infrastructure of Fog is composed of heterogeneous
-resources that must be managed in a distributed way: the infrastructure comprising of several players,
+resources that must be managed in a distributed way: the infrastructure comprising of several physical tiers,
 covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
 is the lowest tier of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
 process the data from the sensors, issues commands to the actuators and also filters the data that
