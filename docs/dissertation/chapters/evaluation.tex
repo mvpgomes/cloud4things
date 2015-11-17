@@ -11,7 +11,7 @@ Our main goal is to obtain basic statistical values that allow us to decide whic
 suitable to fulfill the expected requirements. Furthermore, we present a discussion regarding which
 approach is more adequate to deploy an \gls{IoT} application according its domain.
 
-% 2. Present the evaluation methodology for both cases
+% Evaluation Methodology
 \section{Evaluation Methodology}
 \label{sec:eval_methodology}
 In order to determine which approach is more adequate to meet the latency and data storage scalability
@@ -151,11 +151,12 @@ our solution must accomplish. The evaluation requirements are presented in Table
 \begin{table}[ht!]
   \begin{tabular}{|c|l|}
     \hline
-    Name          & Description                                                                                            \\ \hline
-    \textit{R1}   & The event latency must be $<$ than the robot wait time.                                                \\ \hline
-    \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the $< 100ms$.                    \\ \hline
-    \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                   \\ \hline
-    \textit{R4}   & The EPCIS must support at least 5 users sending simultaneously a large amount of data.                 \\ \hline
+    Name          & Description                                                                                                         \\ \hline
+    \textit{R1}   & The event latency must be $<$ than the robot wait time.                                                             \\ \hline
+    \textit{R2}   & The network latency \textit{Upload Time $+$ Response Time} must be at the $< 100ms$.                                \\ \hline
+    \textit{R3}   & The idle time of an \textit{Event Cycle} must be $<$ than half of the event latency.                                \\ \hline
+    \textit{R4}   & The EPCIS must support at least 5 users sending simultaneously a large                                                       \\
+    ~             & amount of events ($\approx18\times10^{3}$).                                                                 \\ \hline
   \end{tabular}
   \caption{Evaluation requirements.}
   \label{table:eval_requirements}
@@ -177,7 +178,7 @@ in Table~\ref{table:ecspec_parameters}.
 \begin{table}[ht!]
   \begin{tabular}{|l|c|c|c|}
     \hline
-    Event Cycle Specification & Period  & Duration & Repetitions \\ \hline
+    Event Cycle Specification & Period  & Duration & Iterations \\ \hline
     Baseline Event Cycle      &  10s    & 9.5s     & 10          \\ \hline
     Half-period Event Cycle   &   5s    & 4.75s    & 20          \\ \hline
   \end{tabular}
