@@ -1,4 +1,4 @@
-FILES="*.aux .bb *.bl *.lo *.lo *.nl *.ou *.to *.bc *.run.xml *.bbl *.blg *.fdb_latexmk *.fls *.log *.toc *.synctex.gz *.acn *.glo *.ist *.lof *.lot *.out *.acr *.alg *.glg *.gls *.glsdefs"
+FILES="*.aux .bb *.bl *.lo *.lo *.lol *.nl *.ou *.to *.bc *.run.xml *.bbl *.blg *.fdb_latexmk *.fls *.log *.toc *.synctex.gz *.acn *.glo *.ist *.lof *.lot *.out *.acr *.alg *.glg *.gls *.glsdefs"
 rm -f $FILES
 cd abstract
 rm -f $FILES
