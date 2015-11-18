@@ -533,8 +533,8 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
         % Interaction Latency
         \subsection{Interaction Latency}
         \label{subs:eval_results_latency}
-        Regarding the latency interaction, the results presented in Tables~\ref{table:fog_metrics} and
-        \ref{table:cloud_metrics} show that the fog-approach presented a better overall performance than
+        Regarding the latency interaction, the results presented in Tables~\ref{table:cloud_metrics} and
+        \ref{table:fog_metrics} show that the fog-approach presented a better overall performance than
         the cloud-based approach.
 
         \subparagraph{Event Latency.}
@@ -588,13 +588,16 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
         \label{subs:eval_results_data}
         Regarding the data storage performance for the Fosstrak middleware, is possible to conclude that the metrics
         of \textit{CPU Utilization} and \textit{Network In} increase as the threads and requests are growing.
-        These results are consistent with the ones obtained by Gomes et al. \cite{gomes2014future}, which
-        proposes a new \gls{IoT} infrastructure for \gls{EPC}Global middleware. Furthermore, in the experiments
-        performed Gomes detected that when the \textit{CPU Utilization} crosses the value of 95$\%$, the
-        outbound traffic started to decrease. After analyzing the stored data, the conclusion was that the
-        \gls{CPU} exhaustion caused by the \gls{EPCIS} affected the performance of \gls{ALE} module - when
-        executed in the same machine - resulting in a delay of data storage in the \gls{EPCIS} repository,
-        which explains the observed behavior.\\
+        It is important to point out that for this evaluation scenario, it is possible to conclude that the
+        consumption of computing resources increases as faster the robot moves in the warehouse.\\
+
+        The obtained results in the performed experiments are consistent with the ones obtained by Gomes
+        et al. \cite{gomes2014future}, which evaluated the performance of the Fosstrak middlware. In the experiments
+        performed Gomes detected that when the \textit{CPU Utilization} crosses the value of 95$\%$, the outbound
+        traffic started to decrease. After analyzing the stored data, the conclusion was that the \gls{CPU} exhaustion
+        caused by the \gls{EPCIS} affected the performance of \gls{ALE} module - when executed in the same
+        machine - resulting in a delay of data storage in the \gls{EPCIS} repository, which explains the
+        observed behavior.\\
 
         According these results, is reasonable to assume that the performance of the data storage mechanism of
         the Fosstrak implementation can be a bottleneck. However, in the general case the overall performance
