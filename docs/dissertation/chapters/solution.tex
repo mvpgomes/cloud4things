@@ -242,12 +242,18 @@ interact with our entire infrastructure. For instance, it is possible to bootstr
 apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is possible
 to execute a command on a certain number of nodes in our environment. For instance, if we change
 the role configuration that is assigned to a set of nodes in our infrastructure, knife allows to
-update all these nodes with the most recent policy with a single command.\\
+update all these nodes with the most recent policy with a single command. Also, knife provides plugins
+for several cloud providers, such as \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, and Google
+Compute Engine\footnote{\url{https://cloud.google.com/compute/}}. These plugins allow the
+provisioning of the application in the cloud providers infrastructure using the same
+resources - e.g. roles, recipes, etc - for all available providers.\\
 
-Also, knife provides plugins for several cloud providers, such as \gls{AWS}\footnote{\url{https://aws.amazon.com/}},
-and Google Compute Engine\footnote{\url{https://cloud.google.com/compute/}}. These plugins allow
-the provisioning of the application in the cloud providers infrastructure using the same resources - e.g.
-roles, recipes, etc - for all available providers.
+In order to make the provisioning of the instances in the cloud more efficient, our
+provisioning mechanism should be able to provision multiple instances with a single
+provisioning order. However, the current implementation of Chef tool does not support
+the provisioning of a cluster of nodes, but there are third-part plugins that already
+support this operation such as the spiceweasel\footnote{https://github.com/mattray/spiceweasel}
+command-line tool.
 
 % Docker containers
 \subsubsection{Docker Containers}
