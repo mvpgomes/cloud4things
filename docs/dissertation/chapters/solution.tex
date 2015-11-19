@@ -20,7 +20,7 @@ architectures of the smart warehouse deployment.\\
 \label{sec:sol_provisioning}
 In this section we propose a mechanism that automates the provisioning of software for smart place
 applications in the cloud. Our solution relies on \acrfull{CM} tools that leverage
-existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the architecture
+existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the approach
 for the proposed mechanism.\\
 
 % Provisioning mechanism conceptual architecture
@@ -31,11 +31,19 @@ for the proposed mechanism.\\
 \label{fig:provisioning_generic_architecture}
 \end{figure}
 
-In the proposed architecture, the provisioning of a smart place is based on provisioning policies and
+In the proposed approach, the provisioning of a smart place is based on provisioning policies and
 software images that are defined and configured in a development environment. The provisioning policies
 allow to define which components of software must be provisioned in a given instance, configure
 management tasks such as to trigger a notification when a resource state changes. The software images
 contains all the software components required to deploy the application.\\
+
+% Provisioning Seq. Diagram
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=\textwidth]{./images/provisioning_sequence}
+  \caption[Provisioning Sequence Diagram]{Provisioning Mechanism Sequence Diagram.}
+  \label{fig:provisioning_seq}
+\end{figure}
 
 After the provisioning policies were defined and configured, the Orchestrator uploads them to its respective
 remote repositories (CM Server and VM Image Repository). When the provisioning request is performed -
@@ -45,7 +53,9 @@ client (\gls{CM} Client) in the cloud server pulls the polices from the configur
 provisioned nodes in the cloud. In order to enforce the polices, the \gls{CM} Client pulls the software
 images from a central repository and then performs the provisioning and configuration of the software.
 After provisioning the infrastructure, the CM client periodically polls the CM server in order to
-determine if its current state is consistent with the most recent policy.
+determine if its current state is consistent with the most recent policy, as illustrated in Figure~\ref{fig:provisioning_seq}
+
+\pagebreak
 
 % Implementation Details
 \subsection{Implementation Details}
@@ -68,7 +78,7 @@ Docker cookbook for describing how the containers must be provisioned. For insta
 present the provisioning recipe for the Docker container that runs the \gls{EPCIS} Repository:
 
 % EPCIS container recipe
-\begin{listing}
+\begin{listing}[ht!]
 \inputminted[frame=lines,
              framesep=3mm,
              linenos=true,
@@ -78,14 +88,15 @@ present the provisioning recipe for the Docker container that runs the \gls{EPCI
 \label{listing:epcis_recipe}
 \end{listing}
 
-The recipe specification describes that first the Docker image \textit{cloud4things$/$fosstrak-epcis}
+The recipe specification describes that first the Docker image identified as \textit{cloud4things$/$fosstrak-epcis}
 must be pulled from the central repository. In particular, this image contains the software required
 to deploy the \gls{EPCIS} repository web application, namely an Apache Tomcat web-server and the \gls{EPCIS}
 repository source code. Finally, the recipe describes that the image \textit{cloud4things$/$fosstrak-epcis}
 must be used to create a container named \textit{fosstrak-epcis} and the port \textit{8080} need to
 be exposed. Furthermore this container must be linked to the container \textit{fosstrak-db} that
 internally is represented by the alias \textit{db}. The \textit{detach} parameter describes if the
-container must run in the background or not.\\
+container must run in the background or not. Optionally, the recipe attributes can be parametrized
+through a \gls{JSON} file that specifies the attributes value.\\
 
 We also defined the recipes that provision Docker containers for the remaining Fosstrak
 stack, namely the \textit{Filtering \& Collection Server} (Listing~\ref{listing:ale_recipe}),
@@ -93,7 +104,7 @@ stack, namely the \textit{Filtering \& Collection Server} (Listing~\ref{listing:
 database (Listing~\ref{listing:db_recipe}).
 
 % ALE container recipe
-\begin{listing}
+\begin{listing}[ht!]
 \inputminted[frame=lines,
              framesep=3mm,
              linenos=true,
@@ -104,7 +115,7 @@ database (Listing~\ref{listing:db_recipe}).
 \end{listing}
 
 % Capturing app container recipe
-\begin{listing}
+\begin{listing}[ht!]
 \inputminted[frame=lines,
              framesep=3mm,
              linenos=true,
@@ -115,7 +126,7 @@ database (Listing~\ref{listing:db_recipe}).
 \end{listing}
 
 % Database container recipe
-\begin{listing}
+\begin{listing}[ht!]
 \inputminted[frame=lines,
              framesep=3mm,
              linenos=true,
@@ -134,7 +145,7 @@ to define what are the nodes that includes the database, web server, etc. The ro
 the smart place application topology in the cloud.\\
 
 The roles that describe the smart warehouse application topology were defined based in the
-technological architecture of the smart warehouse for the cloud and fog concepts, presented in Section~\ref{sec:impl_smart_place}.
+architecture of the smart warehouse for the cloud and fog deployments, presented in Section~\ref{sec:sol_smart_warehouse_deployment}.
 In the next sections, we describe with more detail the roles that were defined to provisioning the
 smart place infrastructure.
 
@@ -205,13 +216,13 @@ that are specified in the docker \textit{cookbook}: \textit{docker}, \textit{fos
 \label{subs:provisioning_mechanism}
 To provisioning the resources in the cloud instances we used \textit{knife}, a command-line tool
 developed by Chef that provides an interface between the local Chef repository and the Chef server.
-The provisioning workflow is illustrated in Figure~\ref{fig:provisioning_tech_architecture}.\\
+The provisioning mechanism architecture is illustrated in Figure~\ref{fig:provisioning_tech_architecture}.\\
 
 % Automatic provisioning diagram
 \begin{figure}[ht!]
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=.8\textwidth]{./images/c4t-tech-architecture}}%
-\caption[Automatic provisioning workflow.]{Automatic provisioning workflow.}
+\caption[Provisioning mechanism architecture.]{Automatic provisioning mechanism architecture.}
 \label{fig:provisioning_tech_architecture}
 \end{figure}
 
@@ -302,7 +313,7 @@ the deployment approaches of smart place applications based in the cloud and fog
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/solution_cloud_architecture}
-\caption[Cloud-approach: conceptual architecture.]{Cloud-approach: smart warehouse conceptual architecture.}
+\caption[Cloud-deployment: conceptual architecture.]{Cloud-deployment: smart warehouse conceptual architecture.}
 \label{fig:solution_cloud_architecture}
 \end{figure}
 
@@ -321,7 +332,7 @@ The smart warehouse can be connected to the cloud through a physical or wireless
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/solution_fog_architecture}
-\caption[Fog-approach: conceptual architecture.]{Fog-approach: smart warehouse conceptual architecture.}
+\caption[Fog-deployment: conceptual architecture.]{Fog-deployment: smart warehouse conceptual architecture.}
 \label{fig:solution_fog_architecture}
 \end{figure}
 
@@ -364,10 +375,10 @@ the \gls{LLRP} protocol to communicate with the Fosstrak platform.
 \label{subs:imp_smart_warehouse_cloud}
 
 % Cloud approach
-\begin{figure}[ht!]
+\begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./images/implementation_cloud_architecture}
-\caption[Cloud-approach: technological architecture.]{Cloud-approach: smart warehouse technological architecture.}
+\caption[Cloud-deployment: technological architecture.]{Cloud-deployment: smart warehouse technological architecture.}
 \label{fig:implementation_cloud_architecture}
 \end{figure}
 
@@ -388,7 +399,7 @@ to a wireless connection (e.g. Wi-Fi, 3G or \gls{LTE}).
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/implementation_fog_architecture}
-\caption[Fog-approach: technological architecture.]{Fog-approach: smart warehouse technological architecture.}
+\caption[Fog-deployment: technological architecture.]{Fog-deployment: smart warehouse technological architecture.}
 \label{fig:implementation_fog_architecture}
 \end{figure}
 
