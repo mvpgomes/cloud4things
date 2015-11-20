@@ -193,7 +193,7 @@ network, and if anything on the node is out of date, the client update its state
 consistent with the latest policy.\\
 
 The tool was built from the ground up with the cloud infrastructure in mind. With Chef, it is possible
-to dynamically provision and deprovision the application infrastructure on demand to keep up with
+to dynamically provision and de-provision the application infrastructure on demand to keep up with
 peaks in usage and track. For instance, the \textit{knife} command has a plugin for provisioning cloud
 resources across several cloud providers - \gls{AWS}\footnote{\url{https://aws.amazon.com/}}, Google
 Compute Engine\footnote{\url{https://cloud.google.com/compute/}} and Openstack\footnote{\url{https://www.openstack.org/}}.
@@ -220,18 +220,21 @@ traditional data centers in the cloud.\\
 Bonomi et. al \cite{bonomi2012fog} presents the architecture of a Fog Computing platform. As illustrated
 in Figure~\ref{fig:fog_architecture} the distributed infrastructure of Fog is composed of heterogeneous
 resources that must be managed in a distributed way: the infrastructure comprising of several physical tiers,
-covering from data centers, core of the network, edge of the network and end devices. The \textit{Embedded Systems and Sensors}
-is the lowest tier of the Fog and it is responsible for performing \gls{M2M} interactions. It collects and
-process the data from the sensors, issues commands to the actuators and also filters the data that
-is locally consumed and sent to the higher tiers. The \textit{Multi-Service Edge} and \textit{Core}
-tiers are responsible for performing visualization and reporting - e.g. \gls{H2M} interaction -
-as well for dealing with systems and processes (\gls{M2M}).\\
+covering from data centers, core of the network, edge of the network and end devices.\\
+
+\textit{Multi-Service Edge} is the lowest tier of the Fog and it
+is responsible for performing \gls{M2M} interactions. It collects and process the data
+from the \textit{Embedded Systems and Sensors} tier, issues commands to the actuators and also
+filters the data that is locally consumed and sent to the higher tiers.
+\textit{Core Networking and Services} tier is responsible for providing network
+services that are used to exchange data between sub-networks. This tier also provides
+security services as well \textit{QoS} and multicast services for the applications.\\
 
 Since the interaction time between the different tiers can range from seconds - e.g. low-latency real-time
 analytics - to days - transactional analytics - the Fog must support several types of storage, from
 ephemeral storage at the lowest tiers to semi-permanent at the highest tier. It is important to point
 that the higher is the tier, the geographical coverage is wider and the time scale is larger \cite{bonomi2014fog}.
-The global coverage is given by the Cloud, which acts as a central repository for the persistent data
+The global coverage is given by the \textit{Cloud} tier, which acts as a central repository for the persistent data
 and that is used to perform business analytics.
 
 % Internet of Things Applications
