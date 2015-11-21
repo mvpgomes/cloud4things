@@ -11,7 +11,7 @@ specifically, the present work focuses to determine if a cloud-based approach is
 low-latency requirements of many \gls{IoT} applications, since that low-latency is an essential
 requirement of \gls{IoT} applications. If a cloud-based approach is not able to meet the network latency
 requirements for those applications, the cloud platform is not a viable option to perform the
-provisioning of \gls{IoT} applications.\\
+provisioning of \gls{IoT} applications.
 
 To improve the provisioning of \gls{RFID} middleware in the cloud, we developed a mechanism based on
 Docker containers and the Chef tool that automates the installation and configuration of the modules
@@ -19,7 +19,7 @@ that composes the Fosstrak platform \gls{RFID} middleware. This mechanism was of
 importance, because it allowed us to perform the application provisioning of the cloud instances in
 a very efficient way. Although our experiments were conducted in a single cloud provider, the developed
 mechanism gave us the flexibility to choose between several cloud providers to provision the
-\gls{RFID} middleware.\\
+\gls{RFID} middleware.
 
 Regarding the system evaluation, we defined two methodologies for evaluate the latency of an event that
 occurs in the physical space and the data storage performance for the Fosstrak platform. With the
@@ -37,7 +37,7 @@ performance the amount of data that is generated in a smart warehouse.
 \label{sub:future_work}
 In the present work, we achieved our initial goals and determine that a fog-based approach is more
 adequate to deploy a smart place application based in \gls{RFID} technology. However, our solution
-is not perfect and there some aspects that can be improved in the future.\\
+is not perfect and there some aspects that can be improved in the future.
 
 Our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
 This means that we need to have a cloud close to the ground and this cloud must meet the same
@@ -45,7 +45,7 @@ requirements of a remote cloud such as high scalability, security and multi-tena
 we were not able to implement a fog that meet these requirements and in our implementation the fog
 was built on top of a traditional Virtual Machine. In the future, the fog needs to be correctly
 implemented providing all the features of the remote cloud and in addition features such as
-location-awareness, mobility support and geo-distribution.\\
+location-awareness, mobility support and geo-distribution.
 
 In the current implementation we used Docker containers to provisioning the Fosstrak software stack.
 In the evaluation of our solution we deploy the containers in a \gls{EC2} \gls{VM}, which overlays two
@@ -54,18 +54,28 @@ from the containers such as the portability, other benefits such as the low I/O 
 hidden by the \gls{VM} hypervisor. A future improvement that can be made is to perform the deployment
 of the containers on top of the bare-metal or in a cloud-based container service - e.g. Google Kubernetes
 \footnote{\url{http://kubernetes.io/}} or \gls{AWS} \gls{EC2} Container Service\footnote{\url{https://aws.amazon.com/ecs/}} -
-in order to improve the overall performance of the solution.\\
+in order to improve the overall performance of the solution.
 
 Regarding the system evaluation, it was performed only in \gls{AWS} \gls{EC2} instances. For the future
 is important to evaluate our solution in other cloud providers to compare which offers the best cost/performance
 relation. Also, in experiments performed to evaluate the latency interaction, we defined only two
 different \textit{ECspecs}. For the future work, we want to evaluate the latency performance for
 our solution with \textit{ECspecs} that presents smaller periods in order to determine which
-specification is more suitable for our solution.\\
+specification is more suitable for our solution.
 
-Finally, in the evaluation scenario we used a virtual RFID reader instead of a physical one, which
+In the evaluation scenario we used a virtual RFID reader instead of a physical one, which
 does not allow reproducing the environment conditions of a real smart warehouse such as interferences
 in the RFID tags antennas, network bandwidth variations, etc. However, in the evaluation experiments
 we used for some experiments traces from the work developed by Correia et. al \cite{Correia:Thesis:2014},
 which have the real data traces mentioned above. A future improvement is to conduct the system evaluation
 in a real scenario in order to have more accurate results.
+
+Finally, the Utility Computing allows to leverage the smart place infrastructure to the cloud,
+where the resources are available in a pay-as-you-use model. However, there is a
+trade-off between performance and costs. By leveraging the smart place infrastructure
+to the cloud, we can reduce the costs of the smart place operation, but the
+application performance can be compromised. For the future work, we want to perform
+an analysis to establish the relation between the performance and cost of a smart place
+regarding its deployment approach: cloud, fog and local. This analysis will allow
+to choose which is the most adequate approach to deploy an smart place based in
+the performance of the application and the costs of the smart place operation.

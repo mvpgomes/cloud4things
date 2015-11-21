@@ -18,7 +18,7 @@ burden of \gls{IoT}, while providing important features such as high availabilit
 \subsection{Application Domains}
 \label{sub:application_domains}
 There are several environments and domains where \gls{IoT} applications are expected
-to improve the quality of life of the people that live and work in these environments.\\
+to improve the quality of life of the people that live and work in these environments.
 
 % Ambient Intelligence
 \textit{Ambient Intelligence} are environments that use the intelligence of the objects within
@@ -32,7 +32,7 @@ and after-sales services.
 A large area that is covered by \gls{IoT} is \textit{Transportation}. From personal vehicles to public
 transportation, mobile ticketing and transportation of goods. Cars, trains and buses are equipped with
 sensors, actuators and computational power that are able to provide information about the status of
-the vehicle, improve the navigation and even perform collision avoidance.\\
+the vehicle, improve the navigation and even perform collision avoidance.
 
 To give a more unified view over those domains, we propose the term \textit{smart places},
 that can be defined as an environment composed of sensors - e.g. RFID - actuators - e.g. automatic
@@ -44,17 +44,24 @@ the place.
 \subsection{Smart Places Challenges}
 \label{sub:challenges}
 Challenges \cite{caceres2012ubicomp} for the construction of smart places that resulted from leveraging
-part of the smart place infrastructure to the cloud:\\
+part of the smart place infrastructure to the cloud:
 
 % Deployment
 \textit{a) Deployment} of smart places usually is performed in an isolated and vertical manner, which
 makes the its deployment an inefficient process. Therefore, new provisioning approaches need to be
-adopted in order to make the deployment smart place more efficient and scalable.\\
+adopted in order to make the deployment smart place more efficient and scalable.
 
 % Low-latency Interaction
 \textit{b) Low-latency Interaction} is a key requirement that requires that both network access
 latency and data transmission latency be reduced. However, will a cloud-based
-approach able to meet the low-latency requirements of smart place applications?\\
+approach able to meet the low-latency requirements of smart place applications?
+
+% Cost
+\textit{c) Cost vs. Performance} of smart places infrastructure is an important issue
+that can determine if the cloud platform is adequate to support smart places. By
+leveraging the smart place infrastructure to the cloud the cost of its infrastructure
+can be reduced in a significant amount. However, will be the performance of the
+smart place satisfactory when its infrastructure is leveraged to the cloud?
 
 % Objectives
 \subsection{Objectives}
@@ -62,7 +69,7 @@ approach able to meet the low-latency requirements of smart place applications?\
 The objective of this work is to determine if a cloud-based solution can meet the low-latency network
 and data storage performance requirements for smart place applications. Our efforts will be engaged in
 determine if a cloud-based solution is suitable for a smart warehouses that relies on the RFID technology
-\cite{want2006introduction}.\\
+\cite{want2006introduction}.
 
 \subsubsection{Example Domain}
 \label{subs:domain}
@@ -70,18 +77,24 @@ Our example domain is an automated warehouse, where products are tagged with \gl
 can be identified by \gls{RFID} readers. Through the data collected by these readers is possible to
 gather information about the smart place. A complete example of a platform that allows the transformation
 of that data into information is Fosstrak\footnote{\url{http://fosstrak.github.io/}}, an open
-source \gls{RFID} software that implements the \gls{EPC} Network standards.\\
+source \gls{RFID} software that implements the \gls{EPC} Network standards.
 
-The present work we will follow two approaches and determine which of them is more adequate to
-deploy a \gls{RFID} application. The first, is a more traditional approach, where all the application
-middleware is provisioned in the cloud. The second is an approach based on the Fog Computing\cite{bonomi2012fog},
-a virtualized platform that is located close to the smart place and provides network, computing and
-storage resources between the embedded devices in the physical place and the traditional cloud.\\
+To accomplish our objectives, in this work we will follow two approaches and determine which of them
+is more adequate to deploy a \gls{RFID} application. The first, is a more traditional approach, where
+all the application middleware is provisioned in the cloud. The second is an approach based on the Fog
+Computing\cite{bonomi2012fog}, a virtualized platform that is located close to the smart place and
+provides network, computing and storage resources between the embedded devices in the physical place
+and the traditional cloud.
+
+Since the cloud platform offers flexibility to deploy the applications, we propose a solution that
+automates the deployment of \gls{RFID} applications in the cloud regarding the chosen approach:
+cloud or fog. Our solution consists in a provisioning mechanism that automates the application
+deployment according pre-defined provisioning policies and software images.
 
 The remainder of this document is organized as follows. Section \ref{sec:background} summarizes the
 relevant work in the field and introduces the base concepts of our work such as a description of the
-Fog Computing paradigm and the Fosstrak platform. In Section \ref{sec:solution} we present the approaches
-adopted to deploy the smart warehouse application. Section \ref{sec:implementation} details the
-implementation of the proposed solution. In Section \ref{sec:evaluation} describes the performed
-evaluation and presents an analysis of the obtained results and finally in Section \ref{sec:conclusion}
-we present the main conclusion and some important research points for future work.
+Fog Computing paradigm and the Fosstrak platform. In Section \ref{sec:solution} we present the
+approaches adopted to deploy and provision the smart place and details the implementation
+of the proposed solution. In Section \ref{sec:evaluation} describes the performed evaluation and
+presents an analysis of the obtained results and finally in Section \ref{sec:conclusion} we present
+the main conclusion and some important research points for future work.

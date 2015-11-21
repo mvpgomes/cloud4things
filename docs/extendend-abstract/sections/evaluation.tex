@@ -13,7 +13,7 @@ evaluate the data storage performance for the Fosstrak platform.
 \label{sub:eval_methodology}
 In order to determine which approach is more adequate to meet the latency requirements and to
 evaluate the data storage performance for the Fosstrak platform, we propose the following
-methodologies:\\
+methodologies:
 
 % Evaluation Methodologies : Latency
 \subsubsection{Latency Interaction}
@@ -38,7 +38,7 @@ of reader events is performed according to an \textit{Event Cycle} specification
 is a set of periodical cycles where the \gls{ALE} module collect the events from the readers. The data
 about the \textit{Event Cycle} is delivered to the client application through a report. The information
 in the report can be used to notify the client regarding an event in the smart warehouse or even to
-trigger a new event in the warehouse such as open or close a door.\\
+trigger a new event in the warehouse such as open or close a door.
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
 packets in the smart warehouse network. The Fosstrak \gls{ALE} module can be configured to generate
@@ -47,13 +47,13 @@ client. Thus, with the information provided by the monitoring system and the \gl
 possible to calculate the latency request for an event that occurs in the warehouse. The warehouse network
 connection was monitored with the \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}}, a command-line
 tool that allows the monitoring of the packets that are being transmitted or received over a network.
-Through the logs produced by this tool, we are able to determine how the connection time is spent.\\
+Through the logs produced by this tool, we are able to determine how the connection time is spent.
 
 With this methodology we intend to obtain information regarding how the communication time is spent
 when an event is triggered in the warehouse for the approaches described in Section~\ref{sec:solution}.
 In order to determine which approach is more adequate to deploy the application, we defined a set of
 metrics that will allow us to compare the performance of the fog-based and cloud-based approaches and
-help to determine which one is more adequate to deploy the application in the warehouse.\\
+help to determine which one is more adequate to deploy the application in the warehouse.
 
 % Evaluation Methodologies : Data
 \subsubsection{Data Storage Performance}
@@ -74,7 +74,7 @@ presents a configuration with a 2.5 \textit{\gls{GHz}} single-core processor wit
 \gls{RAM}. In the fog-approach configuration, the experiments were conducted in a \gls{VM} with
 a 2.6 \textit{\gls{GHz}} dual-core processor with 2 \textit{\gls{GB}} of \gls{RAM} and running
 the \textit{Linux Ubuntu 14.04.2 LTS} operating system. The smart warehouse was connected to the cloud
-and fog through a \gls{ADSL} connection with a bandwidth of 10 Mbps.\\
+and fog through a \gls{ADSL} connection with a bandwidth of 10 Mbps.
 
 Regarding the software components, the application stack is composed of the \textit{Apache Tomcat 7.0.52.0}\footnote{\url{http://tomcat.apache.org/}}
 with \textit{Java} version \textit{1.7.0} update \textit{79}. The \gls{RFID} middleware used was the Fosstrak
@@ -89,11 +89,11 @@ readers is in version \textit{1.6.0}.
 \label{sub:eval_experiments}
 The experiments performed in our evaluation were based on the scenario and data from the RFIDToys \cite{Correia:Thesis:2014}
 Master Thesis. In short, the RFIDToys is a warehouse demonstrator consisting of a robot transporting
-tagged products that are identified by RFID readers deployed in the physical space, as detailed in
-Section~\ref{sub:impl_smart_place}. In the performed experiments, we use a scenario where a tagged
-robot was programmed to execute  a given number of laps in the warehouse plant where exists an automatic
-door that opens when one of the RFID readers that are placed in the plant detects that the robot is
-approaching.\\
+tagged products that are identified by RFID readers deployed in the physical space. In the
+performed experiments, we use a scenario where a tagged robot was programmed to execute
+a given number of laps in the warehouse plant where exists an automatic door that
+opens when one of the RFID readers that are placed in the plant detects that the robot is
+approaching.
 
 \subsubsection{Latency Interaction}
 \label{subs:eval_exp_latency}
@@ -108,7 +108,7 @@ for the \textit{ECspecs} are presented in Table~\ref{table:ecspec_parameters}.
 \begin{table}[ht!]
  \begin{tabular}{|l|c|c|c|}
   \hline
-  Event Cycle Specification & Period  & Duration & Repetitions \\ \hline
+  Event Cycle Specification & Period  & Duration & Iterations  \\ \hline
   Baseline Event Cycle      &  10s    & 9.5s     & 10          \\ \hline
   Half-period Event Cycle   &   5s    & 4.75s    & 20          \\ \hline
  \end{tabular}
@@ -122,7 +122,7 @@ and how much time the module is in an idle state. Furthermore, we want to determ
 each stage of the event processing pipeline takes. To achieve that we proposed the following metrics
 based on the event processing pipeline stages: (i) \textit{Upload Time}; (ii) \textit{Tag Processing Time};
 (iii) \textit{Filtering \& Aggregation Time}; (iv) \textit{Report Creation Time}; and finally (v)
-\textit{Response Time}.\\
+\textit{Response Time}.
 
 % Cloud-based warehouse latency
 \subsubsection{Cloud-based warehouse latency}
@@ -136,12 +136,12 @@ improvement for the \textit{Upload Time} metric - from 0.294s to 0.103s - and $\
 remains in an idle state also presented a significant improvement, from 7.346s to 2.569s. The value
 for the \textit{Tag Processing Time} increased $\approx1000\%$ when the \gls{ALE} is configured with
 \textit{Half-period ECspec} - from 0.002s to 0.024s. The value for the \textit{Filtering \& Aggregation Time}
-metric increased $\approx300\%$ - from 0.370s to 1.490s.\\
+metric increased $\approx300\%$ - from 0.370s to 1.490s.
 
 % Event Time Breakdown
 \textit{a) Event Time Breakdown.}
 In the current experiment the \gls{ALE} module was configured with the \textit{Baseline ECspec} and
-the \textit{Half-period ECspec}.\\
+the \textit{Half-period ECspec}.
 
 % Baseline ECspec event time breakdown
 \begin{figure}[ht!]
@@ -167,13 +167,13 @@ With the \textit{Baseline ECspec} the \gls{ALE} remains $\approx89\%$ of the \te
 in an idle state while when configured with the \textit{Half-period ECspec} this value decreases to
 $\approx62\%$. This means that during the \textit{Event Cycle} period the \gls{ALE} module can be in
 an idle state during 9 seconds when configured with the \textit{Baseline ECspec} while with the
-\textit{Half-period ECspec} this value can last for 3 seconds.\\
+\textit{Half-period ECspec} this value can last for 3 seconds.
 
 % Event Effective Time Breakdown
 \textit{b) Event Effective Time Breakdown.}
 Figure~\ref{fig:ecspecf_effective_base} presents the how much time is spent in each phase of
 the pipeline when the \gls{ALE} is configured with \textit{Baseline ECspec} and in
-Figure~\ref{fig:ecspecf_effective_half} when it is configured with the \textit{Half-period ECspec}.\\
+Figure~\ref{fig:ecspecf_effective_half} when it is configured with the \textit{Half-period ECspec}.
 
 % ECSpec Fast local breakdown figure
 \begin{figure}[ht!]
@@ -201,12 +201,12 @@ of the total time. As when configured with the \textit{Baseline ECspec}, the \te
 \textit{Response} stages presents similar results, respectively close to $\approx11\%$ and $\approx12\%$.
 Regarding the \textit{Processing} stage, the time required to process the event data increased in a significant
 way, from less than $\approx0.3\%$ to $\approx3\%$. The \textit{Report Creation} stage presented the same
-values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).\\
+values from the \textit{Baseline ECspec} configuration ($\approx0.3\%$).
 
 % Experiment Result
 \textit{c) Experiment Result.}
 In our scenario, that means the warehouse door only will open if the \gls{ALE} module was configured
-with the \textit{Half-period ECspec}, otherwise the robot will crash with the door.\\
+with the \textit{Half-period ECspec}, otherwise the robot will crash with the door.
 
 % Fog-based warehouse latency
 \subsubsection{Fog-based warehouse latency}
@@ -219,7 +219,7 @@ and the amount of time that \gls{ALE} is in an idle state - from 4.944s to 2.747
 network latency, the values for the \textit{Upload Time} and \textit{Response Time} improved 1ms
 for both metrics. However, when configured with a faster \textit{Event Cycle} specification the
 tag processing time presented an inferior performance, where time to process the event data increases
-$\approx470\%$ - from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.\\
+$\approx470\%$ - from 0.049s to 0.279s. Also the report creation time increased $300\%$ - from 0.001s to 0.003s.
 
 % Event Time Breakdown
 \textit{a) Event Time Breakdown.}
@@ -248,7 +248,7 @@ an \textit{Event Cycle} the \gls{ALE} module is in an idle state (\textit{Idle T
 in both configurations - while in the remaining time the \gls{ALE} is processing the event that was
 collected (\textit{Effective Time}). Considering the duration of the \textit{ECspecs} it means that in
 average when the \gls{ALE} is configured with the \textit{Baseline ECspec} the module can be in an idle
-state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.\\
+state during 7s while with the \textit{Half-period ECspec} this idle state can last for 3 seconds.
 
 % Event Effective Time Breakdown
 \textit{b) Event Effective Time Breakdown.}
@@ -280,12 +280,12 @@ With the \textit{Baseline ECspec} the time for processing the event data represe
 of the total time while with the \textit{Half-period ECspec} this value is close to $\approx18\%$.
 The \textit{Upload} and \textit{Response} stages together represents a small percentage of
 the time spent to process the event - close to $\approx5\%$ for both specifications - while the percentage
-of time to create the reports represents less than $\approx1\%$ of the total time.\\
+of time to create the reports represents less than $\approx1\%$ of the total time.
 
 \textit{c) Experiment Result.}
 As in the previous experiment, in our scenario the warehouse door only will open if the \gls{ALE}
 module was configured with the \textit{Half-period ECspec}, otherwise the robot will crash with
-the door.\\
+the door.
 
 % Data storage
 \subsubsection{Data Storage Performance}
@@ -298,7 +298,7 @@ In this scenario tagged a robot is moving in a closed circuit where two RFID ant
 each other. The evaluation reproduced some situations that can occur in a real smart warehouse,
 such as the robot is moving with the standard speed, the robot is moving at twice of the standard
 speed and two robots are moving together in the warehouse. In the performed experiments, we
-simulated up to 5 readers sending events concurrently.\\
+simulated up to 5 readers sending events concurrently.
 
 The obtained results show that the performance of the Fosstrak was acceptable where the maximum
 value obtained for the \text{CPU Utilization} metric was close to 18$\%$ and the maximum
