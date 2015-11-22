@@ -15,7 +15,7 @@ concern regards ubiquitous data: \textit{Where it is located?}, \textit{Who can 
 with the surrounding environment. Thus, these systems need to understand the context in which they are
 inserted and also to adapt to the changes that occur in this environment. Another import concern regards
 about the infrastructure burden of the ubiquitous systems. Many times these systems requires low-latency
-interaction with users and environments, which implies that at least part of an \gls{ubicomp} application
+interaction with users and environments, which implies that at least part of an \gls{ubicomp} system
 needs to be tightly bound to the local infrastructure of the interacting environment. This requirement
 for local infrastructure can be a barrier in the adoption of ubiquitous systems in a large-scale
 perspective. The \gls{IoT} and the Utility Computing in the cloud paradigms can help to solve those
@@ -65,7 +65,7 @@ hospital staff and also to control the inventory of materials. Sensors can be us
 patient conditions, hospital environment conditions - temperature, air quality, etc.\\
 
 Beyond the presented examples, the \gls{IoT} field covers many other domains. To give a more unified
-view over those domains, we propose the term \textit{smart places}, that can be defined as an environment
+view over those domains, we propose the term \textit{smart places}, that can be defined as a system
 composed of sensors - e.g. RFID - actuators - e.g. automatic doors - and computational infrastructure
 - e.g. servers - that are able to acquire data about the surrounding environment and use that data to
 improve the experience of the people interacting with the place.
@@ -93,10 +93,10 @@ part of the smart place infrastructure to the cloud:\\
   the deployment of smart places more efficient and scalable.
   % Low-latency Interaction
   \item \textbf{Low-latency Interaction} is a key requirement that requires that both network access
-  latency and data transmission latency be reduced. However, in cloud-based solutions, part of the
+  latency and data transmission latency be reduced. However, in a cloud-based deployment, part of the
   system's infrastructure is moved to the cloud - for instance the middleware layer, which is responsible
   for processing the information and take decisions based on the results. However, will a cloud-based
-  approach able to meet the low-latency requirements of many smart place applications?
+  deployment able to meet the low-latency requirements of many smart place systems?
   % Management
   \item \textbf{Management} of smart places is an issue that must be carefully addressed. It has been
   shown that end-users are unable to manage their own personal computers systems well \cite{doll1988measurement}
@@ -105,9 +105,9 @@ part of the smart place infrastructure to the cloud:\\
   the services . These managed services introduces new questions that must be answered. For instance,
   who will pay for this services and who will control this services?
   % Cost
-  \item \textbf{Cost vs. Performance} of smart places infrastructure - i.e. hardware, software,
+  \item \textbf{Cost vs. Performance} of smart place infrastructure - i.e. hardware, software,
   maintenance and energy costs - is an important issue that can determine if the cloud platform is the most
-  adequate to support smart places application instead of a local infrastructure. By leveraging the smart
+  adequate to support smart place instead of a local infrastructure. By leveraging the smart
   place infrastructure to the cloud the cost of its infrastructure can be reduced in a significant
   amount. However, will be the performance of the smart place satisfactory when its infrastructure is
   leveraged to the cloud?
@@ -117,7 +117,7 @@ part of the smart place infrastructure to the cloud:\\
 \section{Objectives}
 \label{section:objectives}
 The objective of this work is to determine if the cloud platform is able fulfill the fundamental
-requirements of smart place applications. In this work we focused to determining if a cloud-based
+requirements of smart places. In this work we focused to determining if a cloud-based
 deployment can meet the low-latency interaction and data storage performance requirements. Since
 smart places presents different requirements according its domain, our efforts will be engaged in
 determine if the cloud platform is suitable to support a smart warehouse that relies on the RFID
@@ -134,21 +134,21 @@ information is Fosstrak\footnote{\url{http://fosstrak.github.io/}}, an open sour
 software that implements the \gls{EPC} Network standards.\\
 
 To accomplish our objectives, in this work we will follow two approaches and determine which of them
-is more adequate to deploy a \gls{RFID} application. The first, is a more traditional approach, where
-all the application middleware is provisioned in the cloud. The second is an approach based on the Fog
-Computing\cite{bonomi2012fog}, a virtualized platform that is located close to the smart place and
-provides network, computing and storage resources between the embedded devices in the physical place
-and the traditional cloud.\\
+is more adequate to deploy a smart place based on the \gls{RFID} technology. . The first, is a
+more traditional deployment approach, where all the application middleware is provisioned in the cloud.
+The second is a deployment approach based on the Fog Computing\cite{bonomi2012fog} paradigm,
+a virtualized platform that is located close to the smart place and provides network, computing
+and storage resources between the embedded devices in the physical place and the traditional cloud.\\
 
-Since the cloud platform offers flexibility to deploy the applications, we propose a solution that
-automates the deployment of \gls{RFID} applications in the cloud regarding the chosen approach:
+Since the cloud platform offers flexibility to deploy applications, we propose a solution that
+automates the deployment of \gls{RFID} application middleware in the cloud regarding the chosen approach:
 cloud or fog. Our solution consists in a provisioning mechanism that automates the application
 deployment according pre-defined provisioning policies and software images.\\
 
-Our initial hypothesis is that a fog-based approach will present a best overall performance and as
-consequence will be more adequate to deploy the \gls{RFID} application in the smart warehouse. However
-the data storage capabilities of fog are inferior and they will have to be validated whether they are
-enough.
+Our initial hypothesis is that a fog-based deployment will present a best overall performance and as
+consequence will be more adequate to deploy the smart warehouse \gls{RFID} application middleware.
+However the data storage capabilities of fog are inferior and they will have to be
+validated whether they are enough.
 
 % Dissertation Outline
 \section{Dissertation Outline}
