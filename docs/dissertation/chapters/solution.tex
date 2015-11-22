@@ -7,21 +7,22 @@ that is manually executed and requires expertise since that the software compone
 be correctly installed and configured. Furthermore, every time that a new smart place is deployed
 these operations must be repeated. With that in mind, in order to make the deployment of
 smart places more efficient in Section~\ref{sec:sol_provisioning} we propose a solution
-that automates the provision of smart places application in the cloud.\\
+that automates the provision of smart places application middleware in the cloud.\\
 
 In the present work our main goal is to determine if a cloud-based deployment can meet the
 requirements of RFID-based smart place applications, as mentioned in Section~\ref{section:objectives}.
-To achieve our goals we will follow two approaches to deploy the smart warehouse application: cloud
-and fog. In Section~\ref{sec:sol_smart_warehouse_deployment}, we describe the alternative
-architectures of the smart warehouse deployment.\\
+To achieve our goals we will follow two approaches to deploy the smart warehouse
+application middleware: cloud and fog. In Section~\ref{sec:sol_smart_warehouse_deployment},
+we describe the alternative architectures of the smart warehouse regarding the
+chosen deployment approach.\\
 
 % Provisioning
 \section{Smart Place Provisioning}
 \label{sec:sol_provisioning}
-In this section we propose a mechanism that automates the provisioning of software for smart place
-applications in the cloud. Our solution relies on \acrfull{CM} tools that leverage
-existing software stacks. Figure~\ref{fig:provisioning_generic_architecture} presents the approach
-for the proposed mechanism.\\
+In this section we propose a mechanism that automates the provisioning of software for smart warehouses
+in the cloud. Our solution relies on \acrfull{CM} tools that leverage existing software stacks.
+Figure~\ref{fig:provisioning_generic_architecture} presents the approach for the
+proposed mechanism.\\
 
 % Provisioning mechanism conceptual architecture
 \begin{figure}[ht!]
@@ -31,11 +32,11 @@ for the proposed mechanism.\\
 \label{fig:provisioning_generic_architecture}
 \end{figure}
 
-In the proposed approach, the provisioning of a smart place is based on provisioning policies and
+In the proposed approach, the provisioning of a smart warehouse is based on provisioning policies and
 software images that are defined and configured in a development environment. The provisioning policies
 allow to define which components of software must be provisioned in a given instance, configure
 management tasks such as to trigger a notification when a resource state changes. The software images
-contains all the software components required to deploy the application.\\
+contains all the software components required to deploy the smart warehouse application.\\
 
 % Provisioning Seq. Diagram
 \begin{figure}[ht!]
@@ -61,7 +62,7 @@ determine if its current state is consistent with the most recent policy, as ill
 \subsection{Implementation Details}
 \label{sub:Implementation Details}
 The implementation of the provisioning mechanism relies on the Chef tool. Chef provides several features
-that allow to describe our infrastructure as code. In the implementation of the provisioning mechanism,
+that allow to describe infrastructure as code. In the implementation of the provisioning mechanism,
 the main features used were the Chef \textit{recipes}, \textit{roles} and \textit{knife} command-line
 tool\footnote{The tool uses culinary analogy in most of its concepts}. In the current implementation,
 we used Docker containers to provisioning the smart warehouse software at the cloud providers in
@@ -70,12 +71,12 @@ alternative to traditional \glspl{VM}.
 % Provisioning Recipes
 \subsubsection{Provisioning Recipes}
 \label{subs:recipes}
-The \textit{recipes} that describe our infrastructure are based on \textit{cookbooks} available at the
+The \textit{recipes} that describe the smart warehouse infrastructure are based on \textit{cookbooks} available at the
 Chef Supermarket\footnote{\url{https://supermarket.chef.io/}} and also in custom recipes that
 were defined specifically for this work to describe how the Fosstrak software stack is provisioned
 in the cloud. Since we are using Docker containers the recipes were defined based on the official
 Docker cookbook for describing how the containers must be provisioned. For instance, Listing~\ref{listing:epcis_recipe}
-present the provisioning recipe for the Docker container that runs the \gls{EPCIS} Repository:
+present the provisioning recipe for the Docker container that runs the \gls{EPCIS} Repository:\\
 
 % EPCIS container recipe
 \begin{listing}[ht!]
@@ -142,17 +143,18 @@ database (Listing~\ref{listing:db_recipe}).
 A \textit{role} is a categorization that describes what are the responsibilities of a specific
 node, what settings and software components should be given to it. For instance, it is possible
 to define what are the nodes that includes the database, web server, etc. The roles allows to describe
-the smart place application topology in the cloud.\\
+the smart place warehouse topology in the cloud.\\
 
 The roles that describe the smart warehouse application topology were defined based in the
-architecture of the smart warehouse for the cloud and fog deployments, presented in Section~\ref{sec:sol_smart_warehouse_deployment}.
-In the next sections, we describe with more detail the roles that were defined to provisioning the
-smart place infrastructure.
+architecture of the smart warehouse for the cloud and fog deployment approaches,
+presented in Section~\ref{sec:sol_smart_warehouse_deployment}. In the next sections,
+we describe with more detail the roles that were defined to provisioning the
+smart warehouse infrastructure.
 
 % Cloud Provisioning Roles
 \subparagraph{Cloud Provisioning Roles.}
 \label{subp:cloud_roles}
-In a cloud deployment approach the Fosstrak software stack is provisioned in a single instance, as
+In a cloud-based deployment the Fosstrak software stack is provisioned in a single instance, as
 illustrated in Figure~\ref{fig:implementation_cloud_architecture}. Thus, we defined a single role
 to describe the responsibilities of the node provisioned in the cloud.\\
 
@@ -175,7 +177,7 @@ that have assigned this role are identified as \textit{fosstrak-server}.
 % Fog Provisioning Roles
 \subparagraph{Fog Provisioning Roles.}
 \label{subp:fog_roles}
-In a fog deployment approach the Fosstrak software stack is distributed across the fog and cloud,
+In a fog-based deployment the Fosstrak software stack is distributed across the fog and cloud,
 as illustrated on Figure~\ref{fig:implementation_fog_architecture}. Therefore, we defined two different
 roles that describe the responsibilities of the provisioned nodes.
 
@@ -237,7 +239,7 @@ remote repository, build the containers based on those images and finally applie
 that is associated to each container.\\
 
 We decide to chose Chef instead of its competitors - i.e. Puppet and Ansible - for several
-reasons, where the main one is \textit{knife}. Knife tool is very powerful and allow us to
+reasons. First, the \textit{knife} tool is very powerful and allow us to
 interact with our entire infrastructure. For instance, it is possible to bootstrap a new server,
 apply a role to a set of nodes in our environment. Furthermore, with \textit{knife ssh} it is possible
 to execute a command on a certain number of nodes in our environment. For instance, if we change
@@ -262,9 +264,9 @@ Docker containers are used to provisioning the software stack of Fosstrak platfo
 installation of Fosstrak requires a compatible Java \gls{SDK}, a full MySQL database and a Apache Tomcat
 server.\\
 
-We are provisioning a single container for each component of Fosstrak, the \gls{EPCIS} repository,
-the Capture application, the \gls{FCServer} and also for the MySQL database, As illustrated in Figure~\ref{fig:impl_containers}.
-In our implementation, the container images of Fosstrak are published in the Docker Hub repository
+In the current implementation, we are provisioning a single container for each component of Fosstrak, the \gls{EPCIS} repository,
+the Capture application, the \gls{FCServer} and also for the MySQL database, as illustrated in Figure~\ref{fig:impl_containers}.
+Currently, the container images of Fosstrak are published in the Docker Hub repository
 to later be used to create the containers.\\
 
 % Container stack
@@ -304,12 +306,12 @@ approach guarantees that the low-latency requirements are meet, this solution co
 downsides - such as the low scalability, infrastructure and maintenance costs - that can be a barrier
 for these applications.\\
 
-Leveraging the infrastructure required to provisioning the smart place applications to the cloud
-guarantees that the bottlenecks of traditional solutions are solved. However, we also need to
+Leveraging the infrastructure required to provisioning the smart warehouse application to the cloud
+guarantees that the downsides of traditional solutions are solved. However, we also need to
 guarantee that the latency requirements of these applications are fulfilled. The cloud and fog concepts
-give us more flexibility to perform the deployment of smart place applications, which allow us to
+give us more flexibility to perform the deployment of smart warehouse applications, which allow us to
 provisioning the application modules in a more distributed way. The following sections describe
-the deployment approaches of smart place applications based in the cloud and fog.
+the deployment approaches of smart warehouse applications based in the cloud and fog concepts.
 
 % Cloud approach
 \subsection{Cloud Deployment}
@@ -319,11 +321,11 @@ the deployment approaches of smart place applications based in the cloud and fog
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/solution_cloud_architecture}
-\caption[Cloud-deployment: conceptual architecture.]{Cloud-deployment: smart warehouse conceptual architecture.}
+\caption[Cloud deployment: conceptual architecture.]{Cloud deployment: smart warehouse conceptual architecture.}
 \label{fig:solution_cloud_architecture}
 \end{figure}
 
-Figure~\ref{fig:solution_cloud_architecture} presents the architecture of a cloud-based smart warehouse.
+Figure~\ref{fig:solution_cloud_architecture} presents the architecture of a cloud-based smart warehouse deployment.
 The warehouse is composed of smart objects, sensors and readers that capture the events that occurs
 in the warehouse. The application middleware is provisioned in the cloud, which virtualizes the computing,
 storage and network resources needed to support the application.\\
@@ -338,16 +340,16 @@ The smart warehouse can be connected to the cloud through a physical or wireless
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/solution_fog_architecture}
-\caption[Fog-deployment: conceptual architecture.]{Fog-deployment: smart warehouse conceptual architecture.}
+\caption[Fog deployment: conceptual architecture.]{Fog deployment: smart warehouse conceptual architecture.}
 \label{fig:solution_fog_architecture}
 \end{figure}
 
-Figure~\ref{fig:solution_fog_architecture} presents the architecture of a fog-based smart warehouse.
-As in the cloud-based approach the warehouse is composed of smart objects, sensors and readers.
+Figure~\ref{fig:solution_fog_architecture} presents the architecture of a fog-based smart warehouse deployment.
+As in the cloud-based deployment the warehouse is composed of smart objects, sensors and readers.
 The proposed approach aims to extend the cloud paradigm to the edge of the network. The fog achieves
 that by virtualizing computing, storage and network resources. Unlike the cloud infrastructure, that
 usually is provisioned thousands of kilometers from the smart warehouse, the fog infrastructure
-usually is provisioned closest to the smart warehouse network.\\
+usually is provisioned closest to the smart warehouse.\\
 
 Regarding the application middleware, the application components are distributed across the cloud and
 fog. The components responsible for storing the data during a long period of time are provisioned in
@@ -384,7 +386,7 @@ the \gls{LLRP} protocol to communicate with the Fosstrak platform.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./images/implementation_cloud_architecture}
-\caption[Cloud-deployment: technological architecture.]{Cloud-deployment: smart warehouse technological architecture.}
+\caption[Cloud deployment: technological architecture.]{Cloud deployment: smart warehouse technological architecture.}
 \label{fig:implementation_cloud_architecture}
 \end{figure}
 
@@ -392,7 +394,7 @@ The \gls{RFID} middleware is provisioned in the cloud in a single virtual machin
 Fosstrak implementation the \gls{FCServer}, \gls{EPCIS} repository and the Capture application
 requires an Apache servlet container to deploy and run the web applications. The \gls{EPCIS}
 repository is connected to a MySQL database that stores the event data. The technological architecture
-for the cloud approach is presented in Figure~\ref{fig:implementation_cloud_architecture}.\\
+for a cloud-based deployment is presented in Figure~\ref{fig:implementation_cloud_architecture}.\\
 
 The smart warehouse can be connected to the cloud through a physical (e.g. \gls{ADSL} or Fiber-optic)
 to a wireless connection (e.g. Wi-Fi, 3G or \gls{LTE}).
@@ -405,19 +407,18 @@ to a wireless connection (e.g. Wi-Fi, 3G or \gls{LTE}).
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\textwidth]{./images/implementation_fog_architecture}
-\caption[Fog-deployment: technological architecture.]{Fog-deployment: smart warehouse technological architecture.}
+\caption[Fog deployment: technological architecture.]{Fog deployment: smart warehouse technological architecture.}
 \label{fig:implementation_fog_architecture}
 \end{figure}
 
-The \gls{RFID} middleware is provisioned across the fog and the cloud. At the cloud,
+Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for a fog-based
+deployment. The \gls{RFID} middleware is provisioned across the fog and the cloud. At the cloud,
 all the software components are provisioned in a single \gls{VM}. The \gls{EPCIS} repository is deployed
 and running on top of an Apache Tomcat servlet instance. The repository is connected to a MySQL
 database, which stores the event data. In the current implementation the fog was built with a traditional
 \gls{VM}. The \gls{FCServer} and the Capture application are deployed and running on top of a single
 Tomcat servlet instance. The Capture application sent the events collected by the \gls{FCServer} to
-the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.
-Figure~\ref{fig:implementation_fog_architecture} presents the technological architecture for the fog
-approach.\\
+the \gls{EPCIS} repository through the \textit{\gls{EPCIS} Capture Interface} - via \gls{HTTP} requests.\\
 
 Both the smart warehouse as the fog can be connected respectively to the fog and cloud through several
 types of connection, from a physical connection (e.g. \gls{ADSL} or Fiber-optic) to a wireless connection
@@ -437,8 +438,8 @@ We defined a set of recipes that allow to describing how the Fosstrak software s
 in a node while the roles allow to attributing responsibilities to a specific node. The knife command
 is used to execute the provisioning request and to interact with the provisioned infrastructure.\\
 
-The provisioning mechanism implemented in this work allows to perform the deployment of a smart place
+The provisioning mechanism implemented in this work allows to perform the deployment of a smart warehouse
 application based in Fosstrak across the cloud and fog, although it can be extended to support other
 \gls{RFID} middleware platforms. The flexibility in the deployment provided by the cloud and fog
 concepts will allow us to evaluate the approaches and chose which one is more adequate to support smart
-place applications based on the \gls{RFID} technology.
+warehouse applications based on the \gls{RFID} technology.
