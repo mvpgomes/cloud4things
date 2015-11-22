@@ -11,7 +11,7 @@ evaluate the data storage performance for the Fosstrak platform.
 % Present the evaluation methodology for both cases
 \subsection{Evaluation Methodology}
 \label{sub:eval_methodology}
-In order to determine which approach is more adequate to meet the latency requirements and to
+In order to determine which deployment approach is more adequate to meet the latency requirements and to
 evaluate the data storage performance for the Fosstrak platform, we propose the following
 methodologies:
 
@@ -41,7 +41,7 @@ in the report can be used to notify the client regarding an event in the smart w
 trigger a new event in the warehouse such as open or close a door.
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
-packets in the smart warehouse network. The Fosstrak \gls{ALE} module can be configured to generate
+packets in the warehouse network. The Fosstrak \gls{ALE} module can be configured to generate
 information to register when a new event is processed and also when a new report is delivered to the
 client. Thus, with the information provided by the monitoring system and the \gls{ALE} module it is
 possible to calculate the latency request for an event that occurs in the warehouse. The warehouse network
@@ -50,10 +50,11 @@ tool that allows the monitoring of the packets that are being transmitted or rec
 Through the logs produced by this tool, we are able to determine how the connection time is spent.
 
 With this methodology we intend to obtain information regarding how the communication time is spent
-when an event is triggered in the warehouse for the approaches described in Section~\ref{sec:solution}.
+when an event is triggered in the warehouse for the deployment approaches described in Section~\ref{sec:solution}.
 In order to determine which approach is more adequate to deploy the application, we defined a set of
-metrics that will allow us to compare the performance of the fog-based and cloud-based approaches and
-help to determine which one is more adequate to deploy the application in the warehouse.
+metrics that will allow us to compare the performance of the fog-based and cloud-based deployment
+approaches and help to determine which one is more adequate to deploy the smart warehouse
+application.
 
 % Evaluation Methodologies : Data
 \subsubsection{Data Storage Performance}
@@ -302,12 +303,14 @@ simulated up to 5 readers sending events concurrently.
 
 The obtained results show that the performance of the Fosstrak was acceptable where the maximum
 value obtained for the \text{CPU Utilization} metric was close to 18$\%$ and the maximum
-value obtained for the network traffic metric was close to 3.5 \gls{MB}.
+value obtained for the network traffic metric was close to 3.5 \gls{MB}. It is important
+to point out that for this evaluation scenario, it is possible to conclude that the consumption
+of computing resources increases as faster the robot moves in the warehouse.
 
 % Discussion
 \subsection{Results Analysis and Discussion}
 \label{sub:results_analysis_discussion}
-The obtained results show that a fog-based approach offers better overall performance to deploy a
+The obtained results show that a fog-based deployment offers better overall performance for a
 smart warehouse application based in RFID technology that requires low latency interaction. However
 we detected some performance issues in the behavior of the \gls{ALE} module. In particular, in the
 performed experiments we detected that in most of the time the module remains in an idle state.
