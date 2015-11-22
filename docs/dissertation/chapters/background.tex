@@ -14,7 +14,7 @@ As mentioned in Section~\ref{section:challenges}, the leverage of part of the sm
 to the cloud brought some challenges that must addressed. In the next sections, we present the most
 relevant work regarding to solve the smart place deployment in the cloud and data storage performance.
 Furthermore, we present a brief description of Docker, a lightweight virtualization platform in
-alternative to traditional Virtual Machines. Finally we describe Chef, an configuration management tool
+alternative to traditional Virtual Machines. Finally we describe Chef, a configuration management tool
 that automates the provision of smart applications in the cloud.
 
 % Smart Place Computing
@@ -78,7 +78,7 @@ Although the effect of both types of virtualization are similar, unlike the hype
 an \gls{OS} level virtualization does not provide the ability to run multiple \glspl{VM} with different
 operating systems on the same physical machine. However, \gls{OS} level virtualization provides significant
 benefits when compared to hypervisor-based solutions. Containers are small, they have low memory and
-\gls{CPU} overhead, they also are portable between different virtualization environments \cite{soltesz2007container}.\\
+\gls{CPU} overhead, they also are easy to port between different virtualization environments \cite{soltesz2007container}.\\
 
 \glspl{LXC}\footnote{\url{http://www.linuxcontainers.org}} is an \gls{OS} virtualization environment
 that relies on Linux Kernel. \gls{LXC} are hardware-agnostic and platform-agnostic, and also provides
@@ -100,7 +100,7 @@ a public repository that stores Docker images that are used to create the contai
 \subsection{Data Storage}
 \label{sub:data_storage}
 Smart places generate a large amount of data. The cloud must be able to store and process that data
-in a efficient manner. Currently, there are several alternatives to perform data storage in the cloud,
+in an efficient manner. Currently, there are several alternatives to perform data storage in the cloud,
 from key-value stores to \gls{RDBMS} clusters. In the next sections, we will summarize the most
 relevant work regarding these alternatives.
 
@@ -119,22 +119,22 @@ model than the ACID transactions of most \glspl{RDBMS} systems \cite{cattell2011
 performance predictable key-value stores, that provides many of the benefits of using a traditional
 \gls{RDBMS}, such as the ability to express the queries in a declarative way, automatic data
 parallelism, physical data independence and automatic index selection and maintenance, all while
-maintaining the low latency guarantees on application performance that come from the underlying
+maintaining the low-latency guarantees on application performance that come from the underlying
 key-value store.
 
 % RDBMS Clusters
 \subsubsection{Relational Database Clusters}
 \label{subs:rdbms_clusters}
 \glsdesc{RDBMS} are database management systems that store data in form of related tables. Unlike
-the key-value stores, \gls{RDBMS} have a complete pre-defined schema, a SQL interface and ACID
+the key-value stores, \gls{RDBMS} offers a complete pre-defined schema, a SQL interface and ACID
 transactions. Recently, some progress has been reached as regards the performance and scalability of
-those systems. Although most of the works still are in development, it is possible to highlight some
+these systems. Although most of the works still are in development, it is possible to highlight some
 solutions that are in a more mature state.\\
 
 \textit{MySQL Cluster} \cite{ronstrom2004mysql} is an in-memory clustered distributed \gls{RDBMS}.
 Compared with the basic MySQL implementation it works by replacing the InnoDB engine with the NDB - a
-proprietary distributed layer from MySQL. MySQL Cluster is built on top of a shared-nothing
-\footnote{Shared-nothing architecture share neither data on disk or data in memory between the nodes in the cluster.}
+proprietary distributed layer from MySQL. MySQL Cluster is built on top of a
+shared-nothing\footnote{Shared-nothing architecture share neither data on disk or data in memory between the nodes in the cluster.}
 architecture and includes features such as failover, node recovery, synchronous data replication and
 no single point of failure. MySQL Cluster seems to be the solution that scales to more nodes than
 other \gls{RDBMS} - 48 is the limit. However, it was reported that after scaling up to a few dozen
@@ -142,7 +142,7 @@ nodes it starts to run with stability problems \cite{bunch2010evaluation}.\\
 
 \textit{VoltDB} \cite{stonebraker2013voltdb} is a \gls{RDBMS} designed for performance and scalability.
 VoltDB assumes a multi-node cluster architecture where the database tables are partitioned over
-multiple servers. To allow fast-acess of data tables can be replicated over servers. Data recovery is
+multiple servers. To allow fast-acess of data, tables can be replicated over servers. Data recovery is
 supported through the replication of table rows (shards) across the cluster. The current implementation also
 supports database snapshots. Currently some features still are missing, but in its current implementation
 VoltDB already presents some features that improves the performance of SQL execution. As result, the
@@ -155,7 +155,7 @@ will depend of the application domain and its requirements.
 \subsubsection{RFID Middleware Platforms}
 \label{subs:rdbms_clusters}
 Gomes et. al \cite{gomes2014future} proposed a new infrastructure for EPCGlobal compliant middleware
-platforms in order to improve the performance of those middleware platforms. The Fosstrak platform
+platforms in order to improve the performance of these middleware platforms. The Fosstrak platform
 was evaluated and the results show that Fosstrak is not the best option when executing the modules
 responsible for collecting the data (ALE) from RFID readers and storing the event data
 (EPCIS) in the same  machine. In order to improve the performance of the EPCGlobal compliant middleware platforms,
@@ -179,7 +179,7 @@ most relevant are Chef\footnote{\url{https://www.chef.io/}}, Puppet\footnote{\ur
 Ansible\footnote{\url{http://www.ansible.com/}} and Salt\footnote{\url{http://saltstack.com/}}. The main difference
 between these tools is that some of the them are more oriented to developers, which is the case of Chef and
 Puppet that requires some programming experience to be used, while others are more oriented to system
-administrators, which is the case of Ansible and Salt.\\
+administrators, which is the case of Ansible and Salt.
 
 % Chef
 \subsubsection{Chef}
@@ -249,8 +249,8 @@ bandwidth requirements and \gls{IoT} devices.\\
 The smart place applications usually uses \gls{RFID} tags and \gls{WSN} as \gls{IoT} devices.
 The \gls{IoT} devices are powered through rechargeable batteries - e.g. for applications
 deployed in physical spaces with easy access to the devices such as Offices and Warehouses - and/or
-through energy derived from external sources such as solar power and wind energy -
-for applications that are deployed in large and/or remote physical spaces such as cities
+through energy derived from external sources such as solar energy and wind energy -
+e.g. for applications that are deployed in large and/or remote physical spaces such as cities
 and forests. Usually, the \gls{IoT} devices are connected to the Internet through
 a wireless connection such as 3G, 4G and Wi-fi. The data management can be performed
 through a local server or a shared server, in case of smart place application domains
@@ -265,7 +265,7 @@ is based on the \gls{RFID} technology and the \gls{EPC} Framework.
 \label{subs:iot_stack}
 The \gls{RFID} middleware is the component of a \gls{RFID} system that sits between the low level
 components - e.g. readers and tags - and the business client application - e.g. \gls{ERP} systems.
-The next paragraphs describes the EPCglobal, a framework that provides standardized interfaces that
+The next paragraphs describe the EPCglobal, a framework that provides standardized interfaces that
 isolates hardware vendors from business applications, and Fosstrak, a open-source \gls{RFID}
 middleware platform that implements the GS1 \gls{EPC} Network standards.
 
