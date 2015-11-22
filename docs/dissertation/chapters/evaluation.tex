@@ -3,8 +3,8 @@
 \chapter{Evaluation}
 \label{chapter:evaluation}
 The present chapter describes the evaluation methodology as well as the experiments performed to determine
-if a cloud-based or a fog-based approach is more adequate to deploy \gls{RFID} applications in a
-smart warehouse. The evaluation process will compare the approaches in regard to low-latency and data
+if a cloud-based or a fog-based deployment is more adequate to support smart warehouse applications
+based on the \gls{RFID} tehcnology. The evaluation process will compare the approaches in regard to low-latency and data
 storage performance.\\
 
 Our main goal is to obtain basic statistical values that allow us to decide which approach is more
@@ -14,7 +14,7 @@ approach is more adequate to deploy an \gls{IoT} application according its domai
 % Evaluation Methodology
 \section{Evaluation Methodology}
 \label{sec:eval_methodology}
-In order to determine which approach is more adequate to meet the latency and data storage scalability
+In order to determine which deployment approach is more adequate to meet the latency and data storage scalability
 requirements, we propose the following methodologies to perform the evaluation:
 
 % Evaluation Methodologies : Latency
@@ -43,7 +43,7 @@ in the report can be used to notify the client regarding an event in the smart w
 trigger a new event in the warehouse such as open or close a door.\\
 
 The smart warehouse is running a monitoring system that stores information about the incoming and outgoing
-packets in the smart warehouse network. In particular, we will perform the network monitoring through
+packets in the warehouse network. In particular, we will perform the network monitoring with
 \textit{tcpdump}\footnote{\url{http://www.tcpdump.org/}}, a command-line tool that allows the monitoring
 of the packets that are being transmitted or received over a network. Through the logs produced by this tool,
 we are able to determine how the connection time is spent.\\
@@ -54,10 +54,10 @@ by the monitoring system and the \gls{ALE} module it is possible to calculate th
 an event that occurs in the warehouse.\\
 
 With this methodology we intend to obtain information regarding how the communication time is spent
-when an event is triggered in the warehouse for the approaches described in Chapter~\ref{chapter:solution}.
+when an event is triggered in the warehouse for the deployment approaches described in Chapter~\ref{chapter:solution}.
 In order to determine which approach is more adequate to deploy the application, we propose a set of
 metrics that allow us to measure how much time is spent in the network communication, event processing
-and the latency of the events that occur in the physcal space:
+and the latency of the events that occur in the physical space:
 
 % Metrics
 \begin{enumerate}
@@ -87,14 +87,15 @@ and the latency of the events that occur in the physcal space:
 \end{enumerate}
 
 The analysis of these metrics will allow us to compare the performance of the fog-based and cloud-based
-approaches and help to determine which one is more adequate to deploy the application in the warehouse.
+deployment approaches and help to determine which one is more adequate to deploy
+the smart warehouse application.
 
 % Evaluation Methodologies : Data Storage
 \subsection{Data Storage Performance}
 \label{sub:eval_methodology_data}
-Smart place applications usually generates a large amount of data that must be stored and processed in
+Smart warehouse applications usually generates a large amount of data that must be stored and processed in
 a efficient way, as described in Section~\ref{section:challenges}. To evaluate the data storage
-performance for a \gls{RFID} application based on Fosstrak, the proposed methodology consists in
+performance for a smart warehouse application based on Fosstrak, the proposed methodology consists in
 stress the \gls{EPCIS} Repository by simulating several readers that are concurrently triggering events -
 through \gls{HTTP} requests - to the repository that is running in the cloud, as illustrated in Figure~\ref{fig:eval_data_methodology}.
 
@@ -112,7 +113,7 @@ by the instances (\textit{Network In}). In the present work, the monitoring of t
 cloud and for collecting the system metrics from the instances, we will use \gls{AWS}
 CloudWatch\footnote{\url{http://aws.amazon.com/cloudwatch/}}, a monitoring service provided by Amazon.\\
 
-The analysis of those metrics allows to observe how the performance and behavior of the \gls{EPCIS}
+The analysis of these metrics allows to observe how the performance and behavior of the \gls{EPCIS}
 module is affected regarding the amount of events that are generated in the smart warehouse.
 
 % Evaluation Setup
@@ -137,16 +138,16 @@ readers is in version \textit{1.6.0}.
 % Performed Experiments
 \section{Experiments Performed}
 \label{sec:eval_experiments}
-The experiments performed in our evaluation were based on the scenario and data from the RFIDToys \cite{Correia:Thesis:2014}
+The experiments performed in our evaluation were based on the scenario and data amount from the RFIDToys \cite{Correia:Thesis:2014}
 Master Thesis. In short, the RFIDToys is a warehouse demonstrator consisting of a robot transporting
 tagged products that are identified by RFID readers deployed in the physical space, as detailed in
-Section~\ref{sub:implementation}. In the performed experiments, we use a scenario where a tagged
+Section~\ref{sub:implementation}. In the performed experiments, we used a scenario where a tagged
 robot was programmed to execute  a given number of laps in the warehouse plant where an automatic
 door opens when one of the RFID readers that are placed in the plant detects that the robot is
 approaching.\\
 
 Based on this scenario and application domain we defined a set of non-functional requirements that
-our solution must accomplish. The evaluation requirements are presented in Table~\ref{table:eval_requirements}.
+our solution must accomplish. The evaluation requirements are presented in Table~\ref{table:eval_requirements}.\\
 
 \begin{table}[ht!]
   \begin{tabular}{|c|l|}
@@ -172,7 +173,7 @@ The door must be opened before the robot starts to moving again.\\
 To perform the simulation we defined two different specifications (\textit{ECspec}) for the
 \textit{Event Cycles} of the \gls{ALE} module, \textit{Baseline Event Cycle} and
 \textit{Half-period Event Cycle}. The configuration parameters for the \textit{ECspecs} are presented
-in Table~\ref{table:ecspec_parameters}.
+in Table~\ref{table:ecspec_parameters}.\\
 
 % ECspec parameters
 \begin{table}[ht!]
@@ -212,7 +213,7 @@ to 4.266s. The values for the network latency improved when the \gls{ALE} is con
 \textit{ECspec}, close to $\approx65\%$ of improvement for the \textit{Upload Time} metric - from 0.294s
 to 0.103s - and $\approx40\%$ for the \textit{Response Time} metric - from 0.228s to 0.149s. The
 values for the time where the \gls{ALE} remains in an idle state also presented a significant
-improvement, from 7.346s to 2.569s.
+improvement, from 7.346s to 2.569s.\\
 
 % Cloud metrics result
 \input{./tables/cloud_metrics.tex}
@@ -224,8 +225,8 @@ metric increased $\approx300\%$ - from 0.370s to 1.490s.
 % Event Time Breakdown
 \subparagraph{Event Time Breakdown.}
 \label{subp:cloud_event_breakdown}
-Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a cloud-based
-smart warehouse. In the current experiment the \gls{ALE} module was configured with the
+Figure~\ref{fig:ecspecf_breakdown} summarizes the latency breakdown for an event that occurs in a
+smart warehouse deployed in the cloud. In the current experiment the \gls{ALE} module was configured with the
 \textit{Baseline ECspec} and the \textit{Half-period ECspec}.\\
 
 % Baseline ECspec event time breakdown
@@ -245,7 +246,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
       \caption{Half-period Event Cycle: latency breakdown.}
       \label{fig:ecspecf_half}
     \end{subfigure}
-    \caption[Cloud-based approach: event latency breakdown.]{Cloud-based approach: Event Cycle latency breakdown.}
+    \caption[Cloud deployment: event latency breakdown.]{Cloud-based approach: Event Cycle latency breakdown.}
     \label{fig:ecspecf_breakdown}
   \end{figure}
 
@@ -284,7 +285,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
         \caption{Half-period Event Cycle: event pipeline breakdown.}
         \label{fig:ecspecf_effective_half}
       \end{subfigure}
-      \caption[Cloud-based approach: event processing breakdown.]{Cloud-based approach: event processing pipeline breakdown.}
+      \caption[Cloud deployment: event processing breakdown.]{Cloud-based approach: event processing pipeline breakdown.}
       \label{fig:ecspecf_effective_breakdown}
     \end{figure}
 
@@ -315,7 +316,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
     result is achieved thanks to the improvement in the latency of at the \textit{Filtering \& Aggregation Time}
     by $\approx52\%$ - from 2.530s to 1.230s - and the amount of time that \gls{ALE} is in an idle state -
     from 4.944s to 2.747s. Regarding the network latency, the values for the \textit{Upload Time}
-    and \textit{Response Time} improved 1ms for both metrics.
+    and \textit{Response Time} improved 1ms for both metrics.\\
 
     % Fog Metrics Result
     \input{./tables/fog_metrics.tex}
@@ -327,8 +328,8 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
     % Event Time Breakdown
     \subparagraph{Event Time Breakdown.}
     \label{subp:fog_event_breakdown}
-    Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a fog-based
-    smart warehouse. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
+    Figure~\ref{fig:ecspec_breakdown} summarizes the latency breakdown for an event that occurs in a
+    smart warehouse deployed in the fog. Figure~\ref{fig:ecspec_base} shows the latency breakdown for an event when the
     \gls{ALE} module is configured with the \textit{Baseline ECspec} and in Figure~\ref{fig:ecspec_half}
     when it is configured with the \textit{Half-period ECspec}.\\
 
@@ -349,7 +350,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
           \caption{Half-period Event Cycle: latency breakdown.}
           \label{fig:ecspec_half}
         \end{subfigure}
-        \caption[Fog-based approach: event latency breakdown.]{Fog-based approach: Event Cycle latency breakdown.}
+        \caption[Fog deployment: event latency breakdown.]{Fog deployment: Event Cycle latency breakdown.}
         \label{fig:ecspec_breakdown}
       \end{figure}
 
@@ -385,7 +386,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
             \caption{Half-period Event Cycle: event pipeline breakdown.}
             \label{fig:ecspec_effective_half}
           \end{subfigure}
-          \caption[Fog-based approach: event processing breakdown.]{Fog-based approach: event processing pipeline breakdown.}
+          \caption[Fog deployment: event processing breakdown.]{Fog-based approach: event processing pipeline breakdown.}
           \label{fig:ecspec_effective_breakdown}
         \end{figure}
 
@@ -539,7 +540,7 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
 
         \subparagraph{Event Latency.}
         \label{subp:eval_event_latency}
-        Regarding the results for the \textit{Event Latency} metric, the fog-based approach presented the
+        Regarding the results for the \textit{Event Latency} metric, the fog-based deployment presented the
         best results. In order to meet the requirement \textit{R1} (presented in \ref{sec:eval_experiments}),
         the event latency must be less than 5s. According the results it is possible to conclude that both
         approaches meet \textit{R1}, but only when the \gls{ALE} is configured with the \textit{Half-period ECspec}.
@@ -548,13 +549,13 @@ smart warehouse. In the current experiment the \gls{ALE} module was configured w
         \label{subp:eval_network_latency}
         The most relevant results are in network latency values for both approaches. The values for the \textit{Upload}
         and \textit{Reponse} metrics presented a substantial difference, where the fog-based approach is the
-        best one. This allows to conclude that only the fog-approach is able to meet the requirement \textit{R2}.\\
+        best one. This allows to conclude that only a fog-based deployment is able to meet the requirement \textit{R2}.\\
 
         However, it is important to point that there some aspects that can improve the network latency
-        of the cloud-based approach. For instance, the network connection is a possible bottleneck for the
+        of the cloud-based deployment. For instance, the network connection is a possible bottleneck for the
         performance of such approach. We believe that if the experiments were conducted through a faster
-        network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-approach
-        will be better, but not as good as in the fog-based approach.
+        network connection - e.g. a Fiber-optic connection - the overall performance of the cloud-based
+        deployment will be better, but not as good as in the fog-based deployment.
 
         \subparagraph{Idle Time.}
         \label{subp:eval_idle_time}
