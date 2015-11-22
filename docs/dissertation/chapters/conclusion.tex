@@ -3,15 +3,15 @@
 \chapter{Conclusion}
 \label{chapter:conclusion}
 The present work explored the deployment of \gls{IoT} applications for smart warehouses based on the
-\gls{RFID} technology with two different approaches to deploy: one based in a traditional cloud
+\gls{RFID} technology with two different deployment approaches: one based in a traditional cloud
 deployment approach (cloud-based) and other according the Fog Computing platform (fog-based). More
-specifically, the present work focuses to determine if a cloud-based approach is able to meet the
+specifically, the present work focuses to determine if a cloud-based deployment is able to meet the
 low-latency requirements of many \gls{IoT} applications, since that low-latency is an essential
-requirement of \gls{IoT} applications. If a cloud-based approach is not able to meet the network latency
+requirement of \gls{IoT} applications. If a cloud deployment is not able to meet the network latency
 requirements for those applications, the cloud platform is not a viable option to perform the
 provisioning of \gls{IoT} applications.\\
 
-To improve the provisioning of \gls{RFID} middleware in the cloud, we developed a mechanism based on
+To improve the provisioning of \gls{RFID} application middleware in the cloud, we developed a mechanism based on
 Docker containers and the Chef tool that automates the installation and configuration of the modules
 that composes the Fosstrak platform \gls{RFID} middleware. This mechanism was of extreme
 importance, because it allowed us to perform the application provisioning of the cloud instances in
@@ -22,9 +22,9 @@ mechanism gave us the flexibility to choose between several cloud providers to p
 Regarding the system evaluation, we defined two methodologies for evaluate the latency of an event that
 occurs in the physical space and the data storage performance for the Fosstrak platform. With the
 methodologies proposed, we were able to compare the event latency performance for both cloud-based
-and fog-based approaches. We defined two experiments to evaluate the latency performance of the
+and fog-based deployments. We defined two experiments to evaluate the latency performance of the
 deployment approaches. The obtained results shows that the event latency performance presented better
-results when the application was deployed according the fog-based approach. However, we identified
+results when the application was deployed according a fog-based deployment. However, we identified
 some issues regarding the behavior of a Fosstrak module (\gls{ALE}) that affected the performance
 of the event latency for both deployment approaches. Regarding the data storage performance of the
 RFID middleware, the results show that the Fosstrak platform is able to process with an acceptable
@@ -67,13 +67,13 @@ approach affects the performance of the \textit{Event Cycle} stages.
 \section{Future Work}
 \label{sec:future_work}
 In the present work, we achieved our initial goals and determined that Utility Computing is adequate
-to deploy a smart place application based in \gls{RFID} technology, both in cloud and fog configurations.
+to deploy a smart place application based in \gls{RFID} technology, both in cloud and fog deployments.
 However, our solution is not perfect and there some aspects that can be improved in the future.
 
 % Fog Implementation
 \subparagraph{Fog Implementation.}
 \label{subp:fog_impl}
-Our solution proposes that the \gls{RFID} application is deployed following a fog-based approach.
+Our solution proposes that the \gls{RFID} application is deployed following a fog-based deployment.
 This means that we need to have a cloud close to the ground and this cloud must meet the same
 requirements of a remote cloud such as high scalability, security and multi-tenancy. Unfortunately,
 we were not able to implement a fog that meet these requirements and in our implementation the fog
